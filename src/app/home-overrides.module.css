@@ -1,0 +1,39 @@
+.home{--navy:var(--public-bg);--deep:var(--public-panel);--gold:var(--public-gold);--teal:var(--public-cyan);background:var(--public-bg);color:var(--public-text)}
+.legacyNav,.legacyFooter{display:none}
+.ecoCard :global([class*="cardCopy__"]){transition:background .25s,color .25s}
+.ecoCard:hover :global([class*="cardCopy__"]){background:#F5F7F8;color:#03172B}
+.ecoCard:hover :global([class*="cardCopy__"])>span,.ecoCard:hover :global([class*="cardCopy__"]) h3,.ecoCard:hover :global([class*="cardCopy__"]) p{color:#03172B}
+.ecoCard:hover :global([class*="cardCopy__"])>b{color:#14B8B1}
+.projectCard{transition:background .25s,color .25s,border-color .25s}
+.projectCard:hover{border-color:#F2C76E;background:#F5F7F8;color:#03172B}
+.projectCard:hover>span,.projectCard:hover>h3,.projectCard:hover>p{color:#03172B}
+.projectCard:hover>a{color:#14B8B1}
+.newsCard>div{transition:background .25s,color .25s}
+.newsCard:hover>div{background:#F5F7F8;color:#03172B}
+.newsCard:hover>div>span,.newsCard:hover>div h3{color:#03172B}
+.newsCard:hover>div>b{color:#14B8B1}
+.listingLink{margin:18px auto 0;text-align:center}
+.listingLink a{color:#F2C76E;font-size:11px;font-weight:700}
+.listingLink a:hover{color:#14B8B1}
+:global(html[data-theme="light"]) .home :global([class*="intro__"]),
+:global(html[data-theme="light"]) .home :global([class*="vision__"]),
+:global(html[data-theme="light"]) .home :global([class*="orbitSection__"]),
+:global(html[data-theme="light"]) .home :global([class*="ecosystemCards__"]),
+:global(html[data-theme="light"]) .home :global([class*="projects__"]),
+:global(html[data-theme="light"]) .home :global([class*="synergy__"]),
+:global(html[data-theme="light"]) .home :global([class*="philosophy__"]),
+:global(html[data-theme="light"]) .home :global([class*="chairman__"]),
+:global(html[data-theme="light"]) .home :global([class*="community__"]),
+:global(html[data-theme="light"]) .home :global([class*="partners__"]),
+:global(html[data-theme="light"]) .home :global([class*="news__"]),
+:global(html[data-theme="light"]) .home :global([class*="cta__"]){background:var(--public-bg);color:var(--public-text)}
+:global(html[data-theme="light"]) .home :global([class*="intro__"]) h2,
+:global(html[data-theme="light"]) .home :global([class*="intro__"]) p,
+:global(html[data-theme="light"]) .home :global([class*="vision__"]) h2,
+:global(html[data-theme="light"]) .home :global([class*="vision__"]) p,
+:global(html[data-theme="light"]) .home :global([class*="synergy__"]) h2,
+:global(html[data-theme="light"]) .home :global([class*="synergy__"]) h3,
+:global(html[data-theme="light"]) .home :global([class*="synergy__"]) p{color:var(--public-text)}
+:global(html[data-theme="light"]) .home :global([class*="benefitGrid__"]) article,
+:global(html[data-theme="light"]) .home :global([class*="timeline__"]) article,
+:global(html[data-theme="light"]) .home :global([class*="synergyGrid__"]) article{background:var(--public-panel);color:var(--public-text)}

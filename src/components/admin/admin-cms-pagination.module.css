@@ -1,0 +1,4 @@
+.pagination{display:flex;align-items:center;justify-content:center;gap:10px;margin:14px 0}
+.pagination button{display:grid;width:34px;height:34px;place-items:center;border:1px solid #D7A84A;background:#fff;color:#03172B;font-size:19px;cursor:pointer}
+.pagination button:disabled{opacity:.45;cursor:not-allowed}
+.pagination span{min-width:52px;color:#374151;font-size:11px;text-align:center}
