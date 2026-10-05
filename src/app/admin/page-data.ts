@@ -19,6 +19,10 @@ export type AdminSection = {
   id: string;
   title: string;
   description: string;
+  body?: string;
+  image?: string;
+  ctaLabel?: string;
+  ctaUrl?: string;
   enabled: boolean;
 };
 
@@ -85,12 +89,34 @@ const mediaSections = [
   ["Sáu dịch vụ Media", "Sản xuất, sự kiện, nội dung số, lưu trữ văn hóa và hoạt động cộng đồng."],
 ];
 
+const pageEditorSeeds: Record<string, { slides: [string, string][]; sections: [string, string][] }> = {
+  "gioi-thieu": { slides: [["GIỚI THIỆU TẬP ĐOÀN", "Về Chúng Tôi"], ["GIÁ TRỊ CỐT LÕI", "Giá Trị Cốt Lõi"], ["SỨ MỆNH KẾT NỐI NGUỒN LỰC", "Sứ Mệnh"]], sections: [["Tổng quan Tập đoàn", "Section chuẩn · overview · MÔ HÌNH TỔ HỢP | LIÊN KẾT ĐA NGÀNH"], ["Sứ mệnh & Tầm nhìn", "Section chuẩn · vision · THÔNG ĐIỆP CHIẾN LƯỢC"], ["Giá trị cốt lõi", "Section chuẩn · values · 4 GIÁ TRỊ NỀN TẢNG"], ["Thông điệp Đối tác", "Section chuẩn · partner_cta"]] },
+  "nghieng-travel": { slides: [["NGHIENG TRAVEL", "Hệ Sinh Thái 01"], ["HÀNH TRÌNH ĐÍCH THỰC", "Trải Nghiệm"], ["DU LỊCH BỀN VỮNG", "Phát Triển Du Lịch"]], sections: [["Hệ thống nghỉ dưỡng", "Section chuẩn · facilities · HỆ THỐNG NGHỈ DƯỠNG"], ["Hạng mục tổ chức Tour", "Section chuẩn · tours · HẠNG MỤC TỔ CHỨC TOUR"], ["Giá trị mang lại", "Section chuẩn · benefits · GIÁ TRỊ MANG LẠI"], ["CTA Liên hệ đặt Tour", "Section chuẩn · cta · KHÁM PHÁ CÙNG NGHIENG TRAVEL"]] },
+  "khoang-san": { slides: [["KHOÁNG SẢN", "Hệ Sinh Thái 02"], ["GIÁ TRỊ TÀI NGUYÊN", "Nguồn Lực"], ["LIÊN KẾT NGUỒN LỰC", "Liên Kết Doanh Nghiệp"]], sections: [["Lĩnh vực Khoáng sản", "Section chuẩn · segments · LĨNH VỰC KHOÁNG SẢN"], ["Các dự án hợp tác", "Section chuẩn · projects · CÁC DỰ ÁN HỢP TÁC"], ["CTA Hợp tác Khoáng sản", "Section chuẩn · cta · HỢP TÁC KHOÁNG SẢN"]] },
+  "cong-nghe-ai": { slides: [["CÔNG NGHỆ – AI –", "Hệ Sinh Thái 03"], ["CHUYỂN ĐỔI SỐ", "Đổi Mới Sáng Tạo"], ["JUST IT & WELINK", "Nền Tảng Số"]], sections: [["Giải pháp Công nghệ", "Section chuẩn · services · GIẢI PHÁP CÔNG NGHỆ"], ["Nền tảng Just IT & Welink", "Section chuẩn · platform · NỀN TẢNG | JUST IT & WELINK"], ["CTA Chuyển đổi số", "Section chuẩn · cta · CHUYỂN ĐỔI SỐ CÙNG NGHIENG"]] },
+  "phat-trien-cong-dong": { slides: [["PHÁT TRIỂN CỘNG ĐỒNG", "Hệ Sinh Thái 04"], ["CÙNG HỌC CÙNG LÀM", "Giá Trị Bền Vững"], ["KẾT NỐI THÀNH VIÊN", "Welink Community"]], sections: [["Cấu trúc 3 Trụ cột", "Section chuẩn · pillars · CẤU TRÚC CỘNG ĐỒNG"], ["Tham gia Welink Community", "Section chuẩn · members · THAM GIA WELINK COMMUNITY"], ["CTA Gia nhập cộng đồng", "Section chuẩn · cta · GIA NHẬP CỘNG ĐỒNG"]] },
+  "giai-phap-dong-hanh": { slides: [["GIẢI PHÁP ĐỒNG HÀNH", "Hệ Sinh Thái 05"], ["TĂNG TRƯỞNG TÀI SẢN", "Tăng Trưởng"], ["KẾT NỐI NGUỒN LỰC", "Hợp Tác"]], sections: [["4 Giải pháp gia tăng giá trị", "Section chuẩn · solutions · GIA TĂNG GIÁ TRỊ TÀI SẢN"], ["Thông điệp đồng hành", "Section chuẩn · tagline"]] },
+  "cong-dong": { slides: [["PHÁT TRIỂN CÙNG CỘNG ĐỒNG", "Hoạt Động Xã Hội"], ["SẺ CHIA NÂNG ĐỠ", "Chương Trình Xã Hội"], ["KẾT NỐI CÙNG PHÁT TRIỂN", "Cùng Phát Triển"]], sections: [["Hoạt động cộng đồng", "Section chuẩn · activities · HOẠT ĐỘNG CỘNG ĐỒNG"], ["CTA Cùng lan tỏa giá trị", "Section chuẩn · cta · CÙNG LAN TỎA GIÁ TRỊ"]] },
+  "du-an": { slides: [["HỆ SINH THÁI DỰ ÁN", "Cơ Hội Hợp Tác"], ["CƠ HỘI HỢP TÁC", "Dự Án Đang Mở"], ["TỪ Ý TƯỞNG ĐẾN VẬN HÀNH", "Phát Triển Dự Án"]], sections: [["Danh sách Dự án", "Section chuẩn · projects"], ["CTA Quan tâm dự án", "Section chuẩn · cta · QUAN TÂM DỰ ÁN?"]] },
+  "nghieng-media": { slides: [["NGHIENG MEDIA", "Hệ Sinh Thái 06"], ["SÁNG TẠO NỘI DUNG", "Nội Dung Số"], ["LAN TỎA GIÁ TRỊ VIỆT", "Văn Hóa & Cộng Đồng"]], sections: [["Dịch vụ truyền thông", "Section chuẩn · services · DỊCH VỤ TRUYỀN THÔNG"], ["Sứ mệnh Nghieng Media", "Section chuẩn · mission · XÂY DỰNG BẢN SẮC THƯƠNG HIỆU"], ["Thư viện Ảnh & Video", "Section chuẩn · library"], ["CTA Hợp tác truyền thông", "Section chuẩn · cta · HỢP TÁC TRUYỀN THÔNG"]] },
+  "doi-tac": { slides: [], sections: [] },
+  "tin-tuc": { slides: [], sections: [] },
+  "lien-he": { slides: [], sections: [] },
+};
+
+const referenceSliderImage = "https://static.wixstatic.com/media/12d367_4f26ccd17f8f4e3a8958306ea08c2332~mv2.png";
+const homeSliderImages = [
+  "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/4e2c9afc5_slider-1-home.jpg",
+  "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9970d8492_slider-3-home.jpg",
+  "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9ddb1ea9d_banner-trang-chu-nghieng.webp",
+];
+
 export function defaultPageContent(slug: string): AdminPageContent | null {
   const page = ADMIN_PAGES.find((item) => item.slug === slug);
   if (!page) return null;
 
   const isHome = page.slug === "trang-chu";
-  const sections = isHome ? homeSections : slug === "nghieng-travel" ? travelSections : slug === "nghieng-media" ? mediaSections : standardSections;
+  const sections = isHome ? homeSections : pageEditorSeeds[slug]?.sections ?? (slug === "nghieng-travel" ? travelSections : slug === "nghieng-media" ? mediaSections : standardSections);
 
   return {
     name: page.name,
@@ -106,11 +132,10 @@ export function defaultPageContent(slug: string): AdminPageContent | null {
     active: true,
     sliders: isHome
       ? [
-          { id: "home-slide-1", title: "NGHIENG COMPLEX", description: "Tổ hợp Liên kết Đa ngành", image: "", enabled: true },
-          { id: "home-slide-2", title: "KẾT NỐI GIÁ TRỊ", description: "Hệ Sinh Thái Đa Ngành", image: "", enabled: true },
-          { id: "home-slide-3", title: "CÙNG PHÁT TRIỂN BỀN VỮNG", description: "Tầm nhìn 2026–2030", image: "", enabled: true },
-        ]
-      : [],
+          { id: "home-slide-1", title: "NGHIENG COMPLEX", description: "Tổ hợp Liên kết Đa ngành", image: homeSliderImages[0], enabled: true },
+          { id: "home-slide-2", title: "KẾT NỐI GIÁ TRỊ", description: "Hệ Sinh Thái Đa Ngành", image: homeSliderImages[1], enabled: true },
+          { id: "home-slide-3", title: "CÙNG PHÁT TRIỂN BỀN VỮNG", description: "Tầm Nhìn 2026–2030", image: homeSliderImages[2], enabled: true },
+        ] : (pageEditorSeeds[slug]?.slides ?? []).map(([title, description], index) => ({ id: `${slug}-slide-${index + 1}`, title, description, image: referenceSliderImage, enabled: true })),
     sections: sections.map(([title, description], index) => ({
       id: `${page.slug}-section-${index + 1}`,
       title,
@@ -150,7 +175,10 @@ export async function hydratePageContent(slug: string) {
   if (!fallback || typeof window === "undefined") return;
   const records = await loadCmsRecords("pageContents");
   const record = records.find((item) => item.slug === slug);
-  if (!record) return;
+  if (!record) {
+    await savePageContent(slug, fallback);
+    return;
+  }
   const saved = record.content as Partial<AdminPageContent>;
   const content = { ...fallback, ...saved, sliders: saved.sliders ?? fallback.sliders, sections: saved.sections ?? fallback.sections };
   pageContentCache.set(slug, content);

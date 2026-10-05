@@ -59,7 +59,8 @@ export default function PublicContentPage({ slug, name, path }: { slug: string; 
   }, [content.description, content.title]);
 
   const pageIndex = Math.max(0, ADMIN_PAGES.findIndex((item) => item.slug === slug));
-  const image = content.sliders.find((slider) => slider.enabled && slider.image)?.image || heroImages[pageIndex % heroImages.length];
+  const activeSlide = content.sliders.find((slider) => slider.enabled);
+  const image = activeSlide?.image || heroImages[pageIndex % heroImages.length];
   const visibleSections = content.sections.filter((section) => section.enabled);
 
   if (editorialKind) {
@@ -88,10 +89,10 @@ export default function PublicContentPage({ slug, name, path }: { slug: string; 
       {!content.active ? <section className={styles.offline}><h1>{content.name}</h1><p>Trang hiện chưa được xuất bản.</p></section> : <>
         <section className={styles.hero}>
           <img src={image} alt={content.name} />
-          <div className={styles.heroCopy}><span>NGHIENG COMPLEX</span><h1>{content.heroTitle}</h1><p>{content.heroDescription}</p><Link href="/lien-he">Liên hệ hợp tác <b>→</b></Link></div>
+          <div className={styles.heroCopy}><span>NGHIENG COMPLEX</span><h1>{activeSlide?.title || content.heroTitle}</h1><p>{activeSlide?.description || content.heroDescription}</p><Link href="/lien-he">Liên hệ hợp tác <b>→</b></Link></div>
         </section>
         <section className={styles.intro}><div><span>01 / {content.name}</span><h2>{content.description}</h2><p>Trong hệ sinh thái Nghieng Complex, mỗi lĩnh vực được phát triển với tinh thần kết nối, minh bạch và hướng đến giá trị dài hạn cho đối tác, thành viên và cộng đồng.</p></div><div className={styles.introFacts}><b>01</b><span>Định hướng độc lập</span><b>02</b><span>Cộng hưởng nguồn lực</span><b>03</b><span>Phát triển bền vững</span></div></section>
-        <section className={styles.contentSection}><div className={styles.sectionHeading}><span>NỘI DUNG ĐƯỢC QUẢN LÝ TỪ ADMIN</span><h2>Cùng tạo nên những giá trị <strong>bền vững</strong></h2></div><div className={styles.sectionGrid}>{visibleSections.map((section, index) => <article key={section.id}><small>0{index + 1}</small><h3>{section.title}</h3><p>{section.description || content.description}</p><Link href="/lien-he">Tìm hiểu thêm <b>→</b></Link></article>)}</div></section>
+        <section className={styles.contentSection}><div className={styles.sectionHeading}><span>NỘI DUNG ĐƯỢC QUẢN LÝ TỪ ADMIN</span><h2>Cùng tạo nên những giá trị <strong>bền vững</strong></h2></div><div className={styles.sectionGrid}>{visibleSections.map((section, index) => <article key={section.id}><small>0{index + 1}</small>{section.image && <img src={section.image} alt="" /> }<h3>{section.title}</h3><p>{section.description}</p>{section.body && <p>{section.body}</p>}<Link href={section.ctaUrl || "/lien-he"}>{section.ctaLabel || "Tìm hiểu thêm"} <b>→</b></Link></article>)}</div></section>
         <section className={styles.cta}><h2>Kết nối để cùng phát triển</h2><p>Hãy bắt đầu một cơ hội hợp tác mới với Nghieng Complex.</p><Link href="/lien-he">Liên hệ với Nghieng Complex</Link></section>
       </>}
       <SiteFooter />

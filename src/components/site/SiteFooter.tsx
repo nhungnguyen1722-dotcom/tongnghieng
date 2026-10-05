@@ -22,13 +22,14 @@ export default function SiteFooter() {
         <div className={styles.brand}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={logo || BRAND_LOGOS[0].url} alt="Nghieng Complex" />
-          <p>Tổ hợp liên kết đa ngành, kết nối con người, công nghệ và cộng đồng để cùng phát triển bền vững.</p>
+          <p>Tổ hợp Liên kết Đa ngành — kiến tạo hệ sinh thái phát triển bền vững. Kết nối nguồn lực, cộng hưởng giá trị.</p>
+          <span className={styles.motto}>Kết nối Nguồn lực — Cộng hưởng Giá trị — Kiến tạo Tương lai</span>
         </div>
         <div><h2>Hệ sinh thái</h2>{ecosystems.slice(0, 6).map((item) => <Link href={item.url} key={item.id}>{item.label}</Link>)}</div>
-        <div><h2>Điều hướng</h2><Link href="/">Trang Chủ</Link><Link href="/gioi-thieu">Giới Thiệu</Link><Link href="/du-an">Dự Án</Link><Link href="/cong-dong">Cộng Đồng</Link><Link href="/tin-tuc">Tin Tức</Link><Link href="/muc-tieu">Mục Tiêu 2026–2030</Link></div>
-        <div><h2>Liên hệ</h2><span>Công ty Cổ phần Tập đoàn Nghiêng Complex</span><a href="mailto:info@nghiengcomplex.vn">info@nghiengcomplex.vn</a><a href="https://nghiengcomplex.vn" target="_blank" rel="noreferrer">nghiengcomplex.vn</a><Link className={styles.contact} href="/lien-he">Kết nối cùng Nghieng Complex <span aria-hidden="true">→</span></Link></div>
+        <div><h2>Điều hướng</h2><Link href="/">Trang Chủ</Link><Link href="/gioi-thieu">Giới Thiệu</Link><Link href="/du-an">Dự Án</Link><Link href="/cong-dong">Cộng Đồng</Link><Link href="/tin-tuc">Tin Tức</Link><Link href="/doi-tac">Đối Tác</Link><Link href="/muc-tieu">Mục Tiêu 2026–2030</Link><Link href="/lien-he">Liên Hệ</Link></div>
+        <div><h2>Liên hệ</h2><span>Công ty Cổ phần Tập đoàn Nghieng Complex, Việt Nam</span><a href="mailto:info@nghiengcomplex.vn">info@nghiengcomplex.vn</a><a href="https://nghiengcomplex.vn" target="_blank" rel="noreferrer">nghiengcomplex.vn</a><Link className={styles.contact} href="/lien-he">Kết nối cùng Nghieng Complex <span aria-hidden="true">→</span></Link></div>
       </div>
-      <div className={styles.legal}><span>© 2026 Công ty Cổ phần Tập đoàn Nghiêng Complex. Bảo lưu mọi quyền.</span><div><Link href="/chinh-sach-bao-mat">Chính sách bảo mật</Link><Link href="/dieu-khoan-su-dung">Điều khoản sử dụng</Link></div></div>
+      <div className={styles.legal}><span>© 2024 Công ty Cổ phần Tập đoàn Nghieng Complex. Bảo lưu mọi quyền.</span><div><Link href="/chinh-sach-bao-mat">Chính sách bảo mật</Link><span aria-hidden="true">|</span><Link href="/dieu-khoan-su-dung">Điều khoản sử dụng</Link></div></div>
     </footer>
   );
 }

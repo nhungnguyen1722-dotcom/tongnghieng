@@ -456,8 +456,8 @@ const documents: CmsDocument[] = [
 const users: CmsAccount[] = [
   { id: "user-ketoan", name: "WeLink Kế toán", email: "ketoan@welink.vn", role: "Admin", status: "Active", passwordChangeRequired: false },
   { id: "user-media", name: "media welink", email: "media@welink.vn", role: "Admin", status: "Active", passwordChangeRequired: false },
-  { id: "user-support", name: "Welink Hỗ trợ", email: "support@welink.vn", role: "User", status: "Active", passwordChangeRequired: false },
-  { id: "user-nhung", name: "Nhung Nguyễn", email: "nhungnguyen1722@gmail.com", role: "User", status: "Active", passwordChangeRequired: false },
+  { id: "user-support", name: "Welink Hỗ trợ", email: "support@welink.vn", role: "Admin", status: "Active", passwordChangeRequired: false },
+  { id: "user-nhung", name: "Nhung Nguyễn", email: "nhungnguyen1722@gmail.com", role: "Admin", status: "Active", passwordChangeRequired: false },
   { id: "user-an", name: "(IT) WeLink Nguyễn Đăng An", email: "annd@welink.vn", role: "Admin", status: "Active", passwordChangeRequired: false },
 ];
 

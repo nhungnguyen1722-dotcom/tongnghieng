@@ -37,3 +37,40 @@
 :global(html[data-theme="light"]) .home :global([class*="benefitGrid__"]) article,
 :global(html[data-theme="light"]) .home :global([class*="timeline__"]) article,
 :global(html[data-theme="light"]) .home :global([class*="synergyGrid__"]) article{background:var(--public-panel);color:var(--public-text)}
+.slogan{display:flex;min-height:128px;align-items:center;justify-content:center;padding:32px 24px;background:#03172b;color:#e8c84a;text-align:center}
+.hero{min-height:max(720px,85vh)}
+.home :global([class*="__chairman"]),
+.home :global([class*="__community"]){padding-right:24px;padding-left:24px}
+.slogan span{font-size:18px;font-weight:800;letter-spacing:.2em;line-height:1.8}
+.slogan i{padding:0 8px;color:#25cbd3;font-style:normal}
+.ecosystemDetails{display:flex;width:min(420px,100%);align-items:center;justify-content:space-between;gap:18px;margin:0 auto;color:var(--public-text)}
+.ecosystemDetails>div>span{color:var(--public-gold);font-size:9px;font-weight:800;letter-spacing:.18em}
+.ecosystemDetails h3{margin:7px 0!important;font-size:16px}
+.ecosystemDetails p{font-size:11px}
+.ecosystemDetails>div>div{display:flex;flex-wrap:wrap;gap:6px;margin-top:11px}
+.ecosystemDetails>div>div span{padding:4px 7px;border:1px solid rgba(215,168,74,.25);color:var(--public-muted);font-size:9px}
+.ecosystemDetails>a{flex:none;color:var(--public-gold);font-size:11px;font-weight:700}
+.orbitItemActive b{background:var(--public-gold)!important;color:#03172b}
+.portrait{display:grid;justify-items:center;align-content:center;gap:16px;width:min(230px,100%);min-height:340px!important;margin:auto;background:radial-gradient(ellipse at center,#102d43 0,#061a2b 58%,#03172b 100%)!important}
+.portrait:after{background:linear-gradient(135deg,rgba(37,203,211,.07),transparent 55%)!important}
+.portraitIcon{z-index:1;display:grid;width:82px;height:82px;place-items:center;border:1px solid rgba(201,162,39,.55);border-radius:50%;background:rgba(201,162,39,.12);color:#e8c84a;font-size:29px}
+.portrait small{z-index:1;color:#aebdc8;font-size:10px;line-height:1.5;text-align:center}
+.chairmanTitle{display:block;margin-top:5px;color:var(--public-muted);font-size:11px}
+.visionPoints{display:grid;gap:10px;margin:22px 0 18px;padding:0;list-style:none}
+.visionPoints li{position:relative;padding-left:17px;color:var(--public-muted);font-size:12px;line-height:1.5}
+.visionPoints li:before{position:absolute;top:.55em;left:0;width:6px;height:6px;border-radius:50%;background:var(--public-gold);content:""}
+.communityList{grid-template-columns:1fr 1fr;gap:10px}
+.communityList div{grid-template-columns:24px 1fr 16px;gap:8px;min-height:58px;padding:12px 10px;border:1px solid rgba(215,168,74,.2);background:rgba(3,23,43,.45);font-size:10px}
+.partnerGrid{grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;border:0}
+.partnerGrid div{min-height:66px;flex-direction:column;gap:5px;border:1px solid rgba(215,168,74,.15);background:rgba(255,255,255,.025);font-size:9px;letter-spacing:.04em;text-align:center}
+.partnerGrid span{font-size:13px}
+.partnerNote{margin:17px auto 0;color:var(--public-muted);font-size:9px;text-align:center}
+.footerCta{align-items:center;min-height:78px;padding:14px max(24px,calc((100% - 1120px)/2));background:linear-gradient(90deg,#c9a227,#e8c84a,#c9a227);color:#0d1b3e}
+.footerCtaCopy{display:grid;gap:4px}
+.footerCtaCopy strong{font-size:10px;letter-spacing:.08em}
+.footerCtaCopy span{font-size:9px;font-weight:500;letter-spacing:0}
+.footerCta>a{flex:none;border:1px solid #0d1b3e;background:#0d1b3e;color:#e8c84a;font-size:9px}
+.footerCta>a:hover{background:transparent;color:#0d1b3e}
+@media(max-width:900px){.partnerGrid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:767px){.hero{min-height:max(560px,70vh)}}
+@media(max-width:600px){.slogan{min-height:100px;padding:26px 18px}.slogan span{font-size:13px;letter-spacing:.12em}.ecosystemDetails{align-items:flex-start;flex-direction:column;padding:0 12px}.portrait{min-height:270px!important}.communityList{grid-template-columns:1fr 1fr}.partnerGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.footerCta{align-items:flex-start;flex-direction:column;gap:12px;padding:18px 20px}}

@@ -226,6 +226,7 @@ export function VenueHubPage() {
 
 export function EditorialListingPage({ kind }: { kind: "news" | "projects" }) {
   const initial = kind === "news" ? CMS_SEEDS.news : CMS_SEEDS.projects;
+  const pageContent = useManagedPageContent(kind === "news" ? "tin-tuc" : "du-an");
   const [items, setItems] = useState<CmsArticle[]>(initial);
   const [page, setPage] = useState(1);
   const pageSize = 3;
@@ -235,11 +236,21 @@ export function EditorialListingPage({ kind }: { kind: "news" | "projects" }) {
   const visible = items.slice((page - 1) * pageSize, page * pageSize);
   const news = kind === "news";
   const base = news ? "/tin-tuc/" : "/du-an/";
+  const activeSlide = pageContent?.sliders.find((slide) => slide.enabled);
+
+  useEffect(() => {
+    if (!pageContent) return;
+    document.title = pageContent.title;
+    document.querySelector('meta[name="description"]')?.setAttribute("content", pageContent.description);
+  }, [pageContent]);
+
+  if (pageContent?.active === false) return <main className={styles.site}><SiteHeader /><section className={styles.section}><h1>{pageContent.name}</h1><p>Trang hiện chưa được xuất bản.</p></section><SiteFooter /></main>;
 
   return (
     <main className={styles.site}>
       <SiteHeader />
-      <ListingHero title={news ? "TIN TỨC & SỰ KIỆN" : "DỰ ÁN & CƠ HỘI HỢP TÁC"} description={news ? "Những cập nhật, góc nhìn và hoạt động của Nghieng Complex." : "Kết nối ý tưởng, đối tác và cơ hội phát triển có trách nhiệm."} image={news ? PUBLIC_IMAGES[2] : PUBLIC_IMAGES[0]} eyebrow="NGHIENG COMPLEX" />
+      <ListingHero title={activeSlide?.title || (news ? "TIN TỨC & SỰ KIỆN" : "DỰ ÁN & CƠ HỘI HỢP TÁC")} description={activeSlide?.description || pageContent?.description || (news ? "Những cập nhật, góc nhìn và hoạt động của Nghieng Complex." : "Kết nối ý tưởng, đối tác và cơ hội phát triển có trách nhiệm.")} image={activeSlide?.image || (news ? PUBLIC_IMAGES[2] : PUBLIC_IMAGES[0])} eyebrow="NGHIENG COMPLEX" />
+      {pageContent?.sections.some((section) => section.enabled) && <section className={styles.section} aria-label="Nội dung trang được quản lý từ Admin"><div className={styles.editorialGrid}>{pageContent.sections.filter((section) => section.enabled).map((section, index) => <article className={styles.editorialCard} key={section.id}>{section.image && <div className={styles.editorialImage}><img src={section.image} alt="" /></div>}<div className={styles.editorialBody}><span>0{index + 1} / NGHIENG COMPLEX</span><h3>{section.title}</h3>{section.description && <p>{section.description}</p>}{section.body && <p>{section.body}</p>}{section.ctaLabel && <Link className={styles.textLink} href={section.ctaUrl || "/lien-he"}>{section.ctaLabel}</Link>}</div></article>)}</div></section>}
       <section id="catalog" className={styles.section}>
         <div className={styles.sectionHeading}><div><p className={styles.eyebrow}>{news ? "CẬP NHẬT" : "CÙNG KIẾN TẠO"}</p><h2>{news ? "Bài viết mới nhất" : "Dự án đang kết nối"}</h2></div><span>{items.length} nội dung</span></div>
         <div className={styles.editorialGrid}>{visible.map((item) => <article className={styles.editorialCard} key={item.id}>

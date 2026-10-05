@@ -1,23 +1,40 @@
 import Link from "next/link";
 import AdminShell from "./AdminShell";
-import { ADMIN_PAGES } from "./page-data";
 import styles from "./dashboard.module.css";
 
+const stats = [
+  ["▧", "6", "Dự án"],
+  ["▤", "6", "Tin tức"],
+  ["♧", "8", "Đối tác"],
+  ["♙", "0", "Liên hệ (Lead)"],
+  ["▱", "41", "Section trang chủ"],
+  ["▧", "2", "File media"],
+  ["♙", "7", "Tài khoản"],
+];
+
 const quickLinks = [
-  ["Quản lý các Trang", "/admin/pages", "Chỉnh sửa nội dung, slider và section trên website public."],
-  ["Quản lý Dự án", "/admin/projects", "Theo dõi bài viết, trạng thái và cơ hội hợp tác."],
-  ["Quản lý Tin tức", "/admin/news", "Tổ chức tin tức và sự kiện hiển thị trên website."],
-  ["Quản lý Media", "/admin/media", "Kiểm soát thư viện hình ảnh dùng trong nội dung."],
+  ["▤", "Quản lý Landing Page", "/admin/pages/trang-chu", "Chỉnh sửa tiêu đề, nội dung, ảnh, CTA, bật/tắt và sắp xếp section trang chủ."],
+  ["▧", "Quản lý Dự án", "/admin/projects", "Thêm, sửa, xóa, ẩn/hiện bài đăng dự án."],
+  ["▤", "Quản lý Tin tức", "/admin/news", "Thêm, sửa, xóa, ẩn/hiện bài viết tin tức."],
+  ["↗", "Xem website", "/", "Mở website đang chạy."],
 ];
 
 export default function AdminDashboard() {
   return (
     <AdminShell>
       <div className={styles.content}>
-        <header className={styles.heading}><div><span className={styles.kicker}>NGHIENG COMPLEX / ADMIN</span><h1>Dashboard</h1><p>Tổng quan nội dung và các khu vực đang được quản lý.</p></div><Link className={styles.preview} href="/" target="_blank" rel="noreferrer">↗ Xem website</Link></header>
-        <div className={styles.stats}><article><strong>{ADMIN_PAGES.length}</strong><span>Trang public</span></article><article><strong>06</strong><span>Lĩnh vực cốt lõi</span></article><article><strong>08+</strong><span>Khu vực quản trị</span></article><article><strong className={styles.online}>●</strong><span>Hệ thống hoạt động</span></article></div>
-        <section><div className={styles.sectionHeader}><h2>Truy cập nhanh</h2><span>Quy trình nội dung</span></div><div className={styles.cards}>{quickLinks.map(([title, href, text], index) => <Link className={styles.card} href={href} key={href}><span>0{index + 1}</span><div><h3>{title}</h3><p>{text}</p></div><b>→</b></Link>)}</div></section>
-        <section className={styles.notice}><div><span className={styles.kicker}>ĐỒNG BỘ NỘI DUNG</span><h2>Quản lý tập trung, xuất bản nhất quán</h2><p>Các thay đổi trong editor trang được lưu theo trình duyệt và phát sự kiện cập nhật ngay cho các trang public đang mở.</p></div><Link href="/admin/pages/trang-chu">Mở editor Trang chủ →</Link></section>
+        <header className={styles.heading}>
+          <div><h1>Dashboard</h1><p>Tổng quan nội dung website Nghieng Complex.</p></div>
+        </header>
+        <div className={styles.stats}>
+          {stats.map(([icon, value, label]) => <article key={label}><i aria-hidden="true">{icon}</i><strong>{value}</strong><span>{label}</span></article>)}
+        </div>
+        <section>
+          <div className={styles.sectionHeader}><h2>Truy cập nhanh</h2><span>Quy trình nội dung</span></div>
+          <div className={styles.cards}>
+            {quickLinks.map(([icon, title, href, text]) => <Link className={styles.card} href={href} key={href} target={href === "/" ? "_blank" : undefined} rel={href === "/" ? "noreferrer" : undefined}><span aria-hidden="true">{icon}</span><div><h3>{title}</h3><p>{text}</p></div></Link>)}
+          </div>
+        </section>
       </div>
     </AdminShell>
   );
