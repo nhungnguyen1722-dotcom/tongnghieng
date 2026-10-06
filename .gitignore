@@ -24,6 +24,13 @@
 .DS_Store
 *.pem
 
+# local source exports and scratch helpers
+/tailieugoc/
+/tongnghieng/
+/.codex-reset-passwords.mjs
+/sync-db.mjs
+/backup_postgis_tong_nghieng_before_sync.json
+
 # debug
 npm-debug.log*
 yarn-debug.log*
