@@ -1,11 +1,19 @@
-import { CMS_SEEDS, type CmsCollection, type CmsRecord, type CmsRecordMap } from "./cms-data";
+import { CMS_SEEDS, normalizeNewsCategory, type CmsArticle, type CmsCollection, type CmsRecord, type CmsRecordMap } from "./cms-data";
 
 export async function loadCmsRecords<K extends CmsCollection>(collection: K): Promise<CmsRecordMap[K][]> {
   try {
     const response = await fetch("/api/cms/" + collection, { cache: "no-store" });
     if (!response.ok) throw new Error("CMS request failed with status " + response.status);
     const result = await response.json() as { items?: CmsRecordMap[K][] };
-    if (Array.isArray(result.items)) return result.items;
+    if (Array.isArray(result.items)) {
+      if (collection === "news") {
+        return result.items.map((item) => {
+          const article = item as CmsArticle;
+          return { ...article, category: normalizeNewsCategory(article.category) } as CmsRecordMap[K];
+        });
+      }
+      return result.items;
+    }
   } catch {
     // Keep CMS-backed content empty when the shared source is unavailable.
   }
@@ -31,6 +39,9 @@ export async function saveCmsRecords<K extends CmsCollection>(collection: K, ite
 }
 
 export function fallbackCmsRecords<K extends CmsCollection>(collection: K) {
+  if (collection === "news") {
+    return CMS_SEEDS.news.map((item) => ({ ...item, category: normalizeNewsCategory(item.category) })) as CmsRecordMap[K][];
+  }
   return CMS_SEEDS[collection] as CmsRecordMap[K][];
 }
 

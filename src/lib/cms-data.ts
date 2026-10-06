@@ -95,6 +95,17 @@ export type CmsArticle = {
   order: number;
 };
 
+export function normalizeNewsCategory(value: string | null | undefined) {
+  const category = value?.trim() ?? "";
+  const normalized = category
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/đ/g, "d")
+    .replace(/Đ/g, "D")
+    .toLocaleLowerCase("vi-VN");
+  return !category || ["chua phan loai", "uncategorized", "unclassified"].includes(normalized) ? "Tin tức" : category;
+}
+
 export type CmsMenuItem = {
   id: string;
   label: string;

@@ -6,7 +6,7 @@ import Link from "next/link";
 import AdminShell, { useAdminRole } from "@/app/admin/AdminShell";
 import MediaPicker from "./MediaPicker";
 import { loadCmsRecords, saveCmsRecords } from "@/lib/cms-client";
-import { CMS_SEEDS, type CmsCollection, type CmsRecord } from "@/lib/cms-data";
+import { CMS_SEEDS, normalizeNewsCategory, type CmsCollection, type CmsRecord } from "@/lib/cms-data";
 import styles from "./admin-cms-manager.module.css";
 import pagingStyles from "./admin-cms-pagination.module.css";
 import richStyles from "./rich-text-editor.module.css";
@@ -104,7 +104,7 @@ function freshRecord(section: AdminCmsSection, order: number): Record<string, un
     case "tour-categories": return { ...base, slug: "", title: "", description: "", image: "", active: true };
     case "venues": return { ...base, slug: "", title: "", kind: "restaurant", category: "nha-hang", location: "", address: "", summary: "", description: "", quote: "", rating: 0, reviewCount: 0, priceFrom: 0, state: "draft", image: "", gallery: [], amenities: [], rooms: [], checkIn: "", checkOut: "", seoTitle: "", seoDescription: "" };
     case "venue-categories": return { ...base, slug: "", title: "", kind: "restaurant", description: "", active: true };
-    case "news": return { ...base, slug: "", title: "", summary: "", body: "", category: "Tin hoạt động", status: "draft", active: true, date: new Date().toISOString().slice(0, 10), image: "", relatedIds: [], isDemo: false };
+    case "news": return { ...base, slug: "", title: "", summary: "", body: "", category: "Tin tức", status: "draft", active: true, date: new Date().toISOString().slice(0, 10), image: "", relatedIds: [], isDemo: false };
     case "projects": return { ...base, slug: "", title: "", summary: "", body: "", category: "", status: "Ý tưởng", active: true, date: new Date().toISOString().slice(0, 10), image: "", relatedIds: [], isDemo: true };
     case "menu": return { ...base, label: "", url: "/", parentId: "", target: "_self", active: true, kind: "link" };
     case "library": return { ...base, title: "", type: "PDF", category: "Danh mục tin tức", url: "", status: "published" };
@@ -286,7 +286,7 @@ function AdminCmsManagerContent({ section }: { section: AdminCmsSection }) {
 
   const filterOptions = section === "tours" ? CMS_SEEDS.tourCategories.map((item) => ({ value: item.slug, label: item.title }))
     : section === "venues" ? CMS_SEEDS.venueCategories.map((item) => ({ value: item.kind, label: item.title }))
-    : section === "news" ? [...new Set(items.map((item) => String(item.category ?? "").trim()).filter(Boolean))].map((value) => ({ value, label: value }))
+    : section === "news" ? [...new Set(items.map((item) => normalizeNewsCategory(String(item.category ?? ""))))].map((value) => ({ value, label: value }))
     : section === "library" ? mediaTypes.map((value) => ({ value, label: value }))
     : section === "users" ? ["Admin", "User"].map((value) => ({ value, label: value }))
     : [];

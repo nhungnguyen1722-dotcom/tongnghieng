@@ -4,11 +4,12 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { loadCmsRecords } from "@/lib/cms-client";
-import { CMS_SEEDS, PUBLIC_IMAGES, type CmsArticle, type CmsTour, type CmsVenue, type VenueKind } from "@/lib/cms-data";
+import { CMS_SEEDS, PUBLIC_IMAGES, normalizeNewsCategory, type CmsArticle, type CmsTour, type CmsVenue, type VenueKind } from "@/lib/cms-data";
 import { hydratePageContent, readPageContent, TRAVEL_FACILITY_ITEMS, type AdminPageContent } from "@/app/admin/page-data";
 import SiteFooter from "./SiteFooter";
 import SiteHeader from "./SiteHeader";
 import styles from "./catalog-pages.module.css";
+import newsStyles from "./news-listing.module.css";
 
 const money = (value: number) => new Intl.NumberFormat("vi-VN").format(value) + "đ";
 
@@ -223,17 +224,36 @@ export function VenueHubPage() {
   );
 }
 
+const DEFAULT_NEWS_CATEGORIES = ["Tập đoàn", "Hệ sinh thái", "Dự án", "Hợp tác", "Sự kiện", "Cộng đồng", "Tin tức"];
+
+function normalizeNewsText(value: string | null | undefined) {
+  return (value ?? "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/đ/g, "d")
+    .replace(/Đ/g, "D")
+    .toLocaleLowerCase("vi-VN")
+    .trim()
+    .replace(/\s+/g, " ");
+}
+
+function formatNewsDate(value: string) {
+  const match = /^(\d{4})-(\d{1,2})-(\d{1,2})$/.exec(value);
+  return match ? `${Number(match[3])}/${Number(match[2])}/${match[1]}` : value;
+}
+
 export function EditorialListingPage({ kind }: { kind: "news" | "projects" }) {
   const initial = kind === "news" ? CMS_SEEDS.news : CMS_SEEDS.projects;
   const pageContent = useManagedPageContent(kind === "news" ? "tin-tuc" : "du-an");
   const [items, setItems] = useState<CmsArticle[]>(initial);
   const [page, setPage] = useState(1);
-  const pageSize = 3;
+  const news = kind === "news";
+  const [selectedCategory, setSelectedCategory] = useState("Tất cả");
+  const [search, setSearch] = useState("");
+  const pageSize = news ? 9 : 3;
   useEffect(() => {
     loadCmsRecords(kind).then((records) => setItems(records.filter((item) => item.active && item.status !== "draft").sort((a, b) => a.order - b.order)));
   }, [kind]);
-  const visible = items.slice((page - 1) * pageSize, page * pageSize);
-  const news = kind === "news";
   const base = news ? "/tin-tuc/" : "/du-an/";
   const activeSlide = pageContent?.sliders.find((slide) => slide.enabled);
 
@@ -243,20 +263,82 @@ export function EditorialListingPage({ kind }: { kind: "news" | "projects" }) {
     document.querySelector('meta[name="description"]')?.setAttribute("content", pageContent.description);
   }, [pageContent]);
 
+  const categories = useMemo(() => {
+    const seen = new Set(DEFAULT_NEWS_CATEGORIES.map(normalizeNewsText));
+    const additional = items.reduce<string[]>((result, item) => {
+      const category = normalizeNewsCategory(item.category);
+      if (category && !seen.has(normalizeNewsText(category))) {
+        seen.add(normalizeNewsText(category));
+        result.push(category);
+      }
+      return result;
+    }, []);
+    return [...DEFAULT_NEWS_CATEGORIES, ...additional];
+  }, [items]);
+  const filteredItems = useMemo(() => {
+    if (!news) return items;
+    const query = normalizeNewsText(search);
+    return items.filter((item) => {
+      const category = normalizeNewsCategory(item.category);
+      const matchesCategory = selectedCategory === "Tất cả" || normalizeNewsText(category) === normalizeNewsText(selectedCategory);
+      const searchableText = normalizeNewsText([item.title, item.summary, category, item.body?.replace(/<[^>]*>/g, " ")].join(" "));
+      return matchesCategory && (!query || searchableText.includes(query));
+    });
+  }, [items, news, search, selectedCategory]);
+  const pageCount = Math.max(1, Math.ceil(filteredItems.length / pageSize));
+  const currentPage = Math.min(page, pageCount);
+  const visible = filteredItems.slice((currentPage - 1) * pageSize, currentPage * pageSize);
   if (pageContent?.active === false) return <main className={styles.site}><SiteHeader /><section className={styles.section}><h1>{pageContent.name}</h1><p>Trang hiện chưa được xuất bản.</p></section><SiteFooter /></main>;
 
   return (
     <main className={styles.site}>
       <SiteHeader />
-      <ListingHero title={activeSlide?.title || (news ? "TIN TỨC & SỰ KIỆN" : "DỰ ÁN & CƠ HỘI HỢP TÁC")} description={activeSlide?.description || pageContent?.description || (news ? "Những cập nhật, góc nhìn và hoạt động của Nghieng Complex." : "Kết nối ý tưởng, đối tác và cơ hội phát triển có trách nhiệm.")} image={activeSlide?.image || (news ? PUBLIC_IMAGES[2] : PUBLIC_IMAGES[0])} eyebrow="NGHIENG COMPLEX" />
+      {news ? (
+        <section className={newsStyles.hero} aria-labelledby="news-title">
+          <div className={newsStyles.heroContent}>
+            <p className={newsStyles.eyebrow}><span aria-hidden="true" />TIN TỨC &amp; SỰ KIỆN</p>
+            <h1 id="news-title">TIN <span>TỨC</span></h1>
+          </div>
+        </section>
+      ) : (
+        <ListingHero title={activeSlide?.title || "DỰ ÁN & CƠ HỘI HỢP TÁC"} description={activeSlide?.description || pageContent?.description || "Kết nối ý tưởng, đối tác và cơ hội phát triển có trách nhiệm."} image={activeSlide?.image || PUBLIC_IMAGES[0]} eyebrow="NGHIENG COMPLEX" />
+      )}
       {pageContent?.sections.some((section) => section.enabled) && <section className={styles.section} aria-label="Nội dung trang được quản lý từ Admin"><div className={styles.editorialGrid}>{pageContent.sections.filter((section) => section.enabled).map((section, index) => <article className={styles.editorialCard} key={section.id}>{section.image && <div className={styles.editorialImage}><img src={section.image} alt="" /></div>}<div className={styles.editorialBody}><span>0{index + 1} / NGHIENG COMPLEX</span><h3>{section.title}</h3>{section.description && <p>{section.description}</p>}{section.body && <p>{section.body}</p>}{section.ctaLabel && <Link className={styles.textLink} href={section.ctaUrl || "/lien-he"}>{section.ctaLabel}</Link>}</div></article>)}</div></section>}
       <section id="catalog" className={styles.section}>
-        <div className={styles.sectionHeading}><div><p className={styles.eyebrow}>{news ? "CẬP NHẬT" : "CÙNG KIẾN TẠO"}</p><h2>{news ? "Bài viết mới nhất" : "Dự án đang kết nối"}</h2></div><span>{items.length} nội dung</span></div>
-        <div className={styles.editorialGrid}>{visible.map((item) => <article className={styles.editorialCard} key={item.id}>
-          <Link className={styles.editorialImage} href={base + item.slug}><img src={item.image} alt="" loading="lazy" /></Link>
-          <div className={styles.editorialBody}><span>{item.category} · {item.date}</span><h3><Link href={base + item.slug}>{item.title}</Link></h3><p>{item.summary}</p><b className={styles.status}>{news ? "Bài viết" : item.status}</b><Link className={styles.textLink} href={base + item.slug}>Xem chi tiết <span aria-hidden="true">→</span></Link></div>
-        </article>)}</div>
-        <Pagination page={page} count={Math.max(1, Math.ceil(items.length / pageSize))} onPage={setPage} />
+        {news ? (
+          <div className={newsStyles.filters}>
+            <label className={newsStyles.searchBox}>
+              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="11" cy="11" r="8" />
+                <path d="m21 21-4.3-4.3" />
+              </svg>
+              <input type="search" value={search} onChange={(event) => { setSearch(event.target.value); setPage(1); }} placeholder="Tìm kiếm tin tức..." aria-label="Tìm kiếm tin tức" />
+            </label>
+            <div className={newsStyles.tabs} role="group" aria-label="Danh mục tin tức">
+              {["Tất cả", ...categories].map((category) => (
+                <button key={category} type="button" aria-pressed={selectedCategory === category} className={selectedCategory === category ? newsStyles.tabActive : ""} onClick={() => { setSelectedCategory(category); setPage(1); }}>
+                  {category}
+                </button>
+              ))}
+            </div>
+          </div>
+        ) : (
+          <div className={styles.sectionHeading}><div><p className={styles.eyebrow}>CÙNG KIẾN TẠO</p><h2>Dự án đang kết nối</h2></div><span>{items.length} nội dung</span></div>
+        )}
+        <div className={`${styles.editorialGrid}${news ? ` ${newsStyles.grid}` : ""}`}>
+          {visible.map((item) => <article className={`${styles.editorialCard}${news ? ` ${newsStyles.card}` : ""}`} key={item.id}>
+            <Link className={`${styles.editorialImage}${news ? ` ${newsStyles.image}` : ""}`} href={base + item.slug}><img src={item.image} alt={item.title} loading="lazy" /></Link>
+            <div className={`${styles.editorialBody}${news ? ` ${newsStyles.body}` : ""}`}>
+              {news ? <div className={newsStyles.meta}><span>{normalizeNewsCategory(item.category)}</span><time dateTime={item.date}>{formatNewsDate(item.date)}</time></div> : <span>{item.category} · {item.date}</span>}
+              <h3><Link href={base + item.slug}>{item.title}</Link></h3>
+              <p>{item.summary}</p>
+              {!news && <b className={styles.status}>{item.status}</b>}
+              <Link className={styles.textLink} href={base + item.slug}>{news ? "Đọc tiếp" : "Xem chi tiết"} <span aria-hidden="true">→</span></Link>
+            </div>
+          </article>)}
+        </div>
+        {!visible.length && <p className={styles.empty}>{news ? (search.trim() ? "Không tìm thấy tin tức phù hợp." : "Chưa có tin tức trong danh mục này.") : "Chưa có dự án được xuất bản."}</p>}
+        <Pagination page={currentPage} count={pageCount} onPage={setPage} />
       </section>
       <SiteFooter />
     </main>
