@@ -18,6 +18,31 @@ const heroImages = [
   "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9ddb1ea9d_banner-trang-chu-nghieng.webp",
 ];
 
+function sanitizeArticleHtml(html: string) {
+  const allowed = new Set(["p", "br", "strong", "b", "em", "i", "h2", "h3", "h4", "ul", "ol", "li", "a", "img", "figure", "figcaption", "blockquote", "hr"]);
+  const withoutActiveContent = html
+    .replace(/<!--[\s\S]*?-->/g, "")
+    .replace(/<(script|style|iframe|object|svg|math|form)\b[^>]*>[\s\S]*?<\/\1\s*>/gi, "");
+
+  return withoutActiveContent.replace(/<\/?([a-z][\w:-]*)\b([^>]*)>/gi, (tagMarkup, rawName: string, attributes: string) => {
+    const name = rawName.toLowerCase();
+    if (!allowed.has(name)) return "";
+    if (tagMarkup.startsWith("</")) return `</${name}>`;
+    if (name === "a") {
+      const href = attributes.match(/\bhref\s*=\s*(["'])(.*?)\1/i)?.[2] || "";
+      const safeHref = /^(https?:\/\/|\/)/i.test(href) && !/^\/\//.test(href) ? href : "";
+      return safeHref ? `<a href="${safeHref.replace(/"/g, "&quot;")}" target="_blank" rel="noopener noreferrer">` : "<a>";
+    }
+    if (name === "img") {
+      const src = attributes.match(/\bsrc\s*=\s*(["'])(.*?)\1/i)?.[2] || "";
+      const safeSrc = /^(https:\/\/|\/api\/media-assets\/)/i.test(src) ? src : "";
+      const alt = attributes.match(/\balt\s*=\s*(["'])(.*?)\1/i)?.[2] || "";
+      return safeSrc ? `<img src="${safeSrc.replace(/"/g, "&quot;")}" alt="${alt.replace(/"/g, "&quot;")}" loading="lazy" />` : "";
+    }
+    return ["br", "hr"].includes(name) ? `<${name} />` : `<${name}>`;
+  });
+}
+
 const ecosystemLinks = [
   ["Nghieng Travel", "/nghieng-travel"],
   ["Khoáng sản", "/khoang-san"],
@@ -71,7 +96,9 @@ export default function PublicContentPage({ slug, name, path }: { slug: string; 
         <nav className={editorialStyles.breadcrumb}><Link href="/">Trang chủ</Link><span>/</span><Link href={editorialKind === "news" ? "/tin-tuc" : "/du-an"}>{editorialKind === "news" ? "Tin tức" : "Dự án"}</Link><span>/</span><span>{editorialArticle.title}</span></nav>
         <header><span>{editorialArticle.category} · {editorialArticle.date}</span><h1>{editorialArticle.title}</h1><p>{editorialArticle.summary}</p>{editorialArticle.isDemo && <small>Dữ liệu minh họa</small>}</header>
         {editorialArticle.image && <img className={editorialStyles.cover} src={editorialArticle.image} alt={editorialArticle.title} />}
-        <div className={editorialStyles.body}>{editorialArticle.body.split(/\n\s*\n/).filter(Boolean).map((paragraph, index) => <p key={index}>{paragraph}</p>)}</div>
+        {/<(?:p|div|h[1-6]|img|ul|ol|figure|blockquote|table)\b/i.test(editorialArticle.body)
+          ? <div className={editorialStyles.body} dangerouslySetInnerHTML={{ __html: sanitizeArticleHtml(editorialArticle.body) }} />
+          : <div className={editorialStyles.body}>{editorialArticle.body.split(/\n\s*\n/).filter(Boolean).map((paragraph, index) => <p key={index}>{paragraph}</p>)}</div>}
       </article>
       <section className={editorialStyles.related}><div><span>NỘI DUNG LIÊN QUAN</span><h2>{editorialKind === "news" ? "Tin tức liên quan" : "Dự án liên quan"}</h2></div><div className={editorialStyles.relatedGrid}>{relatedArticles.map((item) => <Link href={(editorialKind === "news" ? "/tin-tuc/" : "/du-an/") + item.slug} key={item.id}><img src={item.image} alt="" /><span>{item.category} · {item.date}</span><h3>{item.title}</h3><p>{item.summary}</p></Link>)}</div></section>
       <SiteFooter />
