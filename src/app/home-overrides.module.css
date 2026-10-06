@@ -309,17 +309,43 @@ html[data-theme="light"] .sectorBody p{color:#344253}
 .home > .chairmanSection,
 .home > .visionSection,
 .home > .communitySection{
+  display:block;
   width:100%;
   max-width:none;
   margin:0;
   padding:0;
   background:#06243D;
 }
+.home .chairmanSection .sectionContainer,
+.home .visionSection .sectionContainer,
+.home .communitySection .sectionContainer{
+  box-sizing:border-box;
+  width:100%;
+  max-width:1280px;
+  margin:0 auto;
+  background:transparent;
+}
+.home .visionSection .sectionContainer,
+.home .communitySection .sectionContainer{padding:104px 24px}
 .home :global([class*="__communityList"]) div{background:#06243D}
+:global(html[data-theme="light"]) .home > .chairmanSection,
+:global(html[data-theme="light"]) .home > .communitySection{background:#F5F7F8!important;color:#03172B}
+:global(html[data-theme="light"]) .home > .visionSection{background:#FFFFFF!important;color:#03172B}
+:global(html[data-theme="light"]) .home .chairmanSection .sectionContainer,
+:global(html[data-theme="light"]) .home .visionSection .sectionContainer,
+:global(html[data-theme="light"]) .home .communitySection .sectionContainer{background:transparent!important}
+:global(html[data-theme="light"]) .home .visionSection .sectionContainer,
+:global(html[data-theme="light"]) .home .communitySection .sectionContainer{padding:104px 24px}
+:global(html[data-theme="light"]) .home .visionSection :global([class*="__timeline"]) article{background:#F5F7F8;color:#03172B}
+:global(html[data-theme="light"]) .home .communitySection :global([class*="__communityList"]) div{background:#FFFFFF;color:#03172B}
 @media(max-width:720px){
   .home > .chairmanSection,
   .home > .visionSection,
   .home > .communitySection{padding:0}
+  .home .chairmanSection .sectionContainer,
+  .home .visionSection .sectionContainer,
+  .home .communitySection .sectionContainer{padding:76px 20px}
+  .home .chairmanSection .sectionContainer{grid-template-columns:1fr;gap:40px}
 }
 :global(html[data-theme="light"]) .home :global([class*="__communityList"]) div{background:#03172B}.home :global([class*="partners"]) :global([class*="sectionHeading"]) h2,
 .home :global([class*="news"]) :global([class*="sectionHeading"]) h2{white-space:nowrap;color:var(--public-text);font-size:clamp(16px,4.2vw,36px)}
