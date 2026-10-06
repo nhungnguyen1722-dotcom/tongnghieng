@@ -1,4 +1,14 @@
 .home{--navy:var(--public-bg);--deep:var(--public-panel);--gold:var(--public-gold);--teal:var(--public-cyan);background:var(--public-bg);color:var(--public-text)}
+.home :global([class*="__partners"]) :global([class*="__sectionHeading"]) h2 strong,
+.home :global([class*="__news"]) :global([class*="__sectionHeading"]) h2 strong{display:inline}
+:global(html:not([data-theme="light"])) .visionSection,
+:global(html:not([data-theme="light"])) .communitySection{padding:0 24px;background:#03172B}
+:global(html:not([data-theme="light"])) .sectionContainer{width:min(1120px,100%);margin:0 auto;background:#06243D}
+:global(html:not([data-theme="light"])) .home :global([class*="__timeline"]) article,
+:global(html:not([data-theme="light"])) .home :global([class*="__communityList"]) div{background:#06243D}
+:global(html[data-theme="light"]) .visionSection,
+:global(html[data-theme="light"]) .communitySection{padding:0 24px;background:var(--public-bg)}
+:global(html[data-theme="light"]) .sectionContainer{background:var(--public-panel)}
 .legacyNav,.legacyFooter{display:none}
 .ecoCard :global([class*="__cardCopy"]){transition:background .25s,color .25s}
 .ecoCard:hover{border-color:#F5F7F8}.ecoCard:hover :global([class*="__cardCopy"]){background:#F5F7F8;color:#03172B}
@@ -76,7 +86,7 @@ html[data-theme="light"] .sectorBody p{color:#344253}
 :global(html[data-theme="light"]) .home .hero a[class*="__button"]{color:#03172B!important}
 .home :global([class*="__chairman"]),
 .home :global([class*="__community"]){padding-right:24px;padding-left:24px}
-.slogan span{font-size:18px;font-weight:800;letter-spacing:.2em;line-height:1.8}
+.slogan span{font-family:"Inter Tight",Inter,system-ui,sans-serif;font-size:18px;font-weight:800;letter-spacing:.2em;line-height:1.8}
 .slogan i{padding:0 8px;color:#25CBD3;font-style:normal}
 .ecosystemDetails{display:flex;width:min(420px,100%);align-items:center;justify-content:space-between;gap:18px;margin:0 auto;color:var(--public-text)}
 .ecosystemDetails>div>span{color:var(--public-gold);font-size:9px;font-weight:800;letter-spacing:.18em}
@@ -210,6 +220,34 @@ html[data-theme="light"] .sectorBody p{color:#344253}
 .home :global([class*="__ecoCard"]) :global([class*="__cardCopy"])>b{font-size:12px}
 .home :global([class*="__newsCard"]) h3{font-size:18px}
 .home :global([class*="__newsCard"]) span{font-size:12px}
+.home .newsTitle{font-size:30px;line-height:1.15}
+.home .newsCard h3{margin:8px 0 6px;font-size:15px}
+.home .newsCard .newsMeta{font-size:inherit}
+.home .newsCard .newsMeta b{font-size:10px}
+.home .newsCard .newsMeta time{font-size:9px}
+.home .newsCard p{font-size:12px}
+.home .newsListing{font-size:11px}
+.home .chairmanSection{width:100%;background:#06243D}
+.home .chairmanSection .sectionContainer{background:transparent}
+:global(html[data-theme="light"]) .home .chairmanSection{background:#F5F7F8;color:#03172B}
+:global(html[data-theme="light"]) .home .chairmanSection .sectionContainer{background:transparent}
+.home .chairmanSection .sectionContainer{display:grid;width:min(1280px,100%);grid-template-columns:minmax(0,2fr) minmax(0,3fr);align-items:center;gap:48px;padding:112px 24px}
+.home .chairmanSection .chairmanPhoto{width:min(100%,384px)!important;min-height:0!important;aspect-ratio:4/5;justify-self:center;overflow:visible;border:0;border-radius:16px;background:linear-gradient(135deg,#0D1B3E,#03172B)!important;box-shadow:0 0 22px rgba(201,162,39,.25)}
+.home .chairmanSection .chairmanPhoto:after{inset:0;border:1px solid rgba(201,162,39,.5);border-radius:16px;background:linear-gradient(135deg,rgba(215,168,74,.04),transparent 55%)}
+.home .portraitIcon{display:grid;width:128px;height:128px;place-items:center;border:2px solid rgba(201,162,39,.4);border-radius:50%;background:rgba(201,162,39,.2);color:#C9A227}
+.home .portraitContent{position:relative;z-index:1;display:flex;width:100%;height:100%;flex-direction:column;align-items:center;justify-content:center;gap:16px;text-align:center}
+.home .portraitIcon svg{width:48px;height:48px}
+.home .portrait small{color:rgba(255,255,255,.45);font-size:12px}
+.home .portraitQuote{position:absolute;z-index:2;right:-15px;bottom:-15px;display:grid;width:40px;height:40px;place-items:center;border-radius:50%;background:#06243D;color:#C9A227;font-family:Georgia,serif;font-size:37px;line-height:1}
+.home .chairmanSection blockquote{max-width:none;margin:0 0 24px;color:rgba(255,255,255,.82);font-size:24px;font-style:italic;line-height:1.65}
+.home .chairmanSection .signature{display:block;margin:0 0 4px;color:#fff;font-size:18px;font-weight:800}
+.home .chairmanTitle{margin:0 0 24px;color:#C9A227;font-size:14px;font-weight:600}
+.home .chairmanSection .textLink{margin:0;padding:14px 28px;border:0;border-radius:9px;background:linear-gradient(90deg,#C9A227,#E8C84A);box-shadow:0 0 0 rgba(201,162,39,0);color:#0D1B3E;font-size:14px;font-weight:800;transition:box-shadow .2s,transform .2s}
+.home .chairmanSection .textLink:hover{box-shadow:0 12px 28px rgba(201,162,39,.25);transform:translateY(-1px)}
+:global(html[data-theme="light"]) .home .chairmanSection blockquote{color:#243044}
+:global(html[data-theme="light"]) .home .chairmanSection .signature{color:#03172B}
+:global(html[data-theme="light"]) .home .chairmanTitle{color:#96701B}
+@media(max-width:720px){.home .chairmanSection .sectionContainer{grid-template-columns:1fr;gap:40px;padding:76px 24px}.home .chairmanSection .chairmanPhoto{width:min(100%,320px)!important}.home .chairmanSection blockquote{font-size:21px}}
 .home :global([class*="__chairman"]) blockquote{font-size:20px}
 .home :global([class*="__vision"]) li{font-size:16px}
 .home :global([class*="__timeline"]) b{font-size:24px}
@@ -244,6 +282,7 @@ html[data-theme="light"] .sectorBody p{color:#344253}
   .home :global([class*="__slogan"]) span{font-size:36px}
   .home :global([class*="__stats"]) b{font-size:48px}
   .home :global([class*="__chairman"]) blockquote{font-size:24px}
+  .home .newsTitle{font-size:30px}
 }
 @media(min-width:1101px){
   .home header :global([class*="__navigation"])>a,
@@ -265,3 +304,29 @@ html[data-theme="light"] .sectorBody p{color:#344253}
 .home :global([class*="__community"]) h2 strong{display:inline;color:inherit}
 .home :global([class*="__vision"]) h2{white-space:nowrap;font-size:clamp(18px,3.2vw,36px)}
 .home :global([class*="__vision"]) h2 strong{display:inline}
+
+/* Preserve pending responsive section and heading refinements from the repo copy. */
+.home :global([class*="__chairman"]),
+.home :global([class*="__vision"]),
+.home :global([class*="__community"]){
+  width:100%;
+  max-width:none;
+  margin:0;
+  padding-right:max(24px,calc((100% - 1120px)/2));
+  padding-left:max(24px,calc((100% - 1120px)/2));
+  background:#06243D;
+}
+.home :global([class*="__communityList"]) div{background:#06243D}
+@media(max-width:720px){
+  .home :global([class*="__chairman"]),
+  .home :global([class*="__vision"]),
+  .home :global([class*="__community"]){
+    display:block;
+    padding:75px 20px;
+  }
+}
+:global(html[data-theme="light"]) .home :global([class*="__communityList"]) div{background:#03172B}
+.home :global([class*="partners"]) :global([class*="sectionHeading"]) h2,
+.home :global([class*="news"]) :global([class*="sectionHeading"]) h2{white-space:nowrap;color:var(--public-text);font-size:clamp(16px,4.2vw,36px)}
+.home :global([class*="partners"]) :global([class*="sectionHeading"]) h2 strong,
+.home :global([class*="news"]) :global([class*="sectionHeading"]) h2 strong{display:inline;color:inherit}

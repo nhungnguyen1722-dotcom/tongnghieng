@@ -40,6 +40,39 @@ html[data-theme] body * {
   transition: color .25s ease, background-color .25s ease, border-color .25s ease, transform .25s ease;
 }
 
+html:not([data-theme="light"]) [class*="__chairmanSection"],
+html:not([data-theme="light"]) [class*="__visionSection"],
+html:not([data-theme="light"]) [class*="__communitySection"] {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #06243D !important;
+}
+
+html:not([data-theme="light"]) [class*="__sectionContainer"] {
+  width: min(1120px, 100%);
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  background-color: #06243D !important;
+}
+
+html:not([data-theme="light"]) [class*="__timeline"] article,
+html:not([data-theme="light"]) [class*="__communityList"] > div {
+  background-color: #06243D !important;
+}
+
+html[data-theme="light"] [class*="__chairmanSection"],
+html[data-theme="light"] [class*="__visionSection"],
+html[data-theme="light"] [class*="__communitySection"] {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: var(--public-bg) !important;
+}
+
+html[data-theme="light"] [class*="__sectionContainer"] {
+  background-color: var(--public-panel) !important;
+}
+
 html[data-theme="light"] [class*="site-footer_footer__"] {
   background: var(--public-panel);
   color: var(--public-text);
