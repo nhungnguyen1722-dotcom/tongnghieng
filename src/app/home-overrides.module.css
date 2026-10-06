@@ -305,28 +305,23 @@ html[data-theme="light"] .sectorBody p{color:#344253}
 .home :global([class*="__vision"]) h2{white-space:nowrap;font-size:clamp(18px,3.2vw,36px)}
 .home :global([class*="__vision"]) h2 strong{display:inline}
 
-/* Preserve pending responsive section and heading refinements from the repo copy. */
-.home :global([class*="__chairman"]),
-.home :global([class*="__vision"]),
-.home :global([class*="__community"]){
+/* Keep full-width section backgrounds without applying container padding to inner grids. */
+.home > .chairmanSection,
+.home > .visionSection,
+.home > .communitySection{
   width:100%;
   max-width:none;
   margin:0;
-  padding-right:max(24px,calc((100% - 1120px)/2));
-  padding-left:max(24px,calc((100% - 1120px)/2));
+  padding:0;
   background:#06243D;
 }
 .home :global([class*="__communityList"]) div{background:#06243D}
 @media(max-width:720px){
-  .home :global([class*="__chairman"]),
-  .home :global([class*="__vision"]),
-  .home :global([class*="__community"]){
-    display:block;
-    padding:75px 20px;
-  }
+  .home > .chairmanSection,
+  .home > .visionSection,
+  .home > .communitySection{padding:0}
 }
-:global(html[data-theme="light"]) .home :global([class*="__communityList"]) div{background:#03172B}
-.home :global([class*="partners"]) :global([class*="sectionHeading"]) h2,
+:global(html[data-theme="light"]) .home :global([class*="__communityList"]) div{background:#03172B}.home :global([class*="partners"]) :global([class*="sectionHeading"]) h2,
 .home :global([class*="news"]) :global([class*="sectionHeading"]) h2{white-space:nowrap;color:var(--public-text);font-size:clamp(16px,4.2vw,36px)}
 .home :global([class*="partners"]) :global([class*="sectionHeading"]) h2 strong,
 .home :global([class*="news"]) :global([class*="sectionHeading"]) h2 strong{display:inline;color:inherit}
