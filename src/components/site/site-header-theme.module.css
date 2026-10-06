@@ -7,7 +7,7 @@
 :global(html[data-theme="light"]) .themeable nav .active{color:#14B8B1}
 :global(html[data-theme="light"]) .themeable nav details>div{background:#FFFFFF}
 :global(html[data-theme="light"]) .themeable nav details>div a{color:#03172B}
-:global(html[data-theme="light"]) .themeable nav details>div a:hover{background:#EAF0F2;color:#14B8B1}
+:global(html[data-theme="light"]) .themeable nav details>div a:hover{background:#F5F7F8;color:#14B8B1}
 :global(html[data-theme="light"]) .themeable>button,
 :global(html[data-theme="light"]) .themeable>div>button{border-color:rgba(3,23,43,.28);color:#06243D}
 :global(html[data-theme="light"]) .themeable>nav[class*="navigation"]{background:#F5F7F8}

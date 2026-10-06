@@ -1,3 +1,5 @@
+import adminReferenceSeeds from "./admin-reference-seeds.json";
+
 export type PublishState = "published" | "draft";
 
 export type TourCategory = {
@@ -114,6 +116,9 @@ export type CmsDocument = {
   order: number;
 };
 
+export type CmsLibraryImage = { id: string; title: string; url: string; order: number; active: boolean };
+export type CmsVideo = { id: string; title: string; url: string; description: string; thumbnail: string; order: number; active: boolean };
+
 export type CmsAccount = {
   id: string;
   name: string;
@@ -138,6 +143,7 @@ export type CmsMedia = {
   type: "image" | "logo";
   source: "library" | "external";
   active?: boolean;
+  variant?: "dark" | "light" | "ecosystem";
 };
 
 export type CmsRecordMap = {
@@ -149,6 +155,8 @@ export type CmsRecordMap = {
   projects: CmsArticle;
   menu: CmsMenuItem;
   documents: CmsDocument;
+  libraryImages: CmsLibraryImage;
+  videos: CmsVideo;
   users: CmsAccount;
   media: CmsMedia;
   pageContents: CmsPageContent;
@@ -164,6 +172,7 @@ export const BRAND_LOGOS = [
     title: "Nghieng Complex, nền tối",
     url: "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/7d454ef94_nghieng_complex_logo_dark_transparent.png",
     type: "logo" as const,
+    variant: "dark" as const,
     source: "external" as const,
   },
   {
@@ -172,6 +181,7 @@ export const BRAND_LOGOS = [
     title: "Logo Nghiêng",
     url: "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/6d68e3aa8_logo-nghieng.png",
     type: "logo" as const,
+    variant: "light" as const,
     source: "external" as const,
   },
 ];
@@ -402,14 +412,7 @@ for (const [index, [kind, title, slug, location, summary]] of venueExtras.entrie
   });
 }
 
-const newsItems: CmsArticle[] = [
-  { id: "news-gioi-thieu-to-hop", slug: "gioi-thieu-to-hop", title: "Nghieng Complex: Tổ hợp liên kết đa ngành", summary: "Nghieng Complex kết nối con người, công nghệ và cộng đồng để cùng kiến tạo giá trị bền vững.", body: "Nghieng Complex được định vị là Tổ hợp Liên kết Đa ngành, kết nối các nguồn lực để mỗi lĩnh vực có thể phát triển độc lập và cộng hưởng cùng nhau. Với triết lý Con người – Công nghệ – Cộng đồng, chúng tôi hướng đến những giá trị thiết thực và dài hạn.\n\nThông điệp Kết nối – Cộng hưởng – Kiến tạo Thịnh vượng là nền tảng để Nghieng Complex đồng hành cùng đối tác, thành viên và cộng đồng.", category: "Giới thiệu", status: "published", active: true, date: "2026-06-01", image: PUBLIC_IMAGES[0], relatedIds: [], isDemo: true, order: 1 },
-  { id: "news-thong-diep-chu-tich", slug: "thong-diep-chu-tich", title: "Thông điệp từ Chủ tịch HĐQT – CEO", summary: "Niềm tin, sẻ chia giá trị và phát triển bền vững là nền tảng cho hành trình dài hạn.", body: "Mỗi kết nối có ý nghĩa đều mở ra một cơ hội để cùng tạo ra giá trị lớn hơn. Nghieng Complex tin vào sức mạnh của sự đồng hành, tinh thần sẻ chia và trách nhiệm với cộng đồng.\n\nChúng tôi trân trọng những đối tác cùng chung tầm nhìn, cùng kiến tạo giá trị bằng sự tử tế và hiệu quả.", category: "Thông điệp lãnh đạo", status: "published", active: true, date: "2026-06-08", image: PUBLIC_IMAGES[1], relatedIds: [], isDemo: true, order: 2 },
-  { id: "news-he-sinh-thai-06-linh-vuc", slug: "he-sinh-thai-06-linh-vuc", title: "Hệ sinh thái Nghieng Complex gồm 06 lĩnh vực", summary: "Sáu lĩnh vực kết nối thành một hệ sinh thái đa ngành, cùng mở rộng giá trị cho đối tác và cộng đồng.", body: "Hệ sinh thái Nghieng Complex gồm Nghieng Travel, Khoáng sản, Công nghệ – AI, Phát triển cộng đồng, Giải pháp đồng hành và Nghieng Media.\n\nMỗi lĩnh vực có phạm vi hoạt động riêng, đồng thời chia sẻ nguồn lực và kinh nghiệm để thúc đẩy những cơ hội phát triển bền vững.", category: "Giới thiệu lĩnh vực", status: "published", active: true, date: "2026-06-15", image: PUBLIC_IMAGES[3], relatedIds: [], isDemo: true, order: 3 },
-  { id: "news-muc-tieu-2026-2030", slug: "muc-tieu-2026-2030", title: "Tầm nhìn và mục tiêu 2026–2030", summary: "Lộ trình phát triển tập trung vào năng lực kết nối, chất lượng vận hành và trách nhiệm cộng đồng.", body: "Trong giai đoạn 2026–2030, Nghieng Complex tập trung củng cố năng lực kết nối, hoàn thiện các mô hình hợp tác và mở rộng giá trị bền vững.\n\nCác mục tiêu được triển khai theo từng giai đoạn, gắn với trách nhiệm của mỗi đơn vị và nhu cầu thực tế của cộng đồng.", category: "Định hướng", status: "published", active: true, date: "2026-06-22", image: PUBLIC_IMAGES[2], relatedIds: [], isDemo: true, order: 4 },
-  { id: "news-cong-dong-thien-nguyen", slug: "cong-dong-thien-nguyen", title: "Sẻ chia và nâng đỡ cộng đồng", summary: "Giá trị của hệ sinh thái được thể hiện qua khả năng đồng hành cùng những sáng kiến địa phương.", body: "Giá trị của một hệ sinh thái không chỉ nằm ở quy mô mà còn ở khả năng sẻ chia và nâng đỡ cộng đồng.\n\nNghieng Complex đồng hành cùng đối tác địa phương trong các hoạt động giáo dục, phát triển sinh kế, bảo tồn văn hóa và kết nối nguồn lực thiện nguyện.", category: "Cộng đồng & thiện nguyện", status: "published", active: true, date: "2026-06-29", image: PUBLIC_IMAGES[4], relatedIds: [], isDemo: true, order: 5 },
-  { id: "news-phat-trien-ben-vung", slug: "phat-trien-ben-vung", title: "Kết nối giá trị mới trong hệ sinh thái Nghieng", summary: "Góc nhìn về cách các lĩnh vực cùng cộng hưởng để tạo giá trị dài hạn.", body: "Phát triển bền vững bắt đầu từ việc kết nối đúng nguồn lực, lắng nghe nhu cầu địa phương và tạo ra những mô hình hợp tác có trách nhiệm.\n\nNghieng Complex tiếp tục xây dựng hệ sinh thái nơi con người, doanh nghiệp, công nghệ và cộng đồng cùng phát triển.", category: "Hoạt động", status: "published", active: true, date: "2026-07-06", image: PUBLIC_IMAGES[5], relatedIds: [], isDemo: true, order: 6 },
-];
+const newsItems: CmsArticle[] = adminReferenceSeeds.news as CmsArticle[];
 
 const projectItems: CmsArticle[] = [
   { id: "project-nghieng-travel", slug: "phat-trien-he-sinh-thai-nghieng-travel", title: "Phát triển hệ sinh thái Nghieng Travel", summary: "Kết nối điểm đến, dịch vụ nghỉ dưỡng và các hành trình văn hóa vùng miền.", body: "Dự án kết nối các dịch vụ du lịch, nghỉ dưỡng và trải nghiệm địa phương trong hệ sinh thái Nghieng Travel.\n\nMục tiêu là tạo thêm cơ hội hợp tác giữa doanh nghiệp, điểm đến và cộng đồng. Phạm vi gồm phát triển sản phẩm tour, kết nối cơ sở lưu trú và nâng cao trải nghiệm du khách.\n\nTrạng thái: Triển khai. Đây là dữ liệu minh họa.", category: "Nghieng Travel", status: "Triển khai", active: true, date: "2026-08-01", image: PUBLIC_IMAGES[0], relatedIds: [], isDemo: true, order: 1 },
@@ -423,35 +426,12 @@ projectItems.push(
   { id: "project-digital-operations", slug: "nen-tang-van-hanh-so", title: "Nền tảng hỗ trợ vận hành số", summary: "Khảo sát giải pháp giúp các đơn vị phối hợp và quản lý nội dung hiệu quả.", body: "Sáng kiến xem xét quy trình vận hành và nhu cầu của các đơn vị để đề xuất công cụ số phù hợp.\n\nKhông đưa ra chỉ tiêu tài chính chưa được duyệt. Đây là dữ liệu minh họa.", category: "Công nghệ – AI", status: "Nghiên cứu", active: true, date: "2026-09-10", image: PUBLIC_IMAGES[4], relatedIds: [], isDemo: true, order: 6 },
 );
 
-const menuItems: CmsMenuItem[] = [
-  { id: "menu-home", label: "Trang Chủ", url: "/", parentId: null, target: "_self", active: true, kind: "link", order: 1 },
-  { id: "menu-about", label: "Giới Thiệu", url: "/gioi-thieu", parentId: null, target: "_self", active: true, kind: "link", order: 2 },
-  { id: "menu-ecosystem", label: "Hệ Sinh Thái", url: "/nghieng-travel", parentId: null, target: "_self", active: true, kind: "link", order: 3 },
-  { id: "menu-travel", label: "Nghieng Travel", url: "/nghieng-travel", parentId: "menu-ecosystem", target: "_self", active: true, kind: "link", order: 1 },
-  { id: "menu-mining", label: "Khoáng Sản", url: "/khoang-san", parentId: "menu-ecosystem", target: "_self", active: true, kind: "link", order: 2 },
-  { id: "menu-ai", label: "Công Nghệ – AI", url: "/cong-nghe-ai", parentId: "menu-ecosystem", target: "_self", active: true, kind: "link", order: 3 },
-  { id: "menu-community-growth", label: "Phát Triển Cộng Đồng", url: "/phat-trien-cong-dong", parentId: "menu-ecosystem", target: "_self", active: true, kind: "link", order: 4 },
-  { id: "menu-partner-solutions", label: "Giải Pháp Đồng Hành", url: "/giai-phap-dong-hanh", parentId: "menu-ecosystem", target: "_self", active: true, kind: "link", order: 5 },
-  { id: "menu-media", label: "Nghieng Media", url: "/nghieng-media", parentId: "menu-ecosystem", target: "_self", active: true, kind: "link", order: 6 },
-  { id: "menu-venues", label: "Nhà Hàng – Khách Sạn", url: "/nha-hang-khach-san", parentId: "menu-ecosystem", target: "_self", active: true, kind: "link", order: 7 },
-  { id: "menu-tours", label: "Tour Du Lịch", url: "/tour", parentId: "menu-ecosystem", target: "_self", active: true, kind: "link", order: 8 },
-  { id: "menu-projects", label: "Dự Án", url: "/du-an", parentId: null, target: "_self", active: true, kind: "link", order: 4 },
-  { id: "menu-community", label: "Cộng Đồng", url: "/cong-dong", parentId: null, target: "_self", active: true, kind: "link", order: 5 },
-  { id: "menu-news", label: "Tin Tức", url: "/tin-tuc", parentId: null, target: "_self", active: true, kind: "link", order: 6 },
-  { id: "menu-partners", label: "Đối Tác", url: "/doi-tac", parentId: null, target: "_self", active: true, kind: "link", order: 7 },
-  { id: "menu-contact", label: "Liên Hệ", url: "/lien-he", parentId: null, target: "_self", active: true, kind: "link", order: 8 },
-  { id: "menu-cta", label: "Hợp tác cùng chúng tôi", url: "/lien-he", parentId: null, target: "_self", active: true, kind: "cta", order: 9 },
-];
+const menuItems: CmsMenuItem[] = adminReferenceSeeds.menu as CmsMenuItem[];
 
-const documents: CmsDocument[] = [
-  { id: "doc-tong-nv-n", title: "TỔNG NV&N", type: "PPTX", category: "Slide", url: "https://docs.google.com/presentation/d/1pSB5Vi2SP63PJXbDijva-GPQApliIovS/edit?slide=id.p1#slide=id.p1", status: "published", order: 1 },
-  { id: "doc-welink-community", title: "Mô hình WeLink Community", type: "PPTX", category: "Danh mục tin tức", url: "https://drive.google.com/drive/folders/1vhei3S6fBQaQ6bAKNdXD9LkKghVezRRn?usp=sharing", status: "published", order: 2 },
-  { id: "doc-vhux-khach-hang", title: "SLIDE VHUX Khách hàng", type: "PPTX", category: "Slide", url: "https://drive.google.com/file/d/1IKspTeNdmF50qV7YrzXHdlGRXdTUM3al/view", status: "published", order: 3 },
-  { id: "doc-he-sinh-thai", title: "SLIDE 03 – HỆ SINH THÁI NGHIÊNG COMPLEX", type: "PPTX", category: "Slide", url: "https://drive.google.com/file/d/1DSFvfYjI_60y0JdfWMMzlcolmIBoDkC7/view", status: "published", order: 4 },
-  { id: "doc-giai-phap-dong-hanh", title: "SLIDE (19) GIẢI PHÁP ĐỒNG HÀNH", type: "Slide", category: "Slide", url: "https://drive.google.com/file/d/1TyoF8Puy_6EQ_JTHjoGed-TdDqu33hzD/view", status: "published", order: 5 },
-  { id: "doc-doc-vhux", title: "ĐỌC – VHUX khách hàng", type: "PDF", category: "Danh mục tin tức", url: "https://drive.google.com/file/d/10kVjjfxTLUZoJd6nB6OaIKrPlUdToYMb/view", status: "published", order: 6 },
-  { id: "doc-trac-nghiem-vhux", title: "Trắc nghiệm VHUX với Khách hàng", type: "PDF", category: "Danh mục tin tức", url: "https://drive.google.com/file/d/1N027T0GooAzIIlmimTTlbnKvjrgglHu2/view", status: "published", order: 7 },
-];
+const documents: CmsDocument[] = adminReferenceSeeds.documents as CmsDocument[];
+
+const libraryImages: CmsLibraryImage[] = adminReferenceSeeds.libraryImages as CmsLibraryImage[];
+const videos: CmsVideo[] = adminReferenceSeeds.videos as CmsVideo[];
 
 const users: CmsAccount[] = [
   { id: "user-ketoan", name: "WeLink Kế toán", email: "ketoan@welink.vn", role: "Admin", status: "Active", passwordChangeRequired: false },
@@ -483,6 +463,8 @@ export const CMS_SEEDS: { [K in keyof CmsRecordMap]: CmsRecordMap[K][] } = {
   projects: projectItems,
   menu: menuItems,
   documents,
+  libraryImages,
+  videos,
   users,
   media,
   pageContents: [],

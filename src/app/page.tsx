@@ -34,6 +34,19 @@ const benefits = [
 
 const homeTextSnapshots = new WeakMap<HTMLElement, Map<string, { markup: string; value: string }>>();
 
+function SectorIcon({ name }: { name?: string }) {
+  const common = { width: 18, height: 18, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 2, strokeLinecap: "round" as const, strokeLinejoin: "round" as const, "aria-hidden": true as const };
+  switch (name) {
+    case "globe": return <svg {...common}><circle cx="12" cy="12" r="10" /><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20M2 12h20" /></svg>;
+    case "layers": return <svg {...common}><path d="m12 2 10 5-10 5L2 7l10-5Z" /><path d="m2 12 10 5 10-5M2 17l10 5 10-5" /></svg>;
+    case "cpu": return <svg {...common}><rect x="4" y="4" width="16" height="16" rx="2" /><rect x="9" y="9" width="6" height="6" rx="1" /><path d="M9 2v2m6-2v2m0 16v2m-6-2v2M2 9h2m-2 6h2m16-6h2m-2 6h2" /></svg>;
+    case "users": return <svg {...common}><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" /></svg>;
+    case "trending-up": return <svg {...common}><path d="m22 7-8.5 8.5-5-5L2 17" /><path d="M16 7h6v6" /></svg>;
+    case "shield": return <svg {...common}><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z" /></svg>;
+    default: return <svg {...common}><circle cx="12" cy="12" r="10" /></svg>;
+  }
+}
+
 function syncHomeText(element: Element | null, value: string | undefined, originalValue: string | undefined, key: string) {
   if (!element || value === undefined) return;
   const target = element as HTMLElement;
@@ -64,11 +77,11 @@ function applyHomeSections(root: HTMLElement, content: AdminPageContent, default
     if (!element && !defaultSections.some((item) => item.id === section.id)) {
       element = document.createElement("section");
       element.dataset.adminSectionId = section.id;
-      element.style.cssText = "padding:4rem max(1.5rem,8vw);background:#06243d;color:#fff";
+      element.style.cssText = "padding:4rem max(1.5rem,8vw);background:#06243D;color:#FFFFFF";
       const heading = document.createElement("h2");
-      heading.style.cssText = "max-width:70rem;margin:0 auto 1rem;color:#d7a84a;font-size:clamp(1.5rem,3vw,2.5rem)";
+      heading.style.cssText = "max-width:70rem;margin:0 auto 1rem;color:#D7A84A;font-size:clamp(1.5rem,3vw,2.5rem)";
       const description = document.createElement("p");
-      description.style.cssText = "max-width:70rem;margin:0 auto;color:#dbe3e8;line-height:1.7;white-space:pre-line";
+      description.style.cssText = "max-width:70rem;margin:0 auto;color:#F5F7F8;line-height:1.7;white-space:pre-line";
       element.append(heading, description);
       root.append(element);
     }
@@ -108,7 +121,9 @@ function applyHomeSections(root: HTMLElement, content: AdminPageContent, default
       else body.remove();
     }
 
-    const link = element.querySelector<HTMLAnchorElement>("a");
+    const link = section.ctaLabel || section.ctaUrl
+      ? element.querySelector<HTMLAnchorElement>("a[data-admin-section-cta]") ?? element.querySelector<HTMLAnchorElement>("a")
+      : null;
     if (link) {
       link.dataset.adminOriginalText ??= link.textContent ?? "";
       link.dataset.adminOriginalHref ??= link.href;
@@ -141,7 +156,7 @@ function Arrow() {
 
 export default function Home() {
   const rootRef = useRef<HTMLElement>(null);
-  const logo = useBrandLogo();
+  const logo = useBrandLogo("ecosystem");
   const [slide, setSlide] = useState(1);
   const [activeEcosystem, setActiveEcosystem] = useState(0);
   const [adminContent, setAdminContent] = useState<AdminPageContent | null>(null);
@@ -192,6 +207,8 @@ export default function Home() {
   ][slide % 3];
   const activeManagedSlide = managedSlides[slide % Math.max(managedSlides.length, 1)];
   const selectedEcosystem = ecosystem[activeEcosystem];
+  const cardsSectionId = defaultHomeSections.find((section) => section.title === "Cards 06 lĩnh vực")?.id;
+  const ecosystemCards = adminContent?.sections.find((section) => section.id === cardsSectionId)?.items ?? defaultHomeSections.find((section) => section.id === cardsSectionId)?.items ?? [];
 
   return (
     <main ref={rootRef} className={s.site + " " + homeStyles.home}>
@@ -217,13 +234,13 @@ export default function Home() {
 
         {sectionEnabled("Số liệu nổi bật") && <section className={s.stats} aria-label="Số liệu nổi bật">{[["06", "Lĩnh vực cốt lõi"], ["8+", "Dự án demo"], ["2030", "Tầm nhìn chiến lược"], ["100%", "Cam kết bền vững"]].map(([value, label]) => <div key={value}><b>{value}</b><span>{label}</span></div>)}</section>}
 
-        {sectionEnabled("Hệ sinh thái 06 lĩnh vực (Orbit)") && <section className={s.orbitSection} id="ecosystem"><div className={s.sectionHeading}><div className={s.eyebrow}><i /> ECOSYSTEM NETWORK <i /></div><h2>HỆ SINH THÁI <strong>06 LĨNH VỰC</strong></h2></div><div className={s.orbit}><div className={s.orbitRing} /><div className={s.orbitCore}><img src={logo} alt="Nghieng Complex" /></div>{ecosystem.map((item, index) => <Link className={`${s.orbitItem} ${s[`orbit${index}`]} ${activeEcosystem === index ? homeStyles.orbitItemActive : ""}`} href={item.path} key={item.path} onMouseEnter={() => setActiveEcosystem(index)} onFocus={() => setActiveEcosystem(index)}><b>0{index + 1}</b><span>{item.name}</span></Link>)}</div><div className={homeStyles.ecosystemDetails} aria-live="polite"><div><span>NGHIENG COMPLEX</span><h3>{selectedEcosystem.name}</h3><p>{selectedEcosystem.description}</p><div>{selectedEcosystem.tags.map((tag) => <span key={tag}>{tag}</span>)}</div></div><Link href={selectedEcosystem.path}>Khám phá <Arrow /></Link></div></section>}
+        {sectionEnabled("Hệ sinh thái 06 lĩnh vực (Orbit)") && <section className={s.orbitSection} id="ecosystem"><div className={s.sectionHeading}><div className={s.eyebrow}><i /> ECOSYSTEM NETWORK <i /></div><h2>HỆ SINH THÁI <strong>06 LĨNH VỰC</strong></h2></div><div className={s.orbit}><div className={s.orbitRing} /><div className={s.orbitCore}><img src={logo} alt="Nghieng Complex" /></div>{ecosystem.map((item, index) => <Link className={`${s.orbitItem} ${s[`orbit${index}`]} ${activeEcosystem === index ? homeStyles.orbitItemActive : ""} ${item.path === "/cong-nghe-ai" ? homeStyles.orbitTech : ""}`} href={item.path} key={item.path} onMouseEnter={() => setActiveEcosystem(index)} onFocus={() => setActiveEcosystem(index)}><b>0{index + 1}</b><span>{item.name}</span></Link>)}</div><div className={homeStyles.ecosystemDetails} aria-live="polite"><div><span>NGHIENG COMPLEX</span><h3>{selectedEcosystem.name}</h3><p>{selectedEcosystem.description}</p><div>{selectedEcosystem.tags.map((tag) => <span key={tag}>{tag}</span>)}</div></div><Link href={selectedEcosystem.path}>Khám phá <Arrow /></Link></div></section>}
 
-        {sectionEnabled("Cards 06 lĩnh vực") && <section className={s.ecosystemCards}><div className={s.sectionHeading}><div className={s.eyebrow}><i /> KHÁM PHÁ</div><h2>CÁC LĨNH VỰC TRONG <strong>HỆ SINH THÁI</strong></h2></div><div className={s.cardGrid}>{ecosystem.map((item, index) => <Link href={item.path} className={s.ecoCard + " " + homeStyles.ecoCard} key={item.path}><img src={item.image} alt={item.name} loading="lazy" /><div className={s.cardShade} /><div className={s.cardCopy}><span>0{index + 1} / NGHIENG COMPLEX</span><h3>{item.name}</h3><p>Kết nối nguồn lực và tạo nên những trải nghiệm, giá trị bền vững.</p><b>Khám phá <Arrow /></b></div></Link>)}</div></section>}
+        {sectionEnabled("Cards 06 lĩnh vực") && <section className={s.ecosystemCards}><div className={s.sectionHeading}><div className={s.eyebrow}><i /> KHÁM PHÁ</div><h2>CÁC LĨNH VỰC TRONG <strong>HỆ SINH THÁI</strong></h2></div><div className={s.cardGrid}>{ecosystemCards.map((item, index) => <Link href={item.href || "#"} className={homeStyles.sectorCard} key={item.id}><div className={homeStyles.sectorImage}><img src={item.image || "/image/tong-nghieng-trang-chu.png"} alt={item.title} loading="lazy" /><span className={`${homeStyles.sectorIcon} ${homeStyles[`sectorIcon${index % 3}`]}`}><SectorIcon name={item.icon} /></span><span className={homeStyles.sectorNumber}>{String(index + 1).padStart(2, "0")}</span></div><div className={homeStyles.sectorBody}><h3>{item.title}</h3>{item.subtitle && <span className={homeStyles.sectorSubtitle}>{item.subtitle}</span>}<p>{item.description}</p><b>Khám phá <Arrow /></b></div></Link>)}</div></section>}
 
         {sectionEnabled("Sức mạnh cộng hưởng") && <section className={s.synergy}><div className={s.sectionHeading}><div className={s.eyebrow}><i /> NGHIENG COMPLEX</div><h2>SỨC MẠNH CỦA SỰ <strong>CỘNG HƯỞNG</strong></h2></div><div className={s.synergyGrid}>{benefits.map(([title, text]) => <article key={title}><b>✦</b><h3>{title}</h3><p>{text}</p></article>)}</div></section>}
 
-        {sectionEnabled("Dự án và cơ hội hợp tác") && <section className={s.projects} id="projects"><div className={s.sectionHeading}><div className={s.eyebrow}><i /> CƠ HỘI HỢP TÁC</div><h2>DỰ ÁN & <strong>CƠ HỘI HỢP TÁC</strong></h2></div><div className={s.projectGrid}>{projectItems.slice(0, 3).map((item, index) => <article className={homeStyles.projectCard} key={item.id}><span>{item.status.toLocaleUpperCase("vi-VN")}</span><b>0{index + 1}</b><h3>{item.title}</h3><p>{item.summary}</p><Link href={"/du-an/" + item.slug}>Khám phá <Arrow /></Link></article>)}</div><p className={homeStyles.listingLink}><Link href="/du-an">Xem tất cả dự án <Arrow /></Link></p></section>}
+        {sectionEnabled("Dự án và cơ hội hợp tác") && <section className={s.projects} id="projects"><div className={s.sectionHeading}><div className={s.eyebrow}><i /> CƠ HỘI HỢP TÁC</div><h2>DỰ ÁN & <strong>CƠ HỘI HỢP TÁC</strong></h2></div><div className={s.projectGrid}>{projectItems.slice(0, 3).map((item, index) => <article className={homeStyles.projectCard} key={item.id}><span className={`${homeStyles.projectStatus} ${item.status === "Vận hành" ? homeStyles.projectStatusActive : ""}`}>{item.status.toLocaleUpperCase("vi-VN")}</span><b>0{index + 1}</b><h3>{item.title}</h3><p>{item.summary}</p><Link href={"/du-an/" + item.slug}>Khám phá <Arrow /></Link></article>)}</div><p className={homeStyles.listingLink}><Link href="/du-an">Xem tất cả dự án <Arrow /></Link></p></section>}
 
         {sectionEnabled("Triết lý phát triển") && <section className={homeStyles.slogan}><span>KẾT NỐI <i>·</i> CỘNG HƯỞNG <i>·</i><br /> PHÁT TRIỂN BỀN VỮNG</span></section>}
 
@@ -231,7 +248,7 @@ export default function Home() {
 
         {sectionEnabled("Tầm nhìn 2026–2030") && <section className={s.vision}><div><div className={s.eyebrow}><i /> TẦM NHÌN</div><h2>TẦM NHÌN <strong>2026–2030</strong></h2><ul className={homeStyles.visionPoints}><li>Mở rộng hệ sinh thái và mạng lưới liên kết</li><li>Kết nối doanh nghiệp và đối tác</li><li>Đẩy mạnh chuyển đổi số và ứng dụng AI</li><li>Phát triển gắn với cộng đồng và địa phương</li></ul><Link className={s.textLink} href="/muc-tieu">XEM CHI TIẾT <Arrow /></Link></div><div className={s.timeline}>{[["2026", "Củng cố nền tảng"], ["2027", "Mở rộng mạng lưới"], ["2028", "Chuyển đổi số & AI"], ["2030", "Hệ sinh thái liên kết"]].map(([year, milestone]) => <article key={year}><b>{year}</b><p>{milestone}</p></article>)}</div></section>}
 
-        {sectionEnabled("Cộng đồng và thiện nguyện") && <section className={s.community}><div><div className={s.eyebrow}><i /> CỘNG ĐỒNG & THIỆN NGUYỆN</div><h2>PHÁT TRIỂN CÙNG <strong>CỘNG ĐỒNG</strong></h2><p>Giá trị của một hệ sinh thái không chỉ được đo bằng tăng trưởng kinh doanh, mà còn bằng những giá trị tích cực mà hệ sinh thái tạo ra cho con người và xã hội.</p><Link className={s.button} href="/phat-trien-cong-dong">KHÁM PHÁ HOẠT ĐỘNG CỘNG ĐỒNG <Arrow /></Link></div><div className={`${s.communityList} ${homeStyles.communityList}`}>{["Thiện nguyện", "Phát triển địa phương", "Văn hóa vùng miền", "Môi trường", "Giáo dục", "Chương trình xã hội"].map((item, index) => <div key={item}><b>0{index + 1}</b><span>{item}</span><Arrow /></div>)}</div></section>}
+        {sectionEnabled("Cộng đồng và thiện nguyện") && <section className={s.community}><div><div className={s.eyebrow}><i /> CỘNG ĐỒNG & THIỆN NGUYỆN</div><h2>PHÁT TRIỂN CÙNG <strong>CỘNG ĐỒNG</strong></h2><p>Giá trị của một hệ sinh thái không chỉ được đo bằng tăng trưởng kinh doanh, mà còn bằng những giá trị tích cực mà hệ sinh thái tạo ra cho con người và xã hội.</p><Link className={s.button} href="/phat-trien-cong-dong">KHÁM PHÁ HOẠT ĐỘNG CỘNG ĐỒNG <Arrow /></Link></div><div className={`${s.communityList} ${homeStyles.communityList}`}>{["Thiện nguyện", "Phát triển địa phương", "Văn hóa vùng miền", "Môi trường", "Giáo dục", "Chương trình xã hội"].map((item) => <div key={item}><b aria-hidden="true" /><span>{item}</span></div>)}</div></section>}
 
         {sectionEnabled("Đối tác đồng hành") && <section className={s.partners}><div className={s.sectionHeading}><div className={s.eyebrow}><i /> ĐỐI TÁC</div><h2>ĐỐI TÁC <strong>ĐỒNG HÀNH</strong></h2></div><div className={`${s.partnerGrid} ${homeStyles.partnerGrid}`}>{["Strategic Partner", "Technology Partner", "Travel Partner", "Media Partner", "Mining Partner", "Community Partner"].map((partner) => <div key={partner}><span>◈</span>{partner}</div>)}</div><p className={homeStyles.partnerNote}>Logo placeholder — chưa sử dụng logo thật cho đến khi được phê duyệt.</p></section>}
 

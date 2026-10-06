@@ -1,0 +1,454 @@
+{
+  "news": [
+    {
+      "id": "news-gioi-thieu-to-hop",
+      "slug": "gioi-thieu-to-hop",
+      "title": "Nghieng Complex giới thiệu mô hình Tổ hợp Liên kết Đa ngành",
+      "category": "Tập đoàn",
+      "date": "2026-08-01",
+      "summary": "Tập đoàn chính thức công bố mô hình hệ sinh thái liên kết 6 lĩnh vực, hướng tới phát triển bền vững.",
+      "body": "<h2>Định vị Tổ hợp Liên kết Đa ngành</h2><p>Trong bối cảnh nền kinh tế chuyển mình mạnh mẽ dưới tác động của chuyển đổi số, hội nhập toàn cầu và xu hướng phát triển bền vững, năng lực cạnh tranh của một doanh nghiệp không còn được quyết định bởi quy mô của từng lĩnh vực kinh doanh riêng lẻ.</p><p>Nghieng Complex ra đời với sứ mệnh trở thành Tổ hợp Liên kết Đa ngành, xây dựng một hệ sinh thái kinh tế hiện đại, nơi Con người, Doanh nghiệp, Công nghệ, Nguồn lực và Cộng đồng được kết nối trên cùng một nền tảng.</p><p>Khác với mô hình tập đoàn đa ngành truyền thống, Nghieng Complex xây dựng một Hệ sinh thái Liên kết, trong đó mỗi ngành nghề vừa hoạt động độc lập, vừa trở thành động lực thúc đẩy sự phát triển của nhau.</p><h3>Triết lý Con người – Công nghệ – Cộng đồng</h3><ol><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><strong>Con người</strong> là trung tâm của mọi giá trị, hướng đến nâng tầm trải nghiệm và cơ hội phát triển cho thành viên.</li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><strong>Công nghệ</strong> là công cụ kết nối, chuyển đổi số và tối ưu chuỗi giá trị trong toàn hệ sinh thái.</li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><strong>Cộng đồng</strong> là nền tảng phát triển bền vững, gắn kết trách nhiệm xã hội và bảo tồn bản sắc.</li></ol><h3>Thông điệp Kết nối – Cộng hưởng – Kiến tạo Thịnh vượng</h3><p>Bằng việc kết nối các nguồn lực, Nghieng Complex tạo sự cộng hưởng giá trị giữa các lĩnh vực, từ đó kiến tạo thịnh vượng dài hạn cho đối tác, nhà đầu tư, thành viên và cộng đồng.</p>",
+      "image": "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/bf72ef9a4_generated_1480f26e.png",
+      "status": "published",
+      "active": true,
+      "relatedIds": [],
+      "isDemo": false,
+      "order": 1
+    },
+    {
+      "id": "news-welink-community",
+      "slug": "khoi-dong-welink-community",
+      "title": "Khởi động nền tảng Welink Community",
+      "category": "Hệ sinh thái",
+      "date": "2026-07-20",
+      "summary": "",
+      "body": "",
+      "image": "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/66b82594f_generated_b3e2a1e9.png",
+      "status": "published",
+      "active": true,
+      "relatedIds": [],
+      "isDemo": false,
+      "order": 2
+    },
+    {
+      "id": "news-hop-tac-lao-cai",
+      "slug": "hop-tac-mo-quang-sat-lao-cai",
+      "title": "Hợp tác khai thác mỏ quặng sắt tại Lào Cai",
+      "category": "Dự án",
+      "date": "2026-07-10",
+      "summary": "",
+      "body": "",
+      "image": "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/0575d5b5e_generated_cd45ba2c.png",
+      "status": "published",
+      "active": true,
+      "relatedIds": [],
+      "isDemo": false,
+      "order": 3
+    },
+    {
+      "id": "news-doi-tac-cong-nghe",
+      "slug": "ky-ket-doi-tac-cong-nghe",
+      "title": "Ký kết đối tác chiến lược công nghệ",
+      "category": "Hợp tác",
+      "date": "2026-06-28",
+      "summary": "",
+      "body": "",
+      "image": "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/490b8b229_generated_d36d21f3.png",
+      "status": "published",
+      "active": true,
+      "relatedIds": [],
+      "isDemo": false,
+      "order": 4
+    },
+    {
+      "id": "news-franchise-center",
+      "slug": "su-kien-franchise-center",
+      "title": "Sự kiện ra mắt Franchise Center",
+      "category": "Sự kiện",
+      "date": "2026-06-15",
+      "summary": "",
+      "body": "",
+      "image": "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/73d59850e_6-nghieng-media-5.png",
+      "status": "published",
+      "active": true,
+      "relatedIds": [],
+      "isDemo": false,
+      "order": 5
+    },
+    {
+      "id": "news-thien-nguyen-mua-he",
+      "slug": "thien-nguyen-mua-he",
+      "title": "Chương trình thiện nguyện mùa hè",
+      "category": "Cộng đồng",
+      "date": "2026-06-01",
+      "summary": "",
+      "body": "",
+      "image": "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/86894c878_6-nghieng-media-6.png",
+      "status": "published",
+      "active": true,
+      "relatedIds": [],
+      "isDemo": false,
+      "order": 6
+    }
+  ],
+  "menu": [
+    {
+      "id": "menu-home",
+      "label": "Trang Chủ",
+      "url": "/",
+      "parentId": null,
+      "target": "_self",
+      "active": true,
+      "kind": "link",
+      "order": 1
+    },
+    {
+      "id": "menu-about",
+      "label": "Giới Thiệu",
+      "url": "/gioi-thieu",
+      "parentId": null,
+      "target": "_self",
+      "active": true,
+      "kind": "link",
+      "order": 2
+    },
+    {
+      "id": "menu-ecosystem",
+      "label": "Hệ Sinh Thái",
+      "url": "#",
+      "parentId": null,
+      "target": "_self",
+      "active": true,
+      "kind": "link",
+      "order": 3
+    },
+    {
+      "id": "menu-travel",
+      "label": "Nghieng Travel",
+      "url": "/nghieng-travel",
+      "parentId": "menu-ecosystem",
+      "target": "_self",
+      "active": true,
+      "kind": "link",
+      "order": 1
+    },
+    {
+      "id": "menu-mining",
+      "label": "Khoáng Sản",
+      "url": "/khoang-san",
+      "parentId": "menu-ecosystem",
+      "target": "_self",
+      "active": true,
+      "kind": "link",
+      "order": 2
+    },
+    {
+      "id": "menu-ai",
+      "label": "Công Nghệ – AI",
+      "url": "/cong-nghe-ai",
+      "parentId": "menu-ecosystem",
+      "target": "_self",
+      "active": true,
+      "kind": "link",
+      "order": 3
+    },
+    {
+      "id": "menu-community-growth",
+      "label": "Phát Triển Cộng Đồng",
+      "url": "/phat-trien-cong-dong",
+      "parentId": "menu-ecosystem",
+      "target": "_self",
+      "active": true,
+      "kind": "link",
+      "order": 4
+    },
+    {
+      "id": "menu-partner-solutions",
+      "label": "Giải Pháp Đồng Hành",
+      "url": "/giai-phap-dong-hanh",
+      "parentId": "menu-ecosystem",
+      "target": "_self",
+      "active": true,
+      "kind": "link",
+      "order": 5
+    },
+    {
+      "id": "menu-tours",
+      "label": "Tour Du Lịch",
+      "url": "/tour",
+      "parentId": "menu-ecosystem",
+      "target": "_self",
+      "active": true,
+      "kind": "link",
+      "order": 7
+    },
+    {
+      "id": "menu-media",
+      "label": "Nghieng Media",
+      "url": "/nghieng-media",
+      "parentId": "menu-ecosystem",
+      "target": "_self",
+      "active": true,
+      "kind": "link",
+      "order": 6
+    },
+    {
+      "id": "menu-venues",
+      "label": "Nhà Hàng – Khách Sạn",
+      "url": "/nha-hang-khach-san",
+      "parentId": "menu-ecosystem",
+      "target": "_self",
+      "active": true,
+      "kind": "link",
+      "order": 8
+    },
+    {
+      "id": "menu-projects",
+      "label": "Dự Án",
+      "url": "/du-an",
+      "parentId": null,
+      "target": "_self",
+      "active": true,
+      "kind": "link",
+      "order": 4
+    },
+    {
+      "id": "menu-community",
+      "label": "Cộng Đồng",
+      "url": "/cong-dong",
+      "parentId": null,
+      "target": "_self",
+      "active": true,
+      "kind": "link",
+      "order": 5
+    },
+    {
+      "id": "menu-news",
+      "label": "Tin Tức",
+      "url": "/tin-tuc",
+      "parentId": null,
+      "target": "_self",
+      "active": true,
+      "kind": "link",
+      "order": 6
+    },
+    {
+      "id": "menu-partners",
+      "label": "Đối Tác",
+      "url": "/doi-tac",
+      "parentId": null,
+      "target": "_self",
+      "active": true,
+      "kind": "link",
+      "order": 7
+    },
+    {
+      "id": "menu-contact",
+      "label": "Liên Hệ",
+      "url": "/lien-he",
+      "parentId": null,
+      "target": "_self",
+      "active": true,
+      "kind": "link",
+      "order": 8
+    },
+    {
+      "id": "menu-cta",
+      "label": "Hợp tác cùng chúng tôi",
+      "url": "/lien-he",
+      "parentId": null,
+      "target": "_self",
+      "active": true,
+      "kind": "cta",
+      "order": 9
+    }
+  ],
+  "documents": [
+    {
+      "id": "doc-tong-nv-n",
+      "title": "TỔNG NV&N",
+      "type": "PPTX",
+      "category": "Slide",
+      "url": "https://docs.google.com/presentation/d/1pSB5Vi2SP63PJXbDijva-GPQApliIovS/edit?slide=id.p1#slide=id.p1",
+      "status": "published",
+      "order": 1
+    },
+    {
+      "id": "doc-welink-community",
+      "title": "MÔ HÌNH WELINK COMMUNITY",
+      "type": "PPTX",
+      "category": "Danh mục tin tức",
+      "url": "https://drive.google.com/drive/folders/1vhei3S6fBQaQ6bAKNdXD9LkKghVezRRn?usp=sharing",
+      "status": "published",
+      "order": 2
+    },
+    {
+      "id": "doc-vhux-khach-hang",
+      "title": "SLIDE VHUX Khách hàng",
+      "type": "PPTX",
+      "category": "Slide",
+      "url": "https://drive.google.com/file/d/1IKspTeNdmF50qV7YrzXHdlGRXdTUM3al/view",
+      "status": "published",
+      "order": 3
+    },
+    {
+      "id": "doc-he-sinh-thai",
+      "title": "SLIDE 03 – HỆ SINH THÁI NGHIÊNG COMPLEX",
+      "type": "PPTX",
+      "category": "Slide",
+      "url": "https://drive.google.com/file/d/1DSFvfYjI_60y0JdfWMMzlcolmIBoDkC7/view",
+      "status": "published",
+      "order": 4
+    },
+    {
+      "id": "doc-giai-phap-dong-hanh",
+      "title": "SLIDE (19) GIẢI PHÁP ĐỒNG HÀNH",
+      "type": "Slide",
+      "category": "Slide",
+      "url": "https://drive.google.com/file/d/1TyoF8Puy_6EQ_JTHjoGed-TdDqu33hzD/view",
+      "status": "published",
+      "order": 5
+    },
+    {
+      "id": "doc-doc-vhux",
+      "title": "ĐỌC – VHUX khách hàng",
+      "type": "PDF",
+      "category": "Danh mục tin tức",
+      "url": "https://drive.google.com/file/d/10kVjjfxTLUZoJd6nB6OaIKrPlUdToYMb/view",
+      "status": "published",
+      "order": 6
+    },
+    {
+      "id": "doc-trac-nghiem-vhux",
+      "title": "Trắc nghiệm VHUX với Khách hàng",
+      "type": "PDF",
+      "category": "Danh mục tin tức",
+      "url": "https://drive.google.com/file/d/1N027T0GooAzIIlmimTTlbnKvjrgglHu2/view",
+      "status": "published",
+      "order": 7
+    },
+    {
+      "id": "doc-tong-nv-n-copy",
+      "title": "TỔNG NV&N",
+      "type": "PPTX",
+      "category": "Slide",
+      "url": "https://docs.google.com/presentation/d/1pSB5Vi2SP63PJXbDijva-GPQApliIovS/edit?slide=id.p1#slide=id.p1",
+      "status": "published",
+      "order": 8
+    }
+  ],
+  "libraryImages": [
+    {
+      "id": "library-image-1",
+      "title": "Sản xuất Film & TVC – Trường quay",
+      "url": "",
+      "order": 10,
+      "active": true
+    },
+    {
+      "id": "library-image-2",
+      "title": "Sự kiện & MICE – Gala Dinner",
+      "url": "",
+      "order": 20,
+      "active": true
+    },
+    {
+      "id": "library-image-3",
+      "title": "Franchise Center – Kết nối nhượng quyền",
+      "url": "",
+      "order": 30,
+      "active": true
+    },
+    {
+      "id": "library-image-4",
+      "title": "Chiến dịch PR & Nội dung số",
+      "url": "",
+      "order": 40,
+      "active": true
+    },
+    {
+      "id": "library-image-5",
+      "title": "Lưu giữ & Quảng bá Văn hóa Việt",
+      "url": "",
+      "order": 50,
+      "active": true
+    },
+    {
+      "id": "library-image-6",
+      "title": "Công tác Thiện nguyện cùng Cộng đồng",
+      "url": "",
+      "order": 60,
+      "active": true
+    },
+    {
+      "id": "library-image-7",
+      "title": "Hậu trường sản xuất Nghieng Media",
+      "url": "",
+      "order": 70,
+      "active": true
+    },
+    {
+      "id": "library-image-8",
+      "title": "Nghieng Media – Kết nối Cộng đồng",
+      "url": "",
+      "order": 80,
+      "active": true
+    }
+  ],
+  "videos": [
+    {
+      "id": "library-video-1",
+      "title": "Nghieng Complex – Giới thiệu Hệ sinh thái",
+      "description": "Tổng quan hệ sinh thái đa ngành Nghieng Complex — Kết nối Nguồn lực, Cộng hưởng Giá trị.",
+      "url": "https://www.youtube.com/watch?v=-YI-G9atqfg",
+      "thumbnail": "https://img.youtube.com/vi/-YI-G9atqfg/hqdefault.jpg",
+      "order": 10,
+      "active": true
+    },
+    {
+      "id": "library-video-2",
+      "title": "Nghieng Travel – Hành trình khám phá",
+      "description": "Hành trình khám phá bản sắc văn hóa và thiên nhiên cùng Nghieng Travel.",
+      "url": "https://www.youtube.com/watch?v=3Ur4Ps_D2KM",
+      "thumbnail": "https://img.youtube.com/vi/3Ur4Ps_D2KM/hqdefault.jpg",
+      "order": 20,
+      "active": true
+    },
+    {
+      "id": "library-video-3",
+      "title": "Nghieng Travel – Trải nghiệm du lịch bản địa",
+      "description": "Trải nghiệm du lịch bản địa — Lan tỏa giá trị văn hóa và kinh tế địa phương.",
+      "url": "https://www.youtube.com/watch?v=3Ur4Ps_D2KM",
+      "thumbnail": "https://img.youtube.com/vi/3Ur4Ps_D2KM/hqdefault.jpg",
+      "order": 30,
+      "active": true
+    },
+    {
+      "id": "library-video-4",
+      "title": "Nghieng Media – Hậu trường sản xuất",
+      "description": "Hậu trường sản xuất film, TVC và các dự án truyền thông của Nghieng Media.",
+      "url": "https://www.youtube.com/watch?v=cifjSZBGGUo",
+      "thumbnail": "https://img.youtube.com/vi/cifjSZBGGUo/hqdefault.jpg",
+      "order": 40,
+      "active": true
+    },
+    {
+      "id": "library-video-5",
+      "title": "Cộng đồng Welink – Kết nối & Phát triển",
+      "description": "Cộng đồng Welink — Kết nối thành viên, cùng nhau phát triển bền vững.",
+      "url": "https://www.youtube.com/watch?v=XvhiNi8hBns",
+      "thumbnail": "https://img.youtube.com/vi/XvhiNi8hBns/hqdefault.jpg",
+      "order": 50,
+      "active": true
+    },
+    {
+      "id": "library-video-6",
+      "title": "Nghieng Complex – Sự kiện & Hợp tác chiến lược",
+      "description": "Những sự kiện và buổi lễ ký kết hợp tác chiến lược của Nghieng Complex.",
+      "url": "https://www.youtube.com/watch?v=Le1_2mEpKWM",
+      "thumbnail": "https://img.youtube.com/vi/Le1_2mEpKWM/hqdefault.jpg",
+      "order": 60,
+      "active": true
+    }
+  ]
+}

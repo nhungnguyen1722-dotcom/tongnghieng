@@ -1,7 +1,7 @@
 "use client";
 
 /* eslint-disable @next/next/no-img-element */
-import { useEffect, useMemo, useState, type ChangeEvent } from "react";
+import { useEffect, useMemo, useRef, useState, type ChangeEvent } from "react";
 import Link from "next/link";
 import AdminShell, { useAdminRole } from "@/app/admin/AdminShell";
 import MediaPicker from "./MediaPicker";
@@ -9,6 +9,10 @@ import { loadCmsRecords, saveCmsRecords } from "@/lib/cms-client";
 import { CMS_SEEDS, type CmsCollection, type CmsRecord } from "@/lib/cms-data";
 import styles from "./admin-cms-manager.module.css";
 import pagingStyles from "./admin-cms-pagination.module.css";
+import richStyles from "./rich-text-editor.module.css";
+import AdminMenuManager from "./AdminMenuManager";
+import AdminLibraryManager from "./AdminLibraryManager";
+import AdminMediaManager from "./AdminMediaManager";
 
 export type AdminCmsSection = "tours" | "tour-categories" | "venues" | "venue-categories" | "news" | "projects" | "menu" | "library" | "users" | "media";
 type FieldType = "text" | "number" | "select" | "textarea" | "lines" | "json" | "image" | "images" | "toggle";
@@ -131,11 +135,38 @@ function normalizeRecord(section: AdminCmsSection, source: Record<string, unknow
 }
 
 export default function AdminCmsManager({ section }: { section: AdminCmsSection }) {
+  if (section === "menu") return <AdminMenuManager />;
+  if (section === "library") return <AdminLibraryManager />;
+  if (section === "media") return <AdminMediaManager />;
   return <AdminShell><AdminCmsManagerContent section={section} /></AdminShell>;
 }
 
+function RichTextEditor({ value, onChange }: { value: string; onChange: (value: string) => void }) {
+  const editor = useRef<HTMLDivElement>(null);
+  const [html, setHtml] = useState(value);
+  useEffect(() => { setHtml(value); }, [value]);
+  const initialHtml = /<\/?[a-z][\s\S]*?>/i.test(html) ? html : html.split(/\n\s*\n/).map((line) => "<p>" + line.replace(/\n/g, "<br>") + "</p>").join("");
+  const format = (command: string, block?: string) => {
+    editor.current?.focus();
+    document.execCommand(command, false, block);
+    if (editor.current) setHtml(editor.current.innerHTML);
+  };
+  return <div className={richStyles.editor}>
+    <div className={richStyles.toolbar} aria-label="Định dạng nội dung">
+      <select aria-label="Kiểu đoạn" defaultValue="p" onChange={(event) => format("formatBlock", event.target.value)}><option value="p">Thường</option><option value="h2">Tiêu đề 2</option><option value="h3">Tiêu đề 3</option></select>
+      <button type="button" onMouseDown={(event) => event.preventDefault()} onClick={() => format("bold")} aria-label="In đậm"><strong>B</strong></button>
+      <button type="button" onMouseDown={(event) => event.preventDefault()} onClick={() => format("italic")} aria-label="In nghiêng"><em>I</em></button>
+      <button type="button" onMouseDown={(event) => event.preventDefault()} onClick={() => format("underline")} aria-label="Gạch chân"><u>U</u></button>
+      <button type="button" onMouseDown={(event) => event.preventDefault()} onClick={() => format("insertUnorderedList")} aria-label="Danh sách">• List</button>
+      <button type="button" onMouseDown={(event) => event.preventDefault()} onClick={() => format("insertOrderedList")} aria-label="Danh sách số">1. List</button>
+    </div>
+    <div ref={editor} className={richStyles.body} contentEditable suppressContentEditableWarning dangerouslySetInnerHTML={{ __html: initialHtml }} onInput={(event) => setHtml(event.currentTarget.innerHTML)} onBlur={(event) => onChange(event.currentTarget.innerHTML)} />
+  </div>;
+}
+
 function AdminCmsManagerContent({ section }: { section: AdminCmsSection }) {
-  const canEdit = useAdminRole() === "Admin";
+  const role = useAdminRole();
+  const canEdit = role === "Admin" || (role === "User" && section === "news");
   const config = configurations[section];
   const collection = config.collection;
   const [items, setItems] = useState<Record<string, unknown>[]>(CMS_SEEDS[collection] as unknown as Record<string, unknown>[]);
@@ -255,6 +286,7 @@ function AdminCmsManagerContent({ section }: { section: AdminCmsSection }) {
 
   const filterOptions = section === "tours" ? CMS_SEEDS.tourCategories.map((item) => ({ value: item.slug, label: item.title }))
     : section === "venues" ? CMS_SEEDS.venueCategories.map((item) => ({ value: item.kind, label: item.title }))
+    : section === "news" ? [...new Set(items.map((item) => String(item.category ?? "").trim()).filter(Boolean))].map((value) => ({ value, label: value }))
     : section === "library" ? mediaTypes.map((value) => ({ value, label: value }))
     : section === "users" ? ["Admin", "User"].map((value) => ({ value, label: value }))
     : [];
@@ -304,6 +336,7 @@ function AdminCmsManagerContent({ section }: { section: AdminCmsSection }) {
                     {field.key === "parentId" && <option value="">Không có mục cha</option>}
                     {(field.key === "parentId" ? items.filter((record) => record.id !== editing.id && record.parentId === null).map((record) => ({ value: String(record.id), label: displayTitle(record) })) : (field.options ?? []).map((value) => ({ value, label: value }))).map((option) => <option value={option.value} key={option.value}>{option.label}</option>)}
                   </select>
+                  : section === "news" && field.key === "body" ? <RichTextEditor value={String(editing.body ?? "")} onChange={(body) => setEditing((current) => current ? { ...current, body } : current)} />
                   : field.type === "textarea" || field.type === "lines" || field.type === "json" ? <textarea rows={field.type === "json" ? 7 : field.type === "textarea" ? 4 : 3} value={String(fieldText(editing[field.key], field.type))} onChange={(event: ChangeEvent<HTMLTextAreaElement>) => setEditing({ ...editing, [field.key]: event.target.value })} />
                   : <input type={field.type === "number" ? "number" : "text"} value={String(editing[field.key] ?? "")} onChange={(event) => setEditing({ ...editing, [field.key]: event.target.value })} />}
                 {field.help && <small>{field.help}</small>}

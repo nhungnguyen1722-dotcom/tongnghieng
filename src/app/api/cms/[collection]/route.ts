@@ -2,10 +2,13 @@ import { NextResponse } from "next/server";
 import { type CmsAccount, type CmsCollection, type CmsRecord } from "@/lib/cms-data";
 import { isCmsCollection, readCollection, removeRecord, replaceCollection } from "@/lib/cms-store";
 import { hasSameOrigin, readAdminSession } from "@/lib/admin-auth";
+import { defaultPageContent, mergePageContentWithDefaults, type AdminPageContent } from "@/app/admin/page-data";
 
 export const runtime = "nodejs";
 
 type RouteContext = { params: Promise<{ collection: string }> };
+
+const userWritableCollections: CmsCollection[] = ["menu", "news", "documents", "libraryImages", "videos", "pageContents"];
 
 function publicRecords(collection: CmsCollection, items: CmsRecord[]) {
   return items.filter((item) => {
@@ -27,13 +30,49 @@ export async function GET(_request: Request, context: RouteContext) {
 
   try {
     let items = await readCollection(collection);
-    if (session?.role !== "Admin") items = publicRecords(collection, items);
+    if (collection === "pageContents") {
+      const aboutFallback = defaultPageContent("gioi-thieu");
+      if (aboutFallback) {
+        const index = items.findIndex((item) => (item as CmsRecord & { slug?: string }).slug === "gioi-thieu");
+        const existing = index < 0 ? undefined : items[index] as CmsRecord & { id: string; slug: string; content: Record<string, unknown>; order: number };
+        const content = mergePageContentWithDefaults("gioi-thieu", aboutFallback, (existing?.content ?? {}) as Partial<AdminPageContent>);
+        const migrated = { id: existing?.id ?? "page-gioi-thieu", slug: "gioi-thieu", content: content as unknown as Record<string, unknown>, order: existing?.order ?? 2 } as CmsRecord;
+        if (!existing || JSON.stringify(existing.content) !== JSON.stringify(content)) {
+          items = index < 0 ? [...items, migrated] : items.map((item, itemIndex) => itemIndex === index ? migrated : item);
+          await replaceCollection("pageContents", items);
+        }
+      }
+      const fallback = defaultPageContent("nghieng-travel");
+      if (fallback) {
+        const index = items.findIndex((item) => (item as CmsRecord & { slug?: string }).slug === "nghieng-travel");
+        const existing = index < 0 ? undefined : items[index] as CmsRecord & { id: string; slug: string; content: Record<string, unknown>; order: number };
+        const content = mergePageContentWithDefaults("nghieng-travel", fallback, (existing?.content ?? {}) as Partial<AdminPageContent>);
+        const migrated = { id: existing?.id ?? "page-nghieng-travel", slug: "nghieng-travel", content: content as unknown as Record<string, unknown>, order: existing?.order ?? 3 } as CmsRecord;
+        if (!existing || JSON.stringify(existing.content) !== JSON.stringify(content)) {
+          items = index < 0 ? [...items, migrated] : items.map((item, itemIndex) => itemIndex === index ? migrated : item);
+          await replaceCollection("pageContents", items);
+        }
+      }
+      const homeFallback = defaultPageContent("trang-chu");
+      if (homeFallback) {
+        const index = items.findIndex((item) => (item as CmsRecord & { slug?: string }).slug === "trang-chu");
+        const existing = index < 0 ? undefined : items[index] as CmsRecord & { id: string; slug: string; content: Record<string, unknown>; order: number };
+        const content = mergePageContentWithDefaults("trang-chu", homeFallback, (existing?.content ?? {}) as Partial<AdminPageContent>);
+        const migrated = { id: existing?.id ?? "page-trang-chu", slug: "trang-chu", content: content as unknown as Record<string, unknown>, order: existing?.order ?? 1 } as CmsRecord;
+        if (!existing || JSON.stringify(existing.content) !== JSON.stringify(content)) {
+          items = index < 0 ? [...items, migrated] : items.map((item, itemIndex) => itemIndex === index ? migrated : item);
+          await replaceCollection("pageContents", items);
+        }
+      }
+    }
+    if (!session) items = publicRecords(collection, items);
+    if (session?.role === "User" && collection === "pageContents") items = items.filter((item) => (item as CmsRecord & { slug?: string }).slug === "nghieng-media");
     if (collection === "users") items = items.map((item) => {
       const account = { ...item } as CmsRecord & { passwordHash?: string };
       delete account.passwordHash;
       return account;
     });
-    if (collection === "pageContents" && session?.role !== "Admin") items = items.map((item) => {
+    if (collection === "pageContents" && !session) items = items.map((item) => {
       const page = item as CmsRecord & { slug: string; content: { active?: boolean }; order: number };
       return page.content?.active === false ? { id: page.id, slug: page.slug, content: { active: false }, order: page.order } : page;
     });
@@ -48,13 +87,21 @@ export async function PUT(request: Request, context: RouteContext) {
   const { collection } = await context.params;
   if (!hasSameOrigin(request)) return NextResponse.json({ error: "Yêu cầu không hợp lệ." }, { status: 403 });
   const session = readAdminSession(request);
-  if (session?.role !== "Admin") return NextResponse.json({ error: "Cần quyền Admin để cập nhật dữ liệu." }, { status: session ? 403 : 401 });
+  if (!session) return NextResponse.json({ error: "Cần đăng nhập để cập nhật dữ liệu." }, { status: 401 });
   if (!isCmsCollection(collection)) return NextResponse.json({ error: "Không tìm thấy danh mục dữ liệu." }, { status: 404 });
+  if (session.role !== "Admin" && !userWritableCollections.includes(collection)) return NextResponse.json({ error: "User account is not allowed to modify this collection." }, { status: 403 });
 
   try {
     const body = await request.json() as { items?: CmsRecord[] };
     if (!Array.isArray(body.items)) return NextResponse.json({ error: "Dữ liệu cần lưu không hợp lệ." }, { status: 400 });
     let items = body.items;
+    if (session.role !== "Admin" && collection === "pageContents") {
+      const requestedPage = body.items.find((item) => (item as CmsRecord & { slug?: string }).slug === "nghieng-media");
+      if (!requestedPage || body.items.some((item) => (item as CmsRecord & { slug?: string }).slug !== "nghieng-media")) return NextResponse.json({ error: "Chỉ được cập nhật trang Nghieng Media." }, { status: 403 });
+      const existingPages = await readCollection("pageContents");
+      items = existingPages.map((item) => (item as CmsRecord & { slug?: string }).slug === "nghieng-media" ? requestedPage : item);
+      if (!existingPages.some((item) => (item as CmsRecord & { slug?: string }).slug === "nghieng-media")) items = [...existingPages, requestedPage];
+    }
     if (collection === "users") {
       const existing = await readCollection("users") as Array<CmsAccount & { passwordHash?: string }>;
       const current = existing.find((account) => account.id === session.id);
@@ -81,12 +128,14 @@ export async function DELETE(request: Request, context: RouteContext) {
   const { collection } = await context.params;
   if (!hasSameOrigin(request)) return NextResponse.json({ error: "Yêu cầu không hợp lệ." }, { status: 403 });
   const session = readAdminSession(request);
-  if (session?.role !== "Admin") return NextResponse.json({ error: "Cần quyền Admin để xóa dữ liệu." }, { status: session ? 403 : 401 });
+  if (!session) return NextResponse.json({ error: "Cần đăng nhập để xóa dữ liệu." }, { status: 401 });
   if (!isCmsCollection(collection)) return NextResponse.json({ error: "Không tìm thấy danh mục dữ liệu." }, { status: 404 });
+  if (session.role !== "Admin" && !userWritableCollections.includes(collection)) return NextResponse.json({ error: "User account is not allowed to modify this collection." }, { status: 403 });
 
   try {
     const { id } = await request.json() as { id?: string };
     if (!id) return NextResponse.json({ error: "Thiếu mã nội dung." }, { status: 400 });
+    if (session.role !== "Admin" && collection === "pageContents") return NextResponse.json({ error: "Không thể xóa trang Nghieng Media." }, { status: 403 });
     const deleted = await removeRecord(collection, id);
     return NextResponse.json({ ok: true, deleted });
   } catch (error) {

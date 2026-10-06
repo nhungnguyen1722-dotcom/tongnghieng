@@ -1,48 +1,83 @@
 .home{--navy:var(--public-bg);--deep:var(--public-panel);--gold:var(--public-gold);--teal:var(--public-cyan);background:var(--public-bg);color:var(--public-text)}
 .legacyNav,.legacyFooter{display:none}
-.ecoCard :global([class*="cardCopy__"]){transition:background .25s,color .25s}
-.ecoCard:hover :global([class*="cardCopy__"]){background:#F5F7F8;color:#03172B}
-.ecoCard:hover :global([class*="cardCopy__"])>span,.ecoCard:hover :global([class*="cardCopy__"]) h3,.ecoCard:hover :global([class*="cardCopy__"]) p{color:#03172B}
-.ecoCard:hover :global([class*="cardCopy__"])>b{color:#14B8B1}
+.ecoCard :global([class*="__cardCopy"]){transition:background .25s,color .25s}
+.ecoCard:hover{border-color:#F5F7F8}.ecoCard:hover :global([class*="__cardCopy"]){background:#F5F7F8;color:#03172B}
+.ecoCard:hover :global([class*="__cardCopy"])>span,.ecoCard:hover :global([class*="__cardCopy"]) h3,.ecoCard:hover :global([class*="__cardCopy"]) p{color:#03172B}
+.ecoCard:hover :global([class*="__cardCopy"])>b{color:#14B8B1}
+
+.sectorCard{display:flex;min-width:0;flex-direction:column;overflow:hidden;border:1px solid #D7A84A;border-radius:16px;background:#03172B;color:#fff;text-decoration:none;transition:transform .3s,box-shadow .3s,border-color .3s}
+.sectorCard:hover{transform:translateY(-6px);border-color:#25CBD3;box-shadow:0 20px 40px #0003}
+.sectorImage{position:relative;height:176px;overflow:hidden;flex:none}
+.sectorImage img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .7s}
+.sectorCard:hover .sectorImage img{transform:scale(1.08)}
+.sectorImage:after{position:absolute;inset:35% 0 0;background:linear-gradient(0deg,#03172B,transparent);content:""}
+.sectorIcon{position:absolute;z-index:1;top:12px;left:12px;display:grid;width:40px;height:40px;place-items:center;border-radius:10px;color:#fff}
+.sectorIcon0{background:linear-gradient(135deg,#14B8B1,#25CBD3)}
+.sectorIcon1{background:linear-gradient(135deg,#D7A84A,#A07E1A)}
+.sectorIcon2{background:linear-gradient(135deg,#14B8B1,#0E8B86)}
+.sectorNumber{position:absolute;z-index:1;top:8px;right:14px;color:#ffffff66;font-size:30px;font-weight:800}
+.sectorBody{display:flex;flex:1;flex-direction:column;padding:18px 22px 22px}
+.sectorBody h3{margin:0 0 5px;color:#fff;font-size:20px;font-weight:800}
+.sectorSubtitle{margin-bottom:12px;color:#C9A227;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.sectorBody p{flex:1;margin:0 0 15px;color:#ffffffa6;font-size:14px;line-height:1.65}
+.sectorBody>b{display:flex;align-items:center;gap:8px;color:#C9A227;font-size:14px;transition:gap .2s}
+.sectorCard:hover .sectorBody>b{gap:13px}
+html[data-theme="light"] .sectorCard{border-color:#dfc77e;background:#fff;color:#03172B;box-shadow:0 8px 26px #10243b0c}
+html[data-theme="light"] .sectorCard:hover{border-color:#14B8B1;box-shadow:0 18px 36px #10243b1a}
+html[data-theme="light"] .sectorImage:after{background:linear-gradient(0deg,#03172b99,transparent)}
+html[data-theme="light"] .sectorBody h3{color:#03172B}
+html[data-theme="light"] .sectorBody p{color:#344253}
 .projectCard{transition:background .25s,color .25s,border-color .25s}
-.projectCard:hover{border-color:#F2C76E;background:#F5F7F8;color:#03172B}
+.projectCard:hover{border-color:#F5F7F8;background:#F5F7F8;color:#03172B}
 .projectCard:hover>span,.projectCard:hover>h3,.projectCard:hover>p{color:#03172B}
 .projectCard:hover>a{color:#14B8B1}
 .newsCard>div{transition:background .25s,color .25s}
-.newsCard:hover>div{background:#F5F7F8;color:#03172B}
+.newsCard:hover{border-color:#F5F7F8}.newsCard:hover>div{background:#F5F7F8;color:#03172B}
 .newsCard:hover>div>span,.newsCard:hover>div h3{color:#03172B}
 .newsCard:hover>div>b{color:#14B8B1}
 .listingLink{margin:18px auto 0;text-align:center}
 .listingLink a{color:#F2C76E;font-size:11px;font-weight:700}
 .listingLink a:hover{color:#14B8B1}
-:global(html[data-theme="light"]) .home :global([class*="intro__"]),
-:global(html[data-theme="light"]) .home :global([class*="vision__"]),
-:global(html[data-theme="light"]) .home :global([class*="orbitSection__"]),
-:global(html[data-theme="light"]) .home :global([class*="ecosystemCards__"]),
-:global(html[data-theme="light"]) .home :global([class*="projects__"]),
-:global(html[data-theme="light"]) .home :global([class*="synergy__"]),
-:global(html[data-theme="light"]) .home :global([class*="philosophy__"]),
-:global(html[data-theme="light"]) .home :global([class*="chairman__"]),
-:global(html[data-theme="light"]) .home :global([class*="community__"]),
-:global(html[data-theme="light"]) .home :global([class*="partners__"]),
-:global(html[data-theme="light"]) .home :global([class*="news__"]),
-:global(html[data-theme="light"]) .home :global([class*="cta__"]){background:var(--public-bg);color:var(--public-text)}
-:global(html[data-theme="light"]) .home :global([class*="intro__"]) h2,
-:global(html[data-theme="light"]) .home :global([class*="intro__"]) p,
-:global(html[data-theme="light"]) .home :global([class*="vision__"]) h2,
-:global(html[data-theme="light"]) .home :global([class*="vision__"]) p,
-:global(html[data-theme="light"]) .home :global([class*="synergy__"]) h2,
-:global(html[data-theme="light"]) .home :global([class*="synergy__"]) h3,
-:global(html[data-theme="light"]) .home :global([class*="synergy__"]) p{color:var(--public-text)}
-:global(html[data-theme="light"]) .home :global([class*="benefitGrid__"]) article,
-:global(html[data-theme="light"]) .home :global([class*="timeline__"]) article,
-:global(html[data-theme="light"]) .home :global([class*="synergyGrid__"]) article{background:var(--public-panel);color:var(--public-text)}
-.slogan{display:flex;min-height:128px;align-items:center;justify-content:center;padding:32px 24px;background:#03172b;color:#e8c84a;text-align:center}
-.hero{min-height:max(720px,85vh)}
+:global(html[data-theme="light"]) .home :global([class*="__intro"]),
+:global(html[data-theme="light"]) .home :global([class*="__vision"]),
+:global(html[data-theme="light"]) .home :global([class*="__orbitSection"]),
+:global(html[data-theme="light"]) .home :global([class*="__ecosystemCards"]),
+:global(html[data-theme="light"]) .home :global([class*="__projects"]),
+:global(html[data-theme="light"]) .home :global([class*="__synergy"]),
+:global(html[data-theme="light"]) .home :global([class*="__philosophy"]),
+:global(html[data-theme="light"]) .home :global([class*="__chairman"]),
+:global(html[data-theme="light"]) .home :global([class*="__community"]),
+:global(html[data-theme="light"]) .home :global([class*="__partners"]),
+:global(html[data-theme="light"]) .home :global([class*="__news"]),
+:global(html[data-theme="light"]) .home :global([class*="__cta"]){background:var(--public-bg);color:var(--public-text)}
+:global(html[data-theme="light"]) .home :global([class*="__intro"]) h2,
+:global(html[data-theme="light"]) .home :global([class*="__intro"]) p,
+:global(html[data-theme="light"]) .home :global([class*="__vision"]) h2,
+:global(html[data-theme="light"]) .home :global([class*="__vision"]) p,
+:global(html[data-theme="light"]) .home :global([class*="__synergy"]) h2,
+:global(html[data-theme="light"]) .home :global([class*="__synergy"]) h3,
+:global(html[data-theme="light"]) .home :global([class*="__synergy"]) p{color:var(--public-text)}
+:global(html[data-theme="light"]) .home :global([class*="__benefitGrid"]) article,
+:global(html[data-theme="light"]) .home :global([class*="__timeline"]) article,
+:global(html[data-theme="light"]) .home :global([class*="__synergyGrid"]) article{background:var(--public-panel);color:var(--public-text)}
+
+/* Match the white vision section in the supplied light-theme reference. */
+:global(html[data-theme="light"]) .home :global([class*="__vision"]){background:#FFFFFF;color:#03172B}
+:global(html[data-theme="light"]) .home :global([class*="__vision"]) h2{color:#03172B}
+:global(html[data-theme="light"]) .home :global([class*="__vision"]) h2 strong,
+:global(html[data-theme="light"]) .home :global([class*="__vision"]) [class*="__eyebrow"],
+:global(html[data-theme="light"]) .home :global([class*="__vision"]) [class*="__textLink"]{color:#C9A227}
+:global(html[data-theme="light"]) .home :global([class*="__vision"]) li{color:#526174}
+:global(html[data-theme="light"]) .home :global([class*="__vision"]) :global([class*="__timeline"]) article{background:#F5F7F8;color:#03172B}
+:global(html[data-theme="light"]) .home :global([class*="__vision"]) :global([class*="__timeline"]) b{color:#C9A227}
+:global(html[data-theme="light"]) .home :global([class*="__vision"]) :global([class*="__timeline"]) p{color:#526174}
+.slogan{display:flex;min-height:128px;align-items:center;justify-content:center;padding:32px 24px;background-color:#06243D;background-image:linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);background-size:32px 32px;color:#D7A84A;text-align:center}
+.hero{min-height:max(720px,85vh);color:#FFFFFF}
+:global(html[data-theme="light"]) .home .hero a[class*="__button"]{color:#03172B!important}
 .home :global([class*="__chairman"]),
 .home :global([class*="__community"]){padding-right:24px;padding-left:24px}
 .slogan span{font-size:18px;font-weight:800;letter-spacing:.2em;line-height:1.8}
-.slogan i{padding:0 8px;color:#25cbd3;font-style:normal}
+.slogan i{padding:0 8px;color:#25CBD3;font-style:normal}
 .ecosystemDetails{display:flex;width:min(420px,100%);align-items:center;justify-content:space-between;gap:18px;margin:0 auto;color:var(--public-text)}
 .ecosystemDetails>div>span{color:var(--public-gold);font-size:9px;font-weight:800;letter-spacing:.18em}
 .ecosystemDetails h3{margin:7px 0!important;font-size:16px}
@@ -50,27 +85,183 @@
 .ecosystemDetails>div>div{display:flex;flex-wrap:wrap;gap:6px;margin-top:11px}
 .ecosystemDetails>div>div span{padding:4px 7px;border:1px solid rgba(215,168,74,.25);color:var(--public-muted);font-size:9px}
 .ecosystemDetails>a{flex:none;color:var(--public-gold);font-size:11px;font-weight:700}
-.orbitItemActive b{background:var(--public-gold)!important;color:#03172b}
-.portrait{display:grid;justify-items:center;align-content:center;gap:16px;width:min(230px,100%);min-height:340px!important;margin:auto;background:radial-gradient(ellipse at center,#102d43 0,#061a2b 58%,#03172b 100%)!important}
+.orbitItemActive b{background:var(--public-gold)!important;color:#03172B}
+.portrait{display:grid;justify-items:center;align-content:center;gap:16px;width:min(230px,100%);min-height:340px!important;margin:auto;background:radial-gradient(ellipse at center,#06243D 0,#03172B 58%,#03172B 100%)!important}
 .portrait:after{background:linear-gradient(135deg,rgba(37,203,211,.07),transparent 55%)!important}
-.portraitIcon{z-index:1;display:grid;width:82px;height:82px;place-items:center;border:1px solid rgba(201,162,39,.55);border-radius:50%;background:rgba(201,162,39,.12);color:#e8c84a;font-size:29px}
-.portrait small{z-index:1;color:#aebdc8;font-size:10px;line-height:1.5;text-align:center}
+.portraitIcon{z-index:1;display:grid;width:82px;height:82px;place-items:center;border:1px solid rgba(215,168,74,.55);border-radius:50%;background:rgba(215,168,74,.12);color:#D7A84A;font-size:29px}
+.portrait small{z-index:1;color:#F5F7F8;font-size:10px;line-height:1.5;text-align:center}
 .chairmanTitle{display:block;margin-top:5px;color:var(--public-muted);font-size:11px}
 .visionPoints{display:grid;gap:10px;margin:22px 0 18px;padding:0;list-style:none}
 .visionPoints li{position:relative;padding-left:17px;color:var(--public-muted);font-size:12px;line-height:1.5}
 .visionPoints li:before{position:absolute;top:.55em;left:0;width:6px;height:6px;border-radius:50%;background:var(--public-gold);content:""}
 .communityList{grid-template-columns:1fr 1fr;gap:10px}
-.communityList div{grid-template-columns:24px 1fr 16px;gap:8px;min-height:58px;padding:12px 10px;border:1px solid rgba(215,168,74,.2);background:rgba(3,23,43,.45);font-size:10px}
+.communityList div{gap:8px;min-height:58px;padding:12px 10px;border:1px solid rgba(201,162,39,.2);background:#03172B;font-size:10px}
 .partnerGrid{grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;border:0}
 .partnerGrid div{min-height:66px;flex-direction:column;gap:5px;border:1px solid rgba(215,168,74,.15);background:rgba(255,255,255,.025);font-size:9px;letter-spacing:.04em;text-align:center}
 .partnerGrid span{font-size:13px}
 .partnerNote{margin:17px auto 0;color:var(--public-muted);font-size:9px;text-align:center}
-.footerCta{align-items:center;min-height:78px;padding:14px max(24px,calc((100% - 1120px)/2));background:linear-gradient(90deg,#c9a227,#e8c84a,#c9a227);color:#0d1b3e}
+.footerCta{align-items:center;min-height:78px;padding:14px max(24px,calc((100% - 1120px)/2));background:linear-gradient(90deg,#D7A84A,#D7A84A,#D7A84A);color:#06243D}
 .footerCtaCopy{display:grid;gap:4px}
 .footerCtaCopy strong{font-size:10px;letter-spacing:.08em}
 .footerCtaCopy span{font-size:9px;font-weight:500;letter-spacing:0}
-.footerCta>a{flex:none;border:1px solid #0d1b3e;background:#0d1b3e;color:#e8c84a;font-size:9px}
-.footerCta>a:hover{background:transparent;color:#0d1b3e}
+.footerCta>a{flex:none;border:1px solid #06243D;background:#06243D;color:#D7A84A;font-size:9px}
+.footerCta>a:hover{background:transparent;color:#06243D}
+@media (prefers-reduced-motion: no-preference){.home *{transition-duration:.25s}}
+:global(html[data-theme="light"]) .home :global([class*="__slogan"]){background:#FFFFFF;color:#D7A84A}
+:global(html[data-theme="light"]) .home :global([class*="__orbitItem"]) span{color:#03172B}
+:global(html[data-theme="light"]) .home :global([class*="__chairman"]) blockquote,
+:global(html[data-theme="light"]) .home :global([class*="__chairman"]) p,
+:global(html[data-theme="light"]) .home :global([class*="__community"]) p,
+:global(html[data-theme="light"]) .home :global([class*="__partners"]) h2,
+:global(html[data-theme="light"]) .home :global([class*="__news"]) h2,
+:global(html[data-theme="light"]) .home :global([class*="__newsCard"]) h3,
+:global(html[data-theme="light"]) .home :global([class*="__newsCard"]) span,
+:global(html[data-theme="light"]) .home :global([class*="__ecoCard"]) h3,
+:global(html[data-theme="light"]) .home :global([class*="__ecoCard"]) p{color:#03172B}
+:global(html[data-theme="light"]) .home :global([class*="__newsCard"]),
+:global(html[data-theme="light"]) .home :global([class*="__ecoCard"]),
+:global(html[data-theme="light"]) .home :global([class*="__projectCard"]){background:#FFFFFF;color:#03172B}
+:global(html[data-theme="light"]) .home :global([class*="__newsCard"]:hover),
+:global(html[data-theme="light"]) .home :global([class*="__ecoCard"]:hover),
+:global(html[data-theme="light"]) .home :global([class*="__projectCard"]:hover){background:#F5F7F8}
+.orbitTech b{border-color:#14B8B1!important;color:#14B8B1}
+.projectStatus{color:#D7A84A!important}
+.projectStatusActive{color:#14B8B1!important}
 @media(max-width:900px){.partnerGrid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:767px){.hero{min-height:max(560px,70vh)}}
 @media(max-width:600px){.slogan{min-height:100px;padding:26px 18px}.slogan span{font-size:13px;letter-spacing:.12em}.ecosystemDetails{align-items:flex-start;flex-direction:column;padding:0 12px}.portrait{min-height:270px!important}.communityList{grid-template-columns:1fr 1fr}.partnerGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.footerCta{align-items:flex-start;flex-direction:column;gap:12px;padding:18px 20px}}
+
+/* Match the reference homepage's alternating light surfaces and dark footer. */
+:global(html[data-theme="light"]) .home :global([class*="__ecosystemCards"]),
+:global(html[data-theme="light"]) .home :global([class*="__projects"]),
+:global(html[data-theme="light"]) .home :global([class*="__chairman"]),
+:global(html[data-theme="light"]) .home :global([class*="__community"]),
+:global(html[data-theme="light"]) .home :global([class*="__news"]){background:#F5F7F8;color:#03172B}
+:global(html[data-theme="light"]) .home :global([class*="__intro"]),
+:global(html[data-theme="light"]) .home :global([class*="__orbitSection"]),
+:global(html[data-theme="light"]) .home :global([class*="__synergy"]),
+:global(html[data-theme="light"]) .home :global([class*="__vision"]),
+:global(html[data-theme="light"]) .home :global([class*="__partners"]),
+:global(html[data-theme="light"]) .home :global([class*="__cta"]){background:#FFFFFF;color:#03172B}
+:global(html[data-theme="light"]) .home :global([class*="__intro"]) :is(h2,p),
+:global(html[data-theme="light"]) .home :global([class*="__vision"]) :is(h2,p,li),
+:global(html[data-theme="light"]) .home :global([class*="__synergy"]) :is(h2,h3,p),
+:global(html[data-theme="light"]) .home :global([class*="__chairman"]) :is(blockquote,p),
+:global(html[data-theme="light"]) .home :global([class*="__community"]) p,
+:global(html[data-theme="light"]) .home :global([class*="__partners"]) h2,
+:global(html[data-theme="light"]) .home :global([class*="__news"]) h2,
+:global(html[data-theme="light"]) .home :global([class*="__cta"]) :is(h2,p){color:#03172B}
+:global(html[data-theme="light"]) .home :global([class*="__benefitGrid"]) p,
+:global(html[data-theme="light"]) .home :global([class*="__timeline"]) p,
+:global(html[data-theme="light"]) .home :global([class*="__projectCard"]) p,
+:global(html[data-theme="light"]) .home .ecosystemDetails p,
+:global(html[data-theme="light"]) .home :global([class*="__partnerNote"]){color:#4B5563}
+:global(html[data-theme="light"]) .home :global([class*="__communityList"]) div{background:#FFFFFF;color:#03172B}
+:global(html[data-theme="light"]) .home :global([class*="__partnerGrid"]) div{background:#FFFFFF;border-color:rgba(3,23,43,.1);color:#374151}
+:global(html[data-theme="light"]) .home :global([class*="__footer"]){background:#03172B;color:#FFFFFF}
+:global(html[data-theme="light"]) .home :global([class*="__footer"]) :is(h2,p,a,span){color:#FFFFFF}
+:global(html[data-theme="light"]) .home :global([class*="__footer"]) h2,
+:global(html[data-theme="light"]) .home :global([class*="__footer"]) [class*="__contact"]{color:#D7A84A}
+:global(html[data-theme="light"]) .home :global([class*="__legal"]){border-color:rgba(255,255,255,.12)}
+
+/* Match the light reference's alternating section and card surfaces. */
+:global(html[data-theme="light"]) .home :global([class*="__intro"]){background:#F5F7F8;color:#03172B}
+:global(html[data-theme="light"]) .home :global([class*="__benefitGrid"]) article,
+:global(html[data-theme="light"]) .home :global([class*="__timeline"]) article{background:#FFFFFF;color:#03172B}
+:global(html[data-theme="light"]) .home :global([class*="__synergyGrid"]) article,
+:global(html[data-theme="light"]) .home :global([class*="__partnerGrid"]) div{background:#F5F7F8;color:#03172B}
+:global(html[data-theme="light"]) .home :global([class*="__ecoCard"]){display:flex;min-height:285px;flex-direction:column;background:#FFFFFF;color:#03172B}
+:global(html[data-theme="light"]) .home :global([class*="__ecoCard"]) img{position:relative;inset:auto;display:block;width:100%;height:145px;flex:none;object-fit:cover}
+:global(html[data-theme="light"]) .home :global([class*="__ecoCard"]) :global([class*="__cardShade"]){display:none}
+:global(html[data-theme="light"]) .home :global([class*="__ecoCard"]) :global([class*="__cardCopy"]){position:relative;inset:auto;display:block;flex:1;padding:13px 14px;background:#FFFFFF;color:#03172B}
+:global(html[data-theme="light"]) .home :global([class*="__ecoCard"]) :global([class*="__cardCopy"])>span{color:#14B8B1}
+:global(html[data-theme="light"]) .home :global([class*="__ecoCard"]) :global([class*="__cardCopy"]) h3,
+:global(html[data-theme="light"]) .home :global([class*="__ecoCard"]) :global([class*="__cardCopy"]) p{color:#03172B}
+:global(html[data-theme="light"]) .home :global([class*="__ecoCard"]) :global([class*="__cardCopy"])>b{color:#96701B}
+
+/* Homepage type scale matched to the supplied Tailwind reference. */
+.home :global([class*="__heroCopy"]) h1{font-size:36px}
+.home :global([class*="__heroCopy"]) p{font-size:18px}
+.home :global([class*="__heroActions"]) a{font-size:14px}
+.home :global([class*="__eyebrow"]){font-size:12px}
+.home :global([class*="__introText"]) h2{font-size:30px}
+.home :global([class*="__introText"]) p{font-size:18px}
+.home :global([class*="__introText"]) :global([class*="__button"]){font-size:16px}
+.home :global([class*="__sectionHeading"]) h2{font-size:30px}
+.home :global([class*="__vision"]) h2,
+.home :global([class*="__community"]) h2,
+.home :global([class*="__projects"]) :global([class*="__sectionHeading"]) h2,
+.home :global([class*="__news"]) :global([class*="__sectionHeading"]) h2{font-size:30px}
+.home :global([class*="__partners"]) :global([class*="__sectionHeading"]) h2{font-size:30px}
+.home :global([class*="__cta"]) h2{font-size:36px}
+.home :global([class*="__community"]) p{font-size:18px}
+.home :global([class*="__community"]) :global([class*="__button"]){font-size:16px}
+.home :global([class*="__benefitGrid"]) h3{font-size:14px}
+.home :global([class*="__benefitGrid"]) p{font-size:12px}
+.home :global([class*="__synergyGrid"]) h3{font-size:16px}
+.home :global([class*="__synergyGrid"]) p,
+.home :global([class*="__projectGrid"]) p{font-size:14px}
+.home :global([class*="__projectGrid"]) h3{font-size:18px}
+.home :global([class*="__projectGrid"]) a,
+.home :global([class*="__listingLink"]) a{font-size:14px}
+.home :global([class*="__ecoCard"]) :global([class*="__cardCopy"])>span{font-size:12px}
+.home :global([class*="__ecoCard"]) :global([class*="__cardCopy"]) h3{font-size:20px}
+.home :global([class*="__ecoCard"]) :global([class*="__cardCopy"]) p{font-size:14px}
+.home :global([class*="__ecoCard"]) :global([class*="__cardCopy"])>b{font-size:12px}
+.home :global([class*="__newsCard"]) h3{font-size:18px}
+.home :global([class*="__newsCard"]) span{font-size:12px}
+.home :global([class*="__chairman"]) blockquote{font-size:20px}
+.home :global([class*="__vision"]) li{font-size:16px}
+.home :global([class*="__timeline"]) b{font-size:24px}
+.home :global([class*="__timeline"]) p{font-size:14px}
+.home :global([class*="__partnerGrid"]) div{font-size:12px}
+.home :global([class*="__partnerNote"]){font-size:12px}
+.home :global([class*="__slogan"]) span{font-size:24px}
+.home .ecosystemDetails p{font-size:14px}
+.home .ecosystemDetails>div>span,
+.home .ecosystemDetails>div>div span{font-size:12px}
+.home :global([class*="__footer"]) :is(p,a,span){font-size:14px}
+.home :global([class*="__footer"]) h2{font-size:14px}
+.home :global([class*="__footer"]) :global([class*="__motto"]){font-size:12px}
+.home :global([class*="__legal"]),
+.home :global([class*="__legal"]) :is(span,a){font-size:12px}
+.home :global([class*="__stats"]) b{font-size:36px}
+.home :global([class*="__stats"]) span{font-size:14px}
+.home :global([class*="__cta"]) p{font-size:18px}
+.home :global([class*="__cta"]) :global([class*="__button"]){font-size:18px}
+.home :global([class*="__chairman"]) p{font-size:14px}
+@media(min-width:768px){
+  .home :global([class*="__heroCopy"]) h1{font-size:72px}
+  .home :global([class*="__heroCopy"]) p{font-size:20px}
+  .home :global([class*="__heroActions"]) a{font-size:16px}
+  .home :global([class*="__introText"]) h2{font-size:48px}
+  .home :global([class*="__sectionHeading"]) h2{font-size:48px}
+  .home :global([class*="__vision"]) h2,
+  .home :global([class*="__community"]) h2,
+  .home :global([class*="__projects"]) :global([class*="__sectionHeading"]) h2,
+  .home :global([class*="__news"]) :global([class*="__sectionHeading"]) h2{font-size:36px}
+  .home :global([class*="__cta"]) h2{font-size:48px}
+  .home :global([class*="__slogan"]) span{font-size:36px}
+  .home :global([class*="__stats"]) b{font-size:48px}
+  .home :global([class*="__chairman"]) blockquote{font-size:24px}
+}
+@media(min-width:1101px){
+  .home header :global([class*="__navigation"])>a,
+  .home header :global([class*="__dropdown"])>summary,
+  .home header :global([class*="__submenu"]) a,
+  .home header :global([class*="__cta"]){font-size:14px}
+}
+
+/* Keep the requested section titles as single, monochrome lines in both themes. */
+.home :global([class*="__orbitSection"]) :global([class*="__sectionHeading"]) h2,
+.home :global([class*="__ecosystemCards"]) :global([class*="__sectionHeading"]) h2,
+.home :global([class*="__synergy"]) :global([class*="__sectionHeading"]) h2{white-space:nowrap;color:var(--public-text);font-size:clamp(14px,4.2vw,48px)}
+.home :global([class*="__projects"]) :global([class*="__sectionHeading"]) h2,
+.home :global([class*="__community"]) h2{white-space:nowrap;color:var(--public-text);font-size:clamp(14px,4.2vw,36px)}
+.home :global([class*="__orbitSection"]) :global([class*="__sectionHeading"]) h2 strong,
+.home :global([class*="__ecosystemCards"]) :global([class*="__sectionHeading"]) h2 strong,
+.home :global([class*="__synergy"]) :global([class*="__sectionHeading"]) h2 strong,
+.home :global([class*="__projects"]) :global([class*="__sectionHeading"]) h2 strong,
+.home :global([class*="__community"]) h2 strong{display:inline;color:inherit}
+.home :global([class*="__vision"]) h2{white-space:nowrap;font-size:clamp(18px,3.2vw,36px)}
+.home :global([class*="__vision"]) h2 strong{display:inline}

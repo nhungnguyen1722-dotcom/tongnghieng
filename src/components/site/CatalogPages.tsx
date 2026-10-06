@@ -5,7 +5,7 @@ import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { loadCmsRecords } from "@/lib/cms-client";
 import { CMS_SEEDS, PUBLIC_IMAGES, type CmsArticle, type CmsTour, type CmsVenue, type VenueKind } from "@/lib/cms-data";
-import { hydratePageContent, readPageContent, type AdminPageContent } from "@/app/admin/page-data";
+import { hydratePageContent, readPageContent, TRAVEL_FACILITY_ITEMS, type AdminPageContent } from "@/app/admin/page-data";
 import SiteFooter from "./SiteFooter";
 import SiteHeader from "./SiteHeader";
 import styles from "./catalog-pages.module.css";
@@ -264,34 +264,65 @@ export function EditorialListingPage({ kind }: { kind: "news" | "projects" }) {
   );
 }
 
-const travelCards = [
-  { title: "Cảng Nội Địa Cà Ná", href: "/cang-ca-na", image: PUBLIC_IMAGES[3], text: "Kết nối hành trình và trải nghiệm miền duyên hải." },
-  { title: "Nhà Hàng – Khách Sạn", href: "/nha-hang-khach-san", image: PUBLIC_IMAGES[1], text: "Khám phá hệ thống nhà hàng, khách sạn và điểm nghỉ dưỡng." },
-  { title: "Khu Sinh Thái – Resort", href: "/resort", image: PUBLIC_IMAGES[4], text: "Nghỉ dưỡng giữa thiên nhiên và bản sắc địa phương." },
-];
-
 export function TravelLandingPage() {
   const page = useManagedPageContent("nghieng-travel");
   const [categories, setCategories] = useState(CMS_SEEDS.tourCategories.filter((item) => item.active));
+  const [activeSlide, setActiveSlide] = useState(0);
   useEffect(() => {
     loadCmsRecords("tourCategories").then((items) => setCategories(items.filter((item) => item.active).sort((a, b) => a.order - b.order)));
   }, []);
   const accommodationSection = page?.sections.find((item) => item.id === "nghieng-travel-section-1");
+  const accommodationItems = accommodationSection?.items?.length ? accommodationSection.items : TRAVEL_FACILITY_ITEMS;
   const toursSection = page?.sections.find((item) => item.id === "nghieng-travel-section-2");
+  const valuesSection = page?.sections.find((item) => item.id === "nghieng-travel-section-3");
+  const exploreSection = page?.sections.find((item) => item.id === "nghieng-travel-section-4");
+  const communitySection = page?.sections.find((item) => item.id === "nghieng-travel-section-5");
+  const slides = page?.sliders.filter((slide) => slide.enabled) ?? [];
+  useEffect(() => {
+    if (slides.length < 2) return;
+    const timer = window.setInterval(() => setActiveSlide((current) => (current + 1) % slides.length), 6000);
+    return () => window.clearInterval(timer);
+  }, [slides.length]);
+  const normalizedSlide = slides.length ? activeSlide % slides.length : 0;
+  const slide = slides[normalizedSlide];
   if (page?.active === false) return <main className={styles.site}><SiteHeader /><section className={styles.section}><h1>{page.name}</h1><p>Trang hiện chưa được xuất bản.</p></section><SiteFooter /></main>;
   return (
     <main className={styles.site}>
       <SiteHeader />
-      <ListingHero title={page?.heroTitle || "NGHIENG TRAVEL"} description={page?.heroDescription || "Nhà hàng, khách sạn, bungalow, khu sinh thái trên nhiều tỉnh – thành phố. Tour nội địa và quốc tế."} image={PUBLIC_IMAGES[0]} />
+      {slide ? <section className={styles.travelHero} style={{ backgroundImage: "linear-gradient(90deg,rgba(3,23,43,.94),rgba(3,23,43,.68) 52%,rgba(3,23,43,.22)),url(" + (slide.image || PUBLIC_IMAGES[0]) + ")" }}>
+        <div className={styles.travelHeroContent}><p className={styles.eyebrow}>{slide.description || "NGHIENG TRAVEL"}</p><h1>{slide.title}</h1><p className={styles.heroDescription}>{page?.heroDescription || "Tour văn hóa, sinh thái và team building — cùng cộng đồng địa phương phát triển kinh tế du lịch bền vững."}</p><div className={styles.travelHeroActions}><Link className={styles.goldButton} href="/lien-he">LIÊN HỆ ĐẶT TOUR <span aria-hidden="true">→</span></Link><Link className={styles.outlineButton} href="/lien-he">GÓP Ý HỢP TÁC</Link></div></div>
+        {slides.length > 1 && <><button className={`${styles.slideArrow} ${styles.slidePrevious}`} type="button" aria-label="Slide trước" onClick={() => setActiveSlide((normalizedSlide - 1 + slides.length) % slides.length)}>‹</button><button className={`${styles.slideArrow} ${styles.slideNext}`} type="button" aria-label="Slide sau" onClick={() => setActiveSlide((normalizedSlide + 1) % slides.length)}>›</button><div className={styles.slideDots}>{slides.map((item, index) => <button type="button" key={item.id} aria-label={`Chuyển đến slide ${index + 1}`} aria-current={index === normalizedSlide} onClick={() => setActiveSlide(index)} />)}</div></>}
+      </section> : <ListingHero title={page?.heroTitle || "NGHIENG TRAVEL"} description={page?.heroDescription || "Nhà hàng, khách sạn, bungalow, khu sinh thái trên nhiều tỉnh – thành phố. Tour nội địa và quốc tế."} image={PUBLIC_IMAGES[0]} />}
       <section id="catalog" className={styles.section} hidden={accommodationSection?.enabled === false}>
-        <div className={styles.sectionHeading}><div><p className={styles.eyebrow}>HỆ THỐNG NGHỈ DƯỠNG</p><h2>{accommodationSection?.title || "Kết nối điểm đến"}</h2></div><span>03 lĩnh vực</span></div>
-        <div className={styles.categoryGrid}>{travelCards.map((card) => <Link className={styles.categoryCard} href={card.href} key={card.href}><img src={card.image} alt="" loading="lazy" /><span>{card.title}</span><p>{card.text}</p><b>Khám phá <span aria-hidden="true">→</span></b></Link>)}</div>
+        <div className={styles.sectionHeading}><div><p className={styles.eyebrow}>CƠ SỞ HẠ TẦNG</p><h2>HỆ THỐNG NGHỈ DƯỠNG</h2></div><span>03 lĩnh vực</span></div>
+        <div className={styles.accommodationGrid}>{accommodationItems.map((card, index) => <Link className={styles.accommodationCard} href={card.href || "#"} key={card.id}><img src={card.image || PUBLIC_IMAGES[index % PUBLIC_IMAGES.length]} alt="" loading="lazy" /><div className={styles.accommodationTitle}><span className={styles.accommodationIcon} aria-hidden="true"><svg viewBox="0 0 24 24">{card.icon === "anchor" ? <><path d="M12 22V8"/><path d="M5 12H2a10 10 0 0 0 20 0h-3"/><circle cx="12" cy="5" r="3"/></> : card.icon === "building" ? <><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2M10 6h4M10 10h4M10 14h4M10 18h4"/></> : <><path d="m17 14 3 3.3a1 1 0 0 1-.7 1.7H4.7a1 1 0 0 1-.7-1.7L7 14h-.3a1 1 0 0 1-.7-1.7L9 9h-.2A1 1 0 0 1 8 7.3L12 3l4 4.3a1 1 0 0 1-.8 1.7H15l3 3.3a1 1 0 0 1-.7 1.7H17ZM12 22v-3"/></>}</svg></span><h3>{card.title}</h3></div><ul>{card.description.split("\n").filter(Boolean).map((detail, detailIndex) => <li key={`${card.id}-${detailIndex}`}>{detail}</li>)}</ul><b>Xem chi tiết <span aria-hidden="true">→</span></b></Link>)}</div>
       </section>
       <section className={styles.section} hidden={toursSection?.enabled === false}>
-        <div className={styles.sectionHeading}><div><p className={styles.eyebrow}>HẠNG MỤC TỔ CHỨC TOUR</p><h2>{toursSection?.title || "Hành trình dành cho bạn"}</h2></div><span>{categories.length} danh mục</span></div>
+        <div className={styles.sectionHeading}><div><p className={styles.eyebrow}>DU LỊCH LỮ HÀNH</p><h2>HẠNG MỤC TỔ CHỨC TOUR</h2></div><span>{categories.length} danh mục</span></div>
         <div className={styles.categoryGrid}>{categories.map((item) => <Link className={styles.categoryCard} href={"/tour/" + item.slug} key={item.id}><img src={item.image} alt="" loading="lazy" /><span>{item.title}</span><p>{item.description}</p><b>Khám phá <span aria-hidden="true">→</span></b></Link>)}</div>
         <div className={styles.centerAction}><Link className={styles.outlineButton} href="/tour">Xem thêm <span aria-hidden="true">→</span></Link></div>
       </section>
+      <section className={styles.valuesSection} hidden={valuesSection?.enabled === false}>
+        <div className={styles.section}>
+          <div className={styles.sectionHeading}><div><h2>{valuesSection?.title || "GIÁ TRỊ MANG LẠI"}</h2></div></div>
+          {valuesSection?.description && <p className={styles.valuesDescription}>{valuesSection.description}</p>}
+          <div className={styles.valueGrid}>
+            <article className={styles.valueCard}><span className={styles.valueIcon} aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm13 10v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" /></svg></span><h3>Kết Nối Toàn Diện</h3><p>Liên kết đa ngành, tối ưu chuỗi giá trị.</p></article>
+            <article className={styles.valueCard}><span className={styles.valueIcon} aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m22 7-8.5 8.5-5-5L2 17M16 7h6v6" /></svg></span><h3>Gia Tăng Giá Trị</h3><p>Đa dạng dịch vụ, nâng tầm trải nghiệm.</p></article>
+            <article className={styles.valueCard}><span className={styles.valueIcon} aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m17 14 3 3.3a1 1 0 0 1-.7 1.7H4.7a1 1 0 0 1-.7-1.7L7 14h-.3a1 1 0 0 1-.7-1.7L9 9h-.2A1 1 0 0 1 8 7.3L12 3l4 4.3a1 1 0 0 1-.8 1.7H15l3 3.3a1 1 0 0 1-.7 1.7H17ZM12 22v-3" /></svg></span><h3>Phát Triển Bền Vững</h3><p>Gắn kết cộng đồng, cân bằng kinh tế và môi trường.</p></article>
+            <article className={styles.valueCard}><span className={styles.valueIcon} aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20ZM2 12h20" /></svg></span><h3>Định Hướng – Quy Mô</h3><p>Hiện diện trên nhiều Tỉnh - Thành phố, mở rộng không giới hạn.</p></article>
+          </div>
+        </div>
+      </section>
+      <section className={styles.exploreSection} hidden={exploreSection?.enabled === false}>
+        <h2>{exploreSection?.title || "KHÁM PHÁ CÙNG NGHIENG TRAVEL"}</h2>
+        <p>{exploreSection?.description || "Trải nghiệm du lịch đẳng cấp, kết nối văn hóa và phát triển cộng đồng cùng Nghieng Travel."}</p>
+        <Link className={styles.goldButton} href="/lien-he">Liên Hệ &amp; Đặt Tour <span aria-hidden="true">→</span></Link>
+      </section>
+      <div className={styles.goldStrip} hidden={communitySection?.enabled === false}>
+        <div><strong>{communitySection?.title || "CÙNG THAM GIA - CÙNG KẾT NỐI - CÙNG PHÁT TRIỂN"}</strong><span>{communitySection?.description || "Nghieng Complex trân trọng chào đón Quý Đối tác, Thành viên và Cộng đồng cùng đồng hành."}</span></div>
+        <Link href="/lien-he">Liên hệ ngay <span aria-hidden="true">→</span></Link>
+      </div>
       <SiteFooter />
     </main>
   );

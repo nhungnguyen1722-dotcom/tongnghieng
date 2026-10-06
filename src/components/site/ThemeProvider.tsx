@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useEffect, useMemo, useSyncExternalStore, type ReactNode } from "react";
+import { createContext, useContext, useLayoutEffect, useMemo, useSyncExternalStore, type ReactNode } from "react";
 
 type Theme = "dark" | "light";
 type ThemeContextValue = { theme: Theme; toggleTheme: () => void };
@@ -9,8 +9,12 @@ const themeEvent = "nghieng:theme-changed";
 const ThemeContext = createContext<ThemeContextValue>({ theme: "dark", toggleTheme: () => undefined });
 
 function getTheme(): Theme {
-  const stored = window.localStorage.getItem("nghieng-theme");
-  return stored === "light" ? "light" : "dark";
+  try {
+    const stored = window.localStorage.getItem("nghieng-theme");
+    return stored === "light" ? "light" : "dark";
+  } catch {
+    return "dark";
+  }
 }
 
 function subscribe(onChange: () => void) {
@@ -25,7 +29,7 @@ function subscribe(onChange: () => void) {
 export function ThemeProvider({ children }: { children: ReactNode }) {
   const theme = useSyncExternalStore<Theme>(subscribe, getTheme, () => "dark");
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     document.documentElement.dataset.theme = theme;
   }, [theme]);
 
@@ -33,7 +37,11 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     theme,
     toggleTheme: () => {
       const next = getTheme() === "dark" ? "light" : "dark";
-      window.localStorage.setItem("nghieng-theme", next);
+      try {
+        window.localStorage.setItem("nghieng-theme", next);
+      } catch {
+        // The current page still switches themes when storage is unavailable.
+      }
       document.documentElement.dataset.theme = next;
       window.dispatchEvent(new Event(themeEvent));
     },

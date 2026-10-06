@@ -1,8 +1,7 @@
 import { randomUUID } from "node:crypto";
-import { mkdir, writeFile } from "node:fs/promises";
-import path from "node:path";
 import { NextResponse } from "next/server";
 import { hasSameOrigin, readAdminSession } from "@/lib/admin-auth";
+import { dbPool } from "@/lib/db";
 
 export const runtime = "nodejs";
 
@@ -16,7 +15,7 @@ const extensions: Record<string, string> = {
 
 export async function POST(request: Request) {
   if (!hasSameOrigin(request)) return NextResponse.json({ error: "Yêu cầu không hợp lệ." }, { status: 403 });
-  if (readAdminSession(request)?.role !== "Admin") return NextResponse.json({ error: "Cần đăng nhập Admin để tải ảnh." }, { status: 401 });
+  if (!readAdminSession(request)) return NextResponse.json({ error: "Cần đăng nhập để tải ảnh." }, { status: 401 });
   const formData = await request.formData();
   const file = formData.get("file");
   if (!(file instanceof File)) return NextResponse.json({ error: "Chọn một tệp ảnh để tải lên." }, { status: 400 });
@@ -32,10 +31,9 @@ export async function POST(request: Request) {
   };
   if (!signatures[file.type](bytes)) return NextResponse.json({ error: "Nội dung tệp không khớp định dạng ảnh được chọn." }, { status: 415 });
 
-  const filename = randomUUID() + extensions[file.type];
-  const directory = path.join(process.cwd(), "public", "uploads");
-  await mkdir(directory, { recursive: true });
-  await writeFile(path.join(directory, filename), bytes);
+  const id = randomUUID();
+  await dbPool.query("CREATE TABLE IF NOT EXISTS nghieng_media_assets (id UUID PRIMARY KEY, file_name TEXT NOT NULL, mime_type TEXT NOT NULL, content BYTEA NOT NULL, created_at TIMESTAMPTZ NOT NULL DEFAULT NOW())");
+  await dbPool.query("INSERT INTO nghieng_media_assets (id, file_name, mime_type, content) VALUES ($1, $2, $3, $4)", [id, file.name, file.type, bytes]);
 
-  return NextResponse.json({ url: "/uploads/" + filename, title: file.name }, { status: 201 });
+  return NextResponse.json({ url: "/api/media-assets/" + id, title: file.name }, { status: 201 });
 }

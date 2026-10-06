@@ -22,10 +22,10 @@ const navigation: NavigationEntry[] = [
   { label: "Quản lý Dự án", href: "/admin/projects", icon: "folder" },
   { label: "Nhà hàng – Khách sạn", icon: "venue", children: [{ label: "Danh mục", href: "/admin/venue-categories" }, { label: "Bài viết", href: "/admin/venues" }] },
   { label: "Tour", icon: "map", children: [{ label: "Danh mục", href: "/admin/tour-categories" }, { label: "Bài viết", href: "/admin/tours" }] },
-  { label: "Quản lý Tin tức", href: "/admin/news", icon: "news" },
+  { label: "Quản lý Tin tức", href: "/admin/pages/tin-tuc", icon: "news" },
   { label: "Quản lý Media", href: "/admin/media", icon: "image" },
   { label: "Quản lý Thư viện", href: "/admin/library", icon: "gallery" },
-  { label: "Quản lý Menu Header", href: "/admin/menu", icon: "menu" },
+  { label: "Quản lý Menu Header", href: "/admin/header-menu", icon: "menu" },
   { label: "Tài khoản Admin", href: "/admin/users", icon: "users" },
 ];
 
@@ -51,7 +51,7 @@ function Icon({ name }: { name: string }) {
 export default function AdminShell({ children }: { children: ReactNode }) {
   const pathname = usePathname();
   const router = useRouter();
-  const brandLogo = useBrandLogo();
+  const brandLogo = useBrandLogo("dark");
   const [auth, setAuth] = useState<{ loading: boolean; user: { name: string; email: string; role: string; passwordChangeRequired: boolean } | null }>({ loading: true, user: null });
 
   useEffect(() => {

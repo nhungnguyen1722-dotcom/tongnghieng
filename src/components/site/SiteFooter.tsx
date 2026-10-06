@@ -8,7 +8,7 @@ import { loadCmsRecords } from "@/lib/cms-client";
 import useBrandLogo from "./useBrandLogo";
 
 export default function SiteFooter() {
-  const logo = useBrandLogo();
+  const logo = useBrandLogo("dark");
   const [menu, setMenu] = useState<CmsMenuItem[]>(CMS_SEEDS.menu);
   useEffect(() => {
     let active = true;

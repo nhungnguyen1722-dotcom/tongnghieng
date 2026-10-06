@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&family=Inter+Tight:wght@400;500;600;700;800;900&display=swap");
 
 :root {
   color-scheme: dark;
@@ -6,9 +6,9 @@
   --foreground: #FFFFFF;
   --public-bg: #03172B;
   --public-panel: #06243D;
-  --public-panel-alt: #0B3045;
+  --public-panel-alt: #06243D;
   --public-text: #FFFFFF;
-  --public-muted: #B9C6D1;
+  --public-muted: #FFFFFF;
   --public-gold: #D7A84A;
   --public-gold-light: #F2C76E;
   --public-teal: #14B8B1;
@@ -26,9 +26,69 @@ html[data-theme="light"] {
   --foreground: #03172B;
   --public-bg: #F5F7F8;
   --public-panel: #FFFFFF;
-  --public-panel-alt: #EAF0F2;
+  --public-panel-alt: #F5F7F8;
   --public-text: #03172B;
   --public-muted: #374151;
+}
+
+html[data-theme] {
+  transition: color-scheme .25s ease;
+}
+
+html[data-theme] body,
+html[data-theme] body * {
+  transition: color .25s ease, background-color .25s ease, border-color .25s ease, transform .25s ease;
+}
+
+html[data-theme="light"] [class*="site-footer_footer__"] {
+  background: var(--public-panel);
+  color: var(--public-text);
+}
+
+html[data-theme="light"] [class*="site-footer_footer__"] a,
+html[data-theme="light"] [class*="site-footer_footer__"] span,
+html[data-theme="light"] [class*="site-footer_footer__"] p {
+  color: var(--public-muted);
+}
+
+html[data-theme="light"] [class*="templateRoot"] {
+  background: var(--public-bg);
+  color: var(--public-text);
+}
+
+html[data-theme="light"] [class*="templateRoot"] section:not(.hero-section) {
+  background-color: var(--public-bg) !important;
+  color: var(--public-text);
+}
+
+html[data-theme="light"] [class*="templateRoot"] .section-navy:not(.hero-section):not(.hero-section *),
+html[data-theme="light"] [class*="templateRoot"] [class*="bg-[#03172B]"]:not(.hero-section):not(.hero-section *),
+html[data-theme="light"] [class*="templateRoot"] [class*="bg-[#06243D]"]:not(.hero-section):not(.hero-section *) {
+  background-color: var(--public-panel) !important;
+  color: var(--public-text) !important;
+}
+
+html[data-theme="light"] [class*="templateRoot"] [class*="text-white"]:not(.hero-section):not(.hero-section *) {
+  color: var(--public-text) !important;
+}
+
+html[data-theme="light"] [class*="templateRoot"] .hover-card:hover,
+html[data-theme="light"] [class*="templateRoot"] .glass-card:hover,
+html[data-theme="light"] [class*="templateRoot"] [class*="card"]:hover > div {
+  background: var(--public-light) !important;
+  border-color: var(--public-light) !important;
+  color: var(--public-bg) !important;
+  transition: background-color .25s ease, color .25s ease, border-color .25s ease;
+}
+
+html[data-theme="light"] [class*="templateRoot"] .hover-card:hover :is(h1,h2,h3,h4,p,span),
+html[data-theme="light"] [class*="templateRoot"] .glass-card:hover :is(h1,h2,h3,h4,p,span),
+html[data-theme="light"] [class*="templateRoot"] [class*="card"]:hover > div :is(h1,h2,h3,h4,p,span) {
+  color: var(--public-text) !important;
+}
+
+html[data-theme="light"] [class*="templateRoot"] :is(h1,h2,h3,h4,h5,p,li,div,span) {
+  transition: color .25s ease;
 }
 
 html,
@@ -46,6 +106,7 @@ body {
   font-family: "Inter Tight", Inter, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: color .25s ease, background-color .25s ease;
 }
 
 h1,

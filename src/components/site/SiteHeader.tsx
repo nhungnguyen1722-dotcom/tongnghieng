@@ -22,7 +22,7 @@ export default function SiteHeader() {
   const [items, setItems] = useState<CmsMenuItem[]>(initialMenu);
   const [menuOpen, setMenuOpen] = useState(false);
   const { theme, toggleTheme } = useSiteTheme();
-  const selectedLogo = useBrandLogo();
+  const selectedLogo = useBrandLogo(theme);
 
   useEffect(() => {
     let mounted = true;
@@ -49,7 +49,12 @@ export default function SiteHeader() {
           const active = isCurrent(pathname, item.url);
           return children.length ? (
             <details className={styles.dropdown} key={item.id}>
-              <summary className={active ? styles.active : ""}>{item.label}<span aria-hidden="true">⌄</span></summary>
+              <summary className={active ? styles.active : ""}>
+                {item.label}
+                <svg aria-hidden="true" className={styles.chevron} xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </summary>
               <div className={styles.submenu}>
                 <Link href={item.url} className={active ? styles.active : ""}>{item.label} – Tổng quan</Link>
                 {children.map((child) => <Link href={child.url} key={child.id} className={isCurrent(pathname, child.url) ? styles.active : ""}>{child.label}</Link>)}

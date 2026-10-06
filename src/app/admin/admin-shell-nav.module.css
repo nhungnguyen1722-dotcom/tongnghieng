@@ -1,10 +1,10 @@
 .group{display:grid;min-width:0}
-.group summary{display:flex;min-height:42px;align-items:center;gap:10px;padding:0 12px;color:#9aa9b8;font-size:12px;cursor:pointer;list-style:none}
+.group summary{display:flex;min-height:42px;align-items:center;gap:10px;padding:0 12px;color:#F2C76E;font-size:12px;cursor:pointer;list-style:none}
 .group summary::-webkit-details-marker{display:none}
-.group summary>span{margin-left:auto;color:#7e8d9b;transition:transform .16s ease}
+.group summary>span{margin-left:auto;color:#14B8B1;transition:transform .16s ease}
 .group[open] summary>span{transform:rotate(180deg)}
-.group summary:hover,.group .groupActive{color:#f2c76e}
+.group summary:hover,.group .groupActive{color:#F2C76E}
 .group>div{display:grid;gap:2px;padding:2px 0 6px 25px}
-.group>div a{display:flex;min-height:34px;align-items:center;padding:0 10px;color:#9aa9b8;font-size:11px;text-decoration:none}
-.group>div a:hover{color:#fff}
+.group>div a{display:flex;min-height:34px;align-items:center;padding:0 10px;color:#F2C76E;font-size:11px;text-decoration:none}
+.group>div a:hover{color:#FFFFFF}
 @media(max-width:800px){.group summary{min-height:40px}}

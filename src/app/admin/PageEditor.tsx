@@ -5,7 +5,7 @@ import { useEffect, useMemo, useState, useSyncExternalStore } from "react";
 import Link from "next/link";
 import AdminShell, { useAdminRole } from "./AdminShell";
 import MediaPicker from "@/components/admin/MediaPicker";
-import { defaultPageContent, hydratePageContent, readPageContent, savePageContent, type AdminPageContent, type AdminSection, type AdminSlider } from "./page-data";
+import { defaultPageContent, hydratePageContent, readPageContent, savePageContent, type AdminPageContent, type AdminSection, type AdminSectionItem, type AdminSlider } from "./page-data";
 import styles from "./page-editor.module.css";
 
 function StatusToggle({ value, onChange, label, disabled = false }: { value: boolean; onChange: (value: boolean) => void; label: string; disabled?: boolean }) {
@@ -23,7 +23,8 @@ export default function PageEditor({ slug }: { slug: string }) {
 }
 
 function PageEditorContent({ slug }: { slug: string }) {
-  const canEdit = useAdminRole() === "Admin";
+  const role = useAdminRole();
+  const canEdit = role === "Admin" || (role === "User" && slug === "nghieng-media");
   const snapshot = useSyncExternalStore(subscribePageContent, () => JSON.stringify(readPageContent(slug)), () => JSON.stringify(defaultPageContent(slug)));
   const content = useMemo(() => JSON.parse(snapshot) as AdminPageContent, [snapshot]);
   useEffect(() => { void hydratePageContent(slug); }, [slug]);
@@ -37,6 +38,11 @@ function PageEditorContent({ slug }: { slug: string }) {
 
   const update = (changes: Partial<AdminPageContent>) => { setDraft((previous) => ({ ...current, ...previous, ...changes })); setSaved(""); };
   const updateSection = (id: string, changes: Partial<AdminSection>) => update({ sections: current.sections.map((item) => item.id === id ? { ...item, ...changes } : item) });
+  const updateSectionItem = (sectionId: string, itemId: string, changes: Partial<AdminSectionItem>) => {
+    const section = current.sections.find((item) => item.id === sectionId);
+    if (!section?.items) return;
+    updateSection(sectionId, { items: section.items.map((item) => item.id === itemId ? { ...item, ...changes } : item) });
+  };
   const updateSlider = (id: string, changes: Partial<AdminSlider>) => update({ sliders: current.sliders.map((item) => item.id === id ? { ...item, ...changes } : item) });
   const moveSlider = (targetId: string) => {
     if (!draggingSlider || draggingSlider === targetId) return;
@@ -77,7 +83,7 @@ function PageEditorContent({ slug }: { slug: string }) {
           <div className={styles.panelFooter}><div className={styles.pageStatus}><StatusToggle value={current.active} onChange={(active) => update({ active })} disabled={!canEdit} label="Trang đang hoạt động" /><span>Active</span></div><button className={styles.panelSave} type="button" disabled={!canEdit} onClick={save}>Lưu thông tin</button></div>
         </section>
 
-        <section className={styles.panel}><div className={styles.sectionHeading}><div><h2>Slider của Trang</h2><p>Banner slide đầu trang, hiển thị theo thứ tự và trạng thái Active.</p></div><button className={styles.addButton} onClick={addSlider} type="button" disabled={!canEdit || current.sliders.length >= 3}>＋ Thêm Slide</button></div><p className={styles.hint}>Kéo thả để đổi thứ tự hoặc mở từng slide để chỉnh sửa nội dung và ảnh.</p>{current.sliders.length === 0 && <div className={styles.emptyState}>Trang này chưa có Slide nào. Nhấn “Thêm Slide” để tạo banner.</div>}<div className={styles.items}>{current.sliders.map((slider, index) => <article className={styles.item} key={slider.id} draggable={canEdit} onDragStart={() => canEdit && setDraggingSlider(slider.id)} onDragEnd={() => setDraggingSlider(null)} onDragOver={(event) => canEdit && event.preventDefault()} onDrop={(event) => { event.preventDefault(); if (canEdit) moveSlider(slider.id); }}><div className={styles.reorderGrip} aria-hidden="true">⋮⋮</div><span className={styles.itemNumber}>{String(index + 1).padStart(2, "0")}</span>{slider.image ? <img className={styles.thumbnail} src={slider.image} alt="" /> : <div className={styles.thumbnailEmpty}>Ảnh</div>}<div className={styles.itemFields}>{editingSlider === slider.id ? <><input aria-label="Tiêu đề banner" value={slider.title} onChange={(event) => updateSlider(slider.id, { title: event.target.value })} /><input aria-label="Mô tả banner" value={slider.description} onChange={(event) => updateSlider(slider.id, { description: event.target.value })} /><MediaPicker value={slider.image} onChange={(value) => updateSlider(slider.id, { image: Array.isArray(value) ? value[0] ?? "" : value })} label="Ảnh banner" /></> : <div className={styles.itemCopy}><strong>{slider.title}</strong><small>{slider.description}</small></div>}</div><StatusToggle value={slider.enabled} onChange={(enabled) => updateSlider(slider.id, { enabled })} disabled={!canEdit} label={`Banner ${index + 1} đang hoạt động`} /><button className={styles.iconButton} type="button" disabled={!canEdit} aria-label={`Chỉnh sửa banner ${index + 1}`} onClick={() => setEditingSlider(editingSlider === slider.id ? null : slider.id)}>✎</button><button className={styles.iconButton} type="button" disabled={!canEdit} aria-label={`Xóa banner ${index + 1}`} onClick={() => window.confirm("Xóa banner này?") && update({ sliders: current.sliders.filter((item) => item.id !== slider.id) })}>×</button></article>)}</div></section>
+        <section className={styles.panel}><div className={styles.sectionHeading}><div><h2>Slider của Trang</h2><p>Banner slide đầu trang, hiển thị theo thứ tự và trạng thái Active.</p></div><button className={styles.addButton} onClick={addSlider} type="button" disabled={!canEdit || current.sliders.length >= 3}>＋ Thêm Slide</button></div><p className={styles.hint}>Kéo thả để đổi thứ tự hoặc mở từng slide để chỉnh sửa nội dung và ảnh.</p>{current.sliders.length === 0 && <div className={styles.emptyState}>Trang này chưa có Slide nào. Nhấn “Thêm Slide” để tạo banner.</div>}<div className={styles.items}>{current.sliders.map((slider, index) => <article className={styles.item} key={slider.id} role={editingSlider === slider.id ? "dialog" : undefined} aria-modal={editingSlider === slider.id ? true : undefined} aria-label={editingSlider === slider.id ? `Chỉnh sửa banner ${index + 1}` : undefined} draggable={canEdit} onDragStart={() => canEdit && setDraggingSlider(slider.id)} onDragEnd={() => setDraggingSlider(null)} onDragOver={(event) => canEdit && event.preventDefault()} onDrop={(event) => { event.preventDefault(); if (canEdit) moveSlider(slider.id); }}><div className={styles.reorderGrip} aria-hidden="true">⋮⋮</div><span className={styles.itemNumber}>{String(index + 1).padStart(2, "0")}</span>{slider.image ? <img className={styles.thumbnail} src={slider.image} alt="" /> : <div className={styles.thumbnailEmpty}>Ảnh</div>}<div className={`${styles.itemFields} ${editingSlider === slider.id ? styles.sliderEditorFields : ""}`}>{editingSlider === slider.id ? <><input aria-label="Tiêu đề banner" value={slider.title} onChange={(event) => updateSlider(slider.id, { title: event.target.value })} /><input aria-label="Mô tả banner" value={slider.description} onChange={(event) => updateSlider(slider.id, { description: event.target.value })} /><MediaPicker value={slider.image} onChange={(value) => updateSlider(slider.id, { image: Array.isArray(value) ? value[0] ?? "" : value })} label="Ảnh banner" /></> : <div className={styles.itemCopy}><strong>{slider.title}</strong><small>{slider.description}</small></div>}</div><StatusToggle value={slider.enabled} onChange={(enabled) => updateSlider(slider.id, { enabled })} disabled={!canEdit} label={`Banner ${index + 1} đang hoạt động`} /><button className={styles.iconButton} type="button" disabled={!canEdit} aria-label={`Chỉnh sửa banner ${index + 1}`} onClick={() => editingSlider === slider.id ? void save() : setEditingSlider(slider.id)}>{editingSlider === slider.id ? "Lưu" : "✎"}</button><button className={styles.iconButton} type="button" disabled={!canEdit} aria-label={`Xóa banner ${index + 1}`} onClick={() => window.confirm("Xóa banner này?") && update({ sliders: current.sliders.filter((item) => item.id !== slider.id) })}>×</button></article>)}</div></section>
 
         <section className={styles.panel}>
           <div className={styles.sectionHeading}>
@@ -88,7 +94,7 @@ function PageEditorContent({ slug }: { slug: string }) {
           {current.sections.length === 0 && <div className={styles.emptyState}>Trang này chưa có section nào trong CMS. Nhấn “Thêm section” để tạo section tự do (tiêu đề, mô tả, ảnh, nội dung, nút CTA).</div>}
           <div className={styles.items}>
             {current.sections.map((section, index) => (
-              <article className={styles.item} key={section.id}>
+              <article className={styles.item} key={section.id} role={editingSection === section.id ? "dialog" : undefined} aria-modal={editingSection === section.id ? true : undefined} aria-label={editingSection === section.id ? `Chỉnh sửa ${section.title}` : undefined}>
                 <div className={styles.reorder}>
                   <button type="button" aria-label="Đưa section lên" disabled={!canEdit || index === 0} onClick={() => moveSection(index, -1)}>↑</button>
                   <span aria-hidden="true">⋮⋮</span>
@@ -103,10 +109,22 @@ function PageEditorContent({ slug }: { slug: string }) {
                     <MediaPicker value={section.image ?? ""} onChange={(value) => updateSection(section.id, { image: Array.isArray(value) ? value[0] ?? "" : value })} label="Ảnh section" />
                     <input aria-label="Nhãn nút CTA" placeholder="Nhãn nút CTA" value={section.ctaLabel ?? ""} onChange={(event) => updateSection(section.id, { ctaLabel: event.target.value })} />
                     <input aria-label="Liên kết nút CTA" placeholder="Liên kết nút CTA" value={section.ctaUrl ?? ""} onChange={(event) => updateSection(section.id, { ctaUrl: event.target.value })} />
-                  </> : <div className={styles.itemCopy}><strong>{section.title}</strong><small>{section.description || "Section chuẩn · nội dung đang hiển thị"}</small></div>}
+                    {section.items?.length ? <div className={styles.sectionCards}>
+                      <strong className={styles.sectionCardsTitle}>Nội dung trong section</strong>
+                      {section.items.map((item, itemIndex) => <fieldset className={styles.sectionCardFields} key={item.id}>
+                        <legend>{String(itemIndex + 1).padStart(2, "0")} · {item.title}</legend>
+                        <label>Tiêu đề<input aria-label={`Tiêu đề nội dung ${itemIndex + 1}`} value={item.title} onChange={(event) => updateSectionItem(section.id, item.id, { title: event.target.value })} /></label>
+                        <label>Nhãn phụ<input aria-label={`Nhãn phụ ${itemIndex + 1}`} value={item.subtitle ?? ""} onChange={(event) => updateSectionItem(section.id, item.id, { subtitle: event.target.value })} /></label>
+                        <label>Mô tả<textarea aria-label={`Mô tả nội dung ${itemIndex + 1}`} rows={5} value={item.description} onChange={(event) => updateSectionItem(section.id, item.id, { description: event.target.value })} /></label>
+                        <label>Biểu tượng<select aria-label={`Biểu tượng nội dung ${itemIndex + 1}`} value={item.icon ?? ""} onChange={(event) => updateSectionItem(section.id, item.id, { icon: (event.target.value || undefined) as AdminSectionItem["icon"] })}><option value="">Mặc định</option><option value="globe">Địa cầu</option><option value="layers">Khoáng sản / Lớp</option><option value="cpu">Công nghệ / CPU</option><option value="users">Cộng đồng</option><option value="trending-up">Tăng trưởng</option><option value="shield">Truyền thông / Khiên</option><option value="anchor">Cảng / Mỏ neo</option><option value="building">Nhà hàng / Khách sạn</option><option value="tree">Khu sinh thái / Cây</option></select></label>
+                        <MediaPicker value={item.image ?? ""} onChange={(value) => updateSectionItem(section.id, item.id, { image: Array.isArray(value) ? value[0] ?? "" : value })} label={`Ảnh nội dung ${itemIndex + 1}`} />
+                        <label>Liên kết<input aria-label={`Liên kết nội dung ${itemIndex + 1}`} value={item.href ?? ""} onChange={(event) => updateSectionItem(section.id, item.id, { href: event.target.value })} /></label>
+                      </fieldset>)}
+                    </div> : null}
+                  </> : <div className={styles.itemCopy}><strong>{section.title}</strong><small>{section.description || (section.items?.map((item) => item.title).join(" · ") ?? (section.body ? section.body.slice(0, 140) : "Section chuẩn · nội dung đang hiển thị"))}</small></div>}
                 </div>
                 <StatusToggle value={section.enabled} onChange={(enabled) => updateSection(section.id, { enabled })} disabled={!canEdit} label={`${section.title} đang hiển thị`} />
-                <button className={styles.iconButton} type="button" disabled={!canEdit} aria-label={`Chỉnh sửa ${section.title}`} onClick={() => setEditingSection(editingSection === section.id ? null : section.id)}>✎</button>
+                <button className={styles.iconButton} type="button" disabled={!canEdit} aria-label={`Chỉnh sửa ${section.title}`} onClick={() => editingSection === section.id ? void save() : setEditingSection(section.id)}>{editingSection === section.id ? "Lưu" : "✎"}</button>
                 <button className={styles.iconButton} type="button" disabled={!canEdit} aria-label={`Xóa ${section.title}`} onClick={() => window.confirm(`Xóa section “${section.title}”?`) && update({ sections: current.sections.filter((item) => item.id !== section.id) })}>×</button>
               </article>
             ))}

@@ -15,7 +15,7 @@ const stats = [
 const quickLinks = [
   ["▤", "Quản lý Landing Page", "/admin/pages/trang-chu", "Chỉnh sửa tiêu đề, nội dung, ảnh, CTA, bật/tắt và sắp xếp section trang chủ."],
   ["▧", "Quản lý Dự án", "/admin/projects", "Thêm, sửa, xóa, ẩn/hiện bài đăng dự án."],
-  ["▤", "Quản lý Tin tức", "/admin/news", "Thêm, sửa, xóa, ẩn/hiện bài viết tin tức."],
+  ["▤", "Quản lý Tin tức", "/admin/pages/tin-tuc", "Thêm, sửa, xóa, ẩn/hiện bài viết tin tức."],
   ["↗", "Xem website", "/", "Mở website đang chạy."],
 ];
 
