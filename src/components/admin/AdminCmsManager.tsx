@@ -143,13 +143,13 @@ export default function AdminCmsManager({ section }: { section: AdminCmsSection 
 
 function RichTextEditor({ value, onChange }: { value: string; onChange: (value: string) => void }) {
   const editor = useRef<HTMLDivElement>(null);
-  const [html, setHtml] = useState(value);
-  useEffect(() => { setHtml(value); }, [value]);
-  const initialHtml = /<\/?[a-z][\s\S]*?>/i.test(html) ? html : html.split(/\n\s*\n/).map((line) => "<p>" + line.replace(/\n/g, "<br>") + "</p>").join("");
+  const initialHtml = /<\/?[a-z][\s\S]*?>/i.test(value) ? value : value.split(/\n\s*\n/).map((line) => "<p>" + line.replace(/\n/g, "<br>") + "</p>").join("");
+  useEffect(() => {
+    if (editor.current && editor.current.innerHTML !== initialHtml) editor.current.innerHTML = initialHtml;
+  }, [initialHtml]);
   const format = (command: string, block?: string) => {
     editor.current?.focus();
     document.execCommand(command, false, block);
-    if (editor.current) setHtml(editor.current.innerHTML);
   };
   return <div className={richStyles.editor}>
     <div className={richStyles.toolbar} aria-label="Định dạng nội dung">
@@ -160,7 +160,7 @@ function RichTextEditor({ value, onChange }: { value: string; onChange: (value: 
       <button type="button" onMouseDown={(event) => event.preventDefault()} onClick={() => format("insertUnorderedList")} aria-label="Danh sách">• List</button>
       <button type="button" onMouseDown={(event) => event.preventDefault()} onClick={() => format("insertOrderedList")} aria-label="Danh sách số">1. List</button>
     </div>
-    <div ref={editor} className={richStyles.body} contentEditable suppressContentEditableWarning dangerouslySetInnerHTML={{ __html: initialHtml }} onInput={(event) => setHtml(event.currentTarget.innerHTML)} onBlur={(event) => onChange(event.currentTarget.innerHTML)} />
+    <div ref={editor} className={richStyles.body} contentEditable suppressContentEditableWarning dangerouslySetInnerHTML={{ __html: initialHtml }} onBlur={(event) => onChange(event.currentTarget.innerHTML)} />
   </div>;
 }
 
