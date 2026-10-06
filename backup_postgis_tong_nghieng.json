@@ -1,0 +1,3874 @@
+[
+  {
+    "collection": "documents",
+    "record_id": "doc-tong-nv-n",
+    "payload": {
+      "id": "doc-tong-nv-n",
+      "title": "TỔNG NV&N",
+      "type": "PPTX",
+      "category": "Slide",
+      "url": "https://docs.google.com/presentation/d/1pSB5Vi2SP63PJXbDijva-GPQApliIovS/edit?slide=id.p1#slide=id.p1",
+      "status": "published",
+      "order": 1
+    },
+    "sort_order": 0,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "documents",
+    "record_id": "doc-welink-community",
+    "payload": {
+      "id": "doc-welink-community",
+      "title": "Mô hình WeLink Community",
+      "type": "PPTX",
+      "category": "Danh mục tin tức",
+      "url": "https://drive.google.com/drive/folders/1vhei3S6fBQaQ6bAKNdXD9LkKghVezRRn?usp=sharing",
+      "status": "published",
+      "order": 2
+    },
+    "sort_order": 1,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "documents",
+    "record_id": "doc-vhux-khach-hang",
+    "payload": {
+      "id": "doc-vhux-khach-hang",
+      "title": "SLIDE VHUX Khách hàng",
+      "type": "PPTX",
+      "category": "Slide",
+      "url": "https://drive.google.com/file/d/1IKspTeNdmF50qV7YrzXHdlGRXdTUM3al/view",
+      "status": "published",
+      "order": 3
+    },
+    "sort_order": 2,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "documents",
+    "record_id": "doc-he-sinh-thai",
+    "payload": {
+      "id": "doc-he-sinh-thai",
+      "title": "SLIDE 03 – HỆ SINH THÁI NGHIÊNG COMPLEX",
+      "type": "PPTX",
+      "category": "Slide",
+      "url": "https://drive.google.com/file/d/1DSFvfYjI_60y0JdfWMMzlcolmIBoDkC7/view",
+      "status": "published",
+      "order": 4
+    },
+    "sort_order": 3,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "documents",
+    "record_id": "doc-giai-phap-dong-hanh",
+    "payload": {
+      "id": "doc-giai-phap-dong-hanh",
+      "title": "SLIDE (19) GIẢI PHÁP ĐỒNG HÀNH",
+      "type": "Slide",
+      "category": "Slide",
+      "url": "https://drive.google.com/file/d/1TyoF8Puy_6EQ_JTHjoGed-TdDqu33hzD/view",
+      "status": "published",
+      "order": 5
+    },
+    "sort_order": 4,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "documents",
+    "record_id": "doc-doc-vhux",
+    "payload": {
+      "id": "doc-doc-vhux",
+      "title": "ĐỌC – VHUX khách hàng",
+      "type": "PDF",
+      "category": "Danh mục tin tức",
+      "url": "https://drive.google.com/file/d/10kVjjfxTLUZoJd6nB6OaIKrPlUdToYMb/view",
+      "status": "published",
+      "order": 6
+    },
+    "sort_order": 5,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "documents",
+    "record_id": "doc-trac-nghiem-vhux",
+    "payload": {
+      "id": "doc-trac-nghiem-vhux",
+      "title": "Trắc nghiệm VHUX với Khách hàng",
+      "type": "PDF",
+      "category": "Danh mục tin tức",
+      "url": "https://drive.google.com/file/d/1N027T0GooAzIIlmimTTlbnKvjrgglHu2/view",
+      "status": "published",
+      "order": 7
+    },
+    "sort_order": 6,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "media",
+    "record_id": "logo-nghieng-complex",
+    "payload": {
+      "id": "logo-nghieng-complex",
+      "active": true,
+      "title": "Nghieng Complex, nền tối",
+      "url": "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/7d454ef94_nghieng_complex_logo_dark_transparent.png",
+      "type": "logo",
+      "source": "external"
+    },
+    "sort_order": 0,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "media",
+    "record_id": "logo-nghieng",
+    "payload": {
+      "id": "logo-nghieng",
+      "active": false,
+      "title": "Logo Nghiêng",
+      "url": "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/6d68e3aa8_logo-nghieng.png",
+      "type": "logo",
+      "source": "external"
+    },
+    "sort_order": 1,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "media",
+    "record_id": "media-public-1",
+    "payload": {
+      "id": "media-public-1",
+      "title": "Nghieng Complex – Ảnh 1",
+      "url": "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/4e2c9afc5_slider-1-home.jpg",
+      "type": "image",
+      "source": "external"
+    },
+    "sort_order": 2,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "media",
+    "record_id": "media-public-2",
+    "payload": {
+      "id": "media-public-2",
+      "title": "Nghieng Complex – Ảnh 2",
+      "url": "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9970d8492_slider-3-home.jpg",
+      "type": "image",
+      "source": "external"
+    },
+    "sort_order": 3,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "media",
+    "record_id": "media-public-3",
+    "payload": {
+      "id": "media-public-3",
+      "title": "Nghieng Complex – Ảnh 3",
+      "url": "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9ddb1ea9d_banner-trang-chu-nghieng.webp",
+      "type": "image",
+      "source": "external"
+    },
+    "sort_order": 4,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "media",
+    "record_id": "media-public-4",
+    "payload": {
+      "id": "media-public-4",
+      "title": "Nghieng Complex – Ảnh 4",
+      "url": "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/99323fe9c_generated_ce3c7248.png",
+      "type": "image",
+      "source": "external"
+    },
+    "sort_order": 5,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "media",
+    "record_id": "media-public-5",
+    "payload": {
+      "id": "media-public-5",
+      "title": "Nghieng Complex – Ảnh 5",
+      "url": "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/0575d5b5e_generated_cd45ba2c.png",
+      "type": "image",
+      "source": "external"
+    },
+    "sort_order": 6,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "media",
+    "record_id": "media-public-6",
+    "payload": {
+      "id": "media-public-6",
+      "title": "Nghieng Complex – Ảnh 6",
+      "url": "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/490b8b229_generated_d36d21f3.png",
+      "type": "image",
+      "source": "external"
+    },
+    "sort_order": 7,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "menu",
+    "record_id": "menu-home",
+    "payload": {
+      "id": "menu-home",
+      "label": "Trang Chủ",
+      "url": "/",
+      "parentId": null,
+      "target": "_self",
+      "active": true,
+      "kind": "link",
+      "order": 1
+    },
+    "sort_order": 0,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "menu",
+    "record_id": "menu-about",
+    "payload": {
+      "id": "menu-about",
+      "label": "Giới Thiệu",
+      "url": "/gioi-thieu",
+      "parentId": null,
+      "target": "_self",
+      "active": true,
+      "kind": "link",
+      "order": 2
+    },
+    "sort_order": 1,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "menu",
+    "record_id": "menu-ecosystem",
+    "payload": {
+      "id": "menu-ecosystem",
+      "label": "Hệ Sinh Thái",
+      "url": "/nghieng-travel",
+      "parentId": null,
+      "target": "_self",
+      "active": true,
+      "kind": "link",
+      "order": 3
+    },
+    "sort_order": 2,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "menu",
+    "record_id": "menu-travel",
+    "payload": {
+      "id": "menu-travel",
+      "label": "Nghieng Travel",
+      "url": "/nghieng-travel",
+      "parentId": "menu-ecosystem",
+      "target": "_self",
+      "active": true,
+      "kind": "link",
+      "order": 1
+    },
+    "sort_order": 3,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "menu",
+    "record_id": "menu-mining",
+    "payload": {
+      "id": "menu-mining",
+      "label": "Khoáng Sản",
+      "url": "/khoang-san",
+      "parentId": "menu-ecosystem",
+      "target": "_self",
+      "active": true,
+      "kind": "link",
+      "order": 2
+    },
+    "sort_order": 4,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "menu",
+    "record_id": "menu-ai",
+    "payload": {
+      "id": "menu-ai",
+      "label": "Công Nghệ – AI",
+      "url": "/cong-nghe-ai",
+      "parentId": "menu-ecosystem",
+      "target": "_self",
+      "active": true,
+      "kind": "link",
+      "order": 3
+    },
+    "sort_order": 5,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "menu",
+    "record_id": "menu-community-growth",
+    "payload": {
+      "id": "menu-community-growth",
+      "label": "Phát Triển Cộng Đồng",
+      "url": "/phat-trien-cong-dong",
+      "parentId": "menu-ecosystem",
+      "target": "_self",
+      "active": true,
+      "kind": "link",
+      "order": 4
+    },
+    "sort_order": 6,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "menu",
+    "record_id": "menu-partner-solutions",
+    "payload": {
+      "id": "menu-partner-solutions",
+      "label": "Giải Pháp Đồng Hành",
+      "url": "/giai-phap-dong-hanh",
+      "parentId": "menu-ecosystem",
+      "target": "_self",
+      "active": true,
+      "kind": "link",
+      "order": 5
+    },
+    "sort_order": 7,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "menu",
+    "record_id": "menu-media",
+    "payload": {
+      "id": "menu-media",
+      "label": "Nghieng Media",
+      "url": "/nghieng-media",
+      "parentId": "menu-ecosystem",
+      "target": "_self",
+      "active": true,
+      "kind": "link",
+      "order": 6
+    },
+    "sort_order": 8,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "menu",
+    "record_id": "menu-venues",
+    "payload": {
+      "id": "menu-venues",
+      "label": "Nhà Hàng – Khách Sạn",
+      "url": "/nha-hang-khach-san",
+      "parentId": "menu-ecosystem",
+      "target": "_self",
+      "active": true,
+      "kind": "link",
+      "order": 7
+    },
+    "sort_order": 9,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "menu",
+    "record_id": "menu-tours",
+    "payload": {
+      "id": "menu-tours",
+      "label": "Tour Du Lịch",
+      "url": "/tour",
+      "parentId": "menu-ecosystem",
+      "target": "_self",
+      "active": true,
+      "kind": "link",
+      "order": 8
+    },
+    "sort_order": 10,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "menu",
+    "record_id": "menu-projects",
+    "payload": {
+      "id": "menu-projects",
+      "label": "Dự Án",
+      "url": "/du-an",
+      "parentId": null,
+      "target": "_self",
+      "active": true,
+      "kind": "link",
+      "order": 4
+    },
+    "sort_order": 11,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "menu",
+    "record_id": "menu-community",
+    "payload": {
+      "id": "menu-community",
+      "label": "Cộng Đồng",
+      "url": "/cong-dong",
+      "parentId": null,
+      "target": "_self",
+      "active": true,
+      "kind": "link",
+      "order": 5
+    },
+    "sort_order": 12,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "menu",
+    "record_id": "menu-news",
+    "payload": {
+      "id": "menu-news",
+      "label": "Tin Tức",
+      "url": "/tin-tuc",
+      "parentId": null,
+      "target": "_self",
+      "active": true,
+      "kind": "link",
+      "order": 6
+    },
+    "sort_order": 13,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "menu",
+    "record_id": "menu-partners",
+    "payload": {
+      "id": "menu-partners",
+      "label": "Đối Tác",
+      "url": "/doi-tac",
+      "parentId": null,
+      "target": "_self",
+      "active": true,
+      "kind": "link",
+      "order": 7
+    },
+    "sort_order": 14,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "menu",
+    "record_id": "menu-contact",
+    "payload": {
+      "id": "menu-contact",
+      "label": "Liên Hệ",
+      "url": "/lien-he",
+      "parentId": null,
+      "target": "_self",
+      "active": true,
+      "kind": "link",
+      "order": 8
+    },
+    "sort_order": 15,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "menu",
+    "record_id": "menu-cta",
+    "payload": {
+      "id": "menu-cta",
+      "label": "Hợp tác cùng chúng tôi",
+      "url": "/lien-he",
+      "parentId": null,
+      "target": "_self",
+      "active": true,
+      "kind": "cta",
+      "order": 9
+    },
+    "sort_order": 16,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "news",
+    "record_id": "news-gioi-thieu-to-hop",
+    "payload": {
+      "id": "news-gioi-thieu-to-hop",
+      "slug": "gioi-thieu-to-hop",
+      "title": "Nghieng Complex: Tổ hợp liên kết đa ngành",
+      "summary": "Nghieng Complex kết nối con người, công nghệ và cộng đồng để cùng kiến tạo giá trị bền vững.",
+      "body": "Nghieng Complex được định vị là Tổ hợp Liên kết Đa ngành, kết nối các nguồn lực để mỗi lĩnh vực có thể phát triển độc lập và cộng hưởng cùng nhau. Với triết lý Con người – Công nghệ – Cộng đồng, chúng tôi hướng đến những giá trị thiết thực và dài hạn.\n\nThông điệp Kết nối – Cộng hưởng – Kiến tạo Thịnh vượng là nền tảng để Nghieng Complex đồng hành cùng đối tác, thành viên và cộng đồng.",
+      "category": "Giới thiệu",
+      "status": "published",
+      "active": true,
+      "date": "2026-06-01",
+      "image": "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/4e2c9afc5_slider-1-home.jpg",
+      "relatedIds": [],
+      "isDemo": true,
+      "order": 1
+    },
+    "sort_order": 0,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "news",
+    "record_id": "news-thong-diep-chu-tich",
+    "payload": {
+      "id": "news-thong-diep-chu-tich",
+      "slug": "thong-diep-chu-tich",
+      "title": "Thông điệp từ Chủ tịch HĐQT – CEO",
+      "summary": "Niềm tin, sẻ chia giá trị và phát triển bền vững là nền tảng cho hành trình dài hạn.",
+      "body": "Mỗi kết nối có ý nghĩa đều mở ra một cơ hội để cùng tạo ra giá trị lớn hơn. Nghieng Complex tin vào sức mạnh của sự đồng hành, tinh thần sẻ chia và trách nhiệm với cộng đồng.\n\nChúng tôi trân trọng những đối tác cùng chung tầm nhìn, cùng kiến tạo giá trị bằng sự tử tế và hiệu quả.",
+      "category": "Thông điệp lãnh đạo",
+      "status": "published",
+      "active": true,
+      "date": "2026-06-08",
+      "image": "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9970d8492_slider-3-home.jpg",
+      "relatedIds": [],
+      "isDemo": true,
+      "order": 2
+    },
+    "sort_order": 1,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "news",
+    "record_id": "news-he-sinh-thai-06-linh-vuc",
+    "payload": {
+      "id": "news-he-sinh-thai-06-linh-vuc",
+      "slug": "he-sinh-thai-06-linh-vuc",
+      "title": "Hệ sinh thái Nghieng Complex gồm 06 lĩnh vực",
+      "summary": "Sáu lĩnh vực kết nối thành một hệ sinh thái đa ngành, cùng mở rộng giá trị cho đối tác và cộng đồng.",
+      "body": "Hệ sinh thái Nghieng Complex gồm Nghieng Travel, Khoáng sản, Công nghệ – AI, Phát triển cộng đồng, Giải pháp đồng hành và Nghieng Media.\n\nMỗi lĩnh vực có phạm vi hoạt động riêng, đồng thời chia sẻ nguồn lực và kinh nghiệm để thúc đẩy những cơ hội phát triển bền vững.",
+      "category": "Giới thiệu lĩnh vực",
+      "status": "published",
+      "active": true,
+      "date": "2026-06-15",
+      "image": "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/99323fe9c_generated_ce3c7248.png",
+      "relatedIds": [],
+      "isDemo": true,
+      "order": 3
+    },
+    "sort_order": 2,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "news",
+    "record_id": "news-muc-tieu-2026-2030",
+    "payload": {
+      "id": "news-muc-tieu-2026-2030",
+      "slug": "muc-tieu-2026-2030",
+      "title": "Tầm nhìn và mục tiêu 2026–2030",
+      "summary": "Lộ trình phát triển tập trung vào năng lực kết nối, chất lượng vận hành và trách nhiệm cộng đồng.",
+      "body": "Trong giai đoạn 2026–2030, Nghieng Complex tập trung củng cố năng lực kết nối, hoàn thiện các mô hình hợp tác và mở rộng giá trị bền vững.\n\nCác mục tiêu được triển khai theo từng giai đoạn, gắn với trách nhiệm của mỗi đơn vị và nhu cầu thực tế của cộng đồng.",
+      "category": "Định hướng",
+      "status": "published",
+      "active": true,
+      "date": "2026-06-22",
+      "image": "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9ddb1ea9d_banner-trang-chu-nghieng.webp",
+      "relatedIds": [],
+      "isDemo": true,
+      "order": 4
+    },
+    "sort_order": 3,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "news",
+    "record_id": "news-cong-dong-thien-nguyen",
+    "payload": {
+      "id": "news-cong-dong-thien-nguyen",
+      "slug": "cong-dong-thien-nguyen",
+      "title": "Sẻ chia và nâng đỡ cộng đồng",
+      "summary": "Giá trị của hệ sinh thái được thể hiện qua khả năng đồng hành cùng những sáng kiến địa phương.",
+      "body": "Giá trị của một hệ sinh thái không chỉ nằm ở quy mô mà còn ở khả năng sẻ chia và nâng đỡ cộng đồng.\n\nNghieng Complex đồng hành cùng đối tác địa phương trong các hoạt động giáo dục, phát triển sinh kế, bảo tồn văn hóa và kết nối nguồn lực thiện nguyện.",
+      "category": "Cộng đồng & thiện nguyện",
+      "status": "published",
+      "active": true,
+      "date": "2026-06-29",
+      "image": "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/0575d5b5e_generated_cd45ba2c.png",
+      "relatedIds": [],
+      "isDemo": true,
+      "order": 5
+    },
+    "sort_order": 4,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "news",
+    "record_id": "news-phat-trien-ben-vung",
+    "payload": {
+      "id": "news-phat-trien-ben-vung",
+      "slug": "phat-trien-ben-vung",
+      "title": "Kết nối giá trị mới trong hệ sinh thái Nghieng",
+      "summary": "Góc nhìn về cách các lĩnh vực cùng cộng hưởng để tạo giá trị dài hạn.",
+      "body": "Phát triển bền vững bắt đầu từ việc kết nối đúng nguồn lực, lắng nghe nhu cầu địa phương và tạo ra những mô hình hợp tác có trách nhiệm.\n\nNghieng Complex tiếp tục xây dựng hệ sinh thái nơi con người, doanh nghiệp, công nghệ và cộng đồng cùng phát triển.",
+      "category": "Hoạt động",
+      "status": "published",
+      "active": true,
+      "date": "2026-07-06",
+      "image": "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/490b8b229_generated_d36d21f3.png",
+      "relatedIds": [],
+      "isDemo": true,
+      "order": 6
+    },
+    "sort_order": 5,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "pageContents",
+    "record_id": "page-trang-chu",
+    "payload": {
+      "id": "page-trang-chu",
+      "slug": "trang-chu",
+      "content": {
+        "name": "Trang chủ",
+        "path": "/",
+        "title": "Nghieng Complex | Tổ hợp liên kết đa ngành",
+        "description": "Nghieng Complex kết nối con người, doanh nghiệp, công nghệ và cộng đồng để cùng phát triển bền vững.",
+        "heroTitle": "CÙNG PHÁT TRIỂN BỀN VỮNG",
+        "heroDescription": "Nghieng Complex đồng hành cùng Đối tác, Thành viên và Cộng đồng kiến tạo tương lai phát triển bền vững trên toàn quốc.",
+        "active": true,
+        "sliders": [
+          {
+            "id": "home-slide-1",
+            "title": "NGHIENG COMPLEX",
+            "description": "Tổ hợp Liên kết Đa ngành",
+            "image": "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/4e2c9afc5_slider-1-home.jpg",
+            "enabled": true
+          },
+          {
+            "id": "home-slide-2",
+            "title": "KẾT NỐI GIÁ TRỊ",
+            "description": "Hệ Sinh Thái Đa Ngành",
+            "image": "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9970d8492_slider-3-home.jpg",
+            "enabled": true
+          },
+          {
+            "id": "home-slide-3",
+            "title": "CÙNG PHÁT TRIỂN BỀN VỮNG",
+            "description": "Tầm nhìn 2026–2030",
+            "image": "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9ddb1ea9d_banner-trang-chu-nghieng.webp",
+            "enabled": true
+          }
+        ],
+        "sections": [
+          {
+            "id": "trang-chu-section-1",
+            "title": "Hero (Banner chính)",
+            "description": "TẦM NHÌN 2026–2030 · CÙNG PHÁT TRIỂN BỀN VỮNG",
+            "enabled": true
+          },
+          {
+            "id": "trang-chu-section-2",
+            "title": "Nghieng Complex là ai?",
+            "description": "KHÔNG CHỈ LÀ MỘT TẬP ĐOÀN ĐA NGÀNH",
+            "enabled": true
+          },
+          {
+            "id": "trang-chu-section-3",
+            "title": "Số liệu nổi bật",
+            "description": "6 LĨNH VỰC · 8+ DỰ ÁN · TẦM NHÌN 2030",
+            "enabled": true
+          },
+          {
+            "id": "trang-chu-section-4",
+            "title": "Hệ sinh thái 06 lĩnh vực (Orbit)",
+            "description": "HỆ SINH THÁI 06 LĨNH VỰC",
+            "enabled": true
+          },
+          {
+            "id": "trang-chu-section-5",
+            "title": "Cards 06 lĩnh vực",
+            "description": "CÁC LĨNH VỰC TRONG HỆ SINH THÁI",
+            "enabled": true
+          },
+          {
+            "id": "trang-chu-section-6",
+            "title": "Sức mạnh cộng hưởng",
+            "description": "KẾT NỐI · CỘNG HƯỞNG · GIA TĂNG GIÁ TRỊ · BỀN VỮNG",
+            "enabled": true
+          },
+          {
+            "id": "trang-chu-section-7",
+            "title": "Dự án và cơ hội hợp tác",
+            "description": "DỰ ÁN & CƠ HỘI HỢP TÁC",
+            "enabled": true
+          },
+          {
+            "id": "trang-chu-section-8",
+            "title": "Triết lý phát triển",
+            "description": "KẾT NỐI ĐỂ CÙNG PHÁT TRIỂN",
+            "enabled": true
+          },
+          {
+            "id": "trang-chu-section-9",
+            "title": "Thông điệp Chủ tịch",
+            "description": "KIẾN TẠO GIÁ TRỊ DÀI HẠN",
+            "enabled": true
+          },
+          {
+            "id": "trang-chu-section-10",
+            "title": "Tầm nhìn 2026–2030",
+            "description": "MỘT LỘ TRÌNH CÓ MỤC TIÊU",
+            "enabled": true
+          },
+          {
+            "id": "trang-chu-section-11",
+            "title": "Cộng đồng và thiện nguyện",
+            "description": "PHÁT TRIỂN CÙNG CỘNG ĐỒNG",
+            "enabled": true
+          },
+          {
+            "id": "trang-chu-section-12",
+            "title": "Đối tác đồng hành",
+            "description": "ĐỐI TÁC ĐỒNG HÀNH",
+            "enabled": true
+          },
+          {
+            "id": "trang-chu-section-13",
+            "title": "Tin tức và sự kiện",
+            "description": "TIN TỨC & SỰ KIỆN",
+            "enabled": true
+          },
+          {
+            "id": "trang-chu-section-14",
+            "title": "CTA cuối trang (Tham gia hệ sinh thái)",
+            "description": "THAM GIA HỆ SINH THÁI NGHIÊNG COMPLEX",
+            "enabled": true
+          }
+        ]
+      },
+      "order": 1
+    },
+    "sort_order": 1,
+    "deleted": false,
+    "updated_at": "2026-10-05T08:17:43.540Z"
+  },
+  {
+    "collection": "pageContents",
+    "record_id": "page-gioi-thieu",
+    "payload": {
+      "id": "page-gioi-thieu",
+      "slug": "gioi-thieu",
+      "content": {
+        "name": "Giới thiệu",
+        "path": "/gioi-thieu",
+        "title": "Giới thiệu | Nghieng Complex",
+        "description": "Thông tin và nội dung về Giới thiệu của Nghieng Complex.",
+        "heroTitle": "GIỚI THIỆU",
+        "heroDescription": "Khám phá Giới thiệu trong hệ sinh thái Nghieng Complex.",
+        "active": true,
+        "sliders": [
+          {
+            "id": "gioi-thieu-slide-1",
+            "title": "GIỚI THIỆU TẬP ĐOÀN",
+            "description": "Về Chúng Tôi",
+            "image": "https://static.wixstatic.com/media/12d367_4f26ccd17f8f4e3a8958306ea08c2332~mv2.png",
+            "enabled": true
+          },
+          {
+            "id": "gioi-thieu-slide-2",
+            "title": "GIÁ TRỊ CỐT LÕI",
+            "description": "Giá Trị Cốt Lõi",
+            "image": "https://static.wixstatic.com/media/12d367_4f26ccd17f8f4e3a8958306ea08c2332~mv2.png",
+            "enabled": true
+          },
+          {
+            "id": "gioi-thieu-slide-3",
+            "title": "SỨ MỆNH KẾT NỐI NGUỒN LỰC",
+            "description": "Sứ Mệnh",
+            "image": "https://static.wixstatic.com/media/12d367_4f26ccd17f8f4e3a8958306ea08c2332~mv2.png",
+            "enabled": true
+          }
+        ],
+        "sections": [
+          {
+            "id": "gioi-thieu-section-1",
+            "title": "Tổng quan Tập đoàn",
+            "description": "Section chuẩn · overview · MÔ HÌNH TỔ HỢP | LIÊN KẾT ĐA NGÀNH",
+            "enabled": true
+          },
+          {
+            "id": "gioi-thieu-section-2",
+            "title": "Sứ mệnh & Tầm nhìn",
+            "description": "Section chuẩn · vision · THÔNG ĐIỆP CHIẾN LƯỢC",
+            "enabled": true
+          },
+          {
+            "id": "gioi-thieu-section-3",
+            "title": "Giá trị cốt lõi",
+            "description": "Section chuẩn · values · 4 GIÁ TRỊ NỀN TẢNG",
+            "enabled": true
+          },
+          {
+            "id": "gioi-thieu-section-4",
+            "title": "Thông điệp Đối tác",
+            "description": "Section chuẩn · partner_cta",
+            "enabled": true
+          }
+        ]
+      },
+      "order": 2
+    },
+    "sort_order": 2,
+    "deleted": false,
+    "updated_at": "2026-10-05T08:17:43.537Z"
+  },
+  {
+    "collection": "pageContents",
+    "record_id": "page-nghieng-travel",
+    "payload": {
+      "id": "page-nghieng-travel",
+      "slug": "nghieng-travel",
+      "content": {
+        "name": "Nghieng Travel",
+        "path": "/nghieng-travel",
+        "title": "Nghieng Travel | Nghieng Complex",
+        "description": "Thông tin và nội dung về Nghieng Travel của Nghieng Complex.",
+        "heroTitle": "NGHIENG TRAVEL",
+        "heroDescription": "Khám phá Nghieng Travel trong hệ sinh thái Nghieng Complex.",
+        "active": true,
+        "sliders": [
+          {
+            "id": "nghieng-travel-slide-1",
+            "title": "NGHIENG TRAVEL",
+            "description": "Hệ Sinh Thái 01",
+            "image": "https://static.wixstatic.com/media/12d367_4f26ccd17f8f4e3a8958306ea08c2332~mv2.png",
+            "enabled": true
+          },
+          {
+            "id": "nghieng-travel-slide-2",
+            "title": "HÀNH TRÌNH ĐÍCH THỰC",
+            "description": "Trải Nghiệm",
+            "image": "https://static.wixstatic.com/media/12d367_4f26ccd17f8f4e3a8958306ea08c2332~mv2.png",
+            "enabled": true
+          },
+          {
+            "id": "nghieng-travel-slide-3",
+            "title": "DU LỊCH BỀN VỮNG",
+            "description": "Phát Triển Du Lịch",
+            "image": "https://static.wixstatic.com/media/12d367_4f26ccd17f8f4e3a8958306ea08c2332~mv2.png",
+            "enabled": true
+          }
+        ],
+        "sections": [
+          {
+            "id": "nghieng-travel-section-1",
+            "title": "Hệ thống nghỉ dưỡng",
+            "description": "Section chuẩn · facilities · HỆ THỐNG NGHỈ DƯỠNG",
+            "enabled": true
+          },
+          {
+            "id": "nghieng-travel-section-2",
+            "title": "Hạng mục tổ chức Tour",
+            "description": "Section chuẩn · tours · HẠNG MỤC TỔ CHỨC TOUR",
+            "enabled": true
+          },
+          {
+            "id": "nghieng-travel-section-3",
+            "title": "Giá trị mang lại",
+            "description": "Section chuẩn · benefits · GIÁ TRỊ MANG LẠI",
+            "enabled": true
+          },
+          {
+            "id": "nghieng-travel-section-4",
+            "title": "CTA Liên hệ đặt Tour",
+            "description": "Section chuẩn · cta · KHÁM PHÁ CÙNG NGHIENG TRAVEL",
+            "enabled": true
+          }
+        ]
+      },
+      "order": 3
+    },
+    "sort_order": 3,
+    "deleted": false,
+    "updated_at": "2026-10-05T08:17:43.539Z"
+  },
+  {
+    "collection": "pageContents",
+    "record_id": "page-khoang-san",
+    "payload": {
+      "id": "page-khoang-san",
+      "slug": "khoang-san",
+      "content": {
+        "name": "Khoáng sản",
+        "path": "/khoang-san",
+        "title": "Khoáng sản | Nghieng Complex",
+        "description": "Thông tin và nội dung về Khoáng sản của Nghieng Complex.",
+        "heroTitle": "KHOÁNG SẢN",
+        "heroDescription": "Khám phá Khoáng sản trong hệ sinh thái Nghieng Complex.",
+        "active": true,
+        "sliders": [
+          {
+            "id": "khoang-san-slide-1",
+            "title": "KHOÁNG SẢN",
+            "description": "Hệ Sinh Thái 02",
+            "image": "https://static.wixstatic.com/media/12d367_4f26ccd17f8f4e3a8958306ea08c2332~mv2.png",
+            "enabled": true
+          },
+          {
+            "id": "khoang-san-slide-2",
+            "title": "GIÁ TRỊ TÀI NGUYÊN",
+            "description": "Nguồn Lực",
+            "image": "https://static.wixstatic.com/media/12d367_4f26ccd17f8f4e3a8958306ea08c2332~mv2.png",
+            "enabled": true
+          },
+          {
+            "id": "khoang-san-slide-3",
+            "title": "LIÊN KẾT NGUỒN LỰC",
+            "description": "Liên Kết Doanh Nghiệp",
+            "image": "https://static.wixstatic.com/media/12d367_4f26ccd17f8f4e3a8958306ea08c2332~mv2.png",
+            "enabled": true
+          }
+        ],
+        "sections": [
+          {
+            "id": "khoang-san-section-1",
+            "title": "Lĩnh vực Khoáng sản",
+            "description": "Section chuẩn · segments · LĨNH VỰC KHOÁNG SẢN",
+            "enabled": true
+          },
+          {
+            "id": "khoang-san-section-2",
+            "title": "Các dự án hợp tác",
+            "description": "Section chuẩn · projects · CÁC DỰ ÁN HỢP TÁC",
+            "enabled": true
+          },
+          {
+            "id": "khoang-san-section-3",
+            "title": "CTA Hợp tác Khoáng sản",
+            "description": "Section chuẩn · cta · HỢP TÁC KHOÁNG SẢN",
+            "enabled": true
+          }
+        ]
+      },
+      "order": 4
+    },
+    "sort_order": 4,
+    "deleted": false,
+    "updated_at": "2026-10-05T08:17:43.538Z"
+  },
+  {
+    "collection": "pageContents",
+    "record_id": "page-cong-nghe-ai",
+    "payload": {
+      "id": "page-cong-nghe-ai",
+      "slug": "cong-nghe-ai",
+      "content": {
+        "name": "Công nghệ AI",
+        "path": "/cong-nghe-ai",
+        "title": "Công nghệ AI | Nghieng Complex",
+        "description": "Thông tin và nội dung về Công nghệ AI của Nghieng Complex.",
+        "heroTitle": "CÔNG NGHỆ AI",
+        "heroDescription": "Khám phá Công nghệ AI trong hệ sinh thái Nghieng Complex.",
+        "active": true,
+        "sliders": [
+          {
+            "id": "cong-nghe-ai-slide-1",
+            "title": "CÔNG NGHỆ – AI –",
+            "description": "Hệ Sinh Thái 03",
+            "image": "https://static.wixstatic.com/media/12d367_4f26ccd17f8f4e3a8958306ea08c2332~mv2.png",
+            "enabled": true
+          },
+          {
+            "id": "cong-nghe-ai-slide-2",
+            "title": "CHUYỂN ĐỔI SỐ",
+            "description": "Đổi Mới Sáng Tạo",
+            "image": "https://static.wixstatic.com/media/12d367_4f26ccd17f8f4e3a8958306ea08c2332~mv2.png",
+            "enabled": true
+          },
+          {
+            "id": "cong-nghe-ai-slide-3",
+            "title": "JUST IT & WELINK",
+            "description": "Nền Tảng Số",
+            "image": "https://static.wixstatic.com/media/12d367_4f26ccd17f8f4e3a8958306ea08c2332~mv2.png",
+            "enabled": true
+          }
+        ],
+        "sections": [
+          {
+            "id": "cong-nghe-ai-section-1",
+            "title": "Giải pháp Công nghệ",
+            "description": "Section chuẩn · services · GIẢI PHÁP CÔNG NGHỆ",
+            "enabled": true
+          },
+          {
+            "id": "cong-nghe-ai-section-2",
+            "title": "Nền tảng Just IT & Welink",
+            "description": "Section chuẩn · platform · NỀN TẢNG | JUST IT & WELINK",
+            "enabled": true
+          },
+          {
+            "id": "cong-nghe-ai-section-3",
+            "title": "CTA Chuyển đổi số",
+            "description": "Section chuẩn · cta · CHUYỂN ĐỔI SỐ CÙNG NGHIENG",
+            "enabled": true
+          }
+        ]
+      },
+      "order": 5
+    },
+    "sort_order": 5,
+    "deleted": false,
+    "updated_at": "2026-10-05T08:17:43.536Z"
+  },
+  {
+    "collection": "pageContents",
+    "record_id": "page-phat-trien-cong-dong",
+    "payload": {
+      "id": "page-phat-trien-cong-dong",
+      "slug": "phat-trien-cong-dong",
+      "content": {
+        "name": "Phát triển cộng đồng",
+        "path": "/phat-trien-cong-dong",
+        "title": "Phát triển cộng đồng | Nghieng Complex",
+        "description": "Thông tin và nội dung về Phát triển cộng đồng của Nghieng Complex.",
+        "heroTitle": "PHÁT TRIỂN CỘNG ĐỒNG",
+        "heroDescription": "Khám phá Phát triển cộng đồng trong hệ sinh thái Nghieng Complex.",
+        "active": true,
+        "sliders": [
+          {
+            "id": "phat-trien-cong-dong-slide-1",
+            "title": "PHÁT TRIỂN CỘNG ĐỒNG",
+            "description": "Hệ Sinh Thái 04",
+            "image": "https://static.wixstatic.com/media/12d367_4f26ccd17f8f4e3a8958306ea08c2332~mv2.png",
+            "enabled": true
+          },
+          {
+            "id": "phat-trien-cong-dong-slide-2",
+            "title": "CÙNG HỌC CÙNG LÀM",
+            "description": "Giá Trị Bền Vững",
+            "image": "https://static.wixstatic.com/media/12d367_4f26ccd17f8f4e3a8958306ea08c2332~mv2.png",
+            "enabled": true
+          },
+          {
+            "id": "phat-trien-cong-dong-slide-3",
+            "title": "KẾT NỐI THÀNH VIÊN",
+            "description": "Welink Community",
+            "image": "https://static.wixstatic.com/media/12d367_4f26ccd17f8f4e3a8958306ea08c2332~mv2.png",
+            "enabled": true
+          }
+        ],
+        "sections": [
+          {
+            "id": "phat-trien-cong-dong-section-1",
+            "title": "Cấu trúc 3 Trụ cột",
+            "description": "Section chuẩn · pillars · CẤU TRÚC CỘNG ĐỒNG",
+            "enabled": true
+          },
+          {
+            "id": "phat-trien-cong-dong-section-2",
+            "title": "Tham gia Welink Community",
+            "description": "Section chuẩn · members · THAM GIA WELINK COMMUNITY",
+            "enabled": true
+          },
+          {
+            "id": "phat-trien-cong-dong-section-3",
+            "title": "CTA Gia nhập cộng đồng",
+            "description": "Section chuẩn · cta · GIA NHẬP CỘNG ĐỒNG",
+            "enabled": true
+          }
+        ]
+      },
+      "order": 6
+    },
+    "sort_order": 6,
+    "deleted": false,
+    "updated_at": "2026-10-05T08:17:43.539Z"
+  },
+  {
+    "collection": "pageContents",
+    "record_id": "page-giai-phap-dong-hanh",
+    "payload": {
+      "id": "page-giai-phap-dong-hanh",
+      "slug": "giai-phap-dong-hanh",
+      "content": {
+        "name": "Giải pháp đồng hành",
+        "path": "/giai-phap-dong-hanh",
+        "title": "Giải pháp đồng hành | Nghieng Complex",
+        "description": "Thông tin và nội dung về Giải pháp đồng hành của Nghieng Complex.",
+        "heroTitle": "GIẢI PHÁP ĐỒNG HÀNH",
+        "heroDescription": "Khám phá Giải pháp đồng hành trong hệ sinh thái Nghieng Complex.",
+        "active": true,
+        "sliders": [
+          {
+            "id": "giai-phap-dong-hanh-slide-1",
+            "title": "GIẢI PHÁP ĐỒNG HÀNH",
+            "description": "Hệ Sinh Thái 05",
+            "image": "https://static.wixstatic.com/media/12d367_4f26ccd17f8f4e3a8958306ea08c2332~mv2.png",
+            "enabled": true
+          },
+          {
+            "id": "giai-phap-dong-hanh-slide-2",
+            "title": "TĂNG TRƯỞNG TÀI SẢN",
+            "description": "Tăng Trưởng",
+            "image": "https://static.wixstatic.com/media/12d367_4f26ccd17f8f4e3a8958306ea08c2332~mv2.png",
+            "enabled": true
+          },
+          {
+            "id": "giai-phap-dong-hanh-slide-3",
+            "title": "KẾT NỐI NGUỒN LỰC",
+            "description": "Hợp Tác",
+            "image": "https://static.wixstatic.com/media/12d367_4f26ccd17f8f4e3a8958306ea08c2332~mv2.png",
+            "enabled": true
+          }
+        ],
+        "sections": [
+          {
+            "id": "giai-phap-dong-hanh-section-1",
+            "title": "4 Giải pháp gia tăng giá trị",
+            "description": "Section chuẩn · solutions · GIA TĂNG GIÁ TRỊ TÀI SẢN",
+            "enabled": true
+          },
+          {
+            "id": "giai-phap-dong-hanh-section-2",
+            "title": "Thông điệp đồng hành",
+            "description": "Section chuẩn · tagline",
+            "enabled": true
+          }
+        ]
+      },
+      "order": 7
+    },
+    "sort_order": 7,
+    "deleted": false,
+    "updated_at": "2026-10-05T08:17:43.537Z"
+  },
+  {
+    "collection": "pageContents",
+    "record_id": "page-nghieng-media",
+    "payload": {
+      "id": "page-nghieng-media",
+      "slug": "nghieng-media",
+      "content": {
+        "name": "Nghieng Media",
+        "path": "/nghieng-media",
+        "title": "Nghieng Media | Nghieng Complex",
+        "description": "Thông tin và nội dung về Nghieng Media của Nghieng Complex.",
+        "heroTitle": "NGHIENG MEDIA",
+        "heroDescription": "Khám phá Nghieng Media trong hệ sinh thái Nghieng Complex.",
+        "active": true,
+        "sliders": [
+          {
+            "id": "nghieng-media-slide-1",
+            "title": "NGHIENG MEDIA",
+            "description": "Hệ Sinh Thái 06",
+            "image": "https://static.wixstatic.com/media/12d367_4f26ccd17f8f4e3a8958306ea08c2332~mv2.png",
+            "enabled": true
+          },
+          {
+            "id": "nghieng-media-slide-2",
+            "title": "SÁNG TẠO NỘI DUNG",
+            "description": "Nội Dung Số",
+            "image": "https://static.wixstatic.com/media/12d367_4f26ccd17f8f4e3a8958306ea08c2332~mv2.png",
+            "enabled": true
+          },
+          {
+            "id": "nghieng-media-slide-3",
+            "title": "LAN TỎA GIÁ TRỊ VIỆT",
+            "description": "Văn Hóa & Cộng Đồng",
+            "image": "https://static.wixstatic.com/media/12d367_4f26ccd17f8f4e3a8958306ea08c2332~mv2.png",
+            "enabled": true
+          }
+        ],
+        "sections": [
+          {
+            "id": "nghieng-media-section-1",
+            "title": "Dịch vụ truyền thông",
+            "description": "Section chuẩn · services · DỊCH VỤ TRUYỀN THÔNG",
+            "enabled": true
+          },
+          {
+            "id": "nghieng-media-section-2",
+            "title": "Sứ mệnh Nghieng Media",
+            "description": "Section chuẩn · mission · XÂY DỰNG BẢN SẮC THƯƠNG HIỆU",
+            "enabled": true
+          },
+          {
+            "id": "nghieng-media-section-3",
+            "title": "Thư viện Ảnh & Video",
+            "description": "Section chuẩn · library",
+            "enabled": true
+          },
+          {
+            "id": "nghieng-media-section-4",
+            "title": "CTA Hợp tác truyền thông",
+            "description": "Section chuẩn · cta · HỢP TÁC TRUYỀN THÔNG",
+            "enabled": true
+          }
+        ]
+      },
+      "order": 8
+    },
+    "sort_order": 8,
+    "deleted": false,
+    "updated_at": "2026-10-05T08:17:43.538Z"
+  },
+  {
+    "collection": "pageContents",
+    "record_id": "page-du-an",
+    "payload": {
+      "id": "page-du-an",
+      "slug": "du-an",
+      "content": {
+        "name": "Dự án",
+        "path": "/du-an",
+        "title": "Dự án | Nghieng Complex",
+        "description": "Thông tin và nội dung về Dự án của Nghieng Complex.",
+        "heroTitle": "DỰ ÁN",
+        "heroDescription": "Khám phá Dự án trong hệ sinh thái Nghieng Complex.",
+        "active": true,
+        "sliders": [
+          {
+            "id": "du-an-slide-1",
+            "title": "HỆ SINH THÁI DỰ ÁN",
+            "description": "Cơ Hội Hợp Tác",
+            "image": "https://static.wixstatic.com/media/12d367_4f26ccd17f8f4e3a8958306ea08c2332~mv2.png",
+            "enabled": true
+          },
+          {
+            "id": "du-an-slide-2",
+            "title": "CƠ HỘI HỢP TÁC",
+            "description": "Dự Án Đang Mở",
+            "image": "https://static.wixstatic.com/media/12d367_4f26ccd17f8f4e3a8958306ea08c2332~mv2.png",
+            "enabled": true
+          },
+          {
+            "id": "du-an-slide-3",
+            "title": "TỪ Ý TƯỞNG ĐẾN VẬN HÀNH",
+            "description": "Phát Triển Dự Án",
+            "image": "https://static.wixstatic.com/media/12d367_4f26ccd17f8f4e3a8958306ea08c2332~mv2.png",
+            "enabled": true
+          }
+        ],
+        "sections": [
+          {
+            "id": "du-an-section-1",
+            "title": "Danh sách Dự án",
+            "description": "Section chuẩn · projects",
+            "enabled": true
+          },
+          {
+            "id": "du-an-section-2",
+            "title": "CTA Quan tâm dự án",
+            "description": "Section chuẩn · cta · QUAN TÂM DỰ ÁN?",
+            "enabled": true
+          }
+        ]
+      },
+      "order": 9
+    },
+    "sort_order": 9,
+    "deleted": false,
+    "updated_at": "2026-10-05T08:17:43.536Z"
+  },
+  {
+    "collection": "pageContents",
+    "record_id": "page-cong-dong",
+    "payload": {
+      "id": "page-cong-dong",
+      "slug": "cong-dong",
+      "content": {
+        "name": "Cộng đồng",
+        "path": "/cong-dong",
+        "title": "Cộng đồng | Nghieng Complex",
+        "description": "Thông tin và nội dung về Cộng đồng của Nghieng Complex.",
+        "heroTitle": "CỘNG ĐỒNG",
+        "heroDescription": "Khám phá Cộng đồng trong hệ sinh thái Nghieng Complex.",
+        "active": true,
+        "sliders": [
+          {
+            "id": "cong-dong-slide-1",
+            "title": "PHÁT TRIỂN CÙNG CỘNG ĐỒNG",
+            "description": "Hoạt Động Xã Hội",
+            "image": "https://static.wixstatic.com/media/12d367_4f26ccd17f8f4e3a8958306ea08c2332~mv2.png",
+            "enabled": true
+          },
+          {
+            "id": "cong-dong-slide-2",
+            "title": "SẺ CHIA NÂNG ĐỠ",
+            "description": "Chương Trình Xã Hội",
+            "image": "https://static.wixstatic.com/media/12d367_4f26ccd17f8f4e3a8958306ea08c2332~mv2.png",
+            "enabled": true
+          },
+          {
+            "id": "cong-dong-slide-3",
+            "title": "KẾT NỐI CÙNG PHÁT TRIỂN",
+            "description": "Cùng Phát Triển",
+            "image": "https://static.wixstatic.com/media/12d367_4f26ccd17f8f4e3a8958306ea08c2332~mv2.png",
+            "enabled": true
+          }
+        ],
+        "sections": [
+          {
+            "id": "cong-dong-section-1",
+            "title": "Hoạt động cộng đồng",
+            "description": "Section chuẩn · activities · HOẠT ĐỘNG CỘNG ĐỒNG",
+            "enabled": true
+          },
+          {
+            "id": "cong-dong-section-2",
+            "title": "CTA Cùng lan tỏa giá trị",
+            "description": "Section chuẩn · cta · CÙNG LAN TỎA GIÁ TRỊ",
+            "enabled": true
+          }
+        ]
+      },
+      "order": 10
+    },
+    "sort_order": 10,
+    "deleted": false,
+    "updated_at": "2026-10-05T08:17:43.534Z"
+  },
+  {
+    "collection": "pageContents",
+    "record_id": "page-tin-tuc",
+    "payload": {
+      "id": "page-tin-tuc",
+      "slug": "tin-tuc",
+      "content": {
+        "name": "Tin tức",
+        "path": "/tin-tuc",
+        "title": "Tin tức | Nghieng Complex",
+        "description": "Thông tin và nội dung về Tin tức của Nghieng Complex.",
+        "heroTitle": "TIN TỨC",
+        "heroDescription": "Khám phá Tin tức trong hệ sinh thái Nghieng Complex.",
+        "active": true,
+        "sliders": [],
+        "sections": []
+      },
+      "order": 11
+    },
+    "sort_order": 11,
+    "deleted": false,
+    "updated_at": "2026-10-05T08:15:48.943Z"
+  },
+  {
+    "collection": "pageContents",
+    "record_id": "page-doi-tac",
+    "payload": {
+      "id": "page-doi-tac",
+      "slug": "doi-tac",
+      "content": {
+        "name": "Đối tác",
+        "path": "/doi-tac",
+        "title": "Đối tác | Nghieng Complex",
+        "description": "Thông tin và nội dung về Đối tác của Nghieng Complex.",
+        "heroTitle": "ĐỐI TÁC",
+        "heroDescription": "Khám phá Đối tác trong hệ sinh thái Nghieng Complex.",
+        "active": true,
+        "sliders": [],
+        "sections": []
+      },
+      "order": 12
+    },
+    "sort_order": 12,
+    "deleted": false,
+    "updated_at": "2026-10-05T08:15:48.943Z"
+  },
+  {
+    "collection": "pageContents",
+    "record_id": "page-lien-he",
+    "payload": {
+      "id": "page-lien-he",
+      "slug": "lien-he",
+      "content": {
+        "name": "Liên hệ",
+        "path": "/lien-he",
+        "title": "Liên hệ | Nghieng Complex",
+        "description": "Thông tin và nội dung về Liên hệ của Nghieng Complex.",
+        "heroTitle": "LIÊN HỆ",
+        "heroDescription": "Khám phá Liên hệ trong hệ sinh thái Nghieng Complex.",
+        "active": true,
+        "sliders": [],
+        "sections": []
+      },
+      "order": 13
+    },
+    "sort_order": 13,
+    "deleted": false,
+    "updated_at": "2026-10-05T08:15:48.943Z"
+  },
+  {
+    "collection": "projects",
+    "record_id": "project-nghieng-travel",
+    "payload": {
+      "id": "project-nghieng-travel",
+      "slug": "phat-trien-he-sinh-thai-nghieng-travel",
+      "title": "Phát triển hệ sinh thái Nghieng Travel",
+      "summary": "Kết nối điểm đến, dịch vụ nghỉ dưỡng và các hành trình văn hóa vùng miền.",
+      "body": "Dự án kết nối các dịch vụ du lịch, nghỉ dưỡng và trải nghiệm địa phương trong hệ sinh thái Nghieng Travel.\n\nMục tiêu là tạo thêm cơ hội hợp tác giữa doanh nghiệp, điểm đến và cộng đồng. Phạm vi gồm phát triển sản phẩm tour, kết nối cơ sở lưu trú và nâng cao trải nghiệm du khách.\n\nTrạng thái: Triển khai. Đây là dữ liệu minh họa.",
+      "category": "Nghieng Travel",
+      "status": "Triển khai",
+      "active": true,
+      "date": "2026-08-01",
+      "image": "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/4e2c9afc5_slider-1-home.jpg",
+      "relatedIds": [],
+      "isDemo": true,
+      "order": 1
+    },
+    "sort_order": 0,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "projects",
+    "record_id": "project-ha-tang-dia-phuong",
+    "payload": {
+      "id": "project-ha-tang-dia-phuong",
+      "slug": "dau-tu-ha-tang-dia-phuong",
+      "title": "Đầu tư phát triển hạ tầng địa phương",
+      "summary": "Tìm kiếm mô hình đồng hành cùng địa phương và đối tác phát triển hạ tầng.",
+      "body": "Dự án nghiên cứu các phương án kết nối nguồn lực và đối tác để hỗ trợ phát triển hạ tầng địa phương.\n\nPhạm vi và tiến độ sẽ được cập nhật theo từng giai đoạn phê duyệt. Trạng thái: Nghiên cứu. Đây là dữ liệu minh họa.",
+      "category": "Giải pháp đồng hành",
+      "status": "Nghiên cứu",
+      "active": true,
+      "date": "2026-08-12",
+      "image": "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9970d8492_slider-3-home.jpg",
+      "relatedIds": [],
+      "isDemo": true,
+      "order": 2
+    },
+    "sort_order": 1,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "projects",
+    "record_id": "project-chuoi-gia-tri",
+    "payload": {
+      "id": "project-chuoi-gia-tri",
+      "slug": "so-hoa-chuoi-gia-tri",
+      "title": "Số hóa chuỗi giá trị cùng đối tác",
+      "summary": "Nghiên cứu công cụ số hỗ trợ kết nối dịch vụ và cải thiện vận hành.",
+      "body": "Sáng kiến hướng đến việc kết nối dữ liệu và quy trình giữa các đơn vị trong hệ sinh thái.\n\nCác chỉ tiêu và số liệu tài chính chỉ được công bố khi đã được phê duyệt. Trạng thái: Tìm đối tác. Đây là dữ liệu minh họa.",
+      "category": "Công nghệ – AI",
+      "status": "Tìm đối tác",
+      "active": true,
+      "date": "2026-08-20",
+      "image": "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/490b8b229_generated_d36d21f3.png",
+      "relatedIds": [],
+      "isDemo": true,
+      "order": 3
+    },
+    "sort_order": 2,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "projects",
+    "record_id": "project-community",
+    "payload": {
+      "id": "project-community",
+      "slug": "phat-trien-cong-dong",
+      "title": "Chương trình đồng hành cùng cộng đồng",
+      "summary": "Kết nối kỹ năng, giáo dục và nguồn lực với các tổ chức địa phương.",
+      "body": "Chương trình hướng đến hợp tác dài hạn với đối tác tại địa phương, tập trung vào giáo dục, kỹ năng và sinh kế bền vững.\n\nMỗi hoạt động được xây dựng cùng cộng đồng và chỉ công bố kết quả sau khi được xác nhận. Đây là dữ liệu minh họa.",
+      "category": "Phát triển cộng đồng",
+      "status": "Nghiên cứu",
+      "active": true,
+      "date": "2026-08-25",
+      "image": "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9ddb1ea9d_banner-trang-chu-nghieng.webp",
+      "relatedIds": [],
+      "isDemo": true,
+      "order": 4
+    },
+    "sort_order": 3,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "projects",
+    "record_id": "project-cultural-values",
+    "payload": {
+      "id": "project-cultural-values",
+      "slug": "ket-noi-gia-tri-van-hoa",
+      "title": "Kết nối giá trị văn hóa địa phương",
+      "summary": "Hợp tác cùng đơn vị văn hóa để giới thiệu di sản và sản phẩm bản địa.",
+      "body": "Dự án nghiên cứu các hình thức hợp tác với cộng đồng, đơn vị văn hóa và doanh nghiệp địa phương nhằm lan tỏa di sản một cách tôn trọng, có trách nhiệm.\n\nPhạm vi cụ thể được cập nhật theo tiến độ phê duyệt. Đây là dữ liệu minh họa.",
+      "category": "Văn hóa vùng miền",
+      "status": "Tìm đối tác",
+      "active": true,
+      "date": "2026-09-02",
+      "image": "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/99323fe9c_generated_ce3c7248.png",
+      "relatedIds": [],
+      "isDemo": true,
+      "order": 5
+    },
+    "sort_order": 4,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "projects",
+    "record_id": "project-digital-operations",
+    "payload": {
+      "id": "project-digital-operations",
+      "slug": "nen-tang-van-hanh-so",
+      "title": "Nền tảng hỗ trợ vận hành số",
+      "summary": "Khảo sát giải pháp giúp các đơn vị phối hợp và quản lý nội dung hiệu quả.",
+      "body": "Sáng kiến xem xét quy trình vận hành và nhu cầu của các đơn vị để đề xuất công cụ số phù hợp.\n\nKhông đưa ra chỉ tiêu tài chính chưa được duyệt. Đây là dữ liệu minh họa.",
+      "category": "Công nghệ – AI",
+      "status": "Nghiên cứu",
+      "active": true,
+      "date": "2026-09-10",
+      "image": "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/0575d5b5e_generated_cd45ba2c.png",
+      "relatedIds": [],
+      "isDemo": true,
+      "order": 6
+    },
+    "sort_order": 5,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "tourCategories",
+    "record_id": "category-tour-ecosystem",
+    "payload": {
+      "id": "category-tour-ecosystem",
+      "slug": "he-sinh-thai",
+      "title": "Tour Hệ Sinh Thái Nghieng",
+      "description": "Tham quan và trải nghiệm trực tiếp các điểm trong hệ sinh thái Nghieng Complex.",
+      "image": "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/99323fe9c_generated_ce3c7248.png",
+      "order": 1,
+      "active": true
+    },
+    "sort_order": 0,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "tourCategories",
+    "record_id": "category-tour-culture",
+    "payload": {
+      "id": "category-tour-culture",
+      "slug": "van-hoa-vung-mien",
+      "title": "Tour Văn Hóa Vùng Miền",
+      "description": "Khám phá bản sắc, trải nghiệm di sản và kết nối con người.",
+      "image": "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/0575d5b5e_generated_cd45ba2c.png",
+      "order": 2,
+      "active": true
+    },
+    "sort_order": 1,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "tourCategories",
+    "record_id": "category-tour-business",
+    "payload": {
+      "id": "category-tour-business",
+      "slug": "doanh-nghiep-hoi-nhom",
+      "title": "Tour Doanh Nghiệp & Hội Nhóm",
+      "description": "Chương trình du lịch dành cho doanh nghiệp, tổ chức và hội nhóm.",
+      "image": "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/4e2c9afc5_slider-1-home.jpg",
+      "order": 3,
+      "active": true
+    },
+    "sort_order": 2,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "tourCategories",
+    "record_id": "category-tour-team",
+    "payload": {
+      "id": "category-tour-team",
+      "slug": "team-building-dao-tao",
+      "title": "Tour Team Building & Đào Tạo",
+      "description": "Kết hợp trải nghiệm, phát triển kỹ năng và gắn kết đội ngũ.",
+      "image": "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/490b8b229_generated_d36d21f3.png",
+      "order": 4,
+      "active": true
+    },
+    "sort_order": 3,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "tours",
+    "record_id": "tour-hoi-an",
+    "payload": {
+      "id": "tour-hoi-an",
+      "slug": "hoi-an",
+      "title": "Hành trình di sản Hội An",
+      "category": "van-hoa-vung-mien",
+      "location": "Hội An, Quảng Nam",
+      "duration": "2 ngày 1 đêm",
+      "guestRange": "2–10 khách",
+      "summary": "Khám phá phố cổ Hội An, di sản văn hóa thế giới và ẩm thực đặc sắc.",
+      "description": "Khám phá phố cổ Hội An, di sản văn hóa thế giới và ẩm thực đặc sắc. Hành trình được thiết kế để du khách hiểu thêm về di sản, con người và những giá trị đặc sắc của từng vùng miền.",
+      "priceFrom": 4200000,
+      "rating": 4.7,
+      "reviewCount": 86,
+      "state": "published",
+      "order": 1,
+      "image": "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/99323fe9c_generated_ce3c7248.png",
+      "gallery": [
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/99323fe9c_generated_ce3c7248.png",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/0575d5b5e_generated_cd45ba2c.png",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/4e2c9afc5_slider-1-home.jpg",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/490b8b229_generated_d36d21f3.png",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9970d8492_slider-3-home.jpg"
+      ],
+      "highlights": [
+        "Khám phá di sản văn hóa thế giới",
+        "Trải nghiệm ẩm thực đặc sắc miền Trung",
+        "Tham quan làng nghề truyền thống",
+        "Hướng dẫn viên chuyên nghiệp"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Đà Nẵng – Hội An",
+          "activities": [
+            "Đón khách tại sân bay Đà Nẵng, di chuyển về Hội An",
+            "Tham quan phố cổ Hội An, Chùa Cầu, nhà cổ Tấn Ký",
+            "Thưởng thức ẩm thực đặc sản địa phương"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Hội An – Huế",
+          "activities": [
+            "Khởi hành đi Huế, tham quan Đại Nội và lăng Khải Định",
+            "Trải nghiệm áo dài, nghe nhã nhạc cung đình",
+            "Nghỉ đêm tại Huế"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Huế – Đà Nẵng",
+          "activities": [
+            "Tham quan chùa Thiên Mụ và sông Hương",
+            "Tự do mua sắm đặc sản",
+            "Kết thúc hành trình, đưa khách ra sân bay"
+          ]
+        }
+      ],
+      "hotelOptions": [
+        "Nghieng Oceanview Hotel & Resort",
+        "Nghieng Central Hotel",
+        "Nghieng Heritage Hotel"
+      ],
+      "departureDate": "2026-10-15",
+      "seoTitle": "Hành trình di sản Hội An | Nghieng Travel",
+      "seoDescription": "Khám phá phố cổ Hội An, di sản văn hóa thế giới và ẩm thực đặc sắc."
+    },
+    "sort_order": 0,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "tours",
+    "record_id": "tour-co-do-hue",
+    "payload": {
+      "id": "tour-co-do-hue",
+      "slug": "co-do-hue",
+      "title": "Dấu ấn cố đô Huế",
+      "category": "van-hoa-vung-mien",
+      "location": "Huế, Thừa Thiên Huế",
+      "duration": "2 ngày 1 đêm",
+      "guestRange": "2–10 khách",
+      "summary": "Trải nghiệm kinh thành, lăng tẩm và nhã nhạc cung đình Huế.",
+      "description": "Trải nghiệm kinh thành, lăng tẩm và nhã nhạc cung đình Huế. Hành trình được thiết kế để du khách hiểu thêm về di sản, con người và những giá trị đặc sắc của từng vùng miền.",
+      "priceFrom": 3900000,
+      "rating": 4.7,
+      "reviewCount": 99,
+      "state": "published",
+      "order": 2,
+      "image": "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/0575d5b5e_generated_cd45ba2c.png",
+      "gallery": [
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/0575d5b5e_generated_cd45ba2c.png",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/4e2c9afc5_slider-1-home.jpg",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/490b8b229_generated_d36d21f3.png",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9970d8492_slider-3-home.jpg",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9ddb1ea9d_banner-trang-chu-nghieng.webp"
+      ],
+      "highlights": [
+        "Khám phá di sản văn hóa thế giới",
+        "Trải nghiệm ẩm thực đặc sắc miền Trung",
+        "Tham quan làng nghề truyền thống",
+        "Hướng dẫn viên chuyên nghiệp"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Đà Nẵng – Hội An",
+          "activities": [
+            "Đón khách tại sân bay Đà Nẵng, di chuyển về Hội An",
+            "Tham quan phố cổ Hội An, Chùa Cầu, nhà cổ Tấn Ký",
+            "Thưởng thức ẩm thực đặc sản địa phương"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Hội An – Huế",
+          "activities": [
+            "Khởi hành đi Huế, tham quan Đại Nội và lăng Khải Định",
+            "Trải nghiệm áo dài, nghe nhã nhạc cung đình",
+            "Nghỉ đêm tại Huế"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Huế – Đà Nẵng",
+          "activities": [
+            "Tham quan chùa Thiên Mụ và sông Hương",
+            "Tự do mua sắm đặc sản",
+            "Kết thúc hành trình, đưa khách ra sân bay"
+          ]
+        }
+      ],
+      "hotelOptions": [
+        "Nghieng Oceanview Hotel & Resort",
+        "Nghieng Central Hotel",
+        "Nghieng Heritage Hotel"
+      ],
+      "departureDate": "2026-10-15",
+      "seoTitle": "Dấu ấn cố đô Huế | Nghieng Travel",
+      "seoDescription": "Trải nghiệm kinh thành, lăng tẩm và nhã nhạc cung đình Huế."
+    },
+    "sort_order": 1,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "tours",
+    "record_id": "tour-sac-mau-tay-bac",
+    "payload": {
+      "id": "tour-sac-mau-tay-bac",
+      "slug": "sac-mau-tay-bac",
+      "title": "Sắc màu Tây Bắc",
+      "category": "van-hoa-vung-mien",
+      "location": "Sapa, Lào Cai",
+      "duration": "3 ngày 2 đêm",
+      "guestRange": "2–12 khách",
+      "summary": "Khám phá ruộng bậc thang, bản làng và văn hóa vùng cao.",
+      "description": "Khám phá ruộng bậc thang, bản làng và văn hóa vùng cao. Hành trình được thiết kế để du khách hiểu thêm về di sản, con người và những giá trị đặc sắc của từng vùng miền.",
+      "priceFrom": 5200000,
+      "rating": 4.7,
+      "reviewCount": 112,
+      "state": "published",
+      "order": 3,
+      "image": "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/4e2c9afc5_slider-1-home.jpg",
+      "gallery": [
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/4e2c9afc5_slider-1-home.jpg",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/490b8b229_generated_d36d21f3.png",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9970d8492_slider-3-home.jpg",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9ddb1ea9d_banner-trang-chu-nghieng.webp",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/99323fe9c_generated_ce3c7248.png"
+      ],
+      "highlights": [
+        "Khám phá di sản văn hóa thế giới",
+        "Trải nghiệm ẩm thực đặc sắc miền Trung",
+        "Tham quan làng nghề truyền thống",
+        "Hướng dẫn viên chuyên nghiệp"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Đà Nẵng – Hội An",
+          "activities": [
+            "Đón khách tại sân bay Đà Nẵng, di chuyển về Hội An",
+            "Tham quan phố cổ Hội An, Chùa Cầu, nhà cổ Tấn Ký",
+            "Thưởng thức ẩm thực đặc sản địa phương"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Hội An – Huế",
+          "activities": [
+            "Khởi hành đi Huế, tham quan Đại Nội và lăng Khải Định",
+            "Trải nghiệm áo dài, nghe nhã nhạc cung đình",
+            "Nghỉ đêm tại Huế"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Huế – Đà Nẵng",
+          "activities": [
+            "Tham quan chùa Thiên Mụ và sông Hương",
+            "Tự do mua sắm đặc sản",
+            "Kết thúc hành trình, đưa khách ra sân bay"
+          ]
+        }
+      ],
+      "hotelOptions": [
+        "Nghieng Oceanview Hotel & Resort",
+        "Nghieng Central Hotel",
+        "Nghieng Heritage Hotel"
+      ],
+      "departureDate": "2026-10-15",
+      "seoTitle": "Sắc màu Tây Bắc | Nghieng Travel",
+      "seoDescription": "Khám phá ruộng bậc thang, bản làng và văn hóa vùng cao."
+    },
+    "sort_order": 2,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "tours",
+    "record_id": "tour-non-nuoc-ninh-binh",
+    "payload": {
+      "id": "tour-non-nuoc-ninh-binh",
+      "slug": "non-nuoc-ninh-binh",
+      "title": "Non nước Ninh Bình",
+      "category": "van-hoa-vung-mien",
+      "location": "Ninh Bình",
+      "duration": "2 ngày 1 đêm",
+      "guestRange": "2–10 khách",
+      "summary": "Chiêm ngưỡng quần thể danh thắng và di sản văn hóa truyền thống.",
+      "description": "Chiêm ngưỡng quần thể danh thắng và di sản văn hóa truyền thống. Hành trình được thiết kế để du khách hiểu thêm về di sản, con người và những giá trị đặc sắc của từng vùng miền.",
+      "priceFrom": 3600000,
+      "rating": 4.7,
+      "reviewCount": 125,
+      "state": "published",
+      "order": 4,
+      "image": "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/490b8b229_generated_d36d21f3.png",
+      "gallery": [
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/490b8b229_generated_d36d21f3.png",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9970d8492_slider-3-home.jpg",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9ddb1ea9d_banner-trang-chu-nghieng.webp",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/99323fe9c_generated_ce3c7248.png",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/0575d5b5e_generated_cd45ba2c.png"
+      ],
+      "highlights": [
+        "Khám phá di sản văn hóa thế giới",
+        "Trải nghiệm ẩm thực đặc sắc miền Trung",
+        "Tham quan làng nghề truyền thống",
+        "Hướng dẫn viên chuyên nghiệp"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Đà Nẵng – Hội An",
+          "activities": [
+            "Đón khách tại sân bay Đà Nẵng, di chuyển về Hội An",
+            "Tham quan phố cổ Hội An, Chùa Cầu, nhà cổ Tấn Ký",
+            "Thưởng thức ẩm thực đặc sản địa phương"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Hội An – Huế",
+          "activities": [
+            "Khởi hành đi Huế, tham quan Đại Nội và lăng Khải Định",
+            "Trải nghiệm áo dài, nghe nhã nhạc cung đình",
+            "Nghỉ đêm tại Huế"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Huế – Đà Nẵng",
+          "activities": [
+            "Tham quan chùa Thiên Mụ và sông Hương",
+            "Tự do mua sắm đặc sản",
+            "Kết thúc hành trình, đưa khách ra sân bay"
+          ]
+        }
+      ],
+      "hotelOptions": [
+        "Nghieng Oceanview Hotel & Resort",
+        "Nghieng Central Hotel",
+        "Nghieng Heritage Hotel"
+      ],
+      "departureDate": "2026-10-15",
+      "seoTitle": "Non nước Ninh Bình | Nghieng Travel",
+      "seoDescription": "Chiêm ngưỡng quần thể danh thắng và di sản văn hóa truyền thống."
+    },
+    "sort_order": 3,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "tours",
+    "record_id": "tour-kham-pha-mien-trung-di-san",
+    "payload": {
+      "id": "tour-kham-pha-mien-trung-di-san",
+      "slug": "kham-pha-mien-trung-di-san",
+      "title": "Khám phá miền Trung di sản",
+      "category": "van-hoa-vung-mien",
+      "location": "Đà Nẵng – Hội An – Huế",
+      "duration": "3 ngày 2 đêm",
+      "guestRange": "2–12 khách",
+      "summary": "Hành trình đưa bạn đến với những giá trị văn hóa, lịch sử, kiến trúc và ẩm thực đặc sắc miền Trung.",
+      "description": "Hành trình đưa bạn đến với những giá trị văn hóa, lịch sử, kiến trúc và ẩm thực đặc sắc miền Trung. Hành trình được thiết kế để du khách hiểu thêm về di sản, con người và những giá trị đặc sắc của từng vùng miền.",
+      "priceFrom": 4990000,
+      "rating": 4.8,
+      "reviewCount": 320,
+      "state": "published",
+      "order": 5,
+      "image": "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9970d8492_slider-3-home.jpg",
+      "gallery": [
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9970d8492_slider-3-home.jpg",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9ddb1ea9d_banner-trang-chu-nghieng.webp",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/99323fe9c_generated_ce3c7248.png",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/0575d5b5e_generated_cd45ba2c.png",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/4e2c9afc5_slider-1-home.jpg"
+      ],
+      "highlights": [
+        "Khám phá di sản văn hóa thế giới",
+        "Trải nghiệm ẩm thực đặc sắc miền Trung",
+        "Tham quan làng nghề truyền thống",
+        "Hướng dẫn viên chuyên nghiệp"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Đà Nẵng – Hội An",
+          "activities": [
+            "Đón khách tại sân bay Đà Nẵng, di chuyển về Hội An",
+            "Tham quan phố cổ Hội An, Chùa Cầu, nhà cổ Tấn Ký",
+            "Thưởng thức ẩm thực đặc sản địa phương"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Hội An – Huế",
+          "activities": [
+            "Khởi hành đi Huế, tham quan Đại Nội và lăng Khải Định",
+            "Trải nghiệm áo dài, nghe nhã nhạc cung đình",
+            "Nghỉ đêm tại Huế"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Huế – Đà Nẵng",
+          "activities": [
+            "Tham quan chùa Thiên Mụ và sông Hương",
+            "Tự do mua sắm đặc sản",
+            "Kết thúc hành trình, đưa khách ra sân bay"
+          ]
+        }
+      ],
+      "hotelOptions": [
+        "Nghieng Oceanview Hotel & Resort",
+        "Nghieng Central Hotel",
+        "Nghieng Heritage Hotel"
+      ],
+      "departureDate": "2026-10-15",
+      "seoTitle": "Khám phá miền Trung di sản | Nghieng Travel",
+      "seoDescription": "Hành trình đưa bạn đến với những giá trị văn hóa, lịch sử, kiến trúc và ẩm thực đặc sắc miền Trung."
+    },
+    "sort_order": 4,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "tours",
+    "record_id": "tour-ban-lang-tay-nguyen",
+    "payload": {
+      "id": "tour-ban-lang-tay-nguyen",
+      "slug": "ban-lang-tay-nguyen",
+      "title": "Bản làng Tây Nguyên",
+      "category": "van-hoa-vung-mien",
+      "location": "Kon Tum – Gia Lai – Đắk Lắk",
+      "duration": "3 ngày 2 đêm",
+      "guestRange": "2–12 khách",
+      "summary": "Tìm hiểu văn hóa các dân tộc Tây Nguyên và đời sống cộng đồng bản địa.",
+      "description": "Tìm hiểu văn hóa các dân tộc Tây Nguyên và đời sống cộng đồng bản địa. Hành trình được thiết kế để du khách hiểu thêm về di sản, con người và những giá trị đặc sắc của từng vùng miền.",
+      "priceFrom": 5500000,
+      "rating": 4.7,
+      "reviewCount": 151,
+      "state": "published",
+      "order": 6,
+      "image": "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9ddb1ea9d_banner-trang-chu-nghieng.webp",
+      "gallery": [
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9ddb1ea9d_banner-trang-chu-nghieng.webp",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/99323fe9c_generated_ce3c7248.png",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/0575d5b5e_generated_cd45ba2c.png",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/4e2c9afc5_slider-1-home.jpg",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/490b8b229_generated_d36d21f3.png"
+      ],
+      "highlights": [
+        "Khám phá di sản văn hóa thế giới",
+        "Trải nghiệm ẩm thực đặc sắc miền Trung",
+        "Tham quan làng nghề truyền thống",
+        "Hướng dẫn viên chuyên nghiệp"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Đà Nẵng – Hội An",
+          "activities": [
+            "Đón khách tại sân bay Đà Nẵng, di chuyển về Hội An",
+            "Tham quan phố cổ Hội An, Chùa Cầu, nhà cổ Tấn Ký",
+            "Thưởng thức ẩm thực đặc sản địa phương"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Hội An – Huế",
+          "activities": [
+            "Khởi hành đi Huế, tham quan Đại Nội và lăng Khải Định",
+            "Trải nghiệm áo dài, nghe nhã nhạc cung đình",
+            "Nghỉ đêm tại Huế"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Huế – Đà Nẵng",
+          "activities": [
+            "Tham quan chùa Thiên Mụ và sông Hương",
+            "Tự do mua sắm đặc sản",
+            "Kết thúc hành trình, đưa khách ra sân bay"
+          ]
+        }
+      ],
+      "hotelOptions": [
+        "Nghieng Oceanview Hotel & Resort",
+        "Nghieng Central Hotel",
+        "Nghieng Heritage Hotel"
+      ],
+      "departureDate": "2026-10-15",
+      "seoTitle": "Bản làng Tây Nguyên | Nghieng Travel",
+      "seoDescription": "Tìm hiểu văn hóa các dân tộc Tây Nguyên và đời sống cộng đồng bản địa."
+    },
+    "sort_order": 5,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "tours",
+    "record_id": "tour-kham-pha-dao-ngoc",
+    "payload": {
+      "id": "tour-kham-pha-dao-ngoc",
+      "slug": "kham-pha-dao-ngoc",
+      "title": "Khám phá đảo Ngọc",
+      "category": "van-hoa-vung-mien",
+      "location": "Phú Quốc, Kiên Giang",
+      "duration": "3 ngày 2 đêm",
+      "guestRange": "2–10 khách",
+      "summary": "Kết hợp trải nghiệm văn hóa địa phương, tham quan làng nghề và thưởng thức ẩm thực biển đảo.",
+      "description": "Kết hợp trải nghiệm văn hóa địa phương, tham quan làng nghề và thưởng thức ẩm thực biển đảo. Hành trình được thiết kế để du khách hiểu thêm về di sản, con người và những giá trị đặc sắc của từng vùng miền.",
+      "priceFrom": 5900000,
+      "rating": 4.7,
+      "reviewCount": 164,
+      "state": "published",
+      "order": 7,
+      "image": "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/99323fe9c_generated_ce3c7248.png",
+      "gallery": [
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/99323fe9c_generated_ce3c7248.png",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/0575d5b5e_generated_cd45ba2c.png",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/4e2c9afc5_slider-1-home.jpg",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/490b8b229_generated_d36d21f3.png",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9970d8492_slider-3-home.jpg"
+      ],
+      "highlights": [
+        "Khám phá di sản văn hóa thế giới",
+        "Trải nghiệm ẩm thực đặc sắc miền Trung",
+        "Tham quan làng nghề truyền thống",
+        "Hướng dẫn viên chuyên nghiệp"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Đà Nẵng – Hội An",
+          "activities": [
+            "Đón khách tại sân bay Đà Nẵng, di chuyển về Hội An",
+            "Tham quan phố cổ Hội An, Chùa Cầu, nhà cổ Tấn Ký",
+            "Thưởng thức ẩm thực đặc sản địa phương"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Hội An – Huế",
+          "activities": [
+            "Khởi hành đi Huế, tham quan Đại Nội và lăng Khải Định",
+            "Trải nghiệm áo dài, nghe nhã nhạc cung đình",
+            "Nghỉ đêm tại Huế"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Huế – Đà Nẵng",
+          "activities": [
+            "Tham quan chùa Thiên Mụ và sông Hương",
+            "Tự do mua sắm đặc sản",
+            "Kết thúc hành trình, đưa khách ra sân bay"
+          ]
+        }
+      ],
+      "hotelOptions": [
+        "Nghieng Oceanview Hotel & Resort",
+        "Nghieng Central Hotel",
+        "Nghieng Heritage Hotel"
+      ],
+      "departureDate": "2026-10-15",
+      "seoTitle": "Khám phá đảo Ngọc | Nghieng Travel",
+      "seoDescription": "Kết hợp trải nghiệm văn hóa địa phương, tham quan làng nghề và thưởng thức ẩm thực biển đảo."
+    },
+    "sort_order": 6,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "tours",
+    "record_id": "tour-huong-sac-tay-nguyen",
+    "payload": {
+      "id": "tour-huong-sac-tay-nguyen",
+      "slug": "huong-sac-tay-nguyen",
+      "title": "Hương sắc Tây Nguyên",
+      "category": "van-hoa-vung-mien",
+      "location": "Buôn Ma Thuột, Đắk Lắk",
+      "duration": "2 ngày 1 đêm",
+      "guestRange": "2–12 khách",
+      "summary": "Trải nghiệm đời sống bản địa, thưởng thức cà phê và khám phá văn hóa cộng đồng.",
+      "description": "Trải nghiệm đời sống bản địa, thưởng thức cà phê và khám phá văn hóa cộng đồng. Hành trình được thiết kế để du khách hiểu thêm về di sản, con người và những giá trị đặc sắc của từng vùng miền.",
+      "priceFrom": 3800000,
+      "rating": 4.7,
+      "reviewCount": 177,
+      "state": "published",
+      "order": 8,
+      "image": "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/0575d5b5e_generated_cd45ba2c.png",
+      "gallery": [
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/0575d5b5e_generated_cd45ba2c.png",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/4e2c9afc5_slider-1-home.jpg",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/490b8b229_generated_d36d21f3.png",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9970d8492_slider-3-home.jpg",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9ddb1ea9d_banner-trang-chu-nghieng.webp"
+      ],
+      "highlights": [
+        "Khám phá di sản văn hóa thế giới",
+        "Trải nghiệm ẩm thực đặc sắc miền Trung",
+        "Tham quan làng nghề truyền thống",
+        "Hướng dẫn viên chuyên nghiệp"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Đà Nẵng – Hội An",
+          "activities": [
+            "Đón khách tại sân bay Đà Nẵng, di chuyển về Hội An",
+            "Tham quan phố cổ Hội An, Chùa Cầu, nhà cổ Tấn Ký",
+            "Thưởng thức ẩm thực đặc sản địa phương"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Hội An – Huế",
+          "activities": [
+            "Khởi hành đi Huế, tham quan Đại Nội và lăng Khải Định",
+            "Trải nghiệm áo dài, nghe nhã nhạc cung đình",
+            "Nghỉ đêm tại Huế"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Huế – Đà Nẵng",
+          "activities": [
+            "Tham quan chùa Thiên Mụ và sông Hương",
+            "Tự do mua sắm đặc sản",
+            "Kết thúc hành trình, đưa khách ra sân bay"
+          ]
+        }
+      ],
+      "hotelOptions": [
+        "Nghieng Oceanview Hotel & Resort",
+        "Nghieng Central Hotel",
+        "Nghieng Heritage Hotel"
+      ],
+      "departureDate": "2026-10-15",
+      "seoTitle": "Hương sắc Tây Nguyên | Nghieng Travel",
+      "seoDescription": "Trải nghiệm đời sống bản địa, thưởng thức cà phê và khám phá văn hóa cộng đồng."
+    },
+    "sort_order": 7,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "tours",
+    "record_id": "tour-ve-mien-bien-dao",
+    "payload": {
+      "id": "tour-ve-mien-bien-dao",
+      "slug": "ve-mien-bien-dao",
+      "title": "Về miền biển đảo",
+      "category": "van-hoa-vung-mien",
+      "location": "Nha Trang, Khánh Hòa",
+      "duration": "3 ngày 2 đêm",
+      "guestRange": "2–12 khách",
+      "summary": "Khám phá văn hóa làng chài, điểm di tích và thưởng thức hải sản tươi ngon.",
+      "description": "Khám phá văn hóa làng chài, điểm di tích và thưởng thức hải sản tươi ngon. Hành trình được thiết kế để du khách hiểu thêm về di sản, con người và những giá trị đặc sắc của từng vùng miền.",
+      "priceFrom": 4800000,
+      "rating": 4.7,
+      "reviewCount": 190,
+      "state": "published",
+      "order": 9,
+      "image": "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/4e2c9afc5_slider-1-home.jpg",
+      "gallery": [
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/4e2c9afc5_slider-1-home.jpg",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/490b8b229_generated_d36d21f3.png",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9970d8492_slider-3-home.jpg",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9ddb1ea9d_banner-trang-chu-nghieng.webp",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/99323fe9c_generated_ce3c7248.png"
+      ],
+      "highlights": [
+        "Khám phá di sản văn hóa thế giới",
+        "Trải nghiệm ẩm thực đặc sắc miền Trung",
+        "Tham quan làng nghề truyền thống",
+        "Hướng dẫn viên chuyên nghiệp"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Đà Nẵng – Hội An",
+          "activities": [
+            "Đón khách tại sân bay Đà Nẵng, di chuyển về Hội An",
+            "Tham quan phố cổ Hội An, Chùa Cầu, nhà cổ Tấn Ký",
+            "Thưởng thức ẩm thực đặc sản địa phương"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Hội An – Huế",
+          "activities": [
+            "Khởi hành đi Huế, tham quan Đại Nội và lăng Khải Định",
+            "Trải nghiệm áo dài, nghe nhã nhạc cung đình",
+            "Nghỉ đêm tại Huế"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Huế – Đà Nẵng",
+          "activities": [
+            "Tham quan chùa Thiên Mụ và sông Hương",
+            "Tự do mua sắm đặc sản",
+            "Kết thúc hành trình, đưa khách ra sân bay"
+          ]
+        }
+      ],
+      "hotelOptions": [
+        "Nghieng Oceanview Hotel & Resort",
+        "Nghieng Central Hotel",
+        "Nghieng Heritage Hotel"
+      ],
+      "departureDate": "2026-10-15",
+      "seoTitle": "Về miền biển đảo | Nghieng Travel",
+      "seoDescription": "Khám phá văn hóa làng chài, điểm di tích và thưởng thức hải sản tươi ngon."
+    },
+    "sort_order": 8,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "tours",
+    "record_id": "tour-kham-pha-cang-ca-na",
+    "payload": {
+      "id": "tour-kham-pha-cang-ca-na",
+      "slug": "kham-pha-cang-ca-na",
+      "title": "Tour Khám phá Cảng Cà Ná – 1 ngày",
+      "category": "he-sinh-thai",
+      "location": "Cà Ná, Ninh Thuận",
+      "duration": "1 ngày",
+      "guestRange": "2–20 khách",
+      "summary": "Hành trình được thiết kế linh hoạt, kết nối trải nghiệm và giá trị của từng điểm đến.",
+      "description": "Chương trình kết hợp trải nghiệm địa phương, dịch vụ phù hợp và sự đồng hành của đội ngũ hướng dẫn viên.",
+      "priceFrom": 1800000,
+      "rating": 4.7,
+      "reviewCount": 58,
+      "state": "published",
+      "order": 10,
+      "image": "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/99323fe9c_generated_ce3c7248.png",
+      "gallery": [
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/99323fe9c_generated_ce3c7248.png",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/0575d5b5e_generated_cd45ba2c.png",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/4e2c9afc5_slider-1-home.jpg",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/490b8b229_generated_d36d21f3.png",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9970d8492_slider-3-home.jpg"
+      ],
+      "highlights": [
+        "Trải nghiệm theo chủ đề",
+        "Lịch trình linh hoạt",
+        "Đội ngũ đồng hành chuyên nghiệp"
+      ],
+      "itinerary": [],
+      "hotelOptions": [
+        "Nghieng Oceanview Hotel & Resort",
+        "Nghieng Central Hotel"
+      ],
+      "departureDate": "2026-10-15",
+      "seoTitle": "Tour Khám phá Cảng Cà Ná – 1 ngày | Nghieng Travel",
+      "seoDescription": "Khám phá hành trình Tour Khám phá Cảng Cà Ná – 1 ngày cùng Nghieng Travel."
+    },
+    "sort_order": 9,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "tours",
+    "record_id": "tour-sinh-thai-nghi-duong",
+    "payload": {
+      "id": "tour-sinh-thai-nghi-duong",
+      "slug": "sinh-thai-nghi-duong",
+      "title": "Tour Sinh thái & Nghỉ dưỡng – 2N1Đ",
+      "category": "he-sinh-thai",
+      "location": "Cà Ná, Ninh Thuận",
+      "duration": "2 ngày 1 đêm",
+      "guestRange": "2–12 khách",
+      "summary": "Hành trình được thiết kế linh hoạt, kết nối trải nghiệm và giá trị của từng điểm đến.",
+      "description": "Chương trình kết hợp trải nghiệm địa phương, dịch vụ phù hợp và sự đồng hành của đội ngũ hướng dẫn viên.",
+      "priceFrom": 3200000,
+      "rating": 4.7,
+      "reviewCount": 59,
+      "state": "published",
+      "order": 11,
+      "image": "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/0575d5b5e_generated_cd45ba2c.png",
+      "gallery": [
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/0575d5b5e_generated_cd45ba2c.png",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/4e2c9afc5_slider-1-home.jpg",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/490b8b229_generated_d36d21f3.png",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9970d8492_slider-3-home.jpg",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9ddb1ea9d_banner-trang-chu-nghieng.webp"
+      ],
+      "highlights": [
+        "Trải nghiệm theo chủ đề",
+        "Lịch trình linh hoạt",
+        "Đội ngũ đồng hành chuyên nghiệp"
+      ],
+      "itinerary": [],
+      "hotelOptions": [
+        "Nghieng Oceanview Hotel & Resort",
+        "Nghieng Central Hotel"
+      ],
+      "departureDate": "2026-10-15",
+      "seoTitle": "Tour Sinh thái & Nghỉ dưỡng – 2N1Đ | Nghieng Travel",
+      "seoDescription": "Khám phá hành trình Tour Sinh thái & Nghỉ dưỡng – 2N1Đ cùng Nghieng Travel."
+    },
+    "sort_order": 10,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "tours",
+    "record_id": "tour-team-building-khu-sinh-thai",
+    "payload": {
+      "id": "tour-team-building-khu-sinh-thai",
+      "slug": "team-building-khu-sinh-thai",
+      "title": "Tour Team Building tại Khu Sinh Thái",
+      "category": "he-sinh-thai",
+      "location": "Ninh Thuận",
+      "duration": "1 ngày",
+      "guestRange": "10–40 khách",
+      "summary": "Hành trình được thiết kế linh hoạt, kết nối trải nghiệm và giá trị của từng điểm đến.",
+      "description": "Chương trình kết hợp trải nghiệm địa phương, dịch vụ phù hợp và sự đồng hành của đội ngũ hướng dẫn viên.",
+      "priceFrom": 2500000,
+      "rating": 4.7,
+      "reviewCount": 60,
+      "state": "published",
+      "order": 12,
+      "image": "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/4e2c9afc5_slider-1-home.jpg",
+      "gallery": [
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/4e2c9afc5_slider-1-home.jpg",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/490b8b229_generated_d36d21f3.png",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9970d8492_slider-3-home.jpg",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9ddb1ea9d_banner-trang-chu-nghieng.webp",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/99323fe9c_generated_ce3c7248.png"
+      ],
+      "highlights": [
+        "Trải nghiệm theo chủ đề",
+        "Lịch trình linh hoạt",
+        "Đội ngũ đồng hành chuyên nghiệp"
+      ],
+      "itinerary": [],
+      "hotelOptions": [
+        "Nghieng Oceanview Hotel & Resort",
+        "Nghieng Central Hotel"
+      ],
+      "departureDate": "2026-10-15",
+      "seoTitle": "Tour Team Building tại Khu Sinh Thái | Nghieng Travel",
+      "seoDescription": "Khám phá hành trình Tour Team Building tại Khu Sinh Thái cùng Nghieng Travel."
+    },
+    "sort_order": 11,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "tours",
+    "record_id": "tour-meeting-incentive-resort",
+    "payload": {
+      "id": "tour-meeting-incentive-resort",
+      "slug": "meeting-incentive-resort",
+      "title": "Tour Meeting & Incentive tại Resort",
+      "category": "doanh-nghiep-hoi-nhom",
+      "location": "Cam Ranh, Khánh Hòa",
+      "duration": "2 ngày 1 đêm",
+      "guestRange": "10–30 khách",
+      "summary": "Hành trình được thiết kế linh hoạt, kết nối trải nghiệm và giá trị của từng điểm đến.",
+      "description": "Chương trình kết hợp trải nghiệm địa phương, dịch vụ phù hợp và sự đồng hành của đội ngũ hướng dẫn viên.",
+      "priceFrom": 6500000,
+      "rating": 4.7,
+      "reviewCount": 61,
+      "state": "published",
+      "order": 13,
+      "image": "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/490b8b229_generated_d36d21f3.png",
+      "gallery": [
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/490b8b229_generated_d36d21f3.png",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9970d8492_slider-3-home.jpg",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9ddb1ea9d_banner-trang-chu-nghieng.webp",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/99323fe9c_generated_ce3c7248.png",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/0575d5b5e_generated_cd45ba2c.png"
+      ],
+      "highlights": [
+        "Trải nghiệm theo chủ đề",
+        "Lịch trình linh hoạt",
+        "Đội ngũ đồng hành chuyên nghiệp"
+      ],
+      "itinerary": [],
+      "hotelOptions": [
+        "Nghieng Oceanview Hotel & Resort",
+        "Nghieng Central Hotel"
+      ],
+      "departureDate": "2026-10-15",
+      "seoTitle": "Tour Meeting & Incentive tại Resort | Nghieng Travel",
+      "seoDescription": "Khám phá hành trình Tour Meeting & Incentive tại Resort cùng Nghieng Travel."
+    },
+    "sort_order": 12,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "tours",
+    "record_id": "tour-gala-dinner",
+    "payload": {
+      "id": "tour-gala-dinner",
+      "slug": "gala-dinner",
+      "title": "Tour Gala Dinner",
+      "category": "doanh-nghiep-hoi-nhom",
+      "location": "Đà Nẵng",
+      "duration": "1 ngày",
+      "guestRange": "10–50 khách",
+      "summary": "Hành trình được thiết kế linh hoạt, kết nối trải nghiệm và giá trị của từng điểm đến.",
+      "description": "Chương trình kết hợp trải nghiệm địa phương, dịch vụ phù hợp và sự đồng hành của đội ngũ hướng dẫn viên.",
+      "priceFrom": 2900000,
+      "rating": 4.7,
+      "reviewCount": 62,
+      "state": "published",
+      "order": 14,
+      "image": "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9970d8492_slider-3-home.jpg",
+      "gallery": [
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9970d8492_slider-3-home.jpg",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9ddb1ea9d_banner-trang-chu-nghieng.webp",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/99323fe9c_generated_ce3c7248.png",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/0575d5b5e_generated_cd45ba2c.png",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/4e2c9afc5_slider-1-home.jpg"
+      ],
+      "highlights": [
+        "Trải nghiệm theo chủ đề",
+        "Lịch trình linh hoạt",
+        "Đội ngũ đồng hành chuyên nghiệp"
+      ],
+      "itinerary": [],
+      "hotelOptions": [
+        "Nghieng Oceanview Hotel & Resort",
+        "Nghieng Central Hotel"
+      ],
+      "departureDate": "2026-10-15",
+      "seoTitle": "Tour Gala Dinner | Nghieng Travel",
+      "seoDescription": "Khám phá hành trình Tour Gala Dinner cùng Nghieng Travel."
+    },
+    "sort_order": 13,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "tours",
+    "record_id": "tour-tour-vip",
+    "payload": {
+      "id": "tour-tour-vip",
+      "slug": "tour-vip",
+      "title": "Tour VIP",
+      "category": "doanh-nghiep-hoi-nhom",
+      "location": "Toàn quốc",
+      "duration": "Theo yêu cầu",
+      "guestRange": "2–12 khách",
+      "summary": "Hành trình được thiết kế linh hoạt, kết nối trải nghiệm và giá trị của từng điểm đến.",
+      "description": "Chương trình kết hợp trải nghiệm địa phương, dịch vụ phù hợp và sự đồng hành của đội ngũ hướng dẫn viên.",
+      "priceFrom": 8900000,
+      "rating": 4.7,
+      "reviewCount": 63,
+      "state": "published",
+      "order": 15,
+      "image": "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9ddb1ea9d_banner-trang-chu-nghieng.webp",
+      "gallery": [
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9ddb1ea9d_banner-trang-chu-nghieng.webp",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/99323fe9c_generated_ce3c7248.png",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/0575d5b5e_generated_cd45ba2c.png",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/4e2c9afc5_slider-1-home.jpg",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/490b8b229_generated_d36d21f3.png"
+      ],
+      "highlights": [
+        "Trải nghiệm theo chủ đề",
+        "Lịch trình linh hoạt",
+        "Đội ngũ đồng hành chuyên nghiệp"
+      ],
+      "itinerary": [],
+      "hotelOptions": [
+        "Nghieng Oceanview Hotel & Resort",
+        "Nghieng Central Hotel"
+      ],
+      "departureDate": "2026-10-15",
+      "seoTitle": "Tour VIP | Nghieng Travel",
+      "seoDescription": "Khám phá hành trình Tour VIP cùng Nghieng Travel."
+    },
+    "sort_order": 14,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "tours",
+    "record_id": "tour-hoi-thao-resort",
+    "payload": {
+      "id": "tour-hoi-thao-resort",
+      "slug": "hoi-thao-resort",
+      "title": "Tour Hội thảo tại Resort",
+      "category": "doanh-nghiep-hoi-nhom",
+      "location": "Cam Ranh, Khánh Hòa",
+      "duration": "2 ngày 1 đêm",
+      "guestRange": "10–40 khách",
+      "summary": "Hành trình được thiết kế linh hoạt, kết nối trải nghiệm và giá trị của từng điểm đến.",
+      "description": "Chương trình kết hợp trải nghiệm địa phương, dịch vụ phù hợp và sự đồng hành của đội ngũ hướng dẫn viên.",
+      "priceFrom": 7200000,
+      "rating": 4.7,
+      "reviewCount": 64,
+      "state": "published",
+      "order": 16,
+      "image": "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/99323fe9c_generated_ce3c7248.png",
+      "gallery": [
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/99323fe9c_generated_ce3c7248.png",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/0575d5b5e_generated_cd45ba2c.png",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/4e2c9afc5_slider-1-home.jpg",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/490b8b229_generated_d36d21f3.png",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9970d8492_slider-3-home.jpg"
+      ],
+      "highlights": [
+        "Trải nghiệm theo chủ đề",
+        "Lịch trình linh hoạt",
+        "Đội ngũ đồng hành chuyên nghiệp"
+      ],
+      "itinerary": [],
+      "hotelOptions": [
+        "Nghieng Oceanview Hotel & Resort",
+        "Nghieng Central Hotel"
+      ],
+      "departureDate": "2026-10-15",
+      "seoTitle": "Tour Hội thảo tại Resort | Nghieng Travel",
+      "seoDescription": "Khám phá hành trình Tour Hội thảo tại Resort cùng Nghieng Travel."
+    },
+    "sort_order": 15,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "tours",
+    "record_id": "tour-team-building-bai-bien",
+    "payload": {
+      "id": "tour-team-building-bai-bien",
+      "slug": "team-building-bai-bien",
+      "title": "Team Building Bãi biển",
+      "category": "team-building-dao-tao",
+      "location": "Nha Trang, Khánh Hòa",
+      "duration": "1 ngày",
+      "guestRange": "10–40 khách",
+      "summary": "Hành trình được thiết kế linh hoạt, kết nối trải nghiệm và giá trị của từng điểm đến.",
+      "description": "Chương trình kết hợp trải nghiệm địa phương, dịch vụ phù hợp và sự đồng hành của đội ngũ hướng dẫn viên.",
+      "priceFrom": 1900000,
+      "rating": 4.7,
+      "reviewCount": 65,
+      "state": "published",
+      "order": 17,
+      "image": "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/0575d5b5e_generated_cd45ba2c.png",
+      "gallery": [
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/0575d5b5e_generated_cd45ba2c.png",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/4e2c9afc5_slider-1-home.jpg",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/490b8b229_generated_d36d21f3.png",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9970d8492_slider-3-home.jpg",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9ddb1ea9d_banner-trang-chu-nghieng.webp"
+      ],
+      "highlights": [
+        "Trải nghiệm theo chủ đề",
+        "Lịch trình linh hoạt",
+        "Đội ngũ đồng hành chuyên nghiệp"
+      ],
+      "itinerary": [],
+      "hotelOptions": [
+        "Nghieng Oceanview Hotel & Resort",
+        "Nghieng Central Hotel"
+      ],
+      "departureDate": "2026-10-15",
+      "seoTitle": "Team Building Bãi biển | Nghieng Travel",
+      "seoDescription": "Khám phá hành trình Team Building Bãi biển cùng Nghieng Travel."
+    },
+    "sort_order": 16,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "tours",
+    "record_id": "tour-team-building-sinh-thai",
+    "payload": {
+      "id": "tour-team-building-sinh-thai",
+      "slug": "team-building-sinh-thai",
+      "title": "Team Building Sinh thái",
+      "category": "team-building-dao-tao",
+      "location": "Cà Ná, Ninh Thuận",
+      "duration": "2 ngày 1 đêm",
+      "guestRange": "10–40 khách",
+      "summary": "Hành trình được thiết kế linh hoạt, kết nối trải nghiệm và giá trị của từng điểm đến.",
+      "description": "Chương trình kết hợp trải nghiệm địa phương, dịch vụ phù hợp và sự đồng hành của đội ngũ hướng dẫn viên.",
+      "priceFrom": 3500000,
+      "rating": 4.7,
+      "reviewCount": 66,
+      "state": "published",
+      "order": 18,
+      "image": "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/4e2c9afc5_slider-1-home.jpg",
+      "gallery": [
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/4e2c9afc5_slider-1-home.jpg",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/490b8b229_generated_d36d21f3.png",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9970d8492_slider-3-home.jpg",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9ddb1ea9d_banner-trang-chu-nghieng.webp",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/99323fe9c_generated_ce3c7248.png"
+      ],
+      "highlights": [
+        "Trải nghiệm theo chủ đề",
+        "Lịch trình linh hoạt",
+        "Đội ngũ đồng hành chuyên nghiệp"
+      ],
+      "itinerary": [],
+      "hotelOptions": [
+        "Nghieng Oceanview Hotel & Resort",
+        "Nghieng Central Hotel"
+      ],
+      "departureDate": "2026-10-15",
+      "seoTitle": "Team Building Sinh thái | Nghieng Travel",
+      "seoDescription": "Khám phá hành trình Team Building Sinh thái cùng Nghieng Travel."
+    },
+    "sort_order": 17,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "tours",
+    "record_id": "tour-dao-tao-lanh-dao-outdoor",
+    "payload": {
+      "id": "tour-dao-tao-lanh-dao-outdoor",
+      "slug": "dao-tao-lanh-dao-outdoor",
+      "title": "Đào tạo lãnh đạo outdoor",
+      "category": "team-building-dao-tao",
+      "location": "Đà Lạt, Lâm Đồng",
+      "duration": "2 ngày 1 đêm",
+      "guestRange": "8–20 khách",
+      "summary": "Hành trình được thiết kế linh hoạt, kết nối trải nghiệm và giá trị của từng điểm đến.",
+      "description": "Chương trình kết hợp trải nghiệm địa phương, dịch vụ phù hợp và sự đồng hành của đội ngũ hướng dẫn viên.",
+      "priceFrom": 5800000,
+      "rating": 4.7,
+      "reviewCount": 67,
+      "state": "published",
+      "order": 19,
+      "image": "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/490b8b229_generated_d36d21f3.png",
+      "gallery": [
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/490b8b229_generated_d36d21f3.png",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9970d8492_slider-3-home.jpg",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9ddb1ea9d_banner-trang-chu-nghieng.webp",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/99323fe9c_generated_ce3c7248.png",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/0575d5b5e_generated_cd45ba2c.png"
+      ],
+      "highlights": [
+        "Trải nghiệm theo chủ đề",
+        "Lịch trình linh hoạt",
+        "Đội ngũ đồng hành chuyên nghiệp"
+      ],
+      "itinerary": [],
+      "hotelOptions": [
+        "Nghieng Oceanview Hotel & Resort",
+        "Nghieng Central Hotel"
+      ],
+      "departureDate": "2026-10-15",
+      "seoTitle": "Đào tạo lãnh đạo outdoor | Nghieng Travel",
+      "seoDescription": "Khám phá hành trình Đào tạo lãnh đạo outdoor cùng Nghieng Travel."
+    },
+    "sort_order": 18,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "users",
+    "record_id": "user-ketoan",
+    "payload": {
+      "id": "user-ketoan",
+      "name": "WeLink Kế toán",
+      "email": "ketoan@welink.vn",
+      "role": "Admin",
+      "status": "Active",
+      "passwordChangeRequired": false
+    },
+    "sort_order": 0,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "users",
+    "record_id": "user-media",
+    "payload": {
+      "id": "user-media",
+      "name": "media welink",
+      "email": "media@welink.vn",
+      "role": "Admin",
+      "status": "Active",
+      "passwordChangeRequired": false
+    },
+    "sort_order": 1,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "users",
+    "record_id": "user-support",
+    "payload": {
+      "id": "user-support",
+      "name": "Welink Hỗ trợ",
+      "role": "Admin",
+      "email": "support@welink.vn",
+      "status": "Active",
+      "passwordChangeRequired": false
+    },
+    "sort_order": 2,
+    "deleted": false,
+    "updated_at": "2026-10-05T09:04:02.815Z"
+  },
+  {
+    "collection": "users",
+    "record_id": "user-nhung",
+    "payload": {
+      "id": "user-nhung",
+      "name": "Nhung Nguyễn",
+      "role": "Admin",
+      "email": "nhungnguyen1722@gmail.com",
+      "status": "Active",
+      "passwordChangeRequired": false
+    },
+    "sort_order": 3,
+    "deleted": false,
+    "updated_at": "2026-10-05T09:04:02.815Z"
+  },
+  {
+    "collection": "users",
+    "record_id": "user-an",
+    "payload": {
+      "id": "user-an",
+      "name": "(IT) WeLink Nguyễn Đăng An",
+      "email": "annd@welink.vn",
+      "role": "Admin",
+      "status": "Active",
+      "passwordChangeRequired": false
+    },
+    "sort_order": 4,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "venueCategories",
+    "record_id": "venue-category-restaurant",
+    "payload": {
+      "id": "venue-category-restaurant",
+      "slug": "nha-hang",
+      "title": "Nhà hàng",
+      "kind": "restaurant",
+      "description": "Hệ thống nhà hàng ẩm thực vùng miền.",
+      "order": 1,
+      "active": true
+    },
+    "sort_order": 0,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "venueCategories",
+    "record_id": "venue-category-hotel",
+    "payload": {
+      "id": "venue-category-hotel",
+      "slug": "khach-san",
+      "title": "Khách sạn",
+      "kind": "hotel",
+      "description": "Khách sạn thành phố và nghỉ dưỡng.",
+      "order": 2,
+      "active": true
+    },
+    "sort_order": 1,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "venueCategories",
+    "record_id": "venue-category-resort",
+    "payload": {
+      "id": "venue-category-resort",
+      "slug": "resort",
+      "title": "Resort",
+      "kind": "resort",
+      "description": "Resort ven biển và thiên nhiên.",
+      "order": 3,
+      "active": true
+    },
+    "sort_order": 2,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "venueCategories",
+    "record_id": "venue-category-retreat",
+    "payload": {
+      "id": "venue-category-retreat",
+      "slug": "khu-nghi-duong",
+      "title": "Khu nghỉ dưỡng",
+      "kind": "retreat",
+      "description": "Khu nghỉ dưỡng sinh thái.",
+      "order": 4,
+      "active": true
+    },
+    "sort_order": 3,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "venueCategories",
+    "record_id": "venue-category-bungalow",
+    "payload": {
+      "id": "venue-category-bungalow",
+      "slug": "bungalow",
+      "title": "Bungalow",
+      "kind": "bungalow",
+      "description": "Bungalow nghỉ dưỡng gần gũi thiên nhiên.",
+      "order": 5,
+      "active": true
+    },
+    "sort_order": 4,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "venues",
+    "record_id": "venue-restaurant-the-coral",
+    "payload": {
+      "id": "venue-restaurant-the-coral",
+      "slug": "the-coral",
+      "title": "Nhà hàng The Coral",
+      "kind": "restaurant",
+      "category": "nha-hang",
+      "location": "Đảo Ngọc, Phú Quốc, Kiên Giang",
+      "address": "Đảo Ngọc, Phú Quốc, Kiên Giang",
+      "summary": "Không gian ẩm thực sang trọng với hải sản tươi ngon và tầm nhìn hướng biển tuyệt đẹp.",
+      "description": "Không gian ẩm thực sang trọng với hải sản tươi ngon và tầm nhìn hướng biển tuyệt đẹp. Không gian được thiết kế để tạo nên trải nghiệm trọn vẹn, kết hợp bản sắc vùng miền với dịch vụ chu đáo.",
+      "quote": "Hương vị địa phương, trải nghiệm đáng nhớ.",
+      "rating": 4.7,
+      "reviewCount": 82,
+      "priceFrom": 350000,
+      "state": "published",
+      "order": 1,
+      "image": "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/4e2c9afc5_slider-1-home.jpg",
+      "gallery": [
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/4e2c9afc5_slider-1-home.jpg",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9970d8492_slider-3-home.jpg",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9ddb1ea9d_banner-trang-chu-nghieng.webp",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/99323fe9c_generated_ce3c7248.png",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/0575d5b5e_generated_cd45ba2c.png"
+      ],
+      "amenities": [
+        "Ẩm thực địa phương",
+        "Không gian sang trọng",
+        "Phục vụ theo yêu cầu"
+      ],
+      "rooms": [],
+      "checkIn": "",
+      "checkOut": "",
+      "seoTitle": "Nhà hàng The Coral | Nghieng Travel",
+      "seoDescription": "Không gian ẩm thực sang trọng với hải sản tươi ngon và tầm nhìn hướng biển tuyệt đẹp."
+    },
+    "sort_order": 0,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "venues",
+    "record_id": "venue-restaurant-sen-vang",
+    "payload": {
+      "id": "venue-restaurant-sen-vang",
+      "slug": "sen-vang",
+      "title": "Nhà hàng Sen Vàng",
+      "kind": "restaurant",
+      "category": "nha-hang",
+      "location": "TP. Đà Nẵng, Việt Nam",
+      "address": "TP. Đà Nẵng, Việt Nam",
+      "summary": "Tinh hoa ẩm thực Việt trong không gian hiện đại, sang trọng.",
+      "description": "Tinh hoa ẩm thực Việt trong không gian hiện đại, sang trọng. Không gian được thiết kế để tạo nên trải nghiệm trọn vẹn, kết hợp bản sắc vùng miền với dịch vụ chu đáo.",
+      "quote": "Hương vị địa phương, trải nghiệm đáng nhớ.",
+      "rating": 4.8,
+      "reviewCount": 101,
+      "priceFrom": 400000,
+      "state": "published",
+      "order": 2,
+      "image": "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9970d8492_slider-3-home.jpg",
+      "gallery": [
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9970d8492_slider-3-home.jpg",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9ddb1ea9d_banner-trang-chu-nghieng.webp",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/99323fe9c_generated_ce3c7248.png",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/0575d5b5e_generated_cd45ba2c.png",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/490b8b229_generated_d36d21f3.png"
+      ],
+      "amenities": [
+        "Ẩm thực địa phương",
+        "Không gian sang trọng",
+        "Phục vụ theo yêu cầu"
+      ],
+      "rooms": [],
+      "checkIn": "",
+      "checkOut": "",
+      "seoTitle": "Nhà hàng Sen Vàng | Nghieng Travel",
+      "seoDescription": "Tinh hoa ẩm thực Việt trong không gian hiện đại, sang trọng."
+    },
+    "sort_order": 1,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "venues",
+    "record_id": "venue-restaurant-an-nhien",
+    "payload": {
+      "id": "venue-restaurant-an-nhien",
+      "slug": "an-nhien",
+      "title": "Nhà hàng An Nhiên",
+      "kind": "restaurant",
+      "category": "nha-hang",
+      "location": "Hội An, Quảng Nam",
+      "address": "Hội An, Quảng Nam",
+      "summary": "Hương vị truyền thống trong không gian đậm chất phố cổ.",
+      "description": "Hương vị truyền thống trong không gian đậm chất phố cổ. Không gian được thiết kế để tạo nên trải nghiệm trọn vẹn, kết hợp bản sắc vùng miền với dịch vụ chu đáo.",
+      "quote": "Hương vị địa phương, trải nghiệm đáng nhớ.",
+      "rating": 4.9,
+      "reviewCount": 120,
+      "priceFrom": 450000,
+      "state": "published",
+      "order": 3,
+      "image": "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9ddb1ea9d_banner-trang-chu-nghieng.webp",
+      "gallery": [
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9ddb1ea9d_banner-trang-chu-nghieng.webp",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/99323fe9c_generated_ce3c7248.png",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/0575d5b5e_generated_cd45ba2c.png",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/490b8b229_generated_d36d21f3.png",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/4e2c9afc5_slider-1-home.jpg"
+      ],
+      "amenities": [
+        "Ẩm thực địa phương",
+        "Không gian sang trọng",
+        "Phục vụ theo yêu cầu"
+      ],
+      "rooms": [],
+      "checkIn": "",
+      "checkOut": "",
+      "seoTitle": "Nhà hàng An Nhiên | Nghieng Travel",
+      "seoDescription": "Hương vị truyền thống trong không gian đậm chất phố cổ."
+    },
+    "sort_order": 2,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "venues",
+    "record_id": "venue-restaurant-sunrise",
+    "payload": {
+      "id": "venue-restaurant-sunrise",
+      "slug": "sunrise",
+      "title": "Nhà hàng Sunrise",
+      "kind": "restaurant",
+      "category": "nha-hang",
+      "location": "Nha Trang, Khánh Hòa",
+      "address": "Nha Trang, Khánh Hòa",
+      "summary": "Đa dạng món Á – Âu, kết hợp nguyên liệu địa phương.",
+      "description": "Đa dạng món Á – Âu, kết hợp nguyên liệu địa phương. Không gian được thiết kế để tạo nên trải nghiệm trọn vẹn, kết hợp bản sắc vùng miền với dịch vụ chu đáo.",
+      "quote": "Hương vị địa phương, trải nghiệm đáng nhớ.",
+      "rating": 4.7,
+      "reviewCount": 139,
+      "priceFrom": 500000,
+      "state": "published",
+      "order": 4,
+      "image": "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/99323fe9c_generated_ce3c7248.png",
+      "gallery": [
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/99323fe9c_generated_ce3c7248.png",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/0575d5b5e_generated_cd45ba2c.png",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/490b8b229_generated_d36d21f3.png",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/4e2c9afc5_slider-1-home.jpg",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9970d8492_slider-3-home.jpg"
+      ],
+      "amenities": [
+        "Ẩm thực địa phương",
+        "Không gian sang trọng",
+        "Phục vụ theo yêu cầu"
+      ],
+      "rooms": [],
+      "checkIn": "",
+      "checkOut": "",
+      "seoTitle": "Nhà hàng Sunrise | Nghieng Travel",
+      "seoDescription": "Đa dạng món Á – Âu, kết hợp nguyên liệu địa phương."
+    },
+    "sort_order": 3,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "venues",
+    "record_id": "venue-restaurant-ocean-view",
+    "payload": {
+      "id": "venue-restaurant-ocean-view",
+      "slug": "ocean-view",
+      "title": "Nhà hàng Ocean View",
+      "kind": "restaurant",
+      "category": "nha-hang",
+      "location": "Đà Nẵng, Việt Nam",
+      "address": "Đà Nẵng, Việt Nam",
+      "summary": "Trải nghiệm ẩm thực cao cấp với tầm nhìn hướng biển ngoạn mục.",
+      "description": "Trải nghiệm ẩm thực cao cấp với tầm nhìn hướng biển ngoạn mục. Không gian được thiết kế để tạo nên trải nghiệm trọn vẹn, kết hợp bản sắc vùng miền với dịch vụ chu đáo.",
+      "quote": "Hương vị địa phương, trải nghiệm đáng nhớ.",
+      "rating": 4.8,
+      "reviewCount": 158,
+      "priceFrom": 550000,
+      "state": "published",
+      "order": 5,
+      "image": "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/0575d5b5e_generated_cd45ba2c.png",
+      "gallery": [
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/0575d5b5e_generated_cd45ba2c.png",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/490b8b229_generated_d36d21f3.png",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/4e2c9afc5_slider-1-home.jpg",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9970d8492_slider-3-home.jpg",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9ddb1ea9d_banner-trang-chu-nghieng.webp"
+      ],
+      "amenities": [
+        "Ẩm thực địa phương",
+        "Không gian sang trọng",
+        "Phục vụ theo yêu cầu"
+      ],
+      "rooms": [],
+      "checkIn": "",
+      "checkOut": "",
+      "seoTitle": "Nhà hàng Ocean View | Nghieng Travel",
+      "seoDescription": "Trải nghiệm ẩm thực cao cấp với tầm nhìn hướng biển ngoạn mục."
+    },
+    "sort_order": 4,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "venues",
+    "record_id": "venue-restaurant-lang-viet",
+    "payload": {
+      "id": "venue-restaurant-lang-viet",
+      "slug": "lang-viet",
+      "title": "Nhà hàng Làng Việt",
+      "kind": "restaurant",
+      "category": "nha-hang",
+      "location": "Mũi Cà Mau, Cà Mau",
+      "address": "Mũi Cà Mau, Cà Mau",
+      "summary": "Ẩm thực dân tộc đặc sắc trong không gian văn hóa truyền thống.",
+      "description": "Ẩm thực dân tộc đặc sắc trong không gian văn hóa truyền thống. Không gian được thiết kế để tạo nên trải nghiệm trọn vẹn, kết hợp bản sắc vùng miền với dịch vụ chu đáo.",
+      "quote": "Hương vị địa phương, trải nghiệm đáng nhớ.",
+      "rating": 4.9,
+      "reviewCount": 177,
+      "priceFrom": 600000,
+      "state": "published",
+      "order": 6,
+      "image": "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/490b8b229_generated_d36d21f3.png",
+      "gallery": [
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/490b8b229_generated_d36d21f3.png",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/4e2c9afc5_slider-1-home.jpg",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9970d8492_slider-3-home.jpg",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9ddb1ea9d_banner-trang-chu-nghieng.webp",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/99323fe9c_generated_ce3c7248.png"
+      ],
+      "amenities": [
+        "Ẩm thực địa phương",
+        "Không gian sang trọng",
+        "Phục vụ theo yêu cầu"
+      ],
+      "rooms": [],
+      "checkIn": "",
+      "checkOut": "",
+      "seoTitle": "Nhà hàng Làng Việt | Nghieng Travel",
+      "seoDescription": "Ẩm thực dân tộc đặc sắc trong không gian văn hóa truyền thống."
+    },
+    "sort_order": 5,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "venues",
+    "record_id": "venue-restaurant-huong-viet",
+    "payload": {
+      "id": "venue-restaurant-huong-viet",
+      "slug": "huong-viet",
+      "title": "Nhà hàng Hương Việt",
+      "kind": "restaurant",
+      "category": "nha-hang",
+      "location": "Vĩnh Long, Bến Tre",
+      "address": "Vĩnh Long, Bến Tre",
+      "summary": "Hương vị quê hương đậm đà, mộc mạc, gần gũi với thiên nhiên.",
+      "description": "Hương vị quê hương đậm đà, mộc mạc, gần gũi với thiên nhiên. Không gian được thiết kế để tạo nên trải nghiệm trọn vẹn, kết hợp bản sắc vùng miền với dịch vụ chu đáo.",
+      "quote": "Hương vị địa phương, trải nghiệm đáng nhớ.",
+      "rating": 4.7,
+      "reviewCount": 196,
+      "priceFrom": 650000,
+      "state": "published",
+      "order": 7,
+      "image": "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/4e2c9afc5_slider-1-home.jpg",
+      "gallery": [
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/4e2c9afc5_slider-1-home.jpg",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9970d8492_slider-3-home.jpg",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9ddb1ea9d_banner-trang-chu-nghieng.webp",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/99323fe9c_generated_ce3c7248.png",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/0575d5b5e_generated_cd45ba2c.png"
+      ],
+      "amenities": [
+        "Ẩm thực địa phương",
+        "Không gian sang trọng",
+        "Phục vụ theo yêu cầu"
+      ],
+      "rooms": [],
+      "checkIn": "",
+      "checkOut": "",
+      "seoTitle": "Nhà hàng Hương Việt | Nghieng Travel",
+      "seoDescription": "Hương vị quê hương đậm đà, mộc mạc, gần gũi với thiên nhiên."
+    },
+    "sort_order": 6,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "venues",
+    "record_id": "venue-restaurant-vi-bien",
+    "payload": {
+      "id": "venue-restaurant-vi-bien",
+      "slug": "vi-bien",
+      "title": "Nhà hàng Vị Biển",
+      "kind": "restaurant",
+      "category": "nha-hang",
+      "location": "Phú Quốc, Kiên Giang",
+      "address": "Phú Quốc, Kiên Giang",
+      "summary": "Hải sản tươi ngon, chế biến tinh tế trong không gian mở hướng biển.",
+      "description": "Hải sản tươi ngon, chế biến tinh tế trong không gian mở hướng biển. Không gian được thiết kế để tạo nên trải nghiệm trọn vẹn, kết hợp bản sắc vùng miền với dịch vụ chu đáo.",
+      "quote": "Hương vị địa phương, trải nghiệm đáng nhớ.",
+      "rating": 4.8,
+      "reviewCount": 215,
+      "priceFrom": 700000,
+      "state": "published",
+      "order": 8,
+      "image": "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9970d8492_slider-3-home.jpg",
+      "gallery": [
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9970d8492_slider-3-home.jpg",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9ddb1ea9d_banner-trang-chu-nghieng.webp",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/99323fe9c_generated_ce3c7248.png",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/0575d5b5e_generated_cd45ba2c.png",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/490b8b229_generated_d36d21f3.png"
+      ],
+      "amenities": [
+        "Ẩm thực địa phương",
+        "Không gian sang trọng",
+        "Phục vụ theo yêu cầu"
+      ],
+      "rooms": [],
+      "checkIn": "",
+      "checkOut": "",
+      "seoTitle": "Nhà hàng Vị Biển | Nghieng Travel",
+      "seoDescription": "Hải sản tươi ngon, chế biến tinh tế trong không gian mở hướng biển."
+    },
+    "sort_order": 7,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "venues",
+    "record_id": "venue-restaurant-mien-xanh",
+    "payload": {
+      "id": "venue-restaurant-mien-xanh",
+      "slug": "mien-xanh",
+      "title": "Nhà hàng Miền Xanh",
+      "kind": "restaurant",
+      "category": "nha-hang",
+      "location": "Cần Thơ, Việt Nam",
+      "address": "Cần Thơ, Việt Nam",
+      "summary": "Không gian xanh mát, gần gũi thiên nhiên, phục vụ đặc sản miền Tây.",
+      "description": "Không gian xanh mát, gần gũi thiên nhiên, phục vụ đặc sản miền Tây. Không gian được thiết kế để tạo nên trải nghiệm trọn vẹn, kết hợp bản sắc vùng miền với dịch vụ chu đáo.",
+      "quote": "Hương vị địa phương, trải nghiệm đáng nhớ.",
+      "rating": 4.9,
+      "reviewCount": 234,
+      "priceFrom": 750000,
+      "state": "published",
+      "order": 9,
+      "image": "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9ddb1ea9d_banner-trang-chu-nghieng.webp",
+      "gallery": [
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9ddb1ea9d_banner-trang-chu-nghieng.webp",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/99323fe9c_generated_ce3c7248.png",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/0575d5b5e_generated_cd45ba2c.png",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/490b8b229_generated_d36d21f3.png",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/4e2c9afc5_slider-1-home.jpg"
+      ],
+      "amenities": [
+        "Ẩm thực địa phương",
+        "Không gian sang trọng",
+        "Phục vụ theo yêu cầu"
+      ],
+      "rooms": [],
+      "checkIn": "",
+      "checkOut": "",
+      "seoTitle": "Nhà hàng Miền Xanh | Nghieng Travel",
+      "seoDescription": "Không gian xanh mát, gần gũi thiên nhiên, phục vụ đặc sản miền Tây."
+    },
+    "sort_order": 8,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "venues",
+    "record_id": "venue-hotel-nghieng-oceanview-hotel-resort",
+    "payload": {
+      "id": "venue-hotel-nghieng-oceanview-hotel-resort",
+      "slug": "nghieng-oceanview-hotel-resort",
+      "title": "Nghieng Oceanview Hotel & Resort",
+      "kind": "hotel",
+      "category": "khach-san",
+      "location": "Bãi Dài, Cam Ranh, Khánh Hòa",
+      "address": "Bãi Dài, Cam Ranh, Khánh Hòa",
+      "summary": "Resort 5 sao bên bờ biển, kết hợp không gian nghỉ dưỡng yên bình với tiện nghi hiện đại.",
+      "description": "Nghiêng Oceanview Hotel & Resort là điểm đến lý tưởng cho những ai yêu thích sự yên bình, sang trọng và gần gũi với thiên nhiên. Với vị trí đắc địa bên bờ biển, khách sạn sở hữu tầm nhìn hướng đại dương và hệ thống phòng nghỉ được thiết kế tinh tế, hiện đại.\n\nKhông chỉ là nơi lưu trú, nơi đây còn là không gian để bạn tận hưởng ẩm thực đặc sắc, thư giãn tại spa và tham gia các hoạt động giải trí biển.",
+      "quote": "Nghỉ dưỡng không chỉ là điểm đến mà còn là hành trình tìm về sự cân bằng.",
+      "rating": 4.8,
+      "reviewCount": 324,
+      "priceFrom": 2500000,
+      "state": "published",
+      "order": 1,
+      "image": "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/4e2c9afc5_slider-1-home.jpg",
+      "gallery": [
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/4e2c9afc5_slider-1-home.jpg",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9970d8492_slider-3-home.jpg",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9ddb1ea9d_banner-trang-chu-nghieng.webp",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/99323fe9c_generated_ce3c7248.png",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/0575d5b5e_generated_cd45ba2c.png"
+      ],
+      "amenities": [
+        "Wifi miễn phí",
+        "Bể bơi vô cực",
+        "Nhà hàng sang trọng",
+        "Spa & Wellness",
+        "Đưa đón sân bay",
+        "Dịch vụ phòng 24/7"
+      ],
+      "rooms": [
+        {
+          "name": "Deluxe Ocean View",
+          "price": 2500000,
+          "capacity": "2 người · 1 giường đôi",
+          "image": "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9970d8492_slider-3-home.jpg",
+          "amenities": [
+            "32 m²",
+            "Ban công hướng biển"
+          ]
+        },
+        {
+          "name": "Premium Beach Front",
+          "price": 3800000,
+          "capacity": "2 người · 1 giường đôi",
+          "image": "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9ddb1ea9d_banner-trang-chu-nghieng.webp",
+          "amenities": [
+            "45 m²",
+            "Bãi biển riêng"
+          ]
+        },
+        {
+          "name": "Suite Ocean View",
+          "price": 5500000,
+          "capacity": "4 người · 2 giường",
+          "image": "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/99323fe9c_generated_ce3c7248.png",
+          "amenities": [
+            "70 m²",
+            "Phòng khách riêng"
+          ]
+        }
+      ],
+      "checkIn": "14:00",
+      "checkOut": "12:00",
+      "seoTitle": "Nghieng Oceanview Hotel & Resort | Nghieng Travel",
+      "seoDescription": "Resort 5 sao bên bờ biển, kết hợp không gian nghỉ dưỡng yên bình với tiện nghi hiện đại."
+    },
+    "sort_order": 9,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "venues",
+    "record_id": "venue-hotel-nghieng-central-hotel",
+    "payload": {
+      "id": "venue-hotel-nghieng-central-hotel",
+      "slug": "nghieng-central-hotel",
+      "title": "Nghieng Central Hotel",
+      "kind": "hotel",
+      "category": "khach-san",
+      "location": "Đà Nẵng, Việt Nam",
+      "address": "Đà Nẵng, Việt Nam",
+      "summary": "Khách sạn trung tâm thuận tiện kết nối điểm đến và trải nghiệm thành phố.",
+      "description": "Nghiêng Oceanview Hotel & Resort là điểm đến lý tưởng cho những ai yêu thích sự yên bình, sang trọng và gần gũi với thiên nhiên. Với vị trí đắc địa bên bờ biển, khách sạn sở hữu tầm nhìn hướng đại dương và hệ thống phòng nghỉ được thiết kế tinh tế, hiện đại.\n\nKhông chỉ là nơi lưu trú, nơi đây còn là không gian để bạn tận hưởng ẩm thực đặc sắc, thư giãn tại spa và tham gia các hoạt động giải trí biển.",
+      "quote": "Nghỉ dưỡng không chỉ là điểm đến mà còn là hành trình tìm về sự cân bằng.",
+      "rating": 4.7,
+      "reviewCount": 186,
+      "priceFrom": 1900000,
+      "state": "published",
+      "order": 2,
+      "image": "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/4e2c9afc5_slider-1-home.jpg",
+      "gallery": [
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/4e2c9afc5_slider-1-home.jpg",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9970d8492_slider-3-home.jpg",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9ddb1ea9d_banner-trang-chu-nghieng.webp",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/99323fe9c_generated_ce3c7248.png",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/0575d5b5e_generated_cd45ba2c.png"
+      ],
+      "amenities": [
+        "Wifi miễn phí",
+        "Bể bơi vô cực",
+        "Nhà hàng sang trọng",
+        "Spa & Wellness",
+        "Đưa đón sân bay",
+        "Dịch vụ phòng 24/7"
+      ],
+      "rooms": [
+        {
+          "name": "Deluxe Ocean View",
+          "price": 2500000,
+          "capacity": "2 người · 1 giường đôi",
+          "image": "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9970d8492_slider-3-home.jpg",
+          "amenities": [
+            "32 m²",
+            "Ban công hướng biển"
+          ]
+        },
+        {
+          "name": "Premium Beach Front",
+          "price": 3800000,
+          "capacity": "2 người · 1 giường đôi",
+          "image": "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9ddb1ea9d_banner-trang-chu-nghieng.webp",
+          "amenities": [
+            "45 m²",
+            "Bãi biển riêng"
+          ]
+        },
+        {
+          "name": "Suite Ocean View",
+          "price": 5500000,
+          "capacity": "4 người · 2 giường",
+          "image": "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/99323fe9c_generated_ce3c7248.png",
+          "amenities": [
+            "70 m²",
+            "Phòng khách riêng"
+          ]
+        }
+      ],
+      "checkIn": "14:00",
+      "checkOut": "12:00",
+      "seoTitle": "Nghieng Central Hotel | Nghieng Travel",
+      "seoDescription": "Khách sạn trung tâm thuận tiện kết nối điểm đến và trải nghiệm thành phố."
+    },
+    "sort_order": 10,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "venues",
+    "record_id": "venue-hotel-nghieng-heritage-hotel",
+    "payload": {
+      "id": "venue-hotel-nghieng-heritage-hotel",
+      "slug": "nghieng-heritage-hotel",
+      "title": "Nghieng Heritage Hotel",
+      "kind": "hotel",
+      "category": "khach-san",
+      "location": "Hội An, Quảng Nam",
+      "address": "Hội An, Quảng Nam",
+      "summary": "Không gian nghỉ dưỡng lấy cảm hứng từ kiến trúc và di sản địa phương.",
+      "description": "Nghiêng Oceanview Hotel & Resort là điểm đến lý tưởng cho những ai yêu thích sự yên bình, sang trọng và gần gũi với thiên nhiên. Với vị trí đắc địa bên bờ biển, khách sạn sở hữu tầm nhìn hướng đại dương và hệ thống phòng nghỉ được thiết kế tinh tế, hiện đại.\n\nKhông chỉ là nơi lưu trú, nơi đây còn là không gian để bạn tận hưởng ẩm thực đặc sắc, thư giãn tại spa và tham gia các hoạt động giải trí biển.",
+      "quote": "Nghỉ dưỡng không chỉ là điểm đến mà còn là hành trình tìm về sự cân bằng.",
+      "rating": 4.8,
+      "reviewCount": 142,
+      "priceFrom": 2200000,
+      "state": "published",
+      "order": 3,
+      "image": "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/4e2c9afc5_slider-1-home.jpg",
+      "gallery": [
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/4e2c9afc5_slider-1-home.jpg",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9970d8492_slider-3-home.jpg",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9ddb1ea9d_banner-trang-chu-nghieng.webp",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/99323fe9c_generated_ce3c7248.png",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/0575d5b5e_generated_cd45ba2c.png"
+      ],
+      "amenities": [
+        "Wifi miễn phí",
+        "Bể bơi vô cực",
+        "Nhà hàng sang trọng",
+        "Spa & Wellness",
+        "Đưa đón sân bay",
+        "Dịch vụ phòng 24/7"
+      ],
+      "rooms": [
+        {
+          "name": "Deluxe Ocean View",
+          "price": 2500000,
+          "capacity": "2 người · 1 giường đôi",
+          "image": "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9970d8492_slider-3-home.jpg",
+          "amenities": [
+            "32 m²",
+            "Ban công hướng biển"
+          ]
+        },
+        {
+          "name": "Premium Beach Front",
+          "price": 3800000,
+          "capacity": "2 người · 1 giường đôi",
+          "image": "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9ddb1ea9d_banner-trang-chu-nghieng.webp",
+          "amenities": [
+            "45 m²",
+            "Bãi biển riêng"
+          ]
+        },
+        {
+          "name": "Suite Ocean View",
+          "price": 5500000,
+          "capacity": "4 người · 2 giường",
+          "image": "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/99323fe9c_generated_ce3c7248.png",
+          "amenities": [
+            "70 m²",
+            "Phòng khách riêng"
+          ]
+        }
+      ],
+      "checkIn": "14:00",
+      "checkOut": "12:00",
+      "seoTitle": "Nghieng Heritage Hotel | Nghieng Travel",
+      "seoDescription": "Không gian nghỉ dưỡng lấy cảm hứng từ kiến trúc và di sản địa phương."
+    },
+    "sort_order": 11,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "venues",
+    "record_id": "venue-resort-oceanview-resort",
+    "payload": {
+      "id": "venue-resort-oceanview-resort",
+      "slug": "oceanview-resort",
+      "title": "Oceanview Resort",
+      "kind": "resort",
+      "category": "resort",
+      "location": "Cam Ranh, Khánh Hòa",
+      "address": "Cam Ranh, Khánh Hòa",
+      "summary": "Nghỉ dưỡng bên bờ biển với không gian mở, hồ bơi và dịch vụ chăm sóc toàn diện.",
+      "description": "Nghỉ dưỡng bên bờ biển với không gian mở, hồ bơi và dịch vụ chăm sóc toàn diện. Liên hệ Nghieng Travel để nhận thông tin dịch vụ, tiện ích và lịch trình phù hợp.",
+      "quote": "Kết nối thiên nhiên, tận hưởng hành trình.",
+      "rating": 4.7,
+      "reviewCount": 96,
+      "priceFrom": 1800000,
+      "state": "published",
+      "order": 1,
+      "image": "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/4e2c9afc5_slider-1-home.jpg",
+      "gallery": [
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/4e2c9afc5_slider-1-home.jpg",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9970d8492_slider-3-home.jpg",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9ddb1ea9d_banner-trang-chu-nghieng.webp",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/99323fe9c_generated_ce3c7248.png",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/0575d5b5e_generated_cd45ba2c.png"
+      ],
+      "amenities": [
+        "Wifi miễn phí",
+        "Không gian nghỉ dưỡng",
+        "Ẩm thực địa phương",
+        "Hỗ trợ khách hàng"
+      ],
+      "rooms": [],
+      "checkIn": "14:00",
+      "checkOut": "12:00",
+      "seoTitle": "Oceanview Resort | Nghieng Travel",
+      "seoDescription": "Nghỉ dưỡng bên bờ biển với không gian mở, hồ bơi và dịch vụ chăm sóc toàn diện."
+    },
+    "sort_order": 12,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "venues",
+    "record_id": "venue-resort-green-resort",
+    "payload": {
+      "id": "venue-resort-green-resort",
+      "slug": "green-resort",
+      "title": "Green Resort",
+      "kind": "resort",
+      "category": "resort",
+      "location": "Cà Ná, Ninh Thuận",
+      "address": "Cà Ná, Ninh Thuận",
+      "summary": "Khu nghỉ dưỡng xanh gắn với thiên nhiên và trải nghiệm địa phương.",
+      "description": "Khu nghỉ dưỡng xanh gắn với thiên nhiên và trải nghiệm địa phương. Liên hệ Nghieng Travel để nhận thông tin dịch vụ, tiện ích và lịch trình phù hợp.",
+      "quote": "Kết nối thiên nhiên, tận hưởng hành trình.",
+      "rating": 4.7,
+      "reviewCount": 103,
+      "priceFrom": 2050000,
+      "state": "published",
+      "order": 2,
+      "image": "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9970d8492_slider-3-home.jpg",
+      "gallery": [
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9970d8492_slider-3-home.jpg",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9ddb1ea9d_banner-trang-chu-nghieng.webp",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/99323fe9c_generated_ce3c7248.png",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/0575d5b5e_generated_cd45ba2c.png",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/490b8b229_generated_d36d21f3.png"
+      ],
+      "amenities": [
+        "Wifi miễn phí",
+        "Không gian nghỉ dưỡng",
+        "Ẩm thực địa phương",
+        "Hỗ trợ khách hàng"
+      ],
+      "rooms": [],
+      "checkIn": "14:00",
+      "checkOut": "12:00",
+      "seoTitle": "Green Resort | Nghieng Travel",
+      "seoDescription": "Khu nghỉ dưỡng xanh gắn với thiên nhiên và trải nghiệm địa phương."
+    },
+    "sort_order": 13,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "venues",
+    "record_id": "venue-resort-island-resort",
+    "payload": {
+      "id": "venue-resort-island-resort",
+      "slug": "island-resort",
+      "title": "Island Resort",
+      "kind": "resort",
+      "category": "resort",
+      "location": "Phú Quốc, Kiên Giang",
+      "address": "Phú Quốc, Kiên Giang",
+      "summary": "Kết nối trải nghiệm biển đảo, ẩm thực và văn hóa bản địa.",
+      "description": "Kết nối trải nghiệm biển đảo, ẩm thực và văn hóa bản địa. Liên hệ Nghieng Travel để nhận thông tin dịch vụ, tiện ích và lịch trình phù hợp.",
+      "quote": "Kết nối thiên nhiên, tận hưởng hành trình.",
+      "rating": 4.7,
+      "reviewCount": 110,
+      "priceFrom": 2300000,
+      "state": "published",
+      "order": 3,
+      "image": "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9ddb1ea9d_banner-trang-chu-nghieng.webp",
+      "gallery": [
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9ddb1ea9d_banner-trang-chu-nghieng.webp",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/99323fe9c_generated_ce3c7248.png",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/0575d5b5e_generated_cd45ba2c.png",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/490b8b229_generated_d36d21f3.png",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/4e2c9afc5_slider-1-home.jpg"
+      ],
+      "amenities": [
+        "Wifi miễn phí",
+        "Không gian nghỉ dưỡng",
+        "Ẩm thực địa phương",
+        "Hỗ trợ khách hàng"
+      ],
+      "rooms": [],
+      "checkIn": "14:00",
+      "checkOut": "12:00",
+      "seoTitle": "Island Resort | Nghieng Travel",
+      "seoDescription": "Kết nối trải nghiệm biển đảo, ẩm thực và văn hóa bản địa."
+    },
+    "sort_order": 14,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "venues",
+    "record_id": "venue-retreat-nghieng-complex-retreat",
+    "payload": {
+      "id": "venue-retreat-nghieng-complex-retreat",
+      "slug": "nghieng-complex-retreat",
+      "title": "Nghieng Complex Retreat",
+      "kind": "retreat",
+      "category": "khu-nghi-duong",
+      "location": "Toàn quốc",
+      "address": "Toàn quốc",
+      "summary": "Không gian nghỉ dưỡng gắn kết cộng đồng và phát triển bền vững.",
+      "description": "Không gian nghỉ dưỡng gắn kết cộng đồng và phát triển bền vững. Liên hệ Nghieng Travel để nhận thông tin dịch vụ, tiện ích và lịch trình phù hợp.",
+      "quote": "Kết nối thiên nhiên, tận hưởng hành trình.",
+      "rating": 4.7,
+      "reviewCount": 117,
+      "priceFrom": 2550000,
+      "state": "published",
+      "order": 4,
+      "image": "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/99323fe9c_generated_ce3c7248.png",
+      "gallery": [
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/99323fe9c_generated_ce3c7248.png",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/0575d5b5e_generated_cd45ba2c.png",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/490b8b229_generated_d36d21f3.png",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/4e2c9afc5_slider-1-home.jpg",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9970d8492_slider-3-home.jpg"
+      ],
+      "amenities": [
+        "Wifi miễn phí",
+        "Không gian nghỉ dưỡng",
+        "Ẩm thực địa phương",
+        "Hỗ trợ khách hàng"
+      ],
+      "rooms": [],
+      "checkIn": "14:00",
+      "checkOut": "12:00",
+      "seoTitle": "Nghieng Complex Retreat | Nghieng Travel",
+      "seoDescription": "Không gian nghỉ dưỡng gắn kết cộng đồng và phát triển bền vững."
+    },
+    "sort_order": 15,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "venues",
+    "record_id": "venue-retreat-sinh-thai-ca-na",
+    "payload": {
+      "id": "venue-retreat-sinh-thai-ca-na",
+      "slug": "sinh-thai-ca-na",
+      "title": "Sinh thái Cà Ná",
+      "kind": "retreat",
+      "category": "khu-nghi-duong",
+      "location": "Cà Ná, Ninh Thuận",
+      "address": "Cà Ná, Ninh Thuận",
+      "summary": "Điểm đến sinh thái kết hợp trải nghiệm thiên nhiên và văn hóa địa phương.",
+      "description": "Điểm đến sinh thái kết hợp trải nghiệm thiên nhiên và văn hóa địa phương. Liên hệ Nghieng Travel để nhận thông tin dịch vụ, tiện ích và lịch trình phù hợp.",
+      "quote": "Kết nối thiên nhiên, tận hưởng hành trình.",
+      "rating": 4.7,
+      "reviewCount": 124,
+      "priceFrom": 2800000,
+      "state": "published",
+      "order": 5,
+      "image": "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/0575d5b5e_generated_cd45ba2c.png",
+      "gallery": [
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/0575d5b5e_generated_cd45ba2c.png",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/490b8b229_generated_d36d21f3.png",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/4e2c9afc5_slider-1-home.jpg",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9970d8492_slider-3-home.jpg",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9ddb1ea9d_banner-trang-chu-nghieng.webp"
+      ],
+      "amenities": [
+        "Wifi miễn phí",
+        "Không gian nghỉ dưỡng",
+        "Ẩm thực địa phương",
+        "Hỗ trợ khách hàng"
+      ],
+      "rooms": [],
+      "checkIn": "14:00",
+      "checkOut": "12:00",
+      "seoTitle": "Sinh thái Cà Ná | Nghieng Travel",
+      "seoDescription": "Điểm đến sinh thái kết hợp trải nghiệm thiên nhiên và văn hóa địa phương."
+    },
+    "sort_order": 16,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "venues",
+    "record_id": "venue-bungalow-ocean-view-bungalow",
+    "payload": {
+      "id": "venue-bungalow-ocean-view-bungalow",
+      "slug": "ocean-view-bungalow",
+      "title": "Ocean View Bungalow",
+      "kind": "bungalow",
+      "category": "bungalow",
+      "location": "Cam Ranh, Khánh Hòa",
+      "address": "Cam Ranh, Khánh Hòa",
+      "summary": "Bungalow hướng biển cho kỳ nghỉ riêng tư, gần gũi thiên nhiên.",
+      "description": "Bungalow hướng biển cho kỳ nghỉ riêng tư, gần gũi thiên nhiên. Liên hệ Nghieng Travel để nhận thông tin dịch vụ, tiện ích và lịch trình phù hợp.",
+      "quote": "Kết nối thiên nhiên, tận hưởng hành trình.",
+      "rating": 4.7,
+      "reviewCount": 131,
+      "priceFrom": 3050000,
+      "state": "published",
+      "order": 6,
+      "image": "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/490b8b229_generated_d36d21f3.png",
+      "gallery": [
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/490b8b229_generated_d36d21f3.png",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/4e2c9afc5_slider-1-home.jpg",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9970d8492_slider-3-home.jpg",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9ddb1ea9d_banner-trang-chu-nghieng.webp",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/99323fe9c_generated_ce3c7248.png"
+      ],
+      "amenities": [
+        "Wifi miễn phí",
+        "Không gian nghỉ dưỡng",
+        "Ẩm thực địa phương",
+        "Hỗ trợ khách hàng"
+      ],
+      "rooms": [],
+      "checkIn": "14:00",
+      "checkOut": "12:00",
+      "seoTitle": "Ocean View Bungalow | Nghieng Travel",
+      "seoDescription": "Bungalow hướng biển cho kỳ nghỉ riêng tư, gần gũi thiên nhiên."
+    },
+    "sort_order": 17,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "venues",
+    "record_id": "venue-bungalow-garden-bungalow",
+    "payload": {
+      "id": "venue-bungalow-garden-bungalow",
+      "slug": "garden-bungalow",
+      "title": "Garden Bungalow",
+      "kind": "bungalow",
+      "category": "bungalow",
+      "location": "Cà Ná, Ninh Thuận",
+      "address": "Cà Ná, Ninh Thuận",
+      "summary": "Không gian sân vườn yên tĩnh với tiện nghi thiết yếu.",
+      "description": "Không gian sân vườn yên tĩnh với tiện nghi thiết yếu. Liên hệ Nghieng Travel để nhận thông tin dịch vụ, tiện ích và lịch trình phù hợp.",
+      "quote": "Kết nối thiên nhiên, tận hưởng hành trình.",
+      "rating": 4.7,
+      "reviewCount": 138,
+      "priceFrom": 3300000,
+      "state": "published",
+      "order": 7,
+      "image": "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/4e2c9afc5_slider-1-home.jpg",
+      "gallery": [
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/4e2c9afc5_slider-1-home.jpg",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9970d8492_slider-3-home.jpg",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9ddb1ea9d_banner-trang-chu-nghieng.webp",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/99323fe9c_generated_ce3c7248.png",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/0575d5b5e_generated_cd45ba2c.png"
+      ],
+      "amenities": [
+        "Wifi miễn phí",
+        "Không gian nghỉ dưỡng",
+        "Ẩm thực địa phương",
+        "Hỗ trợ khách hàng"
+      ],
+      "rooms": [],
+      "checkIn": "14:00",
+      "checkOut": "12:00",
+      "seoTitle": "Garden Bungalow | Nghieng Travel",
+      "seoDescription": "Không gian sân vườn yên tĩnh với tiện nghi thiết yếu."
+    },
+    "sort_order": 18,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "venues",
+    "record_id": "venue-bungalow-family-bungalow",
+    "payload": {
+      "id": "venue-bungalow-family-bungalow",
+      "slug": "family-bungalow",
+      "title": "Family Bungalow",
+      "kind": "bungalow",
+      "category": "bungalow",
+      "location": "Phú Quốc, Kiên Giang",
+      "address": "Phú Quốc, Kiên Giang",
+      "summary": "Lựa chọn rộng rãi cho gia đình và nhóm bạn.",
+      "description": "Lựa chọn rộng rãi cho gia đình và nhóm bạn. Liên hệ Nghieng Travel để nhận thông tin dịch vụ, tiện ích và lịch trình phù hợp.",
+      "quote": "Kết nối thiên nhiên, tận hưởng hành trình.",
+      "rating": 4.7,
+      "reviewCount": 145,
+      "priceFrom": 3550000,
+      "state": "published",
+      "order": 8,
+      "image": "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9970d8492_slider-3-home.jpg",
+      "gallery": [
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9970d8492_slider-3-home.jpg",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9ddb1ea9d_banner-trang-chu-nghieng.webp",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/99323fe9c_generated_ce3c7248.png",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/0575d5b5e_generated_cd45ba2c.png",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/490b8b229_generated_d36d21f3.png"
+      ],
+      "amenities": [
+        "Wifi miễn phí",
+        "Không gian nghỉ dưỡng",
+        "Ẩm thực địa phương",
+        "Hỗ trợ khách hàng"
+      ],
+      "rooms": [],
+      "checkIn": "14:00",
+      "checkOut": "12:00",
+      "seoTitle": "Family Bungalow | Nghieng Travel",
+      "seoDescription": "Lựa chọn rộng rãi cho gia đình và nhóm bạn."
+    },
+    "sort_order": 19,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  },
+  {
+    "collection": "venues",
+    "record_id": "venue-bungalow-vip-bungalow",
+    "payload": {
+      "id": "venue-bungalow-vip-bungalow",
+      "slug": "vip-bungalow",
+      "title": "VIP Bungalow",
+      "kind": "bungalow",
+      "category": "bungalow",
+      "location": "Cam Ranh, Khánh Hòa",
+      "address": "Cam Ranh, Khánh Hòa",
+      "summary": "Không gian nghỉ dưỡng riêng tư với dịch vụ cao cấp.",
+      "description": "Không gian nghỉ dưỡng riêng tư với dịch vụ cao cấp. Liên hệ Nghieng Travel để nhận thông tin dịch vụ, tiện ích và lịch trình phù hợp.",
+      "quote": "Kết nối thiên nhiên, tận hưởng hành trình.",
+      "rating": 4.7,
+      "reviewCount": 152,
+      "priceFrom": 3800000,
+      "state": "published",
+      "order": 9,
+      "image": "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9ddb1ea9d_banner-trang-chu-nghieng.webp",
+      "gallery": [
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9ddb1ea9d_banner-trang-chu-nghieng.webp",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/99323fe9c_generated_ce3c7248.png",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/0575d5b5e_generated_cd45ba2c.png",
+        "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/490b8b229_generated_d36d21f3.png",
+        "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/4e2c9afc5_slider-1-home.jpg"
+      ],
+      "amenities": [
+        "Wifi miễn phí",
+        "Không gian nghỉ dưỡng",
+        "Ẩm thực địa phương",
+        "Hỗ trợ khách hàng"
+      ],
+      "rooms": [],
+      "checkIn": "14:00",
+      "checkOut": "12:00",
+      "seoTitle": "VIP Bungalow | Nghieng Travel",
+      "seoDescription": "Không gian nghỉ dưỡng riêng tư với dịch vụ cao cấp."
+    },
+    "sort_order": 20,
+    "deleted": false,
+    "updated_at": "2026-10-03T02:50:28.905Z"
+  }
+]

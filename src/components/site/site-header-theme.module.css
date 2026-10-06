@@ -11,3 +11,12 @@
 :global(html[data-theme="light"]) .themeable>button,
 :global(html[data-theme="light"]) .themeable>div>button{border-color:rgba(3,23,43,.28);color:#06243D}
 :global(html[data-theme="light"]) .themeable>nav[class*="navigation"]{background:#F5F7F8}
+:global(html:not([data-theme="light"])) .themeable[data-over-hero="true"]{background:transparent;border-bottom-color:transparent;backdrop-filter:none}
+:global(html[data-theme="light"]) .themeable[data-over-hero="true"]{background:rgba(255,255,255,.9);border-bottom-color:rgba(3,23,43,.08);color:#06243D;backdrop-filter:blur(12px)}
+:global(html[data-theme="light"]) .themeable[data-over-hero="true"] nav a,
+:global(html[data-theme="light"]) .themeable[data-over-hero="true"] nav summary{color:#06243D}
+:global(html[data-theme="light"]) .themeable[data-over-hero="true"] nav a:hover,
+:global(html[data-theme="light"]) .themeable[data-over-hero="true"] nav summary:hover,
+:global(html[data-theme="light"]) .themeable[data-over-hero="true"] nav .active{color:#C9A227}
+:global(html[data-theme="light"]) .themeable[data-over-hero="true"]>button,
+:global(html[data-theme="light"]) .themeable[data-over-hero="true"]>div>button{color:#C9A227}

@@ -17,7 +17,7 @@ function isCurrent(pathname: string, href: string) {
   return href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(href + "/");
 }
 
-export default function SiteHeader() {
+export default function SiteHeader({ overHero = false }: { overHero?: boolean }) {
   const pathname = usePathname();
   const [items, setItems] = useState<CmsMenuItem[]>(initialMenu);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -36,12 +36,14 @@ export default function SiteHeader() {
   const logo = selectedLogo || BRAND_LOGOS[0].url;
 
   return (
-    <header className={styles.header + " " + themeStyles.themeable}>
+    <header className={styles.header + " " + themeStyles.themeable} data-over-hero={overHero ? "true" : undefined}>
       <Link href="/" className={styles.brand} aria-label="Nghieng Complex, Trang chủ">
         <img src={logo} alt="Nghieng Complex" />
       </Link>
       <button className={styles.menuToggle} type="button" aria-label={menuOpen ? "Đóng menu" : "Mở menu"} aria-expanded={menuOpen} onClick={() => setMenuOpen((open) => !open)}>
-        <span aria-hidden="true">{menuOpen ? "×" : "☰"}</span>
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          {menuOpen ? <path d="m18 6-12 12M6 6l12 12" /> : <><path d="M4 6h16" /><path d="M4 12h16" /><path d="M4 18h16" /></>}
+        </svg>
       </button>
       <nav className={menuOpen ? styles.navigationOpen : styles.navigation} aria-label="Điều hướng chính">
         {roots.map((item) => {
@@ -65,9 +67,11 @@ export default function SiteHeader() {
       </nav>
       <div className={styles.actions}>
         <button className={styles.themeToggle} type="button" aria-label={theme === "dark" ? "Chuyển sang giao diện sáng" : "Chuyển sang giao diện tối"} title={theme === "dark" ? "Giao diện sáng" : "Giao diện tối"} onClick={toggleTheme}>
-          <span aria-hidden="true">{theme === "dark" ? "☼" : "◐"}</span>
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            {theme === "dark" ? <><circle cx="12" cy="12" r="4" /><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41m12.14-12.14 1.41-1.41" /></> : <><path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z" /></>}
+          </svg>
         </button>
-        {cta && <Link className={styles.cta} href={cta.url}>{cta.label}<span aria-hidden="true">→</span></Link>}
+        {cta && <Link className={styles.cta} href={cta.url}>{cta.label}<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg></Link>}
       </div>
     </header>
   );

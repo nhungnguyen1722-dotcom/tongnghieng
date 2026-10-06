@@ -7,7 +7,7 @@ import SiteHeader from "@/components/site/SiteHeader";
 import { defaultPageContent, hydratePageContent, readPageContent, type AdminPageContent } from "@/app/admin/page-data";
 
 const textSnapshots = new WeakMap<HTMLElement, Map<string, { markup: string; value: string }>>();
-const imageSnapshots = new WeakMap<HTMLImageElement, Map<string, { source: string; value: string }>>();
+const imageSnapshots = new WeakMap<HTMLImageElement, Map<string, { source: string; sourceSet: string | null; value: string }>>();
 const linkSnapshots = new WeakMap<HTMLAnchorElement, { markup: string; href: string }>();
 
 function syncText(element: Element | null, value: string | undefined, defaultValue: string | undefined, key: string) {
@@ -38,11 +38,18 @@ function syncImage(image: HTMLImageElement | null, value: string, defaultValue: 
   }
   let snapshot = snapshots.get(key);
   if (!snapshot) {
-    snapshot = { source: image.src, value: defaultValue ?? "" };
+    snapshot = { source: image.src, sourceSet: image.getAttribute("srcset"), value: defaultValue ?? "" };
     snapshots.set(key, snapshot);
   }
   if (snapshot.value === value && !force) return;
-  image.src = value || snapshot.source || "";
+  if (value === defaultValue) {
+    if (snapshot.sourceSet) image.setAttribute("srcset", snapshot.sourceSet);
+    else image.removeAttribute("srcset");
+    image.src = snapshot.source || "";
+  } else {
+    image.removeAttribute("srcset");
+    image.src = value || snapshot.source || "";
+  }
   snapshot.value = value;
 }
 
@@ -247,7 +254,7 @@ export default function ManagedTemplateContent({ slug, markup, css }: { slug: st
   return (
     <main className="templateRoot" aria-label={content.name}>
       <style dangerouslySetInnerHTML={{ __html: css }} />
-      <SiteHeader />
+      <SiteHeader overHero={slug === "gioi-thieu"} />
       {content.active ? <div ref={rootRef} dangerouslySetInnerHTML={{ __html: markup }} /> : <section style={{ minHeight: "55vh", display: "grid", placeContent: "center", padding: "3rem 1.5rem", textAlign: "center" }}><h1>{content.name}</h1><p>Trang hiện chưa được xuất bản.</p></section>}
       <SiteFooter />
     </main>
