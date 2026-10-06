@@ -1,6 +1,6 @@
-import { readFile } from "node:fs/promises";
-import path from "node:path";
 import ManagedTemplateContent from "./ManagedTemplateContent";
+import PublicContentPage from "./PublicContentPage";
+import { templateMarkup } from "./template-markup";
 
 const fixedUtilities: Record<string, string> = {
   block: "display:block", inline: "display:inline", "inline-block": "display:inline-block", flex: "display:flex", "inline-flex": "display:inline-flex", grid: "display:grid", hidden: "display:none",
@@ -149,9 +149,8 @@ function createUtilityCss(markup: string) {
 }
 
 export default async function TemplateHtmlPage({ slug }: { slug: string }) {
-  const filename = `nghieng-connect-hub.base44.app-${slug}.html`;
-  const sourcePath = path.join(process.cwd(), "tailieugoc", "public", "html", filename);
-  const sourceMarkup = await readFile(sourcePath, "utf8");
+  const sourceMarkup = templateMarkup[slug];
+  if (!sourceMarkup) return <PublicContentPage slug={slug} />;
   const markup = sourceMarkup
     .replace(/<nav\b[\s\S]*?<\/nav>/i, "")
     .replace(/<footer\b[\s\S]*?<\/footer>/i, "")
