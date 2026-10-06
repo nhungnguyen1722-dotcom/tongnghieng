@@ -249,7 +249,6 @@ export default function ManagedTemplateContent({ slug, markup, css }: { slug: st
       <style dangerouslySetInnerHTML={{ __html: css }} />
       <SiteHeader />
       {content.active ? <div ref={rootRef} dangerouslySetInnerHTML={{ __html: markup }} /> : <section style={{ minHeight: "55vh", display: "grid", placeContent: "center", padding: "3rem 1.5rem", textAlign: "center" }}><h1>{content.name}</h1><p>Trang hiện chưa được xuất bản.</p></section>}
-      {content.active && slug === "doi-tac" && <section aria-label="Cùng tham gia, cùng kết nối, cùng phát triển" style={{ display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: "1.5rem", padding: "1rem max(1.5rem, calc((100vw - 70rem) / 2))", background: "linear-gradient(90deg,#C9A227,#E8C84A)", color: "#0D1B3E" }}><div><h2 style={{ margin: 0, fontSize: "1rem", fontWeight: 800 }}>CÙNG THAM GIA – CÙNG KẾT NỐI – CÙNG PHÁT TRIỂN</h2><p style={{ margin: 0, fontSize: ".75rem" }}>Nghieng Complex trân trọng chào đón Quý Đối tác, Thành viên và Cộng đồng cùng đồng hành.</p></div><Link href="/lien-he" style={{ padding: ".75rem 1.25rem", borderRadius: ".375rem", background: "#0D1B3E", color: "#E8C84A", fontWeight: 700, fontSize: ".875rem" }}>Liên Hệ Ngay →</Link></section>}
       <SiteFooter />
     </main>
   );

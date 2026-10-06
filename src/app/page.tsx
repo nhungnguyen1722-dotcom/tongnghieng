@@ -275,7 +275,6 @@ export default function Home() {
         {sectionEnabled("CTA cuối trang (Tham gia hệ sinh thái)") && <section className={s.cta}><div className={s.eyebrow}><i /> CÙNG KIẾN TẠO</div><h2>THAM GIA HỆ SINH THÁI <strong>NGHIENG COMPLEX</strong></h2><p>Kết nối cùng chúng tôi để bắt đầu những cơ hội hợp tác mới.</p><Link className={s.button} href="/lien-he">KẾT NỐI VỚI CHÚNG TÔI <Arrow /></Link></section>}
       </>}
 
-      <section className={`${s.bottomCta} ${homeStyles.footerCta}`}><div className={homeStyles.footerCtaCopy}><strong>CÙNG THAM GIA · CÙNG KẾT NỐI · CÙNG PHÁT TRIỂN</strong><span>Nghieng Complex trân trọng chào đón Quý Đối tác, Thành viên và Cộng đồng cùng đồng hành.</span></div><Link href="/lien-he">LIÊN HỆ NGAY <Arrow /></Link></section>
       <SiteFooter />
     </main>
   );

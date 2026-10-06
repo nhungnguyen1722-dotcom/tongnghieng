@@ -18,6 +18,13 @@ export default function SiteFooter() {
   const ecosystems = menu.filter((item) => item.parentId === "menu-ecosystem" && item.active).sort((a, b) => a.order - b.order);
   return (
     <footer className={styles.footer}>
+      <section className={styles.invite} aria-label="Cùng tham gia, cùng kết nối, cùng phát triển">
+        <div className={styles.inviteCopy}>
+          <strong>CÙNG THAM GIA – CÙNG KẾT NỐI – CÙNG PHÁT TRIỂN</strong>
+          <span>Nghieng Complex trân trọng chào đón Quý Đối tác, Thành viên và Cộng đồng cùng đồng hành.</span>
+        </div>
+        <Link href="/lien-he" className={styles.inviteButton}>Liên Hệ Ngay →</Link>
+      </section>
       <div className={styles.main}>
         <div className={styles.brand}>
           {/* eslint-disable-next-line @next/next/no-img-element */}

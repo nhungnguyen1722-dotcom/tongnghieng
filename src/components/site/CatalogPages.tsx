@@ -180,7 +180,6 @@ export function VenueCategoryPage({ kind, title, description }: { kind: VenueKin
         <img src={PUBLIC_IMAGES[2]} alt="Không gian nhà hàng bên biển lúc hoàng hôn" loading="lazy" />
         <div><p className={styles.eyebrow}>TRẢI NGHIỆM ẨM THỰC</p><h2>Hương vị đặc sắc từ khắp vùng miền</h2><p>Tận hưởng những bữa ăn tinh tế với nguyên liệu tươi ngon, được chế biến bởi đội ngũ đầu bếp giàu kinh nghiệm, mang đến trải nghiệm ẩm thực độc đáo và khó quên.</p><ul><li>Nguyên liệu tươi ngon địa phương</li><li>Đầu bếp giàu kinh nghiệm</li><li>Không gian sang trọng, đẳng cấp</li></ul><Link className={styles.goldButton} href="/nha-hang-khach-san">Khám phá hệ thống nhà hàng <span aria-hidden="true">→</span></Link></div>
       </section>}
-      <div className={styles.goldStrip}><span>CÙNG THAM GIA · CÙNG KẾT NỐI · CÙNG PHÁT TRIỂN</span><Link href="/lien-he">Liên hệ ngay <span aria-hidden="true">→</span></Link></div>
       <SiteFooter />
     </main>
   );
@@ -276,7 +275,6 @@ export function TravelLandingPage() {
   const toursSection = page?.sections.find((item) => item.id === "nghieng-travel-section-2");
   const valuesSection = page?.sections.find((item) => item.id === "nghieng-travel-section-3");
   const exploreSection = page?.sections.find((item) => item.id === "nghieng-travel-section-4");
-  const communitySection = page?.sections.find((item) => item.id === "nghieng-travel-section-5");
   const slides = page?.sliders.filter((slide) => slide.enabled) ?? [];
   useEffect(() => {
     if (slides.length < 2) return;
@@ -319,10 +317,6 @@ export function TravelLandingPage() {
         <p>{exploreSection?.description || "Trải nghiệm du lịch đẳng cấp, kết nối văn hóa và phát triển cộng đồng cùng Nghieng Travel."}</p>
         <Link className={styles.goldButton} href="/lien-he">Liên Hệ &amp; Đặt Tour <span aria-hidden="true">→</span></Link>
       </section>
-      <div className={styles.goldStrip} hidden={communitySection?.enabled === false}>
-        <div><strong>{communitySection?.title || "CÙNG THAM GIA - CÙNG KẾT NỐI - CÙNG PHÁT TRIỂN"}</strong><span>{communitySection?.description || "Nghieng Complex trân trọng chào đón Quý Đối tác, Thành viên và Cộng đồng cùng đồng hành."}</span></div>
-        <Link href="/lien-he">Liên hệ ngay <span aria-hidden="true">→</span></Link>
-      </div>
       <SiteFooter />
     </main>
   );
