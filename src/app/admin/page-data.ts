@@ -138,6 +138,13 @@ export const TRAVEL_FACILITY_ITEMS: AdminSectionItem[] = [
 ];
 
 const aboutHeroDescription = "Nghieng Complex — Tổ hợp Liên kết Đa ngành, nơi Con người, Doanh nghiệp và Công nghệ cùng cộng hưởng giá trị.";
+const techHeroTitle = "CHUYỂN ĐỔI SỐ";
+const techHeroDescription = "Ứng dụng AI vào vận hành, thương mại và phát triển cộng đồng — đổi mới sáng tạo tạo hiệu quả thực tế.";
+const legacyTechSliderCopy: [string, string][] = [
+  ["CÔNG NGHỆ – AI –", "Hệ Sinh Thái 03"],
+  ["CHUYỂN ĐỔI SỐ", "Đổi Mới Sáng Tạo"],
+  ["JUST IT & WELINK", "Nền Tảng Số"],
+];
 const aboutSections: AdminSection[] = [
   {
     id: "gioi-thieu-section-1",
@@ -185,7 +192,7 @@ const pageEditorSeeds: Record<string, { slides: [string, string][]; sections: [s
   "gioi-thieu": { slides: [["GIỚI THIỆU TẬP ĐOÀN", aboutHeroDescription], ["GIỚI THIỆU TẬP ĐOÀN", aboutHeroDescription], ["GIỚI THIỆU TẬP ĐOÀN", aboutHeroDescription]], sections: [["MÔ HÌNH TỔ HỢP LIÊN KẾT ĐA NGÀNH", aboutSections[0].description], ["THÔNG ĐIỆP CHIẾN LƯỢC", "Sứ mệnh, tầm nhìn và triết lý phát triển."], ["4 GIÁ TRỊ NỀN TẢNG", "Minh bạch · Bền vững · Liên kết · Đổi mới."], ["Thông điệp Đối tác", "Trở Thành Đối Tác"]] },
   "nghieng-travel": { slides: [["NGHIENG TRAVEL", "Hệ Sinh Thái 01"], ["HÀNH TRÌNH ĐÍCH THỰC", "Trải Nghiệm"], ["DU LỊCH BỀN VỮNG", "Phát Triển Du Lịch"]], sections: [["HỆ THỐNG NGHỈ DƯỠNG", "Section chuẩn · facilities · HỆ THỐNG NGHỈ DƯỠNG"], ["HẠNG MỤC TỔ CHỨC TOUR", "Section chuẩn · tours · HẠNG MỤC TỔ CHỨC TOUR"], ["GIÁ TRỊ MANG LẠI", "Section chuẩn · benefits · GIÁ TRỊ MANG LẠI"], ["KHÁM PHÁ CÙNG NGHIENG TRAVEL", "Section chuẩn · cta · KHÁM PHÁ CÙNG NGHIENG TRAVEL"], ["CÙNG THAM GIA - CÙNG KẾT NỐI - CÙNG PHÁT TRIỂN", "Dải thông điệp cuối trang"]] },
   "khoang-san": { slides: [["KHOÁNG SẢN", "Hệ Sinh Thái 02"], ["GIÁ TRỊ TÀI NGUYÊN", "Nguồn Lực"], ["LIÊN KẾT NGUỒN LỰC", "Liên Kết Doanh Nghiệp"]], sections: [["Lĩnh vực Khoáng sản", "Section chuẩn · segments · LĨNH VỰC KHOÁNG SẢN"], ["Các dự án hợp tác", "Section chuẩn · projects · CÁC DỰ ÁN HỢP TÁC"], ["CTA Hợp tác Khoáng sản", "Section chuẩn · cta · HỢP TÁC KHOÁNG SẢN"]] },
-  "cong-nghe-ai": { slides: [["CÔNG NGHỆ – AI –", "Hệ Sinh Thái 03"], ["CHUYỂN ĐỔI SỐ", "Đổi Mới Sáng Tạo"], ["JUST IT & WELINK", "Nền Tảng Số"]], sections: [["Giải pháp Công nghệ", "Section chuẩn · services · GIẢI PHÁP CÔNG NGHỆ"], ["Nền tảng Just IT & Welink", "Section chuẩn · platform · NỀN TẢNG | JUST IT & WELINK"], ["CTA Chuyển đổi số", "Section chuẩn · cta · CHUYỂN ĐỔI SỐ CÙNG NGHIENG"]] },
+  "cong-nghe-ai": { slides: [[techHeroTitle, techHeroDescription], [techHeroTitle, techHeroDescription], [techHeroTitle, techHeroDescription]], sections: [["Giải pháp Công nghệ", "Section chuẩn · services · GIẢI PHÁP CÔNG NGHỆ"], ["Nền tảng Just IT & Welink", "Section chuẩn · platform · NỀN TẢNG | JUST IT & WELINK"], ["CTA Chuyển đổi số", "Section chuẩn · cta · CHUYỂN ĐỔI SỐ CÙNG NGHIENG"]] },
   "phat-trien-cong-dong": { slides: [["PHÁT TRIỂN CỘNG ĐỒNG", "Hệ Sinh Thái 04"], ["CÙNG HỌC CÙNG LÀM", "Giá Trị Bền Vững"], ["KẾT NỐI THÀNH VIÊN", "Welink Community"]], sections: [["Cấu trúc 3 Trụ cột", "Section chuẩn · pillars · CẤU TRÚC CỘNG ĐỒNG"], ["Tham gia Welink Community", "Section chuẩn · members · THAM GIA WELINK COMMUNITY"], ["CTA Gia nhập cộng đồng", "Section chuẩn · cta · GIA NHẬP CỘNG ĐỒNG"]] },
   "giai-phap-dong-hanh": { slides: [["GIẢI PHÁP ĐỒNG HÀNH", "Hệ Sinh Thái 05"], ["TĂNG TRƯỞNG TÀI SẢN", "Tăng Trưởng"], ["KẾT NỐI NGUỒN LỰC", "Hợp Tác"]], sections: [["4 Giải pháp gia tăng giá trị", "Section chuẩn · solutions · GIA TĂNG GIÁ TRỊ TÀI SẢN"], ["Thông điệp đồng hành", "Section chuẩn · tagline"]] },
   "cong-dong": { slides: [["PHÁT TRIỂN CÙNG CỘNG ĐỒNG", "Hoạt Động Xã Hội"], ["SẺ CHIA NÂNG ĐỠ", "Chương Trình Xã Hội"], ["KẾT NỐI CÙNG PHÁT TRIỂN", "Cùng Phát Triển"]], sections: [["Hoạt động cộng đồng", "Section chuẩn · activities · HOẠT ĐỘNG CỘNG ĐỒNG"], ["CTA Cùng lan tỏa giá trị", "Section chuẩn · cta · CÙNG LAN TỎA GIÁ TRỊ"]] },
@@ -197,7 +204,7 @@ const pageEditorSeeds: Record<string, { slides: [string, string][]; sections: [s
 };
 
 const referenceSliderImage = "https://static.wixstatic.com/media/12d367_4f26ccd17f8f4e3a8958306ea08c2332~mv2.png";
-const homeSliderImages = [
+export const homeSliderImages = [
   "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/4e2c9afc5_slider-1-home.jpg",
   "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9970d8492_slider-3-home.jpg",
   "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9ddb1ea9d_banner-trang-chu-nghieng.webp",
@@ -216,18 +223,18 @@ export function defaultPageContent(slug: string): AdminPageContent | null {
     title: isHome ? "Nghieng Complex | Tổ hợp liên kết đa ngành" : `${page.name} | Nghieng Complex`,
     description: isHome
       ? "Nghieng Complex kết nối con người, doanh nghiệp, công nghệ và cộng đồng để cùng phát triển bền vững."
-      : slug === "gioi-thieu" ? aboutHeroDescription : `Thông tin và nội dung về ${page.name} của Nghieng Complex.`,
+      : slug === "gioi-thieu" ? aboutHeroDescription : slug === "cong-nghe-ai" ? techHeroDescription : `Thông tin và nội dung về ${page.name} của Nghieng Complex.`,
     seoTitle: isHome ? "Nghieng Complex | Tổ hợp liên kết đa ngành" : page.name + " | Nghieng Complex",
     seoDescription: isHome
       ? "Nghieng Complex kết nối con người, doanh nghiệp, công nghệ và cộng đồng để cùng phát triển bền vững."
       : "Thông tin và nội dung về " + page.name + " của Nghieng Complex.",
     seoKeywords: "",
-    heroTitle: isHome ? "CÙNG PHÁT TRIỂN BỀN VỮNG" : slug === "gioi-thieu" ? "GIỚI THIỆU TẬP ĐOÀN" : page.name.toLocaleUpperCase("vi-VN"),
+    heroTitle: isHome ? "CÙNG PHÁT TRIỂN BỀN VỮNG" : slug === "gioi-thieu" ? "GIỚI THIỆU TẬP ĐOÀN" : slug === "cong-nghe-ai" ? techHeroTitle : page.name.toLocaleUpperCase("vi-VN"),
     heroDescription: isHome
       ? "Nghieng Complex đồng hành cùng Đối tác, Thành viên và Cộng đồng kiến tạo tương lai phát triển bền vững trên toàn quốc."
-      : slug === "gioi-thieu" ? aboutHeroDescription : `Khám phá ${page.name} trong hệ sinh thái Nghieng Complex.`,
+      : slug === "gioi-thieu" ? aboutHeroDescription : slug === "cong-nghe-ai" ? techHeroDescription : `Khám phá ${page.name} trong hệ sinh thái Nghieng Complex.`,
     active: true,
-    ...(slug === "gioi-thieu" ? { contentRevision: 3 } : slug === "trang-chu" ? { contentRevision: 5 } : {}),
+    ...(slug === "gioi-thieu" ? { contentRevision: 3 } : slug === "trang-chu" ? { contentRevision: 5 } : slug === "cong-nghe-ai" ? { contentRevision: 1 } : {}),
     sliders: isHome
       ? [
           { id: "home-slide-1", title: "NGHIENG COMPLEX", description: "Tổ hợp Liên kết Đa ngành", image: homeSliderImages[0], enabled: true },
@@ -246,10 +253,25 @@ export function defaultPageContent(slug: string): AdminPageContent | null {
 }
 
 export function mergePageContentWithDefaults(slug: string, fallback: AdminPageContent, saved: Partial<AdminPageContent>): AdminPageContent {
-  // Restore the about page reference content once; later CMS edits remain editable.
+  // Migrate built-in page copy while preserving other CMS edits.
   const currentSaved = slug === "gioi-thieu" && saved.contentRevision !== 3
     ? { ...saved, sliders: fallback.sliders, sections: fallback.sections, contentRevision: 3 }
-    : saved;
+    : slug === "cong-nghe-ai" && saved.contentRevision !== 1
+      ? {
+          ...saved,
+          sliders: (saved.sliders ?? fallback.sliders).map((slide, index) => {
+            const oldCopy = legacyTechSliderCopy[index];
+            const defaultSlide = fallback.sliders.find((item) => item.id === slide.id) ?? fallback.sliders[index];
+            if (!oldCopy || !defaultSlide) return slide;
+            return {
+              ...slide,
+              title: slide.title === oldCopy[0] ? defaultSlide.title : slide.title,
+              description: slide.description === oldCopy[1] ? defaultSlide.description : slide.description,
+            };
+          }),
+          contentRevision: 1,
+        }
+      : saved;
   const savedSections = currentSaved.sections ?? fallback.sections;
   const savedById = new Map(savedSections.map((section) => [section.id, section]));
   const sections = fallback.sections.map((seed) => {
@@ -282,7 +304,7 @@ export function mergePageContentWithDefaults(slug: string, fallback: AdminPageCo
     ...currentSaved,
     sliders: currentSaved.sliders ?? fallback.sliders,
     sections,
-    ...(slug === "gioi-thieu" ? { contentRevision: 3 } : slug === "trang-chu" ? { contentRevision: 5 } : {}),
+    ...(slug === "gioi-thieu" ? { contentRevision: 3 } : slug === "trang-chu" ? { contentRevision: 5 } : slug === "cong-nghe-ai" ? { contentRevision: 1 } : {}),
   };
 }
 
@@ -327,7 +349,7 @@ export async function hydratePageContent(slug: string) {
   const content = mergePageContentWithDefaults(slug, fallback, saved);
   pageContentCache.set(slug, content);
   window.dispatchEvent(new Event("nghieng:content-updated"));
-  if ((slug === "gioi-thieu" && saved.contentRevision !== content.contentRevision) || (slug === "trang-chu" && saved.contentRevision !== content.contentRevision)) {
+  if ((slug === "gioi-thieu" && saved.contentRevision !== content.contentRevision) || (slug === "trang-chu" && saved.contentRevision !== content.contentRevision) || (slug === "cong-nghe-ai" && saved.contentRevision !== content.contentRevision)) {
     await savePageContent(slug, content);
   }
 }

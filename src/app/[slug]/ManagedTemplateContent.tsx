@@ -4,7 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import SiteFooter from "@/components/site/SiteFooter";
 import SiteHeader from "@/components/site/SiteHeader";
-import { defaultPageContent, hydratePageContent, readPageContent, type AdminPageContent } from "@/app/admin/page-data";
+import { defaultPageContent, hydratePageContent, homeSliderImages, readPageContent, type AdminPageContent } from "@/app/admin/page-data";
 
 const textSnapshots = new WeakMap<HTMLElement, Map<string, { markup: string; value: string }>>();
 const imageSnapshots = new WeakMap<HTMLImageElement, Map<string, { source: string; sourceSet: string | null; value: string }>>();
@@ -195,6 +195,98 @@ function applyManagedContent(root: HTMLElement, content: AdminPageContent, defau
   }
 }
 
+function setupTemplateSlider(root: HTMLElement, content: AdminPageContent, defaults: AdminPageContent | null) {
+  const hero = root.querySelector<HTMLElement>(".hero-section");
+  if (!hero) return;
+
+  const panels = Array.from(hero.children).filter((child): child is HTMLElement =>
+    child instanceof HTMLElement && Boolean(child.querySelector(":scope > img")),
+  );
+  const dots = Array.from(hero.querySelectorAll<HTMLButtonElement>('button[aria-label^="Chuyển đến Slide"]'));
+  const controls = dots[0]?.parentElement;
+  const arrows = Array.from(hero.querySelectorAll<HTMLButtonElement>('button[aria-label="Slide trước"], button[aria-label="Slide sau"]'));
+  arrows.forEach((button) => {
+    button.hidden = true;
+    button.tabIndex = -1;
+  });
+
+  const enabledSlides = content.sliders.filter((slide) => slide.enabled && slide.image);
+  const slides = enabledSlides.map((slide, index) => {
+    const defaultSlide = defaults?.sliders.find((item) => item.id === slide.id);
+    const defaultIndex = defaults?.sliders.findIndex((item) => item.id === slide.id) ?? -1;
+    const isUnchangedPlaceholder = defaultSlide?.image === slide.image
+      && defaults?.sliders.every((item) => item.image === defaultSlide.image);
+    if (!isUnchangedPlaceholder) return slide;
+    return { ...slide, image: homeSliderImages[(defaultIndex >= 0 ? defaultIndex : index) % homeSliderImages.length] };
+  });
+  const slideCount = Math.min(slides.length, panels.length, dots.length);
+
+  panels.forEach((panel, index) => {
+    panel.hidden = index >= slideCount;
+  });
+  dots.forEach((dot, index) => {
+    dot.hidden = index >= slideCount;
+    dot.type = "button";
+    dot.className = "top-slider-dot";
+    dot.setAttribute("aria-label", `Chuyển đến slide ${index + 1}`);
+  });
+
+  if (controls) {
+    controls.className = "top-slider-controls";
+    controls.hidden = slideCount <= 1;
+    controls.setAttribute("role", "group");
+    controls.setAttribute("aria-label", "Chọn banner đầu trang");
+  }
+
+  if (slideCount === 0) {
+    panels.forEach((panel, index) => {
+      panel.hidden = index > 0;
+      panel.classList.toggle("opacity-100", index === 0);
+      panel.classList.toggle("opacity-0", index > 0);
+      panel.setAttribute("aria-hidden", String(index > 0));
+    });
+    return;
+  }
+
+  const heading = hero.querySelector("h1");
+  const description = hero.querySelector("p");
+  let activeIndex = 0;
+  const showSlide = (index: number) => {
+    activeIndex = (index + slideCount) % slideCount;
+    for (let slideIndex = 0; slideIndex < slideCount; slideIndex += 1) {
+      const isActive = slideIndex === activeIndex;
+      const panel = panels[slideIndex];
+      const image = panel.querySelector<HTMLImageElement>(":scope > img");
+      if (image) {
+        image.src = slides[slideIndex].image;
+        image.alt = slides[slideIndex].title || content.name;
+      }
+      panel.classList.toggle("opacity-100", isActive);
+      panel.classList.toggle("opacity-0", !isActive);
+      panel.setAttribute("aria-hidden", String(!isActive));
+      dots[slideIndex].setAttribute("aria-current", String(isActive));
+    }
+
+    const slide = slides[activeIndex];
+    syncText(heading, slide.title, defaults?.sliders[0]?.title, "HeroTitle");
+    syncText(description, slide.description, defaults?.sliders[0]?.description, "HeroDescription");
+  };
+
+  const removeDotListeners = dots.slice(0, slideCount).map((dot, index) => {
+    const onClick = () => showSlide(index);
+    dot.addEventListener("click", onClick);
+    return () => dot.removeEventListener("click", onClick);
+  });
+
+  showSlide(0);
+  const timer = slideCount > 1 ? window.setInterval(() => showSlide(activeIndex + 1), 6000) : null;
+
+  return () => {
+    if (timer !== null) window.clearInterval(timer);
+    removeDotListeners.forEach((removeListener) => removeListener());
+  };
+}
+
 export default function ManagedTemplateContent({ slug, markup, css }: { slug: string; markup: string; css: string }) {
   const defaults = useMemo(() => defaultPageContent(slug), [slug]);
   const [content, setContent] = useState<AdminPageContent>(() => readPageContent(slug) ?? defaults!);
@@ -248,13 +340,17 @@ export default function ManagedTemplateContent({ slug, markup, css }: { slug: st
   useEffect(() => {
     document.title = content.title;
     document.querySelector('meta[name="description"]')?.setAttribute("content", content.description);
-    if (rootRef.current) applyManagedContent(rootRef.current, content, defaults);
-  }, [content, defaults]);
+    if (!rootRef.current) return;
+    applyManagedContent(rootRef.current, content, defaults);
+    if (slug === "gioi-thieu" || slug === "cong-nghe-ai") {
+      return setupTemplateSlider(rootRef.current, content, defaults);
+    }
+  }, [content, defaults, slug]);
 
   return (
     <main className="templateRoot" aria-label={content.name}>
       <style dangerouslySetInnerHTML={{ __html: css }} />
-      <SiteHeader overHero={slug === "gioi-thieu"} />
+      <SiteHeader overHero={slug === "gioi-thieu" || slug === "cong-nghe-ai"} />
       {content.active ? <div ref={rootRef} dangerouslySetInnerHTML={{ __html: markup }} /> : <section style={{ minHeight: "55vh", display: "grid", placeContent: "center", padding: "3rem 1.5rem", textAlign: "center" }}><h1>{content.name}</h1><p>Trang hiện chưa được xuất bản.</p></section>}
       <SiteFooter />
     </main>

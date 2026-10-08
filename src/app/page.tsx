@@ -8,15 +8,11 @@ import SiteFooter from "@/components/site/SiteFooter";
 import useBrandLogo from "@/components/site/useBrandLogo";
 import { loadCmsRecords } from "@/lib/cms-client";
 import { CMS_SEEDS, type CmsArticle } from "@/lib/cms-data";
-import { defaultPageContent, hydratePageContent, readPageContent, type AdminPageContent } from "./admin/page-data";
+import { defaultPageContent, homeSliderImages, hydratePageContent, readPageContent, type AdminPageContent } from "./admin/page-data";
 import s from "./page.module.css";
 import homeStyles from "./home-overrides.module.css";
 
-const slides = [
-  "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/4e2c9afc5_slider-1-home.jpg",
-  "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9970d8492_slider-3-home.jpg",
-  "https://base44.app/api/apps/6a867a0f31b1d902ab55332d/files/mp/public/6a867a0f31b1d902ab55332d/9ddb1ea9d_banner-trang-chu-nghieng.webp",
-];
+const slides = homeSliderImages;
 const ecosystem = [
   { name: "Nghieng Travel", path: "/nghieng-travel", image: "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/99323fe9c_generated_ce3c7248.png/v1/fill/w_785,h_352,al_c,q_90,enc_webp,quality_auto/99323fe9c_generated_ce3c7248.webp", description: "Du lịch & nghỉ dưỡng với nhà hàng, khách sạn, bungalow, khu sinh thái và tour trong nước, quốc tế.", tags: ["Du lịch", "Nhà hàng", "Khách sạn", "Nghỉ dưỡng"] },
   { name: "Khoáng sản", path: "/khoang-san", image: "https://media.base44.com/images/public/6a867a0f31b1d902ab55332d/0575d5b5e_generated_cd45ba2c.png/v1/fill/w_785,h_352,al_c,q_90,enc_webp,quality_auto/0575d5b5e_generated_cd45ba2c.webp", description: "Kết nối các dự án khai thác, sơ chế và thương mại khoáng sản cùng đối tác trên toàn quốc.", tags: ["Quặng sắt", "Than xít", "Vật liệu xây dựng"] },
