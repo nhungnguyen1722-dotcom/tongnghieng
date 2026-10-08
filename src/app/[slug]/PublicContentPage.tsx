@@ -57,8 +57,8 @@ function getFallback(slug: string, name?: string, path?: string) {
   return createDetailPageContent(slug, name || page?.name || slug.replaceAll("-", " "), path || page?.path || `/${slug}`);
 }
 
-export default function PublicContentPage({ slug, name, path }: { slug: string; name?: string; path?: string }) {
-  const [content, setContent] = useState<AdminPageContent>(() => getFallback(slug, name, path));
+export default function PublicContentPage({ slug, name, path, initialContent }: { slug: string; name?: string; path?: string; initialContent?: AdminPageContent }) {
+  const [content, setContent] = useState<AdminPageContent>(() => initialContent ?? getFallback(slug, name, path));
   const editorialKind = slug.startsWith("tin-tuc-") ? "news" : slug.startsWith("du-an-") ? "projects" : null;
   const editorialSlug = editorialKind ? slug.slice(editorialKind === "news" ? "tin-tuc-".length : "du-an-".length) : "";
   const [editorialItems, setEditorialItems] = useState<CmsArticle[]>(() => editorialKind === "news" ? CMS_SEEDS.news : editorialKind === "projects" ? CMS_SEEDS.projects : []);
@@ -72,16 +72,18 @@ export default function PublicContentPage({ slug, name, path }: { slug: string; 
   const relatedArticles = useMemo(() => editorialItems.filter((item) => item.id !== editorialArticle?.id).slice(0, 3), [editorialArticle, editorialItems]);
 
   useEffect(() => {
+    if (initialContent) return;
     const refresh = () => setContent(readPageContent(slug) || getFallback(slug, name, path));
     void hydratePageContent(slug);
     window.addEventListener("nghieng:content-updated", refresh);
     return () => window.removeEventListener("nghieng:content-updated", refresh);
-  }, [name, path, slug]);
+  }, [initialContent, name, path, slug]);
 
   useEffect(() => {
-    document.title = content.title;
-    document.querySelector('meta[name="description"]')?.setAttribute("content", content.description);
-  }, [content.description, content.title]);
+    document.title = content.seoTitle || content.title;
+    document.querySelector('meta[name="description"]')?.setAttribute("content", content.seoDescription || content.description);
+    document.querySelector('meta[name="keywords"]')?.setAttribute("content", content.seoKeywords || "");
+  }, [content.description, content.seoDescription, content.seoKeywords, content.seoTitle, content.title]);
 
   const pageIndex = Math.max(0, ADMIN_PAGES.findIndex((item) => item.slug === slug));
   const activeSlide = content.sliders.find((slider) => slider.enabled);

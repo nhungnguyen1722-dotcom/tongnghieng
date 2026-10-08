@@ -155,6 +155,11 @@ export type CmsMedia = {
   source: "library" | "external";
   active?: boolean;
   variant?: "dark" | "light" | "ecosystem";
+  pageId?: string;
+  order?: number;
+  status?: "enabled" | "disabled";
+  createdAt?: string;
+  updatedAt?: string;
 };
 
 export type CmsRecordMap = {
@@ -437,7 +442,12 @@ projectItems.push(
   { id: "project-digital-operations", slug: "nen-tang-van-hanh-so", title: "Nền tảng hỗ trợ vận hành số", summary: "Khảo sát giải pháp giúp các đơn vị phối hợp và quản lý nội dung hiệu quả.", body: "Sáng kiến xem xét quy trình vận hành và nhu cầu của các đơn vị để đề xuất công cụ số phù hợp.\n\nKhông đưa ra chỉ tiêu tài chính chưa được duyệt. Đây là dữ liệu minh họa.", category: "Công nghệ – AI", status: "Nghiên cứu", active: true, date: "2026-09-10", image: PUBLIC_IMAGES[4], relatedIds: [], isDemo: true, order: 6 },
 );
 
-const menuItems: CmsMenuItem[] = adminReferenceSeeds.menu as CmsMenuItem[];
+const menuItems: CmsMenuItem[] = [...adminReferenceSeeds.menu as CmsMenuItem[]];
+if (!menuItems.some((item) => item.url === "/van-hoa-va-quy-dinh")) {
+  const order = menuItems.find((item) => item.url === "/lien-he")?.order ?? Math.max(0, ...menuItems.map((item) => item.order)) + 1;
+  for (const item of menuItems) if (item.order >= order) item.order += 1;
+  menuItems.push({ id: "menu-van-hoa-va-quy-dinh", label: "Văn hóa & Quy định", url: "/van-hoa-va-quy-dinh", parentId: null, target: "_self", active: true, kind: "link", order });
+}
 
 const documents: CmsDocument[] = adminReferenceSeeds.documents as CmsDocument[];
 

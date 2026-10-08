@@ -43,12 +43,31 @@ export type AdminPageContent = {
   path: string;
   title: string;
   description: string;
+  seoTitle?: string;
+  seoDescription?: string;
+  seoKeywords?: string;
   heroTitle: string;
   heroDescription: string;
   active: boolean;
   sliders: AdminSlider[];
   sections: AdminSection[];
+  order?: number;
   contentRevision?: number;
+};
+
+export type CultureSlide = AdminSlider & {
+  pageId: string;
+  name: string;
+  order: number;
+  status: "enabled" | "disabled";
+  assetId?: string;
+  createdAt: string;
+  updatedAt: string;
+};
+
+export type CulturePageContent = AdminPageContent & {
+  presentationSlides: CultureSlide[];
+  contentHtml: string;
 };
 
 export const ADMIN_PAGES: AdminPage[] = [
@@ -65,6 +84,7 @@ export const ADMIN_PAGES: AdminPage[] = [
   { number: "11", name: "Tin tức", slug: "tin-tuc", path: "/tin-tuc" },
   { number: "12", name: "Đối tác", slug: "doi-tac", path: "/doi-tac" },
   { number: "13", name: "Liên hệ", slug: "lien-he", path: "/lien-he" },
+  { number: "14", name: "Văn hóa và Quy định", slug: "van-hoa-va-quy-dinh", path: "/van-hoa-va-quy-dinh" },
 ];
 
 const pageContentCache = new Map<string, AdminPageContent>();
@@ -197,6 +217,11 @@ export function defaultPageContent(slug: string): AdminPageContent | null {
     description: isHome
       ? "Nghieng Complex kết nối con người, doanh nghiệp, công nghệ và cộng đồng để cùng phát triển bền vững."
       : slug === "gioi-thieu" ? aboutHeroDescription : `Thông tin và nội dung về ${page.name} của Nghieng Complex.`,
+    seoTitle: isHome ? "Nghieng Complex | Tổ hợp liên kết đa ngành" : page.name + " | Nghieng Complex",
+    seoDescription: isHome
+      ? "Nghieng Complex kết nối con người, doanh nghiệp, công nghệ và cộng đồng để cùng phát triển bền vững."
+      : "Thông tin và nội dung về " + page.name + " của Nghieng Complex.",
+    seoKeywords: "",
     heroTitle: isHome ? "CÙNG PHÁT TRIỂN BỀN VỮNG" : slug === "gioi-thieu" ? "GIỚI THIỆU TẬP ĐOÀN" : page.name.toLocaleUpperCase("vi-VN"),
     heroDescription: isHome
       ? "Nghieng Complex đồng hành cùng Đối tác, Thành viên và Cộng đồng kiến tạo tương lai phát triển bền vững trên toàn quốc."
@@ -267,6 +292,9 @@ export function createDetailPageContent(slug: string, name: string, path: string
     path,
     title: `${name} | Nghieng Complex`,
     description: `Khám phá ${name} trong hệ sinh thái Nghieng Complex.`,
+    seoTitle: name + " | Nghieng Complex",
+    seoDescription: "Khám phá " + name + " trong hệ sinh thái Nghieng Complex.",
+    seoKeywords: "",
     heroTitle: name.toLocaleUpperCase("vi-VN"),
     heroDescription: `Nội dung chi tiết ${name.toLocaleLowerCase("vi-VN")} của Nghieng Complex.`,
     active: true,
