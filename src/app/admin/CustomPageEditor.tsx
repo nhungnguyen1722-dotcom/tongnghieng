@@ -12,6 +12,10 @@ import type { AdminPageContent, AdminSection, AdminSlider } from "./page-data";
 import styles from "./page-editor.module.css";
 
 export default function CustomPageEditor({ slug }: { slug: string }) {
+  return <AdminShell><CustomPageEditorContent slug={slug} /></AdminShell>;
+}
+
+function CustomPageEditorContent({ slug }: { slug: string }) {
   const role = useAdminRole();
   const canEdit = role === "Admin";
   const router = useRouter();
@@ -103,10 +107,10 @@ export default function CustomPageEditor({ slug }: { slug: string }) {
     router.replace("/admin/pages");
   };
 
-  if (loading) return <AdminShell><div className={styles.content}><p role="status">Đang tải trang…</p></div></AdminShell>;
-  if (!content || !record) return <AdminShell><div className={styles.content}><p>Không tìm thấy trang trong cơ sở dữ liệu.</p><Link href="/admin/pages">← Quản lý các Trang</Link></div></AdminShell>;
+  if (loading) return <div className={styles.content}><p role="status">Đang tải trang…</p></div>;
+  if (!content || !record) return <div className={styles.content}><p>Không tìm thấy trang trong cơ sở dữ liệu.</p><Link href="/admin/pages">← Quản lý các Trang</Link></div>;
 
-  return <AdminShell><div className={styles.content}>
+  return <div className={styles.content}>
     <div className={styles.topline}><Link href="/admin/pages">← Quản lý các Trang</Link><div className={styles.toplineActions}><Link className={styles.preview} href={content.path} target="_blank" rel="noreferrer">↗ Mở trang</Link>{canEdit && <button className={styles.topSave} type="button" disabled={saving} onClick={() => void save()}>{saving ? "\u0110ang l\u01b0u\u2026" : "L\u01b0u th\u00f4ng tin"}</button>}</div></div>
     <div className={styles.pageTitle}><div><h1>{content.name}</h1><span>{content.path}</span></div></div>
 
@@ -144,5 +148,5 @@ export default function CustomPageEditor({ slug }: { slug: string }) {
     </section>
 
     {canEdit && <div className={styles.saveBar}><span role="status">{saved}</span><button type="button" onClick={() => void save()} disabled={saving}>{saving ? "Đang lưu…" : "Lưu thay đổi"}</button><button className={styles.iconButton} type="button" onClick={() => void deletePage()}>Xóa Page</button></div>}
-  </div></AdminShell>;
+  </div>;
 }

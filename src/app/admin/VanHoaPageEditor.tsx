@@ -18,6 +18,10 @@ function assetIdFromUrl(url: string) {
 }
 
 export default function VanHoaPageEditor() {
+  return <AdminShell><VanHoaPageEditorContent /></AdminShell>;
+}
+
+function VanHoaPageEditorContent() {
   const role = useAdminRole();
   const canEdit = role === "Admin";
   const [records, setRecords] = useState<CmsPageContent[]>([]);
@@ -127,10 +131,10 @@ export default function VanHoaPageEditor() {
     setSaved("Đã lưu Slider, nội dung và thông tin trang vào PostgreSQL.");
   };
 
-  if (loading) return <AdminShell><div className={styles.content}><p role="status">Đang tải trang…</p></div></AdminShell>;
-  if (!content || !record) return <AdminShell><div className={styles.content}><p>Chưa có bản ghi trang Văn hóa và Quy định trong PostgreSQL.</p><Link href="/admin/pages">← Quản lý các Trang</Link></div></AdminShell>;
+  if (loading) return <div className={styles.content}><p role="status">Đang tải trang…</p></div>;
+  if (!content || !record) return <div className={styles.content}><p>Chưa có bản ghi trang Văn hóa và Quy định trong PostgreSQL.</p><Link href="/admin/pages">← Quản lý các Trang</Link></div>;
 
-  return <AdminShell><div className={styles.content}>
+  return <div className={styles.content}>
     <div className={styles.topline}><Link href="/admin/pages">← Quản lý các Trang</Link><div className={styles.toplineActions}><Link className={styles.preview} href="/van-hoa-va-quy-dinh" target="_blank" rel="noreferrer">↗ Mở trang</Link>{canEdit && <button className={styles.topSave} type="button" disabled={saving} onClick={() => void save()}>{saving ? "\u0110ang l\u01b0u\u2026" : "L\u01b0u th\u00f4ng tin"}</button>}</div></div>
     <div className={styles.pageTitle}><div><h1>Văn hóa và Quy định</h1><span>/van-hoa-va-quy-dinh</span></div></div>
 
@@ -179,5 +183,5 @@ export default function VanHoaPageEditor() {
     </section>
 
     {canEdit && <div className={styles.saveBar}><span role="status">{saved}</span><button type="button" disabled={saving} onClick={() => void save()}>{saving ? "Đang lưu…" : "Lưu thay đổi"}</button></div>}
-  </div></AdminShell>;
+  </div>;
 }
