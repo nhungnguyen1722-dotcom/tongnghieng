@@ -79,12 +79,6 @@ export default function PublicContentPage({ slug, name, path, initialContent }: 
     return () => window.removeEventListener("nghieng:content-updated", refresh);
   }, [initialContent, name, path, slug]);
 
-  useEffect(() => {
-    document.title = content.seoTitle || content.title;
-    document.querySelector('meta[name="description"]')?.setAttribute("content", content.seoDescription || content.description);
-    document.querySelector('meta[name="keywords"]')?.setAttribute("content", content.seoKeywords || "");
-  }, [content.description, content.seoDescription, content.seoKeywords, content.seoTitle, content.title]);
-
   const pageIndex = Math.max(0, ADMIN_PAGES.findIndex((item) => item.slug === slug));
   const activeSlide = content.sliders.find((slider) => slider.enabled);
   const image = activeSlide?.image || heroImages[pageIndex % heroImages.length];

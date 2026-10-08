@@ -227,7 +227,7 @@ export function defaultPageContent(slug: string): AdminPageContent | null {
     seoTitle: isHome ? "Nghieng Complex | Tổ hợp liên kết đa ngành" : page.name + " | Nghieng Complex",
     seoDescription: isHome
       ? "Nghieng Complex kết nối con người, doanh nghiệp, công nghệ và cộng đồng để cùng phát triển bền vững."
-      : "Thông tin và nội dung về " + page.name + " của Nghieng Complex.",
+      : slug === "gioi-thieu" ? aboutHeroDescription : "Thông tin và nội dung về " + page.name + " của Nghieng Complex.",
     seoKeywords: "",
     heroTitle: isHome ? "CÙNG PHÁT TRIỂN BỀN VỮNG" : slug === "gioi-thieu" ? "GIỚI THIỆU TẬP ĐOÀN" : slug === "cong-nghe-ai" ? techHeroTitle : page.name.toLocaleUpperCase("vi-VN"),
     heroDescription: isHome

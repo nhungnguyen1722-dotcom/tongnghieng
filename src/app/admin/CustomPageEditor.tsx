@@ -108,7 +108,7 @@ export default function CustomPageEditor({ slug }: { slug: string }) {
 
   return <AdminShell><div className={styles.content}>
     <div className={styles.topline}><Link href="/admin/pages">← Quản lý các Trang</Link><Link className={styles.preview} href={content.path} target="_blank" rel="noreferrer">↗ Mở trang</Link></div>
-    <div className={styles.pageTitle}><div><h1>{content.name}</h1><span>{content.path}</span></div></div>
+    <div className={styles.pageTitle}><div><h1>{content.name}</h1><span>{content.path}</span></div>{canEdit && <button className={styles.panelSave} type="button" disabled={saving} onClick={() => void save()}>{saving ? "Đang lưu…" : "Lưu thông tin"}</button>}</div>
 
     <section className={styles.panel}>
       <h2>Thông tin Trang</h2>

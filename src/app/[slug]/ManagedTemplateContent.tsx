@@ -338,8 +338,6 @@ export default function ManagedTemplateContent({ slug, markup, css }: { slug: st
   }, [slug, markup]);
 
   useEffect(() => {
-    document.title = content.title;
-    document.querySelector('meta[name="description"]')?.setAttribute("content", content.description);
     if (!rootRef.current) return;
     applyManagedContent(rootRef.current, content, defaults);
     if (slug === "gioi-thieu" || slug === "cong-nghe-ai") {

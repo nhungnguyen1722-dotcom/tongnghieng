@@ -73,7 +73,7 @@ function PageEditorContent({ slug }: { slug: string }) {
   return (
       <div className={styles.content}>
         <div className={styles.topline}><Link href="/admin/pages">← Quản lý các Trang</Link><Link className={styles.preview} href={current.path} target="_blank" rel="noreferrer">↗ Mở trang</Link></div>
-        <div className={styles.pageTitle}><div><h1>{current.name}</h1><span>{current.path}</span></div></div>
+        <div className={styles.pageTitle}><div><h1>{current.name}</h1><span>{current.path}</span></div>{canEdit && <button className={styles.panelSave} type="button" onClick={() => void save()}>Lưu thông tin</button>}</div>
 
         <section className={styles.panel}>
           <h2>Thông tin Trang</h2>

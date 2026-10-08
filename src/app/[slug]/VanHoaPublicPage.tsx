@@ -46,12 +46,6 @@ export default function VanHoaPublicPage({ content }: { content: CulturePageCont
   const presentationSlide = presentationSlides[visibleSlideIndex];
 
   useEffect(() => {
-    document.title = content.seoTitle || content.title;
-    document.querySelector('meta[name="description"]')?.setAttribute("content", content.seoDescription || content.description);
-    document.querySelector('meta[name="keywords"]')?.setAttribute("content", content.seoKeywords || "");
-  }, [content.description, content.seoDescription, content.seoKeywords, content.seoTitle, content.title]);
-
-  useEffect(() => {
     if (heroSlides.length < 2) return;
     const timer = window.setInterval(() => setHeroIndex((current) => (current + 1) % heroSlides.length), 6000);
     return () => window.clearInterval(timer);
