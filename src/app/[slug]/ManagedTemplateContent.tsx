@@ -127,12 +127,12 @@ function syncSectionLink(element: HTMLElement, section: AdminPageContent["sectio
   else if (link.getAttribute("href") !== snapshot.href) link.setAttribute("href", snapshot.href);
 }
 
-function applyManagedContent(root: HTMLElement, content: AdminPageContent, defaults: AdminPageContent | null) {
+function applyManagedContent(root: HTMLElement, content: AdminPageContent, defaults: AdminPageContent | null, manageHero = true) {
   const defaultSlider = defaults?.sliders[0];
   const activeSlider = content.sliders.find((slider) => slider.enabled);
   const hero = root.querySelector<HTMLElement>(".hero-section, .hero") ?? root.querySelector<HTMLElement>("section");
 
-  if (hero && activeSlider) {
+  if (manageHero && hero && activeSlider) {
     syncText(hero.querySelector("h1"), activeSlider.title, defaultSlider?.title, "HeroTitle");
     syncText(hero.querySelector("p"), activeSlider.description, defaultSlider?.description, "HeroDescription");
     const firstSliderSelected = activeSlider.id === defaultSlider?.id;
@@ -205,10 +205,7 @@ function setupTemplateSlider(root: HTMLElement, content: AdminPageContent, defau
   const dots = Array.from(hero.querySelectorAll<HTMLButtonElement>('button[aria-label^="Chuyển đến Slide"]'));
   const controls = dots[0]?.parentElement;
   const arrows = Array.from(hero.querySelectorAll<HTMLButtonElement>('button[aria-label="Slide trước"], button[aria-label="Slide sau"]'));
-  arrows.forEach((button) => {
-    button.hidden = true;
-    button.tabIndex = -1;
-  });
+  const initialPanelIndex = panels.findIndex((panel) => panel.getAttribute("aria-hidden") === "false" || panel.classList.contains("opacity-100"));
 
   const enabledSlides = content.sliders.filter((slide) => slide.enabled && slide.image);
   const slides = enabledSlides.map((slide, index) => {
@@ -223,6 +220,13 @@ function setupTemplateSlider(root: HTMLElement, content: AdminPageContent, defau
 
   panels.forEach((panel, index) => {
     panel.hidden = index >= slideCount;
+  });
+  arrows.forEach((button) => {
+    const isPrevious = button.getAttribute("aria-label") === "Slide trước";
+    button.type = "button";
+    button.hidden = slideCount <= 1;
+    button.className = `top-slider-arrow ${isPrevious ? "top-slider-arrow-prev" : "top-slider-arrow-next"}`;
+    button.setAttribute("aria-label", isPrevious ? "Slide trước" : "Slide sau");
   });
   dots.forEach((dot, index) => {
     dot.hidden = index >= slideCount;
@@ -268,22 +272,44 @@ function setupTemplateSlider(root: HTMLElement, content: AdminPageContent, defau
     }
 
     const slide = slides[activeIndex];
-    syncText(heading, slide.title, defaults?.sliders[0]?.title, "HeroTitle");
-    syncText(description, slide.description, defaults?.sliders[0]?.description, "HeroDescription");
+    const initialSlide = slides[initialPanelIndex >= 0 && initialPanelIndex < slideCount ? initialPanelIndex : 0];
+    const initialDefault = defaults?.sliders.find((item) => item.id === initialSlide.id) ?? defaults?.sliders[0];
+    syncText(heading, slide.title, initialDefault?.title, "HeroTitle");
+    syncText(description, slide.description, initialDefault?.description, "HeroDescription");
+  };
+
+  let timer: number | null = null;
+  const restartTimer = () => {
+    if (timer !== null) window.clearInterval(timer);
+    timer = slideCount > 1 ? window.setInterval(() => showSlide(activeIndex + 1), 6000) : null;
   };
 
   const removeDotListeners = dots.slice(0, slideCount).map((dot, index) => {
-    const onClick = () => showSlide(index);
+    const onClick = () => {
+      showSlide(index);
+      restartTimer();
+    };
     dot.addEventListener("click", onClick);
     return () => dot.removeEventListener("click", onClick);
   });
 
-  showSlide(0);
-  const timer = slideCount > 1 ? window.setInterval(() => showSlide(activeIndex + 1), 6000) : null;
+  const removeArrowListeners = arrows.map((button) => {
+    const isPrevious = button.getAttribute("aria-label") === "Slide trước";
+    const onClick = () => {
+      showSlide(activeIndex + (isPrevious ? -1 : 1));
+      restartTimer();
+    };
+    button.addEventListener("click", onClick);
+    return () => button.removeEventListener("click", onClick);
+  });
+
+  showSlide(initialPanelIndex >= 0 && initialPanelIndex < slideCount ? initialPanelIndex : 0);
+  restartTimer();
 
   return () => {
     if (timer !== null) window.clearInterval(timer);
     removeDotListeners.forEach((removeListener) => removeListener());
+    removeArrowListeners.forEach((removeListener) => removeListener());
   };
 }
 
@@ -339,8 +365,9 @@ export default function ManagedTemplateContent({ slug, markup, css }: { slug: st
 
   useEffect(() => {
     if (!rootRef.current) return;
-    applyManagedContent(rootRef.current, content, defaults);
-    if (slug === "gioi-thieu" || slug === "cong-nghe-ai") {
+    const hasTemplateSlider = slug === "gioi-thieu" || slug === "cong-nghe-ai" || slug === "cong-dong";
+    applyManagedContent(rootRef.current, content, defaults, !hasTemplateSlider);
+    if (hasTemplateSlider) {
       return setupTemplateSlider(rootRef.current, content, defaults);
     }
   }, [content, defaults, slug]);
@@ -348,7 +375,7 @@ export default function ManagedTemplateContent({ slug, markup, css }: { slug: st
   return (
     <main className="templateRoot" aria-label={content.name}>
       <style dangerouslySetInnerHTML={{ __html: css }} />
-      <SiteHeader overHero={slug === "gioi-thieu" || slug === "cong-nghe-ai"} />
+      <SiteHeader overHero={slug === "gioi-thieu" || slug === "cong-nghe-ai" || slug === "cong-dong"} />
       {content.active ? <div ref={rootRef} dangerouslySetInnerHTML={{ __html: markup }} /> : <section style={{ minHeight: "55vh", display: "grid", placeContent: "center", padding: "3rem 1.5rem", textAlign: "center" }}><h1>{content.name}</h1><p>Trang hiện chưa được xuất bản.</p></section>}
       <SiteFooter />
     </main>
