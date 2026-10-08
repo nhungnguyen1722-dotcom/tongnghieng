@@ -131,8 +131,8 @@ export default function VanHoaPageEditor() {
   if (!content || !record) return <AdminShell><div className={styles.content}><p>Chưa có bản ghi trang Văn hóa và Quy định trong PostgreSQL.</p><Link href="/admin/pages">← Quản lý các Trang</Link></div></AdminShell>;
 
   return <AdminShell><div className={styles.content}>
-    <div className={styles.topline}><Link href="/admin/pages">← Quản lý các Trang</Link><Link className={styles.preview} href="/van-hoa-va-quy-dinh" target="_blank" rel="noreferrer">↗ Mở trang</Link></div>
-    <div className={styles.pageTitle}><div><h1>Văn hóa và Quy định</h1><span>/van-hoa-va-quy-dinh</span></div>{canEdit && <button className={styles.panelSave} type="button" disabled={saving} onClick={() => void save()}>{saving ? "Đang lưu…" : "Lưu thông tin"}</button>}</div>
+    <div className={styles.topline}><Link href="/admin/pages">← Quản lý các Trang</Link><div className={styles.toplineActions}><Link className={styles.preview} href="/van-hoa-va-quy-dinh" target="_blank" rel="noreferrer">↗ Mở trang</Link>{canEdit && <button className={styles.topSave} type="button" disabled={saving} onClick={() => void save()}>{saving ? "\u0110ang l\u01b0u\u2026" : "L\u01b0u th\u00f4ng tin"}</button>}</div></div>
+    <div className={styles.pageTitle}><div><h1>Văn hóa và Quy định</h1><span>/van-hoa-va-quy-dinh</span></div></div>
 
     <section className={styles.panel}>
       <h2>Thông tin Trang</h2>
